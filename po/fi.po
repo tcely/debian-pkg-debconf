@@ -1,14 +1,14 @@
 # Finnish translation of debconf
 # Copyright (C) 2001 Jaakko Kangasharju
 # Jaakko Kangasharju <ashar@iki.fi>, 2001.
-# Tommi Vainikainen, 2004.
+# Tommi Vainikainen, 2004-2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.0.00\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-23 09:06+0100\n"
-"PO-Revision-Date: 2004-11-11 10:07+0200\n"
+"PO-Revision-Date: 2005-01-23 18:48+0200\n"
 "Last-Translator: Tommi Vainikainen <thv+debian@lists.debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -307,11 +307,11 @@ msgstr "pakettien esiasetusta ei tehdä, koska apt-utils:ia ei ole asennettu"
 #: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
 #, c-format
 msgid "apt-extracttemplates failed: %s"
-msgstr ""
+msgstr "apt-extracttemplates epäonnistui: %s"
 
 #: ../dpkg-preconfigure:167
 msgid "Preconfiguring packages ...\n"
-msgstr ""
+msgstr "Esiräätälöidään paketteja...\n"
 
 #: ../dpkg-preconfigure:179
 #, c-format
@@ -319,9 +319,9 @@ msgid "template parse error: %s"
 msgstr "kyselypohjan jäsennysvirhe: %s"
 
 #: ../dpkg-preconfigure:191
-#, fuzzy, c-format
+#, c-format
 msgid "preconfiguring %s (%s)"
-msgstr "%s:n asetusten säätö"
+msgstr "esiräätälöidään %s (%s)"
 
 #: ../dpkg-preconfigure:193
 #, c-format
