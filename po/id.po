@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf.po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:06+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-25 13:04+0700\n"
 "Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
-"Language-Team: Debian Indonesia L10N Team <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
+"Language-Team: Debian Indonesia L10N Team <debian-l10n-id@gurame.fisika.ui."
+"ac.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,13 +34,13 @@ msgid ""
 "items as necessary, and then save it and exit. At that point, debconf will "
 "read the edited file, and use the values you entered to configure the system."
 msgstr ""
-"Antarmuka debconf berbasis editor menyajikan kepada Anda satu atau lebih berkas "
-"teks yang harus diubah. Ini termasuk salah satu berkas tersebut. Jika Anda tidak "
-"akrab dengan berkas konfigurasi standar unix, berkas ini akan tampak akrab bagi Anda "
-"-- berkas ini berisi keterangan yang diikuti dengan item konfigurasi. Ubahlah file ini, "
-"ganti sebarang item yang diperlukan, dan simpanlah lalu keluar. Pada titik ini debconf "
-"akan membaca berkas yang telah diubah, dan menggunakan nilai yang Anda masukkan untuk "
-"mengonfigurasi sistem."
+"Antarmuka debconf berbasis editor menyajikan kepada Anda satu atau lebih "
+"berkas teks yang harus diubah. Ini termasuk salah satu berkas tersebut. Jika "
+"Anda tidak akrab dengan berkas konfigurasi standar unix, berkas ini akan "
+"tampak akrab bagi Anda -- berkas ini berisi keterangan yang diikuti dengan "
+"item konfigurasi. Ubahlah file ini, ganti sebarang item yang diperlukan, dan "
+"simpanlah lalu keluar. Pada titik ini debconf akan membaca berkas yang telah "
+"diubah, dan menggunakan nilai yang Anda masukkan untuk mengonfigurasi sistem."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96 ../Debconf/FrontEnd/Kde.pm:61
 #: ../Debconf/FrontEnd/Kde.pm:72
@@ -320,11 +321,6 @@ msgstr "Prakonfigurasi paket ... \n"
 msgid "template parse error: %s"
 msgstr "Kesalahan penguraian template: %s"
 
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "Prakonfigurasi %s (%s)"
-
 #: ../dpkg-preconfigure:193
 #, c-format
 msgid "debconf: can't chmod: %s"
@@ -388,3 +384,6 @@ msgstr "%s sudah usang"
 #, c-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s sudah usang; seluruh template dihapus!"
+
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "Prakonfigurasi %s (%s)"

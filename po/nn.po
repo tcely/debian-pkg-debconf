@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:06+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-23 19:33+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -72,11 +72,13 @@ msgstr "Fleire"
 
 #: ../Debconf/FrontEnd/Dialog.pm:50
 msgid "TERM is not set, so the dialog frontend is not usable."
-msgstr "TERM er ikkje sett, så det dialogbaserte grensesnittet er ikkje brukande."
+msgstr ""
+"TERM er ikkje sett, så det dialogbaserte grensesnittet er ikkje brukande."
 
 #: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "Dialog frontend is incompatible with emacs shell buffers"
-msgstr "Det dialogbaserte grensesnittet er ikkje kompatibel med emacs skal-buffer"
+msgstr ""
+"Det dialogbaserte grensesnittet er ikkje kompatibel med emacs skal-buffer"
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid ""
@@ -91,14 +93,15 @@ msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
 msgstr ""
-"Ingen brukbare dialogprogram er installert, så det dialogbaserte grensesnittet "
-"kan ikkje brukast."
+"Ingen brukbare dialogprogram er installert, så det dialogbaserte "
+"grensesnittet kan ikkje brukast."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgid ""
+"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
-"Det dialogbaserte grensesnittet krev eit skjermvindauge på minst 13 linjer og "
-"31 kolonner."
+"Det dialogbaserte grensesnittet krev eit skjermvindauge på minst 13 linjer "
+"og 31 kolonner."
 
 #: ../Debconf/FrontEnd/Dialog.pm:282
 msgid "Debian Configuration"
@@ -139,7 +142,8 @@ msgstr "Maldatabase er ikkje oppgjeve i oppsettsfila."
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
-msgstr "Vala Sigils og Smileys er ikkje i bruk i oppsettsfila lenger. Fjern dei."
+msgstr ""
+"Vala Sigils og Smileys er ikkje i bruk i oppsettsfila lenger. Fjern dei."
 
 #: ../Debconf/Config.pm:147
 #, c-format
@@ -230,8 +234,10 @@ msgid "Choices"
 msgstr "Val"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
-msgstr "(Skriv inn null eller fleire element avskilt med komma og mellomrom (', ').)"
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgstr ""
+"(Skriv inn null eller fleire element avskilt med komma og mellomrom (', ').)"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:36
@@ -248,7 +254,8 @@ msgid "no"
 msgstr "nei"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid "Debconf was not configured to display this note, so it mailed it to you."
+msgid ""
+"Debconf was not configured to display this note, so it mailed it to you."
 msgstr ""
 "Debconf var ikkje sett opp til å vise denne merknaden, så han vart sendt deg "
 "på e-post."
@@ -316,11 +323,6 @@ msgstr "Førehandsoppset pakkar ...\n"
 msgid "template parse error: %s"
 msgstr "maltolkingsfeil: %s"
 
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "førehandsoppset %s (%s)"
-
 #: ../dpkg-preconfigure:193
 #, c-format
 msgid "debconf: can't chmod: %s"
@@ -385,4 +387,5 @@ msgstr "%s er utdatert"
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s er utdatert; droppar heile malen!"
 
-
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "førehandsoppset %s (%s)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:18+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-29 16:38+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -21,8 +21,8 @@ msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
 msgstr ""
-"تستخدم الآن واجهة debconf المبنية على المُحرّر لتهيئة نظامك. "
-"راجع نهاية هذا المستند للتعليمات المفصلة."
+"تستخدم الآن واجهة debconf المبنية على المُحرّر لتهيئة نظامك. راجع نهاية هذا "
+"المستند للتعليمات المفصلة."
 
 #: ../Debconf/FrontEnd/Editor.pm:111
 msgid ""
@@ -33,8 +33,11 @@ msgid ""
 "items as necessary, and then save it and exit. At that point, debconf will "
 "read the edited file, and use the values you entered to configure the system."
 msgstr ""
-"واجهة debconf المبنية على المُحرّر تقدم لك ملفاً نصيّاً أو أكثر لتحريرها. وهذا أحد هذه الملفات. إن كنت تألف ملفات تهيئة يونكس القياسيّة، سيكون هذا الملف مألوفاً لك، حيث أنه يحتوي ملاحظات مُدمجة مع عناصر التهيئة. قم بتحرير الملف، بتغيير أي عناصر كما يلزم، ثم احفظ الملف واخرج من البرنامج. "
-"عند هذا، سيقرأ debconf الملف، ويستخدم القيم التي أدخلتها لتهيئة نظامك."
+"واجهة debconf المبنية على المُحرّر تقدم لك ملفاً نصيّاً أو أكثر لتحريرها. وهذا "
+"أحد هذه الملفات. إن كنت تألف ملفات تهيئة يونكس القياسيّة، سيكون هذا الملف "
+"مألوفاً لك، حيث أنه يحتوي ملاحظات مُدمجة مع عناصر التهيئة. قم بتحرير الملف، "
+"بتغيير أي عناصر كما يلزم، ثم احفظ الملف واخرج من البرنامج. عند هذا، سيقرأ "
+"debconf الملف، ويستخدم القيم التي أدخلتها لتهيئة نظامك."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96 ../Debconf/FrontEnd/Kde.pm:61
 #: ../Debconf/FrontEnd/Kde.pm:72
@@ -71,16 +74,20 @@ msgstr "واجهة dialog ليست متوافقة مع مخازن صدفة emacs
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
-msgstr "لن يعمل dialog على طرفيّة وهمية، أو مخزن صدفة emacs، أو بدون طرفيّة تحكّم."
+msgstr ""
+"لن يعمل dialog على طرفيّة وهمية، أو مخزن صدفة emacs، أو بدون طرفيّة تحكّم."
 
 #: ../Debconf/FrontEnd/Dialog.pm:102
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
-msgstr "ليس هناك برنامج مشابه لـdialog مثبّت، لذا لا يمكن استخدام الواجهة المبنيّة على dialog."
+msgstr ""
+"ليس هناك برنامج مشابه لـdialog مثبّت، لذا لا يمكن استخدام الواجهة المبنيّة على "
+"dialog."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgid ""
+"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr "تتطلب واجهة dialog شاشة بطول 13 سطراً على الأقل وعرض 31 عموداً."
 
 #: ../Debconf/FrontEnd/Dialog.pm:282
@@ -100,9 +107,9 @@ msgstr "Term::ReadLine::GNU ليس متوافق مع مخازن صدفة emacs."
 msgid "falling back to frontend: %s"
 msgstr "التّراجع إلى الواجهة: %s"
 
+# # CHECK
 #: ../Debconf/AutoSelect.pm:84
 #, c-format
-## CHECK
 msgid "unable to initialize frontend: %s"
 msgstr "لم يمكن ابتداء الواجهة: %s"
 
@@ -123,11 +130,13 @@ msgstr "قالب قاعدة البيانات غير مُحدّد في ملف ا�
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
-msgstr "الخيارات Sigils و Smileys في ملف التهيئة غير مستخدمة بعد الآن. الرجاء إزالتها."
+msgstr ""
+"الخيارات Sigils و Smileys في ملف التهيئة غير مستخدمة بعد الآن. الرجاء "
+"إزالتها."
 
+# # CHECK
 #: ../Debconf/Config.pm:147
 #, c-format
-## CHECK
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "مشكلة في إعداد قاعدة البيانات المُعرفة في المَقْطع %s من %s."
 
@@ -146,7 +155,9 @@ msgstr "الأولويات الصالحة هي: %s"
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
 "missing question %s."
-msgstr "تحذير: احتمال فساد قاعدة البيانات. ستتم محاولة إصلاحها بإعادة السؤال المفقود %s."
+msgstr ""
+"تحذير: احتمال فساد قاعدة البيانات. ستتم محاولة إصلاحها بإعادة السؤال المفقود "
+"%s."
 
 #: ../Debconf/Template.pm:201
 #, c-format
@@ -154,18 +165,18 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly seperated by a lone newline.\n"
 msgstr ""
-"القالب #%s في %s يحتوي حقلاً مُزدوج \"%s\" بقيمة جديدة \"%s\". "
-"على الأرجح أن القالبين الجديدين غير مفصولين بشكل صحيح بسطر جديد.\n"
+"القالب #%s في %s يحتوي حقلاً مُزدوج \"%s\" بقيمة جديدة \"%s\". على الأرجح أن "
+"القالبين الجديدين غير مفصولين بشكل صحيح بسطر جديد.\n"
 
+# # CHECK
 #: ../Debconf/Template.pm:226
 #, c-format
-## CHECK
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "## CHECKحقل قالب مجهول '%s'، في المَقْطع #%s من %s\n"
 
+# # CHECK
 #: ../Debconf/Template.pm:252
 #, c-format
-## CHECK
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "خطأ في إعراب القالب قُرْب `%s'، في المَقْطع #%s من %s\n"
 
@@ -212,9 +223,10 @@ msgstr "تعذر حفظ الملاحظة."
 msgid "Choices"
 msgstr "الخيارات"
 
+# # CHECK
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-## CHECK
-msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr "(لا تُدخل أي عنصر أو عنصر أو أكثر مفصولة بفواصل يتبعها مسافة (', ').)"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
@@ -232,7 +244,8 @@ msgid "no"
 msgstr "لا"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid "Debconf was not configured to display this note, so it mailed it to you."
+msgid ""
+"Debconf was not configured to display this note, so it mailed it to you."
 msgstr "لم تتم تهيئة debconf لعرض هذه الملاحظة، فقام بإرسالها إليك بالبريد."
 
 #: ../Debconf/Element/Noninteractive/Note.pm:64
@@ -252,15 +265,15 @@ msgstr "ليس أياً مما أعلاه"
 msgid "Enter the items you want to select, separated by spaces."
 msgstr "أدخل العناصر التي تريد اختيارها، مفصولة بمسافات."
 
+# # CHECK
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, c-format
-## CHECK
 msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
-"لم يُعثر على قيمة الإدخال، \"%s\" في خيارات C! يجب أن لا يحدث هذا أبداً. "
-"يبدو أن القوالب تُرجمت بشكل غير صحيح."
+"لم يُعثر على قيمة الإدخال، \"%s\" في خيارات C! يجب أن لا يحدث هذا أبداً. يبدو "
+"أن القوالب تُرجمت بشكل غير صحيح."
 
 #: ../Debconf/FrontEnd.pm:131
 #, c-format
@@ -298,11 +311,6 @@ msgstr "تهيئة الحزم مسبقاً ...\n"
 #, c-format
 msgid "template parse error: %s"
 msgstr "خطأ في إعراب القالب: %s"
-
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "تهيئة %s مسبقاً (%s)"
 
 #: ../dpkg-preconfigure:193
 #, c-format
@@ -348,15 +356,15 @@ msgstr "%s مفقودة"
 msgid "%s is missing; dropping %s"
 msgstr "%s مفقودة، إسقاط %s"
 
+# # CHECK
 #: ../debconf-mergetemplate:146
 #, c-format
-## CHECK
 msgid "%s is fuzzy at byte %s: %s"
 msgstr "%s مبهمة عند البايت %s: %s"
 
+# # CHECK
 #: ../debconf-mergetemplate:151
 #, c-format
-## CHECK
 msgid "%s is fuzzy at byte %s: %s; dropping it"
 msgstr "%s مبهمة عند البايت %s: %s؛ جاري إسقاطها"
 
@@ -370,3 +378,5 @@ msgstr "%s انتهت صلاحيتها"
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s انتهت صلاحيتها، إسقاط القالب بالكامل"
 
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "تهيئة %s مسبقاً (%s)"

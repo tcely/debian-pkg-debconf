@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:06+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-23 19:18+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -15,7 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
 msgid ""
@@ -94,7 +95,8 @@ msgstr ""
 "може бути застосована."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgid ""
+"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Для діалогового інтерфейсу потрібен термінал не менше 13 рядків в висоту та "
 "31 стовпчиків в ширину."
@@ -145,7 +147,8 @@ msgstr ""
 #: ../Debconf/Config.pm:147
 #, c-format
 msgid "Problem setting up the database defined by stanza %s of %s."
-msgstr "Виникла проблема при налаштуванні бази даних, визначеної в строфі %s з %s."
+msgstr ""
+"Виникла проблема при налаштуванні бази даних, визначеної в строфі %s з %s."
 
 #: ../Debconf/Config.pm:262
 #, c-format
@@ -231,7 +234,8 @@ msgid "Choices"
 msgstr "Варіанти"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Вкажіть необхідну кількість параметрів, розділяючи їх комою з пробілом (', "
 "').)"
@@ -251,7 +255,8 @@ msgid "no"
 msgstr "ні"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid "Debconf was not configured to display this note, so it mailed it to you."
+msgid ""
+"Debconf was not configured to display this note, so it mailed it to you."
 msgstr ""
 "Debconf був налаштований не відображувати це повідомлення, тому воно було "
 "відправлене поштою."
@@ -271,7 +276,8 @@ msgstr "жоден з перерахованих"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
 msgid "Enter the items you want to select, separated by spaces."
-msgstr "Вкажіть літери, що відповідають вибраним варіантам, розділяючи їх пробілами."
+msgstr ""
+"Вкажіть літери, що відповідають вибраним варіантам, розділяючи їх пробілами."
 
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, c-format
@@ -318,11 +324,6 @@ msgstr "Передналаштування пакунків...\n"
 #, c-format
 msgid "template parse error: %s"
 msgstr "помилка при розборі шаблону: %s"
-
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "Передналаштування %s (%s)"
 
 #: ../dpkg-preconfigure:193
 #, c-format
@@ -388,3 +389,5 @@ msgstr "Пакунок %s застарів"
 msgid "%s is outdated; dropping whole template!"
 msgstr "Пакунок %s застарів; кидаю весь шаблон!"
 
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "Передналаштування %s (%s)"

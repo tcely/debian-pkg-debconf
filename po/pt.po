@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:06+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-23 14:54+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -123,7 +123,8 @@ msgstr "Não foi possível iniciar o frontend: %s"
 
 #: ../Debconf/Config.pm:127
 msgid "Config database not specified in config file."
-msgstr "Base de dados de configuração não especificada no ficheiro de configuração."
+msgstr ""
+"Base de dados de configuração não especificada no ficheiro de configuração."
 
 #: ../Debconf/Config.pm:131
 msgid "Template database not specified in config file."
@@ -200,8 +201,9 @@ msgstr "Gravar (mail) Nota"
 
 #: ../Debconf/Element/Gnome/Note.pm:53
 msgid "Debconf was asked to save this note, so it mailed it to you."
-msgstr "Foi pedido ao Debconf para gravar esta nota, então enviou-a por "
-"e-mail para si."
+msgstr ""
+"Foi pedido ao Debconf para gravar esta nota, então enviou-a por e-mail para "
+"si."
 
 #: ../Debconf/Element/Gnome/Note.pm:55
 msgid "Information"
@@ -250,8 +252,8 @@ msgstr "não"
 msgid ""
 "Debconf was not configured to display this note, so it mailed it to you."
 msgstr ""
-"O Debconf não foi configurado para mostrar esta nota, por isso enviou-a "
-"via mail para si."
+"O Debconf não foi configurado para mostrar esta nota, por isso enviou-a via "
+"mail para si."
 
 #: ../Debconf/Element/Noninteractive/Note.pm:64
 msgid "Debconf"
@@ -300,7 +302,8 @@ msgstr "tem de especificar alguns debs para pré-configurar"
 
 #: ../dpkg-preconfigure:121
 msgid "delaying package configuration, since apt-utils is not installed"
-msgstr "a atrasar a configuração do pacote, já que o apt-utils não está instalado"
+msgstr ""
+"a atrasar a configuração do pacote, já que o apt-utils não está instalado"
 
 #: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
 #, c-format
@@ -315,11 +318,6 @@ msgstr "A pré-configurar os pacotes...\n"
 #, c-format
 msgid "template parse error: %s"
 msgstr "erro de parse do template: %s"
-
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "a pré-configurar %s (%s)"
 
 #: ../dpkg-preconfigure:193
 #, c-format
@@ -384,3 +382,6 @@ msgstr "%s está ultrapassado"
 #, c-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s está ultrapassado; deixando todo o template!"
+
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "a pré-configurar %s (%s)"

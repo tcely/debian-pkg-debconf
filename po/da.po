@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.4.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:06+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-24 14:17+0100\n"
 "Last-Translator: Morten Bo Johansen <mojo@mbjnet.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -14,12 +14,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
-msgid "You are using the editor-based debconf frontend to configure your system. See the end of this document for detailed instructions."
-msgstr "Du bruger debconfs editorbaserede brugerflade til at sætte dit system op. Se slutningen af dette dokument for detaljerede instruktioner."
+msgid ""
+"You are using the editor-based debconf frontend to configure your system. "
+"See the end of this document for detailed instructions."
+msgstr ""
+"Du bruger debconfs editorbaserede brugerflade til at sætte dit system op. Se "
+"slutningen af dette dokument for detaljerede instruktioner."
 
 #: ../Debconf/FrontEnd/Editor.pm:111
-msgid "The editor-based debconf frontend presents you with one or more text files to edit. This is one such text file. If you are familiar with standard unix configuration files, this file will look familiar to you -- it contains comments interspersed with configuration items. Edit the file, changing any items as necessary, and then save it and exit. At that point, debconf will read the edited file, and use the values you entered to configure the system."
-msgstr "Debconfs editorbaserede brugerflade giver dig en eller flere tekstfiler til redigering. Dette er en sådan tekstfil. Hvis du er bekendt med standard Unix-opsætningsfiler, vil denne fil se bekendt ud - den indeholder kommentarer og opsætningselementer. Rediger filen, ændr alle elementer i det omfang det er nødvendigt, gem den og afslut så. Derefter vil debconf læse den redigerede fil og bruge værdierne du indtastede til at sætte systemet op."
+msgid ""
+"The editor-based debconf frontend presents you with one or more text files "
+"to edit. This is one such text file. If you are familiar with standard unix "
+"configuration files, this file will look familiar to you -- it contains "
+"comments interspersed with configuration items. Edit the file, changing any "
+"items as necessary, and then save it and exit. At that point, debconf will "
+"read the edited file, and use the values you entered to configure the system."
+msgstr ""
+"Debconfs editorbaserede brugerflade giver dig en eller flere tekstfiler til "
+"redigering. Dette er en sådan tekstfil. Hvis du er bekendt med standard Unix-"
+"opsætningsfiler, vil denne fil se bekendt ud - den indeholder kommentarer og "
+"opsætningselementer. Rediger filen, ændr alle elementer i det omfang det er "
+"nødvendigt, gem den og afslut så. Derefter vil debconf læse den redigerede "
+"fil og bruge værdierne du indtastede til at sætte systemet op."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96 ../Debconf/FrontEnd/Kde.pm:61
 #: ../Debconf/FrontEnd/Kde.pm:72
@@ -53,16 +69,26 @@ msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialog-grænseflade er ikke forenelig med Emacs-skalbuffere"
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
-msgid "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal."
-msgstr "Dialog-grænsefladen vil ikke virke på en 'dum' terminal, en Emacs-skalbuffer eller uden en styrende terminal."
+msgid ""
+"Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
+"without a controlling terminal."
+msgstr ""
+"Dialog-grænsefladen vil ikke virke på en 'dum' terminal, en Emacs-skalbuffer "
+"eller uden en styrende terminal."
 
 #: ../Debconf/FrontEnd/Dialog.pm:102
-msgid "No usable dialog-like program is installed, so the dialog based frontend cannot be used."
-msgstr "Der er ikke installeret noget brugbart dialoglignende program, så den dialogbaserede grænseflade kan ikke bruges."
+msgid ""
+"No usable dialog-like program is installed, so the dialog based frontend "
+"cannot be used."
+msgstr ""
+"Der er ikke installeret noget brugbart dialoglignende program, så den "
+"dialogbaserede grænseflade kan ikke bruges."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
-msgstr "Dialog-grænsefladen behøver en skærm, min. 13 linjer høj og 31 kolonner bred."
+msgid ""
+"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgstr ""
+"Dialog-grænsefladen behøver en skærm, min. 13 linjer høj og 31 kolonner bred."
 
 #: ../Debconf/FrontEnd/Dialog.pm:282
 msgid "Debian Configuration"
@@ -100,13 +126,18 @@ msgid "Template database not specified in config file."
 msgstr "Skabelondatabase ikke specificeret i opsætningsfil"
 
 #: ../Debconf/Config.pm:136
-msgid "The Sigils and Smileys options in the config file are no longer used. Please remove them."
-msgstr "Sigils- og Smileys-tilvalg bruges ikke længere i opsætningsfilen. Fjern dem venligst."
+msgid ""
+"The Sigils and Smileys options in the config file are no longer used. Please "
+"remove them."
+msgstr ""
+"Sigils- og Smileys-tilvalg bruges ikke længere i opsætningsfilen. Fjern dem "
+"venligst."
 
 #: ../Debconf/Config.pm:147
 #, c-format
 msgid "Problem setting up the database defined by stanza %s of %s."
-msgstr "Opsætning af database, defineret ved kombination %s af %s, gav problemer."
+msgstr ""
+"Opsætning af database, defineret ved kombination %s af %s, gav problemer."
 
 #: ../Debconf/Config.pm:262
 #, c-format
@@ -120,13 +151,22 @@ msgstr "Gyldige prioriteringer er: %s"
 
 #: ../Debconf/Template.pm:90
 #, c-format
-msgid "warning: possible database corruption. Will attempt to repair by adding back missing question %s."
-msgstr "advarsel: database måske ødelagt. Vil forsøge at reparere ved at gentilføje manglende spørgsmål %s."
+msgid ""
+"warning: possible database corruption. Will attempt to repair by adding back "
+"missing question %s."
+msgstr ""
+"advarsel: database måske ødelagt. Vil forsøge at reparere ved at gentilføje "
+"manglende spørgsmål %s."
 
 #: ../Debconf/Template.pm:201
 #, c-format
-msgid "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". Probably two templates are not properly seperated by a lone newline.\n"
-msgstr "Skabelon nr. %s i %s har et dubletfelt \"%s\" med en ny værdi \"%s\". Det kan være fordi at to skabeloner ikke er adskilt rigtigt med en tom ny linje.\n"
+msgid ""
+"Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
+"Probably two templates are not properly seperated by a lone newline.\n"
+msgstr ""
+"Skabelon nr. %s i %s har et dubletfelt \"%s\" med en ny værdi \"%s\". Det "
+"kan være fordi at to skabeloner ikke er adskilt rigtigt med en tom ny "
+"linje.\n"
 
 #: ../Debconf/Template.pm:226
 #, c-format
@@ -182,8 +222,11 @@ msgid "Choices"
 msgstr "Valg"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
-msgstr "(Vælg nul eller flere punkter. Adskil dem med et komma og et mellemrum (', ').)"
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgstr ""
+"(Vælg nul eller flere punkter. Adskil dem med et komma og et mellemrum (', "
+"').)"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:36
@@ -200,8 +243,10 @@ msgid "no"
 msgstr "nej"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid "Debconf was not configured to display this note, so it mailed it to you."
-msgstr "Debconf var ikke sat op til at vise denne notits, så den sendte den til dig."
+msgid ""
+"Debconf was not configured to display this note, so it mailed it to you."
+msgstr ""
+"Debconf var ikke sat op til at vise denne notits, så den sendte den til dig."
 
 #: ../Debconf/Element/Noninteractive/Note.pm:64
 msgid "Debconf"
@@ -222,8 +267,12 @@ msgstr "Vælg de ønskede punkter, adskilt af mellemrum."
 
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, c-format
-msgid "Input value, \"%s\" not found in C choices! This should never happen. Perhaps the templates were incorrectly localized."
-msgstr "Værdi på inddata \"%s\" fandtes ikke i C-valg! Dette burde aldrig ske. Måske var sprogtilpasningen af skabelonerne forkert."
+msgid ""
+"Input value, \"%s\" not found in C choices! This should never happen. "
+"Perhaps the templates were incorrectly localized."
+msgstr ""
+"Værdi på inddata \"%s\" fandtes ikke i C-valg! Dette burde aldrig ske. Måske "
+"var sprogtilpasningen af skabelonerne forkert."
 
 #: ../Debconf/FrontEnd.pm:131
 #, c-format
@@ -261,11 +310,6 @@ msgstr "Prækonfigurerer pakker ...\n"
 #, c-format
 msgid "template parse error: %s"
 msgstr "Fortolkningsfejl i skabelon: %s"
-
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "prækonfigurerer %s (%s)"
 
 #: ../dpkg-preconfigure:193
 #, c-format
@@ -330,3 +374,6 @@ msgstr "%s er forældet"
 #, c-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s er forældet; udelader hele skabelonen"
+
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "prækonfigurerer %s (%s)"

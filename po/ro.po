@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-23 09:02+0100\n"
+"POT-Creation-Date: 2005-02-04 20:14-0500\n"
 "PO-Revision-Date: 2005-01-26 11:29+0200\n"
 "Last-Translator: Sorin Batariuc <sorin@bonbon.net>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
@@ -129,16 +129,16 @@ msgstr "nu pot iniţializa interfaţa program: %s"
 msgid "Unable to start a frontend: %s"
 msgstr "Nu pot porni interfaţa program: %s"
 
-#: ../Debconf/Config.pm:128
+#: ../Debconf/Config.pm:127
 msgid "Config database not specified in config file."
 msgstr ""
 "Configurarea bazei de date n-a fost specificată în fişierul de configurare."
 
-#: ../Debconf/Config.pm:132
+#: ../Debconf/Config.pm:131
 msgid "Template database not specified in config file."
 msgstr "Şablonul bazei de date n-a fost specificat în fişierul de configurare."
 
-#: ../Debconf/Config.pm:137
+#: ../Debconf/Config.pm:136
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -146,17 +146,17 @@ msgstr ""
 "Opţiunile Sigils şi Smileys din fişierul de configurare nu mai sunt "
 "folosite. Vă rog să le ştergeţi."
 
-#: ../Debconf/Config.pm:148
+#: ../Debconf/Config.pm:147
 #, c-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Problemă la ajustarea bazei de date definită de strofa %s din %s."
 
-#: ../Debconf/Config.pm:277
+#: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Se ignoră prioritatea nevalidă \"%s\""
 
-#: ../Debconf/Config.pm:278
+#: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
 msgstr "Priorităţile valide sunt: %s"
@@ -329,11 +329,6 @@ msgstr "Se preconfigurează pachetele ...\n"
 msgid "template parse error: %s"
 msgstr "eroare la analiza şablonului: %s"
 
-#: ../dpkg-preconfigure:191
-#, c-format
-msgid "preconfiguring %s (%s)"
-msgstr "preconfigurez %s (%s)"
-
 #: ../dpkg-preconfigure:193
 #, c-format
 msgid "debconf: can't chmod: %s"
@@ -397,3 +392,6 @@ msgstr "%s este depăşit"
 #, c-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s este depăşit, renunţ la întregul şablon!"
+
+#~ msgid "preconfiguring %s (%s)"
+#~ msgstr "preconfigurez %s (%s)"
