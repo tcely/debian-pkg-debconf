@@ -2,7 +2,6 @@
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Polish translation Copyright (C) Marcin Owsiany <porridge@debian.org>, 2000-2002.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 0.3.39\n"
