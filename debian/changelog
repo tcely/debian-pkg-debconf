@@ -5,6 +5,10 @@ debconf (0.2.79) frozen unstable; urgency=low
     not under the confmodule interface. base-config shows this is necessary,
     with its non-confmodule postinst. This change is needed in frozen to
     keep base-config working.
+  * Fixed debconf's oldest bug report, which turned out to be a bug in how
+    IPC::Open3 was being called. It also turns out this bug is tickeled by
+    base-config, since it will be reconfiguredd from inittab, so it turned out
+    to be a critical bug. Closes: #47659
   * Documented (again) in dpkg-reconfigure.8 that 
     "dpkg-reconfigure --priority=medium debconf" should be used to
     reconfigure debconf. Closes: #55706
