@@ -223,7 +223,11 @@ Debian::DebConf::ConfigDb::savedb(Debian::DebConf::Config::dbdir());
 	sub getversion {
 		my $package=shift;
 		
-		return $versions{$package} if $haveversions;
+		if ($haveversions) {
+			return $versions{$package} if defined $versions{$package};
+			return ''; # not installed
+		}
+
 		{
 			local $/="\n\n";
 			open (STATUS, "</var/lib/dpkg/status");
@@ -237,6 +241,7 @@ Debian::DebConf::ConfigDb::savedb(Debian::DebConf::Config::dbdir());
 			close STATUS;
 		}	
 		$haveversions=1;
-		return $versions{$package};
+		return $versions{$package} if defined $versions{$package};
+		return ''; # not installed
 	}
 }

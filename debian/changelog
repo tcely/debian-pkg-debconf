@@ -1,3 +1,17 @@
+debconf (0.2.80.16) frozen; urgency=low
+
+  * I don't think this will actually get into frozen, but it fixes my most
+    common problem report, and I had to build it anyway for something else,
+    so may be worth a shot. Release maanger, feel free to reject.
+  * Catch undefined value returned if a package that is not installed is
+    preconfigured, and use '' instead. This clears up the undefined value
+    warning people have been seeing for months, especially on fresh debian
+    installs where a lot of stuff gets preconfigured and you see it about
+    20 times. (see bugs #55498, #57792, #62263, #53657) This fix has been
+    tested for 2 months in the woody debconf tree, and works.
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 21 Jul 2000 15:01:08 -0700
+
 debconf (0.2.80.15) frozen; urgency=low
 
   * Fixed a typo that breaks the web frontend. Closes: #64474 
