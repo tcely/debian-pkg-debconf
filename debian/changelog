@@ -1,4 +1,4 @@
-debconf (1.4.30.8) UNRELEASED; urgency=low
+debconf (1.4.30.8) testing-proposed-updates; urgency=low
 
   * Translations:
     - Updated Spanish (programs). Closes: #274148
