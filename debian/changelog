@@ -1,3 +1,12 @@
+debconf (0.2.80.8) frozen; urgency=low
+
+  * Fixed bad merge of changes that I thought was done in 0.2.80.6; fixes 2
+    important bugs.
+  * Fixed minor back problem in debconf's own config script, and some
+    documentation fixes.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 17 Feb 2000 11:52:21 -0800
+
 debconf (0.2.80.7) frozen; urgency=low
 
   * Important fix: don't accidentially delete Dialog/Text.pm from
@@ -13,6 +22,7 @@ debconf (0.2.80.6) frozen; urgency=low
     in a tight loop, unable to read keypresses from stdin. The fix is
     pretty simple; just open /dev/tty and connect STDIN to it after reading
     the filelist from apt. Closes: #56518, #57771 (important bugs).
+  * Disabled dialog exclusion that was added in the last release.
 
  -- Joey Hess <joeyh@debian.org>  Mon, 14 Feb 2000 11:43:52 -0800
 
