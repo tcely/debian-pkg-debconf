@@ -2,18 +2,20 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004
+# Dennis Stampfer <seppy@debian.org>, 2005
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.0.25\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-04 20:14-0500\n"
-"PO-Revision-Date: 2004-07-21 10:16 +0200\n"
-"Last-Translator: Michael Piefel <piefel@debian.org>\n"
-"Language-Team: German, freelance\n"
+"PO-Revision-Date: 2005-02-12 19:32GMT\n"
+"Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
+"Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
 msgid ""
@@ -91,8 +93,7 @@ msgstr ""
 "Frontend nicht verwendet werden."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid ""
-"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Für das Dialog-Frontend muss das Bild mindestens 13 Zeilen hoch und 31 "
 "Spalten breit sein."
@@ -230,8 +231,7 @@ msgid "Choices"
 msgstr "Auswahl"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid ""
-"(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Geben Sie keinen oder mehr Begriffe durch ein Komma und ein Leerzeichen "
 "(, ) getrennt ein.)"
@@ -251,8 +251,7 @@ msgid "no"
 msgstr "nein"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid ""
-"Debconf was not configured to display this note, so it mailed it to you."
+msgid "Debconf was not configured to display this note, so it mailed it to you."
 msgstr ""
 "Debconf wurde nicht konfiguriert, diese Nachricht anzuzeigen, daher sendet "
 "es sie Ihnen."
@@ -306,17 +305,16 @@ msgstr "es müssen debs zum Vorkonfigurieren angegeben werden"
 
 #: ../dpkg-preconfigure:121
 msgid "delaying package configuration, since apt-utils is not installed"
-msgstr ""
-"Schiebe die Paket-Konfiguration auf, da apt-utils nicht installiert ist"
+msgstr "Schiebe die Paket-Konfiguration auf, da apt-utils nicht installiert ist"
 
 #: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
 #, c-format
 msgid "apt-extracttemplates failed: %s"
-msgstr ""
+msgstr "apt-extracttemplates schlug fehl: %s"
 
 #: ../dpkg-preconfigure:167
 msgid "Preconfiguring packages ...\n"
-msgstr ""
+msgstr "Vorkonfigurieren der Pakete ...\n"
 
 #: ../dpkg-preconfigure:179
 #, c-format
@@ -387,12 +385,3 @@ msgstr "%s ist veraltet"
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s ist veraltet; lasse das ganze Tamplate fallen!"
 
-#, fuzzy
-#~ msgid "preconfiguring %s (%s)"
-#~ msgstr "Konfiguriere %s"
-
-#~ msgid "Debconf was asked to save this "
-#~ msgstr "Debconf wurde gebeten, diese Notiz aufzubewahren, "
-
-#~ msgid "note, so it mailed it to you."
-#~ msgstr "daher hat es sie Ihnen zugesendet."
