@@ -1,3 +1,10 @@
+debconf (0.2.80.1) frozen; urgency=low
+
+  * Turned off "deprecated debconf compatibility library" warning, for
+    stable. It will stay enabled in unstable. Closes: #56665
+
+ -- Joey Hess <joeyh@debian.org>  Sun,  6 Feb 2000 18:25:50 -0800
+
 debconf (0.2.80) frozen unstable; urgency=low
 
   * Adjusted debconf dependancy to perl-5.005, not perl5. As Raphael points

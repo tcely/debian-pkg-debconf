@@ -32,7 +32,7 @@ _command () {
 	echo $* >&3
 }
 
-echo "WARNING: Using deprecated debconf compatibility library."
+#echo "WARNING: Using deprecated debconf compatibility library."
 
 ###############################################################################
 # Commands.
