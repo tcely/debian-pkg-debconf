@@ -14,7 +14,7 @@ use Debconf::Priority qw(priority_valid priority_list);
 use Debconf::Log qw(warn);
 use Debconf::Db;
 
-use fields qw(config templates frontend frontend_forced priority terse reshow
+use fields qw(config templates frontend priority terse reshow
               admin_email log debug nowarnings smileys sigils);
 our $config=fields::new('Debconf::Config');
 
@@ -206,7 +206,7 @@ EOF
 	require Getopt::Long;
 	Getopt::Long::Configure('bundling');
 	Getopt::Long::GetOptions(
-		'frontend|f=s',	sub { shift; $class->frontend(shift); $config->frontend_forced(1) },
+		'frontend|f=s',	sub { shift; $class->frontend(shift) },
 		'priority|p=s',	sub { shift; $class->priority(shift) },
 		'terse',	sub { $config->{terse} = 'true' },
 		'help|h',	$showusage,
@@ -239,20 +239,6 @@ sub frontend {
 		$ret=lcfirst($question->value) || $ret;
 	}
 	return $ret;
-}
-
-=item frontend_forced
-
-Whether the frontend was forced set on the command line or in the
-environment.
-
-=cut
-
-sub frontend_forced {
-	my ($class, $val) = @_;
-	$config->{frontend_forced} = $val
-		if defined $val || exists $ENV{DEBIAN_FRONTEND};
-	return $config->{frontend_forced} ? 1 : 0;
 }
 
 =item priority

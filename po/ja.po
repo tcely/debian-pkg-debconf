@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-16 23:12+0100\n"
+"POT-Creation-Date: 2004-08-16 23:24+0100\n"
 "PO-Revision-Date: 2004-08-16 12:32+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
@@ -149,12 +149,12 @@ msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "%2$s の %1$s で定義されたデータベースを設定するのに問題が発生しました。"
 
-#: ../Debconf/Config.pm:276
+#: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "不正なプロパティ \"%s\" を無視します"
 
-#: ../Debconf/Config.pm:277
+#: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
 msgstr "有効なプロパティは次のとおりです: %s"
@@ -330,21 +330,21 @@ msgstr "%s は終了コード %s で前設定に失敗しました"
 msgid "%s must be run as root"
 msgstr "%s は root で実行する必要があります"
 
-#: ../dpkg-reconfigure:137
+#: ../dpkg-reconfigure:136
 msgid "please specify a package to reconfigure"
 msgstr "再設定するパッケージを指定してください"
 
-#: ../dpkg-reconfigure:157
+#: ../dpkg-reconfigure:156
 #, c-format
 msgid "%s is not installed"
 msgstr "%s はインストールされていません"
 
-#: ../dpkg-reconfigure:161
+#: ../dpkg-reconfigure:160
 #, c-format
 msgid "%s is broken or not fully installed"
 msgstr "%s は壊れているか、完全にインストールされていません"
 
-#: ../dpkg-reconfigure:238
+#: ../dpkg-reconfigure:237
 #, c-format
 msgid "Cannot read status file: %s"
 msgstr "ステータスファイルを読み込めません: %s"
