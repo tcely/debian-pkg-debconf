@@ -1,3 +1,14 @@
+debconf (1.4.30.3) testing-proposed-updates; urgency=low
+ 
+   * Skip title questions in debconf-get-selections along with the notes, text,
+     and errors previously skipped.
+   * Add titles to the list of known types in debconf-set-selections, just in
+     case.
+   * (These combined to make preseeding hard to use, which is why this is
+     another upload to t-p-u.)
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  1 Sep 2004 01:00:08 -0400
+
 debconf (1.4.30.2) testing-proposed-updates; urgency=low
 
   * Hack in an --installer parameter in debconf-get-selections so the d-i
