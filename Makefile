@@ -41,7 +41,8 @@ install: install-common
 # This target installs a minimal debconf.
 tiny-install: install-common
 	# Delete the libs we don't need.
-	find $(prefix)/usr/lib/perl5/Debian/DebConf/ | egrep 'Text|Web|Gtk' | xargs rm -rf
+	find $(prefix)/usr/lib/perl5/Debian/DebConf/ | egrep 'Text|Web|Gtk' \
+		| grep -v Dialog/ | xargs rm -rf
 	# Strip out POD documentation and all other comments
 	# from all .pm files.
 	find $(prefix)/usr/lib/perl5/Debian/DebConf/ -name '*.pm' | \
@@ -52,5 +53,7 @@ tiny-install: install-common
 		'
 	find $(prefix)/usr/lib/perl5/Debian/DebConf/ -name '*.bak' | xargs rm -f
 	install -d $(prefix)/usr/sbin $(prefix)/usr/share/man/man8
-	install Client/dpkg-reconfigure $(prefix)/usr/sbin
-	cp Client/dpkg-reconfigure.8 $(prefix)/usr/share/man/man8
+	install Client/dpkg-reconfigure Client/dpkg-preconfigure \
+		$(prefix)/usr/sbin/
+	cp Client/dpkg-reconfigure.8 Client/dpkg-preconfigure.8 \
+		$(prefix)/usr/share/man/man8
