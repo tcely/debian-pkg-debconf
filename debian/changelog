@@ -1,4 +1,4 @@
-debconf (1.4.30.6) UNRELEASED; urgency=low
+debconf (1.4.30.6) testing-proposed-updates; urgency=low
 
   * Translations
     - Errors corrected in Greek programs translations by
@@ -8,7 +8,7 @@ debconf (1.4.30.6) UNRELEASED; urgency=low
     - Russian translations updates. Closes: #272723
     - Dutch translation added. Closes: #272535
     - Portuguese translation added. Closes: #273227
-  * Spelling error in "man page" of debconf-show fixed. Closes: 272541
+  * Spelling error in "man page" of debconf-show fixed. Closes: #272541
 
  -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 27 Sep 2004 17:16:35 +0200
 

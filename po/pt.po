@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-21 13:21-0600\n"
+"POT-Creation-Date: 2004-09-27 22:15-0400\n"
 "PO-Revision-Date: 2004-09-22 18:40+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -20,9 +20,8 @@ msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
 msgstr ""
-"Está a utilizar um frontend do debconf baseado num editor para configurar "
-"o seu sistema. "
-"Veja o final deste documento para instruções detalhadas."
+"Está a utilizar um frontend do debconf baseado num editor para configurar o "
+"seu sistema. Veja o final deste documento para instruções detalhadas."
 
 #: ../Debconf/FrontEnd/Editor.pm:111
 msgid ""
@@ -124,7 +123,8 @@ msgstr "Não foi possível iniciar o frontend: %s"
 
 #: ../Debconf/Config.pm:127
 msgid "Config database not specified in config file."
-msgstr "Base de dados de configuração não especificada no ficheiro de configuração."
+msgstr ""
+"Base de dados de configuração não especificada no ficheiro de configuração."
 
 #: ../Debconf/Config.pm:131
 msgid "Template database not specified in config file."
@@ -143,12 +143,12 @@ msgstr ""
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Problema ao definir a base de dados definida por stanza %s de %s."
 
-#: ../Debconf/Config.pm:276
+#: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "A ignorar a prioridade inválida \"%s\""
 
-#: ../Debconf/Config.pm:277
+#: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
 msgstr "As prioridades válidas são: %s"
@@ -201,7 +201,8 @@ msgstr "Gravar (mail) Nota"
 
 #: ../Debconf/Element/Gnome/Note.pm:53
 msgid "Debconf was asked to save this note, so it mailed it to you."
-msgstr "Foi pedido ao Debconf para gravar esta nota, então voi enviada por e-mail "
+msgstr ""
+"Foi pedido ao Debconf para gravar esta nota, então voi enviada por e-mail "
 "para si."
 
 #: ../Debconf/Element/Gnome/Note.pm:55
@@ -230,7 +231,8 @@ msgstr "Escolhas"
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
-"(Introduza zero ou mais items sepatados por uma virgula seguida de um espaço (', ').)"
+"(Introduza zero ou mais items sepatados por uma virgula seguida de um espaço "
+"(', ').)"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:36
@@ -276,9 +278,8 @@ msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
-"Valor de entrada, \"%s\" não foi encontrado nas escolhas de C! "
-"Isto nunca deveria acontecer. "
-"Talvez os templates estejam com os locales incorrectos."
+"Valor de entrada, \"%s\" não foi encontrado nas escolhas de C! Isto nunca "
+"deveria acontecer. Talvez os templates estejam com os locales incorrectos."
 
 #: ../Debconf/FrontEnd.pm:131
 #, c-format
@@ -301,7 +302,8 @@ msgstr "tem de especificar alguns debs para pré-configurar"
 
 #: ../dpkg-preconfigure:121
 msgid "delaying package configuration, since apt-utils is not installed"
-msgstr "a atrasar a configuração do pacote, já que o apt-utils não está instalado"
+msgstr ""
+"a atrasar a configuração do pacote, já que o apt-utils não está instalado"
 
 #: ../dpkg-preconfigure:179
 #, c-format
@@ -323,21 +325,21 @@ msgstr "%s falhou a pré-configuração, com estado de saída %s"
 msgid "%s must be run as root"
 msgstr "%s tem de ser corrido como root"
 
-#: ../dpkg-reconfigure:137
+#: ../dpkg-reconfigure:136
 msgid "please specify a package to reconfigure"
 msgstr "por favor especifique o pacote a reconfigurar"
 
-#: ../dpkg-reconfigure:157
+#: ../dpkg-reconfigure:156
 #, c-format
 msgid "%s is not installed"
 msgstr "%s não está instalado"
 
-#: ../dpkg-reconfigure:161
+#: ../dpkg-reconfigure:160
 #, c-format
 msgid "%s is broken or not fully installed"
 msgstr "%s está defeituoso ou não totalmente instalado"
 
-#: ../dpkg-reconfigure:238
+#: ../dpkg-reconfigure:237
 #, c-format
 msgid "Cannot read status file: %s"
 msgstr "Não pode ler o estado do ficheiro: %s"
