@@ -2,8 +2,9 @@ debconf (1.4.30.11) UNRELEASED; urgency=low
 
   * Translations:
     - Finnish updated (programs). Closes: #280709
+    - Romanian added (programs). Closes: #283209
 
- -- Christian Perrier <bubulle@debian.org>  Thu, 11 Nov 2004 09:50:41 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sat, 27 Nov 2004 12:39:51 +0100
 
 debconf (1.4.30.10) testing-proposed-updates; urgency=low
 
