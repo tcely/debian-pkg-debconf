@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#    Translators, please read /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debconf 1.2.35\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-28 19:07-0500\n"
+"PO-Revision-Date: 2004-08-16 12:33+0900\n"
+"Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "Dialog, Readline, Gnome, Kde, Editor, Noninteractive"
+msgstr "ダイアログ, Readline, Gnome, Kde, エディタ, 非対話的"
+
+#. Type: select
+#. Description
+#: ../templates:5
+msgid "What interface should be used for configuring packages?"
+msgstr "パッケージの設定にどのインターフェースを用いますか?"
+
+#. Type: select
+#. Description
+#: ../templates:5
+msgid ""
+"Packages that use debconf for configuration share a common look and feel. "
+"You can select the type of user interface they use."
+msgstr ""
+"設定に debconf を用いるパッケージは、共通のルック＆フィールを用います。どの種"
+"類のユーザインターフェースを用いるかを選んでください。"
+
+#. Type: select
+#. Description
+#: ../templates:5
+msgid ""
+"The dialog frontend is a full-screen, character based interface, while the "
+"readline frontend uses a more traditional plain text interface, and both the "
+"gnome and kde frontends are modern X interfaces, fitting the respective "
+"desktops (but may be used in any X environment). The editor frontend lets "
+"you configure things using your favorite text editor. The noninteractive "
+"frontend never asks you any questions."
+msgstr ""
+"「ダイアログ」は全画面の文字ベースのインターフェースです。「readline」はより"
+"伝統的なプレーンテキストのインターフェースです。「gnome」と「kde」は近代的な "
+"X のインターフェースで、それぞれのデスクトップに適しています (ほかの X 環境で"
+"利用することもできます)。「エディタ」を用いるとあなたの好きなテキストエディタ"
+"を用いることができます。「非対話的」を選ぶとまったく質問をしなくなります。"
+
+#. Type: select
+#. Choices
+#: ../templates:18
+msgid "critical, high, medium, low"
+msgstr "重要, 高, 中, 低"
+
+#. Type: select
+#. Description
+#: ../templates:20
+msgid "See only questions that are of what priority and higher?"
+msgstr "どの優先度以上の質問のみしか表示しないようにしますか?"
+
+#. Type: select
+#. Description
+#: ../templates:20
+msgid ""
+"Debconf prioritizes the questions it asks you. Pick the lowest priority of "
+"question you want to see:\n"
+"  - 'critical' only prompts you if the system might break.\n"
+"    Pick it if you are a newbie, or in a hurry.\n"
+"  - 'high' is for rather important questions\n"
+"  - 'medium' is for normal questions\n"
+"  - 'low' is for control freaks who want to see everything"
+msgstr ""
+"あなたが答えたい質問のうち、最低の優先度のものを選択してください。\n"
+" - 「重要」は、ユーザが介在しないとシステムを破壊しかねないような項目用で"
+"す。\n"
+"   あなたが初心者か、あるいは急いでいるのであればこれを選んでください。\n"
+" - 「高」は、適切なデフォルトの回答がないような項目用です。\n"
+" - 「中」は、適切なデフォルトの回答があるような普通の項目用です。\n"
+" - 「低」は、ほとんどの場合にデフォルトの回答で構わないような、ささいな項目用"
+"です。"
+
+#. Type: select
+#. Description
+#: ../templates:20
+msgid ""
+"Note that no matter what level you pick here, you will be able to see every "
+"question if you reconfigure a package with dpkg-reconfigure."
+msgstr ""
+"注意: ここで何を選択しても、以前に行なった質問は dpkg-reconfigure プログラム"
+"を使用して表示できます。"
