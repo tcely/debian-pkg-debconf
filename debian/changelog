@@ -1,3 +1,16 @@
+debconf (0.2.80.2) frozen; urgency=low
+
+  * Installed workaround from Joel Klecker to fix the annoying termcap
+    warning from Term::Readline. This does not close these bugs, but it does
+    work around them: #47363, #50286, #50540, #51787, #52052, #53274,
+    #55142, #56987, and #46270
+  * Given the number of times people tend to report this bug, and how much
+    it confuses them (people who mysteriously think the one line of warning
+    means the entire install failed (see bug #56987), and so on), and since
+    it is a 1 line workaround, I think this is a candidate for frozen.
+
+ -- Joey Hess <joeyh@debian.org>  Mon,  7 Feb 2000 23:40:06 -0800
+
 debconf (0.2.80.1) frozen; urgency=low
 
   * Turned off "deprecated debconf compatibility library" warning, for
