@@ -1,3 +1,11 @@
+debconf (1.4.30.10) testing-proposed-updates; urgency=low
+
+  * Joey Hess
+    - Remove the debug message added in the last verson, the check seems
+      somewhat buggy and we can debug it in unstable.
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  3 Nov 2004 17:26:31 -0500
+
 debconf (1.4.30.9) testing-proposed-updates; urgency=low
 
   * Joey Hess
