@@ -1,3 +1,10 @@
+debconf (1.4.30.8) UNRELEASED; urgency=low
+
+  * Translations:
+    - Updated Spanish (programs). Closes: #274148
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Thu, 30 Sep 2004 11:14:04 +0200
+
 debconf (1.4.30.7) testing-proposed-updates; urgency=low
 
   * Joey Hess
