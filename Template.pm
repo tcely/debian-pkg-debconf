@@ -134,7 +134,9 @@ Set/get a property. This supports internationalization.
 =cut
 
 {
-	my @langs=_getlangs();
+	my @langs=(); # this would call getlangs(), but I have disabled
+	              # localizations for potato, since it's broken in this
+		      # old version
 
 	sub AUTOLOAD {
 		my $this=shift;

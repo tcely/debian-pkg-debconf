@@ -1,3 +1,13 @@
+debconf (0.2.80.17) stable; urgency=low
+
+  * Disabled locales. The issue is that select elements are quite broken
+    if used in no-C locales. So broken that any package that uses them with
+    debconf will probably get quite confused. This is fixed in woody, but
+    the fix was quite a lot of code, so it seems safer just to disable
+    them. I modified one line of code.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 28 Aug 2000 21:37:00 -0700
+
 debconf (0.2.80.16) frozen; urgency=low
 
   * I don't think this will actually get into frozen, but it fixes my most
