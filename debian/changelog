@@ -1,3 +1,10 @@
+debconf (1.4.30.9) UNRELEASED; urgency=low
+
+  * Translations:
+    - Indonesian added (programs). Closes: #275981
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 12 Oct 2004 08:40:57 +0200
+
 debconf (1.4.30.8) testing-proposed-updates; urgency=low
 
   * Translations:
