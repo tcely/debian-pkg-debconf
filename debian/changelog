@@ -1,17 +1,17 @@
-debconf (1.4.31) unstable; urgency=low
+debconf (1.4.30.1) testing-proposed-updates; urgency=low
 
+  * Docs and translations only upload for sarge.
   * Improve the man page with state machine improvements and better back out
     handling from Bruce Perens.
   * Minor Danish po file update. Closes: #262131
-  * Patch from David Schweikert to let dpkg-reconfigure use the noninteractive
-    frontend if forced to do so. Closes: #263398
   * Patch from Julien Louis to add translations of debconf-communicate and
     debconf-set-selections to debconf-i18n. Closes: #264140
   * Ran recode latin1..utf-8 debian/changelog. Closes: #214563
   * Add Tukish po file translation from Recai Oktas. Closes: #264713
   * Japanese po file update from kmuto. Closes: #265984
+    (This last one fixes a very confusing translation error.)
 
- -- Joey Hess <joeyh@debian.org>  Mon, 16 Aug 2004 23:11:33 +0100
+ -- Joey Hess <joeyh@debian.org>  Thu, 29 Jul 2004 13:54:40 -0400
 
 debconf (1.4.30) unstable; urgency=low
 
