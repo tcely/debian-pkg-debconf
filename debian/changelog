@@ -1,3 +1,10 @@
+debconf (0.2.80.13) frozen; urgency=low
+
+  * Use fully-qualified path for dpkg-preconfigure in apt.conf, 
+    Closes: #58469
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  1 Mar 2000 11:35:07 -0800
+
 debconf (0.2.80.12) frozen; urgency=low
 
   * When debconf or debconf-tiny is purged, the database is not deleted if
