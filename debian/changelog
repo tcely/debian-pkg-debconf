@@ -1,3 +1,9 @@
+debconf (0.5.65) unstable; urgency=low
+
+  * Built with apt 0.5, since it has finally been released.
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 21 Feb 2001 00:19:20 -0800
+
 debconf (0.5.64) unstable; urgency=low
 
   * Updated to new perl policy.
