@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-16 23:12+0100\n"
+"POT-Creation-Date: 2004-08-17 20:50+0100\n"
 "PO-Revision-Date: 2004-05-03 20:41+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -49,10 +49,6 @@ msgstr ""
 msgid "Debconf on %s"
 msgstr "Debconf %s-n"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
-msgid "More"
-msgstr "Gehiago"
-
 #: ../Debconf/FrontEnd/Web.pm:65
 #, c-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
@@ -66,6 +62,10 @@ msgstr "Atzera"
 #: ../Debconf/FrontEnd/Web.pm:167
 msgid "Next"
 msgstr "Hurrengoa"
+
+#: ../Debconf/FrontEnd/Teletype.pm:96
+msgid "More"
+msgstr "Gehiago"
 
 #: ../Debconf/FrontEnd/Dialog.pm:50
 msgid "TERM is not set, so the dialog frontend is not usable."
@@ -146,12 +146,12 @@ msgstr ""
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Arazo bat %s-tik %s-ra parafoak ezarritako databasea ezartzerakoan."
 
-#: ../Debconf/Config.pm:276
+#: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "\"%s\"baliogabko lehentasuna alde batetara uzrten"
 
-#: ../Debconf/Config.pm:277
+#: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
 msgstr "Lentasun erabilgarriak: %s"
@@ -189,6 +189,14 @@ msgstr "'%s' gertu txantilloi errorea, #%s parafoan %s-n.\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "#%s txantilloiak ez du 'Template:' lerro bat %s-n:\n"
 
+#: ../Debconf/Element/Gnome.pm:183
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../Debconf/Element/Gnome.pm:185
+msgid "Help"
+msgstr "Laguntza"
+
 #: ../Debconf/Element/Gnome/Note.pm:52
 msgid "Save (mail) Note"
 msgstr "Gorde oharra (epostaz)"
@@ -213,14 +221,6 @@ msgstr "Errorea"
 #: ../Debconf/Element/Gnome/Note.pm:61
 msgid "Unable to save note."
 msgstr "Ezin da oharra gorde."
-
-#: ../Debconf/Element/Gnome.pm:183
-msgid "_Help"
-msgstr "_Laguntza"
-
-#: ../Debconf/Element/Gnome.pm:185
-msgid "Help"
-msgstr "Laguntza"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:31
 #: ../Debconf/Element/Editor/Select.pm:31
@@ -248,14 +248,6 @@ msgstr "bai"
 msgid "no"
 msgstr "ez"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
-msgid "none of the above"
-msgstr "aurrekoetako bat ere ez"
-
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
-msgstr "Sar aukeratu nahi dituzunak, leku batez bereizirik."
-
 #: ../Debconf/Element/Noninteractive/Note.pm:40
 msgid ""
 "Debconf was not configured to display this note, so it mailed it to you."
@@ -271,6 +263,14 @@ msgstr "Debconf"
 #, c-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s-n abiarazirik"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:27
+msgid "none of the above"
+msgstr "aurrekoetako bat ere ez"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:47
+msgid "Enter the items you want to select, separated by spaces."
+msgstr "Sar aukeratu nahi dituzunak, leku batez bereizirik."
 
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, c-format
@@ -325,21 +325,21 @@ msgstr "%s huts aurrekonfiguratzerakoan, %s irteera kodeaz."
 msgid "%s must be run as root"
 msgstr "%s root bezala abiarazi behar da"
 
-#: ../dpkg-reconfigure:137
+#: ../dpkg-reconfigure:136
 msgid "please specify a package to reconfigure"
 msgstr "Mesedez ezarri berkonfiguratu nahi duzun paketea"
 
-#: ../dpkg-reconfigure:157
+#: ../dpkg-reconfigure:156
 #, c-format
 msgid "%s is not installed"
 msgstr "%s ez dago instalaturik"
 
-#: ../dpkg-reconfigure:161
+#: ../dpkg-reconfigure:160
 #, c-format
 msgid "%s is broken or not fully installed"
 msgstr "%s ondaturik edo erdi instalaturik dago"
 
-#: ../dpkg-reconfigure:238
+#: ../dpkg-reconfigure:237
 #, c-format
 msgid "Cannot read status file: %s"
 msgstr "Ezin da egoera fitxategia irakurri: %s"

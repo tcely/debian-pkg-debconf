@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-16 23:12+0100\n"
+"POT-Creation-Date: 2004-08-17 20:50+0100\n"
 "PO-Revision-Date: 2004-03-28 17:31EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -48,10 +48,6 @@ msgstr ""
 msgid "Debconf on %s"
 msgstr "Debconf στο %s"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
-msgid "More"
-msgstr "Περισσότερα"
-
 #: ../Debconf/FrontEnd/Web.pm:65
 #, c-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
@@ -66,6 +62,10 @@ msgstr "Προηγούμενο"
 #: ../Debconf/FrontEnd/Web.pm:167
 msgid "Next"
 msgstr "Επόμενο"
+
+#: ../Debconf/FrontEnd/Teletype.pm:96
+msgid "More"
+msgstr "Περισσότερα"
 
 #: ../Debconf/FrontEnd/Dialog.pm:50
 msgid "TERM is not set, so the dialog frontend is not usable."
@@ -151,12 +151,12 @@ msgstr ""
 "Σφάλμα κατά την ρύθμιση της βάσης δεδομένων όπως ορίστηκε κατά το τμήμα %s "
 "του %s."
 
-#: ../Debconf/Config.pm:276
+#: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr ""
 
-#: ../Debconf/Config.pm:277
+#: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
 msgstr ""
@@ -192,6 +192,14 @@ msgstr "Σφάλμα ανάλυσης προτύπου κοντά στο `%s', �
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Το πρότυπο #%s στο %s δεν περιέχει μια γραμμή 'Template:'\n"
 
+#: ../Debconf/Element/Gnome.pm:183
+msgid "_Help"
+msgstr "Βοήθεια"
+
+#: ../Debconf/Element/Gnome.pm:185
+msgid "Help"
+msgstr "Βοήθεια"
+
 #: ../Debconf/Element/Gnome/Note.pm:52
 msgid "Save (mail) Note"
 msgstr "Αποθήκευση (αποστολή) Σημείωσης"
@@ -217,14 +225,6 @@ msgstr "Σφάλμα"
 #: ../Debconf/Element/Gnome/Note.pm:61
 msgid "Unable to save note."
 msgstr "Αδύνατη η αποθήκευση της σημείωσης."
-
-#: ../Debconf/Element/Gnome.pm:183
-msgid "_Help"
-msgstr "Βοήθεια"
-
-#: ../Debconf/Element/Gnome.pm:185
-msgid "Help"
-msgstr "Βοήθεια"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:31
 #: ../Debconf/Element/Editor/Select.pm:31
@@ -252,14 +252,6 @@ msgstr "ναι"
 msgid "no"
 msgstr "όχι"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
-msgid "none of the above"
-msgstr "καμία από τις παραπάνω"
-
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
-msgstr "Εισάγετε τις επιλογές σας, χωρισμένες με κενό."
-
 #: ../Debconf/Element/Noninteractive/Note.pm:40
 msgid ""
 "Debconf was not configured to display this note, so it mailed it to you."
@@ -275,6 +267,14 @@ msgstr "Debconf"
 #, c-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, στο %s"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:27
+msgid "none of the above"
+msgstr "καμία από τις παραπάνω"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:47
+msgid "Enter the items you want to select, separated by spaces."
+msgstr "Εισάγετε τις επιλογές σας, χωρισμένες με κενό."
 
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, c-format
@@ -330,21 +330,21 @@ msgstr "Αδύνατη η προρύθμιση του %s, με κωδικό λά
 msgid "%s must be run as root"
 msgstr "Το %s πρέπει να εκτελεστεί ως χρήστης root"
 
-#: ../dpkg-reconfigure:137
+#: ../dpkg-reconfigure:136
 msgid "please specify a package to reconfigure"
 msgstr "παρακαλώ δηλώστε το πακέτο προς επαναρύθμιση"
 
-#: ../dpkg-reconfigure:157
+#: ../dpkg-reconfigure:156
 #, c-format
 msgid "%s is not installed"
 msgstr "το %s δεν είναι εγκατεστημένο"
 
-#: ../dpkg-reconfigure:161
+#: ../dpkg-reconfigure:160
 #, c-format
 msgid "%s is broken or not fully installed"
 msgstr "το %s είναι κατεστραμμένο ή όχι πλήρως εγκατεστημένο"
 
-#: ../dpkg-reconfigure:238
+#: ../dpkg-reconfigure:237
 #, c-format
 msgid "Cannot read status file: %s"
 msgstr "Αδύνατη η ανάγνωση του αρχείου κατάστασης: %s"
