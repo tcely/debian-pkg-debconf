@@ -28,8 +28,9 @@ debconf (1.4.30.12) UNRELEASED; urgency=low
     - Arabic added from Arabeyes CVS
     - Traditional Chinese translation updated. Closes: #294892
     - German updated.
+    - Polish updated. Closes: #295378
 
- -- Dennis Stampfer <seppy@debian.org>  Sat, 12 Feb 2005 19:34:59 +0100
+ -- Christian Perrier <bubulle@debian.org>  Tue, 15 Feb 2005 20:22:05 +0100
 
 debconf (1.4.30.11) testing-proposed-updates; urgency=low
 

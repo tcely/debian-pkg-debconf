@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 0.3.39\n"
+"Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-04 20:14-0500\n"
-"PO-Revision-Date: 2004-02-03 02:17+0200\n"
+"PO-Revision-Date: 2005-02-15 15:21+0100\n"
 "Last-Translator: Emil Nowak <emil5@go2.pl>\n"
 "Language-Team: Polish <porridge@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -133,6 +133,8 @@ msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
+"Opcje Sigils i Smileys w pliku konfiguracyjnym nie s± ju¿ wykorzystywane - "
+"zaleca siê ich usuniêcie."
 
 #: ../Debconf/Config.pm:147
 #, c-format
@@ -142,12 +144,12 @@ msgstr "Problem z ustawieniem bazy danych zdefiniowanej przez zwrotkê %s z %s."
 #: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
-msgstr ""
+msgstr "Ignorowanie niew³a¶ciwego priorytetu \"%s\""
 
 #: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
-msgstr ""
+msgstr "W³a¶ciwe priorytety to: %s"
 
 #: ../Debconf/Template.pm:90
 #, c-format
@@ -303,11 +305,11 @@ msgstr ""
 #: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
 #, c-format
 msgid "apt-extracttemplates failed: %s"
-msgstr ""
+msgstr "Dzia³anie apt-extracttemplates zakoñczy³o siê b³êdem: %s"
 
 #: ../dpkg-preconfigure:167
 msgid "Preconfiguring packages ...\n"
-msgstr ""
+msgstr "Prekonfiguracja pakietów ...\n"
 
 #: ../dpkg-preconfigure:179
 #, c-format
@@ -378,6 +380,5 @@ msgstr "%s jest nieaktualny"
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s jest nieaktualne; zostaje pominiêty ca³y szablon!"
 
-#, fuzzy
-#~ msgid "preconfiguring %s (%s)"
-#~ msgstr "Konfiguracja pakietu %s"
+msgid "preconfiguring %s (%s)"
+msgstr "Prekonfiguracja pakietu %s (%s)"
