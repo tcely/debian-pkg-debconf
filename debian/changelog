@@ -1,3 +1,10 @@
+debconf (1.4.30.13) UNRELEASED; urgency=low
+
+  * Translations:
+    - Update German translation by Helge Kreutzmann
+
+ -- Dennis Stampfer <seppy@debian.org>  Tue,  8 Mar 2005 20:04:52 +0100
+
 debconf (1.4.30.12) testing-proposed-updates; urgency=low
 
   * Mark more strings as translatable. Closes: #225463

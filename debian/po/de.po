@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-28 19:07-0500\n"
-"PO-Revision-Date: 2004-05-29 17:03-0200\n"
+"PO-Revision-Date: 2005-03-08 11:50-0100\n"
 "Last-Translator: Helge Kreutzmann <kreutzm@itp.uni-hannover.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Pakete die Debconf für die Konfiguration verwenden, teilen ein gemeinsames "
+"Pakete, die Debconf für die Konfiguration verwenden, teilen ein gemeinsames "
 "»look and feel«. Sie können wählen, welche Benutzerschnittstelle sie "
 "benutzen."
 
@@ -47,7 +47,6 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../templates:5
-#, fuzzy
 msgid ""
 "The dialog frontend is a full-screen, character based interface, while the "
 "readline frontend uses a more traditional plain text interface, and both the "
@@ -56,13 +55,14 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
-"Das Dialog-Frontend ist eine zeichenbasierte Vollbildschirmdarstellung, "
-"während das Readline-Frontend eine eher traditionelle einfache "
-"Textschnittstelle verwendet, und sowohl das GNOME- als auch das KDE-Frontend "
-"sind moderne X-Schnittstellen, die in den jeweiligen Desktop eingepasst sind "
-"(aber in beliebigen X-Umgebungen verwendet werden können). Das Editor-"
-"Frontend läßt Sie die Dinge mit Ihrem Lieblingseditor konfigurieren. Das "
-"nicht-interaktive Frontend fragt Sie nie irgendeine Frage."
+"Das Dialog-Oberfläche ist eine zeichenbasierte Vollbildschnittstelle, "
+"während die Readline-Oberfläche eine eher traditionelle einfache "
+"Textschnittstelle verwendet, und sowohl die GNOME- als auch das KDE-"
+"Oberläche sind moderne X-Schnittstellen, die in den jeweiligen Desktop "
+"eingepasst sind (aber in beliebigen X-Umgebungen verwendet werden können). "
+"Die Editor-Oberfläche läßt Sie die Dinge mit Ihrem Lieblingseditor "
+"konfigurieren. Die nicht-interaktive Oberfläche fragt Sie nie irgendeine "
+"Frage."
 
 #. Type: select
 #. Choices
@@ -83,7 +83,6 @@ msgstr "Nur Fragen mit welcher Priorität (und höher) anzeigen?"
 #. Type: select
 #. Description
 #: ../templates:20
-#, fuzzy
 msgid ""
 "Debconf prioritizes the questions it asks you. Pick the lowest priority of "
 "question you want to see:\n"
@@ -95,12 +94,12 @@ msgid ""
 msgstr ""
 "Debconf priorisiert die Fragen an Sie.  Wählen Sie die niedrigste Priorität "
 "der Fragen, die Sie sehen möchten:\n"
-"  - »kritisch« wird nur gefragt, wenn das System zerstört werden\n"
-"    könnte.  Nehmen Sie das, wenn Sie Neuling oder in Eile sind.\n"
+"  - »kritisch« fragt Sie nur, wenn das System zerstört werden\n"
+"    könnte.  Nehmen Sie dies, falls Sie Neuling oder in Eile sind.\n"
 "  - »hoch« ist für eher wichtige Fragen\n"
 "  - »mittel« ist für normale Fragen\n"
 "  - »niedrig« ist für Freunde der vollen Kontrolle, die alles sehen \n"
-"    möchten\n"
+"    möchten"
 
 #
 #. Type: select
