@@ -1,3 +1,9 @@
+debconf (0.2.80.11) frozen; urgency=low
+
+  * Catch SIGPIPEs from confmodules and handle them. Closes: #58847, #58818
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 24 Feb 2000 10:32:40 -0800
+
 debconf (0.2.80.10) frozen; urgency=low
 
   * dpkg-reconfigure: don't run the postrm of the package. Doing so breaks

@@ -86,6 +86,10 @@ sub startup {
 	$this->pid(open2($this->read_handle(FileHandle->new),
 		         $this->write_handle(FileHandle->new),
 			 @args)) || die $!;
+
+	# Catch sigpipes so they don't kill us, and return 128 for them.
+	$this->caught_sigpipe('');
+	$SIG{PIPE}=sub { $this->caught_sigpipe(128) };
 }
 
 =head2 communicate
@@ -129,7 +133,7 @@ sub _finish {
 	my $this=shift;
 
 	waitpid $this->pid, 0;
-	$this->exitcode($? >> 8);
+	$this->exitcode($this->caught_sigpipe || $? >> 8);
 	return '';
 }
 
