@@ -78,9 +78,8 @@ foreach my $pkg ($all ? allpackages() : @ARGV) {
 	Debian::DebConf::ConfigDb::loadtemplatefile("$infodir/$pkg.templates", $pkg)
 		if -e "$infodir/$pkg.templates";
 
-	# Run postrm, config, and postinst scripts in sequence, with args.
-	foreach my $info (['postrm',   'remove'		      ],
-			  ['config',   'reconfigure', $version],
+	# Run config and postinst scripts in sequence, with args.
+	foreach my $info (['config',   'reconfigure', $version],
 			  ['postinst', 'configure',   $version]) {
 		my $script=shift @$info;
 		next unless -x "$infodir/$pkg.$script";

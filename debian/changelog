@@ -1,3 +1,13 @@
+debconf (0.2.80.10) frozen; urgency=low
+
+  * dpkg-reconfigure: don't run the postrm of the package. Doing so breaks
+    things when for example, the package uses dpkg-divert and tries to remove
+    diversions in the postrm. This cannot be an isolated problem either. This
+    reverses the change made in version 0.2.52, which did not say why I
+    added it in the first place.. Closes: #58527 (important bug)
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 19 Feb 2000 20:47:00 -0800
+
 debconf (0.2.80.9) frozen; urgency=low
 
   * Rebuild to fix 0 length documentation files (I have no idea what caused
