@@ -5,8 +5,9 @@ debconf (1.4.30.6) UNRELEASED; urgency=low
       Konstantinos Margaritis
     - Italian debconf update. Closes: #272521
     - Russian translations updates. Closes: #272723
+    - Dutch translation added. Closes: #272535
 
- -- Christian Perrier <bubulle@debian.org>  Thu, 23 Sep 2004 18:36:12 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sun, 26 Sep 2004 08:29:04 +0200
 
 debconf (1.4.30.5) testing-proposed-updates; urgency=low
 
