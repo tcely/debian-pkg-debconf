@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.4.25\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-17 20:50+0100\n"
+"POT-Creation-Date: 2005-01-23 09:06+0100\n"
 "PO-Revision-Date: 2004-05-31 00:07+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -317,10 +317,24 @@ msgstr ""
 "s'està retardant la configuració dels paquets ja que apt-utils no està "
 "instal·lat"
 
+#: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
+#, c-format
+msgid "apt-extracttemplates failed: %s"
+msgstr ""
+
+#: ../dpkg-preconfigure:167
+msgid "Preconfiguring packages ...\n"
+msgstr ""
+
 #: ../dpkg-preconfigure:179
 #, c-format
 msgid "template parse error: %s"
 msgstr "s'ha produït un error d'anàlisi de plantilla: %s"
+
+#: ../dpkg-preconfigure:191
+#, fuzzy, c-format
+msgid "preconfiguring %s (%s)"
+msgstr "Configuració del paquet «%s»"
 
 #: ../dpkg-preconfigure:193
 #, c-format

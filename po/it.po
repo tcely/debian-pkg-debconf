@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-10 15:37-0400\n"
+"POT-Creation-Date: 2005-01-23 09:06+0100\n"
 "PO-Revision-Date: 2004-09-21 20:50+0200\n"
 "Last-Translator: Stefano Canepa <sc@linux.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -306,10 +306,24 @@ msgstr "bisogna specificare dei pacchetti deb da preconfigurare"
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "configurazione rimandata perché apt-utils non è installato"
 
+#: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
+#, c-format
+msgid "apt-extracttemplates failed: %s"
+msgstr ""
+
+#: ../dpkg-preconfigure:167
+msgid "Preconfiguring packages ...\n"
+msgstr ""
+
 #: ../dpkg-preconfigure:179
 #, c-format
 msgid "template parse error: %s"
 msgstr "errori analizzando il template: %s"
+
+#: ../dpkg-preconfigure:191
+#, fuzzy, c-format
+msgid "preconfiguring %s (%s)"
+msgstr "Configurazione in corso di %s"
 
 #: ../dpkg-preconfigure:193
 #, c-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-06 17:44-0500\n"
+"POT-Creation-Date: 2005-01-23 09:06+0100\n"
 "PO-Revision-Date: 2004-11-27 11:20+0200\n"
 "Last-Translator: Sorin Batariuc <sorin@bonbon.net>\n"
 "Language-Team: Romanian\n"
@@ -314,10 +314,24 @@ msgstr ""
 "întârziere la configurarea pachetului, din moment ce apt-utils nu este "
 "instalat"
 
+#: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
+#, c-format
+msgid "apt-extracttemplates failed: %s"
+msgstr ""
+
+#: ../dpkg-preconfigure:167
+msgid "Preconfiguring packages ...\n"
+msgstr ""
+
 #: ../dpkg-preconfigure:179
 #, c-format
 msgid "template parse error: %s"
 msgstr "eroare la analiza şablonului: %s"
+
+#: ../dpkg-preconfigure:191
+#, fuzzy, c-format
+msgid "preconfiguring %s (%s)"
+msgstr "Configurez %s"
 
 #: ../dpkg-preconfigure:193
 #, c-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-13 23:11-0400\n"
+"POT-Creation-Date: 2005-01-23 09:06+0100\n"
 "PO-Revision-Date: 2004-09-05 14:44+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -313,10 +313,24 @@ msgstr "для перед-конфігурації необхідно вказа
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "оскільки apt-utils не встановлені, налаштування пакунків відкладається"
 
+#: ../dpkg-preconfigure:151 ../dpkg-preconfigure:159
+#, c-format
+msgid "apt-extracttemplates failed: %s"
+msgstr ""
+
+#: ../dpkg-preconfigure:167
+msgid "Preconfiguring packages ...\n"
+msgstr ""
+
 #: ../dpkg-preconfigure:179
 #, c-format
 msgid "template parse error: %s"
 msgstr "помилка при розборі шаблону: %s"
+
+#: ../dpkg-preconfigure:191
+#, fuzzy, c-format
+msgid "preconfiguring %s (%s)"
+msgstr "Налаштування %s"
 
 #: ../dpkg-preconfigure:193
 #, c-format
