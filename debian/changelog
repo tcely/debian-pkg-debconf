@@ -2,8 +2,9 @@ debconf (1.4.30.8) UNRELEASED; urgency=low
 
   * Translations:
     - Updated Spanish (programs). Closes: #274148
+    - Added Hebrew. Closes: #274381
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Thu, 30 Sep 2004 11:14:04 +0200
+ -- Christian Perrier <bubulle@debian.org>  Fri,  1 Oct 2004 20:18:55 +0200
 
 debconf (1.4.30.7) testing-proposed-updates; urgency=low
 
