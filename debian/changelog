@@ -1,3 +1,17 @@
+debconf (0.2.80.4) frozen; urgency=low
+
+  * Add templates file, config script, postinst, and posrtm to debconf-tiny,
+    so debconf/priority actually exists. This is necessary so base-config
+    can change the priority if the boot-floppies were installed in verbose or
+    quiet mode. This is a critical bugfix, as it fixes a bug that made newly
+    installed systems unusable.
+  * Added dpkg-preconfigure to debconf-tiny, since this:
+    a) lets debconf-tiny use debconf's postinst unchanged
+    b) is useful in general to have in debconf-tiny
+  * Several k of bloat. Oh well..
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  9 Feb 2000 18:12:24 -0800
+
 debconf (0.2.80.3) frozen; urgency=low
 
   * dpkg-reconfigure: detect perl confmodules properly, by making my regexp
