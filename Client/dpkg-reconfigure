@@ -84,12 +84,11 @@ foreach my $pkg ($all ? allpackages() : @ARGV) {
 			  ['postinst', 'configure',   $version]) {
 		my $script=shift @$info;
 		next unless -x "$infodir/$pkg.$script";
-
 		# Test to see if the script uses debconf.
 		my $is_confmodule='';
 		open (IN, "<$infodir/$pkg.$script");
 		while (<IN>) {
-			if (/confmodule/) {
+			if (/confmodule/i) {
 				$is_confmodule=1;
 				last;
 			}

@@ -1,3 +1,13 @@
+debconf (0.2.80.3) frozen; urgency=low
+
+  * dpkg-reconfigure: detect perl confmodules properly, by making my regexp
+    match case in-sensitively. This fixes a bug that made dpkg-reconfigure
+    not work at all to reconfigure packages that used ConfModule.pm.
+    Probably worth putting into frozen, especially as it is a 1 character
+    (count 'em!) bugfix.
+
+ -- Joey Hess <joeyh@debian.org>  Tue,  8 Feb 2000 10:35:10 -0800
+
 debconf (0.2.80.2) frozen; urgency=low
 
   * Installed workaround from Joel Klecker to fix the annoying termcap
