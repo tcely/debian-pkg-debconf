@@ -1,3 +1,12 @@
+debconf (1.4.30.2) testing-proposed-updates; urgency=low
+
+  * Hack in an --installer parameter in debconf-get-selections so the d-i
+    manual can document a sane way to generate d-i preseeding files.
+  * Add the question's short description as a comment in
+    debconf-get-selections output, and skip notes, text, and errors.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 19 Aug 2004 15:42:05 +0100
+
 debconf (1.4.30.1) testing-proposed-updates; urgency=low
 
   * Docs and translations only upload for sarge.
