@@ -1,4 +1,4 @@
-debconf (1.4.30.12) UNRELEASED; urgency=low
+debconf (1.4.30.12) testing-proposed-updates; urgency=low
 
   * Mark more strings as translatable. Closes: #225463
   * Translations:
@@ -30,7 +30,7 @@ debconf (1.4.30.12) UNRELEASED; urgency=low
     - German updated.
     - Polish updated. Closes: #295378
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 20 Feb 2005 12:04:41 +0100
+ -- Joey Hess <joeyh@debian.org>  Mon, 21 Feb 2005 19:38:08 -0500
 
 debconf (1.4.30.11) testing-proposed-updates; urgency=low
 
