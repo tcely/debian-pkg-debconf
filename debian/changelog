@@ -26,8 +26,9 @@ debconf (1.4.30.12) UNRELEASED; urgency=low
     - Romanian updated. Closes: #292306
     - Tagalog added. Closes: #292608
     - Arabic added from Arabeyes CVS
+    - Traditional Chinese translation updated. Closes: #294892
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Mon,  7 Feb 2005 09:40:03 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sat, 12 Feb 2005 09:46:47 +0100
 
 debconf (1.4.30.11) testing-proposed-updates; urgency=low
 
