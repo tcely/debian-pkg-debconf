@@ -5,6 +5,7 @@ debconf (1.4.30.9) UNRELEASED; urgency=low
     - Traditional Chinese renamed from zh_TW.Big5.po to zh_TW.po
       (Christian Perrier)
     - Simplified Chinese added (programs). Closes: #277470
+    - Slovak translation added (programs and debconf). Closes: #279299
 
  -- Christian Perrier <bubulle@debian.org>  Wed, 20 Oct 2004 23:34:51 +0200
 
