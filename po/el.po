@@ -1,21 +1,23 @@
+# translation of debconf_el.po to Greek
 # translation of el.po to Greek
 # translation of debconf.po to Greek
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Konstantinos Margaritis <markos@debian.org>, 2004.
+# Greek Translation Team <debian-l10n-greek@lists.debian.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: debconf_el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-17 20:50+0100\n"
-"PO-Revision-Date: 2004-03-28 17:31EEST\n"
-"Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
+"PO-Revision-Date: 2004-09-15 23:06EEST\n"
+"Last-Translator: Greek Translation Team <debian-l10n-greek@lists.debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
 msgid ""
@@ -52,8 +54,8 @@ msgstr "Debconf στο %s"
 #, c-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
 msgstr ""
-"Σημείωση: Το debconf τρέχει σε κατάσταση δικτυακού τόπου. Δείτε τη http://"
-"localhost:%i/"
+"Σημείωση: Το debconf τρέχει σε κατάσταση δικτυακού τόπου. "
+"Δείτε τη http://localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:165
 msgid "Back"
@@ -96,8 +98,7 @@ msgstr ""
 "να χρησιμοποιηθεί το διαλογικό περιβάλλον."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
-msgid ""
-"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgid "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Το διαλογικό περιβάλλον απαιτεί οθόνη ύψους 13 γραμμών και 31 στηλών "
 "τουλάχιστον."
@@ -112,8 +113,7 @@ msgstr "Το περιβάλλον αυτό απαιτεί ένα τυλέτυπ�
 
 #: ../Debconf/FrontEnd/Readline.pm:58
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
-msgstr ""
-"Το Term::ReadLine::GNU δεν είναι συμβατό με το περιβάλλον κελύφους του emacs."
+msgstr "Το Term::ReadLine::GNU δεν είναι συμβατό με το περιβάλλον κελύφους του emacs."
 
 #: ../Debconf/AutoSelect.pm:76
 #, c-format
@@ -143,6 +143,8 @@ msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
+"Οι χαρακτήρες Sigils και Smileys στο αρχείο ρυθμίσεων δε χρησιμοποιούνται πλέον. Παρακαλώ, "
+"αφαιρέστε τους."
 
 #: ../Debconf/Config.pm:147
 #, c-format
@@ -154,19 +156,21 @@ msgstr ""
 #: ../Debconf/Config.pm:262
 #, c-format
 msgid "Ignoring invalid priority \"%s\""
-msgstr ""
+msgstr "Θα αγνοηθεί η μή έγκυρη ιδιότητα \"%s\""
 
 #: ../Debconf/Config.pm:263
 #, c-format
 msgid "Valid priorities are: %s"
-msgstr ""
+msgstr "Οι έγκυρες ιδιότητες είναι : %s"
 
 #: ../Debconf/Template.pm:90
 #, c-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
 "missing question %s."
-msgstr "προειδοποίηση: πιθανή καταστροφή της βάσης. Θα "
+msgstr ""
+"προειδοποίηση: πιθανή καταστροφή της βάσης. Θα γίνει προσπάθεια επιδιόρθωσής της "
+"προσθέτοντας την εκλιπόμμενη ερώτηση %s."
 
 #: ../Debconf/Template.pm:201
 #, c-format
@@ -233,10 +237,8 @@ msgid "Choices"
 msgstr "Επιλογές"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid ""
-"(Enter zero or more items separated by a comma followed by a space (', ').)"
-msgstr ""
-"(Εισάγετε καμία ή περισσότερες επιλογές χωρισμένες με κόμμα και κενό (', ').)"
+msgid "(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgstr "(Εισάγετε καμία ή περισσότερες επιλογές χωρισμένες με κόμμα και κενό (', ').)"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:36
@@ -253,8 +255,7 @@ msgid "no"
 msgstr "όχι"
 
 #: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid ""
-"Debconf was not configured to display this note, so it mailed it to you."
+msgid "Debconf was not configured to display this note, so it mailed it to you."
 msgstr ""
 "Το debconf δεν έχει ρυθμιστεί να εμφανίζει τη σημείωση αυτή, έτσι την "
 "έστειλε μέσω ηλ. ταχυδρομείου."
@@ -266,7 +267,7 @@ msgstr "Debconf"
 #: ../Debconf/Element/Noninteractive/Note.pm:87
 #, c-format
 msgid "Debconf, running at %s"
-msgstr "Debconf, στο %s"
+msgstr "Debconf, τρέχει στο %s"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
 msgid "none of the above"
@@ -357,7 +358,7 @@ msgstr "το %s αγνοείται"
 #: ../debconf-mergetemplate:123
 #, c-format
 msgid "%s is missing; dropping %s"
-msgstr "το %s αγνοείται, "
+msgstr "το %s αγνοείται, θα παραλειφθεί το %s"
 
 #: ../debconf-mergetemplate:146
 #, c-format
@@ -378,3 +379,4 @@ msgstr "το %s είναι απηρχαιωμένο"
 #, c-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "το %s είναι απηρχαιωμένο, παραλείπεται ολόκληρο το πρότυπο!"
+

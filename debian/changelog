@@ -1,3 +1,11 @@
+debconf (1.4.30.6) UNRELEASED; urgency=low
+
+  * Translations
+    - Errors corrected in Greek programs translations by
+      Konstantinos Margaritis
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 15 Sep 2004 22:14:50 +0200
+
 debconf (1.4.30.5) testing-proposed-updates; urgency=low
 
   * Joey Hess
