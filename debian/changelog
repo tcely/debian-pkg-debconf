@@ -1,3 +1,13 @@
+debconf (0.2.80.5) frozen; urgency=low
+
+  * Fixed dpkg-preconfigure to not use Getopt::Long, so it will work even on
+    the base system it is now a part of.
+  * As a workaround for the dialog lock problem (which seems to be a dialog
+    bug), never use dialog for the text mode menus. Works around: #56518
+    (grave), #57771 (important)
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 13 Feb 2000 00:35:47 -0800
+
 debconf (0.2.80.4) frozen; urgency=low
 
   * Add templates file, config script, postinst, and posrtm to debconf-tiny,
