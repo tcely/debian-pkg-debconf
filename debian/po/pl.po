@@ -1,34 +1,31 @@
-# translation of debconf/debian to Polish.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# debconf
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Polish translation Copyright (C) Marcin Owsiany <porridge@debian.org>, 2000-2002.
 #
-#    Translators, please read /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf\n"
-"Report-Msgid-Bugs-To: <emil5@go2.pl>\n"
+"Project-Id-Version: debconf 1.4.34\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-28 19:07-0500\n"
-"PO-Revision-Date: 2004-02-03 02:21+0100\n"
+"PO-Revision-Date: 2004-09-13 02:00+0200\n"
 "Last-Translator: Emil Nowak <emil5@go2.pl>\n"
-"Language-Team: pddp <pddp@debian.linux.org.pl>\n"
+"Language-Team: Polish <porridge@debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
 #: ../templates:3
 msgid "Dialog, Readline, Gnome, Kde, Editor, Noninteractive"
-msgstr "Dialog, Readline, Gnome, Kde, Edytor, Nieinteraktywny"
+msgstr ""
 
 #. Type: select
 #. Description
 #: ../templates:5
 msgid "What interface should be used for configuring packages?"
-msgstr "Który interfejs ma byæ u¿ywany do konfigurowania pakietów?"
+msgstr ""
 
 #. Type: select
 #. Description
@@ -37,8 +34,6 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Konfiguracja pakietów u¿ywaj±cych do tego celu debconf-a ma spójny wygl±d. "
-"Mo¿esz wybraæ rodzaj interfejsu u¿ytkownika, jaki bêdzie u¿ywany."
 
 #. Type: select
 #. Description
@@ -51,23 +46,18 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
-"Interfejs dialog to pe³noekranowy interfejs tekstowy, natomiast readline "
-"u¿ywa bardziej tradycyjnego, zwyk³ego interfejsu tekstowego. Z kolei gnome i "
-"kde to nowoczesne interfejsy u¿ywaj±ce X. Interfejs edytor pozwala "
-"konfigurowaæ system przy pomocy Twojego ulubionego edytora. Interfejs "
-"nieinteraktywny nigdy nie zadaje ¿adnych pytañ."
 
 #. Type: select
 #. Choices
 #: ../templates:18
 msgid "critical, high, medium, low"
-msgstr "najwy¿szy, wysoki, ¶redni, niski"
+msgstr ""
 
 #. Type: select
 #. Description
 #: ../templates:20
 msgid "See only questions that are of what priority and higher?"
-msgstr "Wy¶wietlanie pytañ, które maj± priorytet równy lub wiêkszy ni¿:"
+msgstr ""
 
 #. Type: select
 #. Description
@@ -81,14 +71,6 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf posiada przypisane priorytety zdawanym pytaniom. Wybierz najni¿szy "
-"priorytet pytañ jakie chcesz ogl±daæ:\n"
-"  - 'krytyczny' zadaje pytania tylko gdy istnieje mo¿liwo¶æ uszkodzenia "
-"systemu.\n"
-"    Wybierz tê opcjê je¿eli jeste¶ pocz±tkuj±cy, lub bardzo ci siê ¶pieszy.\n"
-"  - 'wysoki' dla wa¿nych pytañ\n"
-"  - '¶redni' dla zwyk³ych pytañ\n"
-"  - 'niski' dla maniaków kontroli, którzy chc± widzieæ wszystko"
 
 #. Type: select
 #. Description
@@ -97,73 +79,261 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
-"Zwróæ uwagê, ¿e niezale¿nie od tego jak teraz odpowiesz, zawsze mo¿esz "
-"zobaczyæ wszystkie pytania rekonfiguruj±c pakiet przy pomocy komendy dpkg-"
-"reconfigure."
 
-msgid "Show all old questions again and again?"
-msgstr "Pokazywaæ stare pytania za ka¿dym razem?"
+#~ msgid ""
+#~ "You are using the editor-based debconf frontend to configure your system. "
+#~ "See the end of this document for detailed instructions."
+#~ msgstr ""
+#~ "U¿ywasz nak³adki debconf opartej na edytorze. Dok³adne instrukcje "
+#~ "znajduj± siê na koñcu dokumentu"
 
-msgid ""
-"Debconf normally only asks you any given question once. Then it remembers "
-"your answer and never asks you that question again. If you prefer, debconf "
-"can ask you questions over and over again, each time you upgrade or "
-"reinstall a package that asks them."
-msgstr ""
-"Debconf zazwyczaj zadaje dane pytanie tylko raz. Pó¼niej pamiêta Twoj± "
-"odpowied¼ i nigdy nie zadaje wiêcej tego samego pytania. Je¶li jednak "
-"wolisz, debconf mo¿e zadawaæ pytania przy ka¿dej aktualizacji lub "
-"reinstalacji danego pakietu."
+#~ msgid ""
+#~ "The editor-based debconf frontend presents you with one or more text "
+#~ "files to edit. This is one such text file. If you are familiar with "
+#~ "standard unix configuration files, this file will look familiar to you -- "
+#~ "it contains comments interspersed with configuration items. Edit the "
+#~ "file, changing any items as necessary, and then save it and exit. At that "
+#~ "point, debconf will read the edited file, and use the values you entered "
+#~ "to configure the system."
+#~ msgstr ""
+#~ "Nak³adka oparta na edytorze pokazuje jeden lub wiêcej plików tekstowych, "
+#~ "które mo¿na modyfikowaæ. To jest jeden z takich plików. Je¶li znasz "
+#~ "standardowe pliki konfiguracyjne UNIXa, ten plik bêdzie wygl±da³ znajomo "
+#~ "-- zawiera komentarze oraz linie konfiguracji. Zmodyfikuj plik, "
+#~ "zmieniaj±c potrzebne pozycje, zapisz go i zakoñcz edytor. W tym momencie "
+#~ "debconf przeczyta zapisany plik i u¿yje wprowadzonych przez Ciebie "
+#~ "warto¶ci do konfiguracji systemu."
 
-msgid ""
-"Note that no matter what you choose here, you can see old questions again by "
-"using the dpkg-reconfigure program."
-msgstr ""
-"Zwróæ uwagê, ¿e niezale¿nie od tego jak teraz odpowiesz, zawsze mo¿esz "
-"zobaczyæ stare pytania przy pomocy komendy dpkg-reconfigure."
+#~ msgid "Debconf on %s"
+#~ msgstr "Debconf na %s"
 
-msgid ""
-"Packages that use debconf for configuration prioritize the questions they "
-"might ask you. Only questions with a certain priority or higher are actually "
-"shown to you; all less important questions are skipped."
-msgstr ""
-"Pakiety u¿ywaj±ce do konfiguracji systemu debconf nadaj± ka¿demu pytaniu, na "
-"które wymagaj± odpowiedzi, pewien priorytet. W rzeczywisto¶ci zobaczysz "
-"tylko pytania o priorytecie wy¿szym lub równym pewnemu ustalonemu; wszystkie "
-"mniej wa¿ne s± pomijane."
+#~ msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
+#~ msgstr "Uwaga: Debconf dzia³a w trybie www. Patrz http://localhost:%i/"
 
-msgid ""
-"You can select the lowest priority of question you want to see:\n"
-"  - 'critical' is for items that will probably break the system\n"
-"    without user intervention.\n"
-"  - 'high' is for items that don't have reasonable defaults.\n"
-"  - 'medium' is for normal items that have reasonable defaults.\n"
-"  - 'low' is for trivial items that have defaults that will work in the\n"
-"    vast majority of cases."
-msgstr ""
-"Mo¿esz ustaliæ najni¿szy priorytet pytañ, które chcesz widzieæ:\n"
-"  - 'najwy¿szy' obejmuje pytania, od odpowiedzi na które zale¿y poprawna\n"
-"    praca systemu.\n"
-"  - 'wysoki' obejmuje pytania, które nie maj± sensownych warto¶ci\n"
-"    domy¶lnych.\n"
-"  - '¶redni' obejmuje zwyk³e pytania, które maj± sensowne warto¶ci\n"
-"    domy¶lne.\n"
-"  - 'niski' obejmuje ma³o istotne rzeczy, których warto¶ci domy¶lne bêd±\n"
-"    dzia³aæ w prawie wszystkich przypadkach."
+#~ msgid "Back"
+#~ msgstr "Powrót"
 
-msgid ""
-"If you are new to the Debian GNU/Linux system choose 'critical' now, so you "
-"only see the most important questions."
-msgstr ""
-"Je¶li jeste¶ pocz±tkuj±cym u¿ytkownikiem systemu Debian GNU/Linux wybierz "
-"poziom 'najwy¿szy', aby widzieæ tylko najwa¿niejsze pytania."
+#~ msgid "Next"
+#~ msgstr "Dalej"
 
-msgid ""
-"For example, this question is of medium priority, and if your priority were "
-"already 'high' or 'critical', you wouldn't see this question."
-msgstr ""
-"Na przyk³ad to pytanie ma priorytet ¶redni, wiêc je¶li wybra³by¶/wybra³aby¶ "
-"wcze¶niej priorytet 'wysoki' albo 'najwy¿szy', nie ukaza³oby siê ono."
+#~ msgid "More"
+#~ msgstr "Dalej"
 
-msgid "Ignore questions with a priority less than.."
-msgstr "Ignoruj pytania o priorytecie ni¿szym ni¿.."
+#~ msgid "TERM is not set, so the dialog frontend is not usable."
+#~ msgstr ""
+#~ "Zmienna TERM nie jest ustawiona, wiêc interfejs dialog nie mo¿e dzia³aæ."
+
+#~ msgid "Dialog frontend is incompatible with emacs shell buffers"
+#~ msgstr "Interfejs dialog nie jest zgodny z buforami pow³oki emacsa"
+
+#~ msgid ""
+#~ "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, "
+#~ "or without a controlling terminal."
+#~ msgstr ""
+#~ "Interfejs dialog nie mo¿e dzia³aæ na terminalu \"dumb\", buforze pow³oki "
+#~ "emacsa ani bez terminala steruj±cego."
+
+#~ msgid ""
+#~ "No usable dialog-like program is installed, so the dialog based frontend "
+#~ "cannot be used."
+#~ msgstr ""
+#~ "¯aden program typu dialog nie jest zainstalowany, wiêc nak³adka dialog "
+#~ "nie mo¿e zostaæ u¿yta."
+
+#~ msgid ""
+#~ "Dialog frontend requires a screen at least 13 lines tall and 31 columns "
+#~ "wide."
+#~ msgstr ""
+#~ "Interfejs dialog wymaga ekranu o wymiarach conajmniej 13 linii na 31 "
+#~ "kolumn."
+
+#~ msgid "Debian Configuration"
+#~ msgstr "Konfiguracja Debiana"
+
+#~ msgid "This frontend requires a controlling tty."
+#~ msgstr "Ten interfejst wymaga terminala steruj±cego."
+
+#~ msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
+#~ msgstr "Term::ReadLine::GNU nie jest zgodny z buforami pow³oki emacsa"
+
+#~ msgid "falling back to frontend: %s"
+#~ msgstr "powrót do nak³adki: %s"
+
+#~ msgid "unable to initialize frontend: %s"
+#~ msgstr "nie uda³o siê zainicjalizowaæ nak³adki: %s"
+
+#~ msgid "Unable to start a frontend: %s"
+#~ msgstr "nie uda³o siê uruchomiæ nak³adki: %s"
+
+#~ msgid "Config database not specified in config file."
+#~ msgstr "Brak bazy danych konfiguracji w pliku konfiguracyjnym."
+
+#~ msgid "Template database not specified in config file."
+#~ msgstr "Brak bazy danych szablonów w pliku konfiguracyjnym."
+
+#~ msgid ""
+#~ "The Sigils and Smileys options in the config file are no longer used. "
+#~ "Please remove them."
+#~ msgstr ""
+#~ "Opcje Sigils i Smileys w pliku konfiguracyjnym nie s± ju¿ u¿ywane. Zaleca "
+#~ "siê usuniêcie tych opcji"
+
+#~ msgid "Problem setting up the database defined by stanza %s of %s."
+#~ msgstr ""
+#~ "Problem z ustawieniem bazy danych zdefiniowanej przez zwrotkê %s z %s."
+
+#~ msgid "Ignoring invalid priority \"%s\""
+#~ msgstr "Ignorowanie niew³a¶ciwego priorytetu \"%s\""
+
+#~ msgid "Valid priorities are: %s"
+#~ msgstr "Poprawne priorytety to: %s"
+
+#~ msgid ""
+#~ "warning: possible database corruption. Will attempt to repair by adding "
+#~ "back missing question %s."
+#~ msgstr ""
+#~ "uwaga: mog³o nast±piæ uszkodzenie bazy danych. Zostanie wykonana próba "
+#~ "naprawy przez dodanie brakuj±cego pytania %s."
+
+#~ msgid ""
+#~ "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
+#~ "Probably two templates are not properly seperated by a lone newline.\n"
+#~ msgstr ""
+#~ "Szablon nr %s w %s ma drugie pole \"%s\" z inn± warto¶ci± \"%s\". "
+#~ "Prawdopodobnie dwa szablony nie zosta³y poprawnie rozdzielone przy pomocy "
+#~ "pustej linii.\n"
+
+#~ msgid "Unknown template field '%s', in stanza #%s of %s\n"
+#~ msgstr "Nieznane pole szablonu '%s', w czê¶ci nr %s pliku %s\n"
+
+#~ msgid "Template parse error near `%s', in stanza #%s of %s\n"
+#~ msgstr "B³±d w szablonie w pobli¿u `%s', w czê¶ci nr %s pliku %s\n"
+
+#~ msgid "Template #%s in %s does not contain a 'Template:' line\n"
+#~ msgstr "Szablon nr %s w pliku %s nie zawiera linii `Template:'\n"
+
+#~ msgid "_Help"
+#~ msgstr "_Pomoc"
+
+#~ msgid "Help"
+#~ msgstr "Pomoc"
+
+#~ msgid "Save (mail) Note"
+#~ msgstr "Zapisz (wy¶lij poczt±) uwagê"
+
+#~ msgid "Debconf was asked to save this note, so it mailed it to you."
+#~ msgstr ""
+#~ "Debconf mia³ za zadanie zapisaæ t± uwagê, wiêc zosta³a przes³ana do "
+#~ "Ciebie."
+
+#~ msgid "Information"
+#~ msgstr "Informacja"
+
+#~ msgid "The note has been mailed."
+#~ msgstr "Uwaga zosta³a wys³ana."
+
+#~ msgid "Error"
+#~ msgstr "B³±d"
+
+#~ msgid "Unable to save note."
+#~ msgstr "Nie uda³o siê zapisaæ uwagi."
+
+#~ msgid "Choices"
+#~ msgstr "Pozycje do wyboru"
+
+#~ msgid ""
+#~ "(Enter zero or more items separated by a comma followed by a space (', "
+#~ "').)"
+#~ msgstr ""
+#~ "(Wpisz zero lub wiêcej pozycji oddzielonych przecinkiem i spacj± (', ').)"
+
+#~ msgid "yes"
+#~ msgstr "tak"
+
+#~ msgid "no"
+#~ msgstr "nie"
+
+#~ msgid ""
+#~ "Debconf was not configured to display this note, so it mailed it to you."
+#~ msgstr ""
+#~ "Debconf zosta³ skonfigurowany tak, aby nie wy¶wietlaæ tej uwagi, wiêc "
+#~ "zosta³a przes³ana do Ciebie."
+
+#~ msgid "Debconf"
+#~ msgstr "Debconf"
+
+#~ msgid "Debconf, running at %s"
+#~ msgstr "Debconf, dzia³aj±cy na %s"
+
+#~ msgid "none of the above"
+#~ msgstr "¿adna z powy¿ych"
+
+#~ msgid "Enter the items you want to select, separated by spaces."
+#~ msgstr "Wpisz, oddzielone przecinkami, pozycje, które chcesz zaznaczyæ."
+
+#~ msgid ""
+#~ "Input value, \"%s\" not found in C choices! This should never happen. "
+#~ "Perhaps the templates were incorrectly localized."
+#~ msgstr ""
+#~ "Warto¶æ wej¶ciowa \"%s\" nie zosta³a znaleziona w ¼ród³ach C! To "
+#~ "niepowinno. siê nigdy zdarzyæ. Byæ mo¿e szablony nie zosta³y poprawnie "
+#~ "przet³umaczone."
+
+#~ msgid "Unable to load Debconf::Element::%s. Failed because: %s"
+#~ msgstr "Nie uda³o siê za³adowaæ Debconf::Element:: %s. Powodem by³o: %s"
+
+#~ msgid "Configuring %s"
+#~ msgstr "Konfiguracja pakietu %s"
+
+#~ msgid "unable to re-open stdin: %s"
+#~ msgstr "nie uda³o siê ponownie otworzyæ stdin: %s"
+
+#~ msgid "must specify some debs to preconfigure"
+#~ msgstr "nale¿y podaæ pakiety do skonfigurowania"
+
+#~ msgid "delaying package configuration, since apt-utils is not installed"
+#~ msgstr ""
+#~ "opó¼nienie konfiguracji pakietu poniewa¿ pakiet apt-utils nie jest "
+#~ "zainstalowany"
+
+#~ msgid "template parse error: %s"
+#~ msgstr "b³±d w szablonie: %s"
+
+#~ msgid "debconf: can't chmod: %s"
+#~ msgstr "debconf: nie uda³o siê zmieniæ uprawnieñ: %s"
+
+#~ msgid "%s failed to preconfigure, with exit status %s"
+#~ msgstr "nie uda³o siê skonfigurowaæ %s, kod wyj¶cia: %s"
+
+#~ msgid "%s must be run as root"
+#~ msgstr "%s musi byæ uruchamiany jako root"
+
+#~ msgid "please specify a package to reconfigure"
+#~ msgstr "proszê podaæ pakiet do skonfigurowania"
+
+#~ msgid "%s is not installed"
+#~ msgstr "%s nie jest zainstalowany"
+
+#~ msgid "%s is broken or not fully installed"
+#~ msgstr "%s jest uszkodzony, lub nie jest w pe³ni zainstalowany"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Nie mo¿na czytaæ pliku stanu: %s"
+
+#~ msgid "%s is missing"
+#~ msgstr "brakuje %s"
+
+#~ msgid "%s is missing; dropping %s"
+#~ msgstr "brakuje %s; %s zostaje pominiête"
+
+#~ msgid "%s is fuzzy at byte %s: %s"
+#~ msgstr "t³umaczenie %s budzi w±tpliwo¶ci. Bajt %s: %s"
+
+#~ msgid "%s is fuzzy at byte %s: %s; dropping it"
+#~ msgstr "t³umaczenie %s (bajt %s) budzi w±tpliwo¶ci: %s; zostaje pominiête"
+
+#~ msgid "%s is outdated"
+#~ msgstr "%s jest nieaktualny"
+
+#~ msgid "%s is outdated; dropping whole template!"
+#~ msgstr "%s jest nieaktualne; zostaje pominiêty ca³y szablon!"
