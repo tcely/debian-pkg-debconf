@@ -4,8 +4,10 @@ debconf (1.4.30.8) UNRELEASED; urgency=low
     - Updated Spanish (programs). Closes: #274148
     - Added Hebrew. Closes: #274381
     - Italian added (programs) and updated (debconf). Closes: #274582, #274584
+    - Norwegian Nynorsk added (programs). Closes: #275081
 
- -- Christian Perrier <bubulle@debian.org>  Sun,  3 Oct 2004 08:39:45 +0200
+
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Wed,  6 Oct 2004 08:59:34 +0200
 
 debconf (1.4.30.7) testing-proposed-updates; urgency=low
 
