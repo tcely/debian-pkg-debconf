@@ -1,3 +1,14 @@
+debconf (1.4.30.4) testing-proposed-updates; urgency=low
+
+  * Fix debconf-get-selections to not choke on files with comments followed
+    by nothing.
+  * Allow multiple spaces between all values except the last one in preseed
+    files.
+  * (Sent to t-p-u because the above make it annoyingly hard to write preseed
+    files by hand, and our example preseed files tickle both problems.)
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 12 Sep 2004 13:32:09 -0400
+
 debconf (1.4.30.3) testing-proposed-updates; urgency=low
  
    * Skip title questions in debconf-get-selections along with the notes, text,
