@@ -1,3 +1,15 @@
+debconf (0.2.80.14) frozen; urgency=low
+
+  * Made noninteractive select elements smarter. If the value is set, but
+    is set to something not on the list, disregard it and pick the first
+    element from the list. This is actually an important bugfix; it's been
+    causing problems with apt-setup in base-config, making
+    http.us.debian.org be incorrectly picked as the default when users try
+    to set up apt to use a country that just has one mirror on file.
+  * Closes #60160 (important)
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 13 Mar 2000 13:23:18 -0800
+
 debconf (0.2.80.13) frozen; urgency=low
 
   * Use fully-qualified path for dpkg-preconfigure in apt.conf, 
