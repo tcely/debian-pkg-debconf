@@ -1,3 +1,10 @@
+debconf (0.2.80.9) frozen; urgency=low
+
+  * Rebuild to fix 0 length documentation files (I have no idea what caused
+    them). Closes: #58493
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 19 Feb 2000 17:55:47 -0800
+
 debconf (0.2.80.8) frozen; urgency=low
 
   * Fixed bad merge of changes that I thought was done in 0.2.80.6; fixes 2
