@@ -1,3 +1,10 @@
+debconf (0.2.80.7) frozen; urgency=low
+
+  * Important fix: don't accidentially delete Dialog/Text.pm from
+    debconf-tiny.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 15 Feb 2000 13:11:58 -0800
+
 debconf (0.2.80.6) frozen; urgency=low
 
   * dpkg-preconfigure: It turns out that the trick of reading from stdin

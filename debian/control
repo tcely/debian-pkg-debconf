@@ -26,7 +26,6 @@ Description: Tiny subset of debconf for the base system
  Debconf is a configuration management system for debian packages. It is 
  used by some packages to prompt you for questions before they are installed.
  .
- This is a tiny subset of debconf, with only one frontend, no preconfiguration
- and few other features. It is intended to be used to set up things in the
- base system that use debconf. Unless you are very short on disk space, you
- should install debconf instead.
+ This is a tiny subset of debconf, with only one frontend, few features. It is
+ intended to be used to set up things in the base system that use debconf.
+ Unless you are very short on disk space, you should install debconf instead.
