@@ -1,3 +1,14 @@
+debconf (0.2.77) frozen unstable; urgency=low
+
+  * debconf proper depends on perl5 (not -base), because some utilities
+    do use Getopt::Long. debconf-tiny continues to just depend on
+    perl-5.005-base, because everything in it will work without debconf.
+    Closes: #55381 (important)
+  * Added --all option to dpkg-reconfigure, for use by the boot-floppies
+    inittab.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 16 Jan 2000 18:11:12 -0800
+
 debconf (0.2.76) frozen unstable; urgency=low
 
   * Re-enabled use of _ and . in template fields. Necessary for localaization.
