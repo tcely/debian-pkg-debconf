@@ -24,8 +24,9 @@ debconf (1.4.30.12) UNRELEASED; urgency=low
     - Basque updated.
     - Romanian updated. Closes: #292306
     - Tagalog added. Closes: #292608
+    - Arabic added from Arabeyes CVS
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 23 Jan 2005 08:52:59 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 30 Jan 2005 08:20:58 +0100
 
 debconf (1.4.30.11) testing-proposed-updates; urgency=low
 
