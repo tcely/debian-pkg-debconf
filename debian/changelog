@@ -24,13 +24,13 @@ debconf (1.4.30.12) UNRELEASED; urgency=low
     - Greek updated. Closes: #293912
     - Basque updated.
     - Romanian updated. Closes: #292306
-    - Tagalog added. Closes: #292608
+    - Tagalog added (programs and debconf). Closes: #292608, #296050
     - Arabic added from Arabeyes CVS
     - Traditional Chinese translation updated. Closes: #294892
     - German updated.
     - Polish updated. Closes: #295378
 
- -- Christian Perrier <bubulle@debian.org>  Tue, 15 Feb 2005 20:22:05 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 20 Feb 2005 12:04:41 +0100
 
 debconf (1.4.30.11) testing-proposed-updates; urgency=low
 
