@@ -1,3 +1,13 @@
+debconf (1.4.30.7) testing-proposed-updates; urgency=low
+
+  * Joey Hess
+    - Tightended the versioned conflicts/replaces on debconf-utils in
+      debconf-i18n. Closes: #273970
+  * Translations:
+    - Updated Brazilian Portuguese translation (programs). Closes: #273941
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 29 Sep 2004 01:54:54 -0400
+
 debconf (1.4.30.6) testing-proposed-updates; urgency=low
 
   * Translations
@@ -10,7 +20,7 @@ debconf (1.4.30.6) testing-proposed-updates; urgency=low
     - Portuguese translation added. Closes: #273227
   * Spelling error in "man page" of debconf-show fixed. Closes: #272541
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 27 Sep 2004 17:16:35 +0200
+ -- Joey Hess <joeyh@debian.org>  Mon, 27 Sep 2004 22:23:23 -0400
 
 debconf (1.4.30.5) testing-proposed-updates; urgency=low
 
