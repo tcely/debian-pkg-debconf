@@ -4,8 +4,9 @@ debconf (1.4.30.6) UNRELEASED; urgency=low
     - Errors corrected in Greek programs translations by
       Konstantinos Margaritis
     - Italian debconf update. Closes: #272521
+    - Russian translations updates. Closes: #272723
 
- -- Christian Perrier <bubulle@debian.org>  Tue, 21 Sep 2004 11:38:27 +0200
+ -- Christian Perrier <bubulle@debian.org>  Thu, 23 Sep 2004 18:36:12 +0200
 
 debconf (1.4.30.5) testing-proposed-updates; urgency=low
 
