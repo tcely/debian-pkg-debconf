@@ -1,3 +1,10 @@
+debconf (0.2.80.15) frozen; urgency=low
+
+  * Fixed a typo that breaks the web frontend. Closes: #64474 
+    (severity important)
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 21 May 2000 20:37:35 -0700
+
 debconf (0.2.80.14) frozen; urgency=low
 
   * Made noninteractive select elements smarter. If the value is set, but
