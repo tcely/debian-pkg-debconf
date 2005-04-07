@@ -1,4 +1,4 @@
-debconf (1.4.30.13) UNRELEASED; urgency=low
+debconf (1.4.30.13) testing-proposed-updates; urgency=low
 
   * Joey Hess
     - Make debconf-set-selections not fail if it encounters an unknown
