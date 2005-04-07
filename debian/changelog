@@ -12,7 +12,7 @@ debconf (1.4.30.13) testing-proposed-updates; urgency=low
     - Update German translation by Helge Kreutzmann
     - Spanish updated. Closes: #301126
 
- -- Dennis Stampfer <seppy@debian.org>  Tue,  8 Mar 2005 20:04:52 +0100
+ -- Joey Hess <joeyh@debian.org>  Thu,  7 Apr 2005 16:35:16 -0400
 
 debconf (1.4.30.12) testing-proposed-updates; urgency=low
 
