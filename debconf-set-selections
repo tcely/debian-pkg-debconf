@@ -75,6 +75,11 @@ sub info {
 	print STDERR "info: $msg\n" if $debug;
 }
 
+sub warning {
+	my $msg = shift;
+	print STDERR "warning: $msg\n";
+}
+
 sub error {
 	my $msg = shift;
 	print STDERR "error: $msg\n";
@@ -115,14 +120,19 @@ my @knowntypes = qw(select boolean string multiselect note password text title);
 
 sub ok_format {
 	my ($owner, $label, $type, $content) = @_;
-	if (! defined $owner || ! defined $label || ! defined $content ||
-	    ! grep { $_ eq $type } @knowntypes) {
+	if (! defined $owner || ! defined $label || ! defined $content) {
+		error "parse error on line $.: '$_'";
+		return;
+	}
+	elsif (! grep { $_ eq $type } @knowntypes) {
+		warning "Unknown type $type, skipping line $.";
 		return;
 	}
 	else {
 		return 1;
 	}
 }
+
 GetOptions(
 	"verbose|v" => \$debug,
 	"checkonly|c" => \$checkonly,
@@ -142,13 +152,9 @@ while (<>) {
 	if (! defined $content) {
 		$content='';
 	}
-
 	if (ok_format($owner, $label, $type, $content)) {
 		info "Trying to set '$label' [$type] to '$content'";
 		load_answer($owner, $label, $type, $content);
-	}
-	else {
-		error "parse error on line $.: '$_'";
 	}
 }
 

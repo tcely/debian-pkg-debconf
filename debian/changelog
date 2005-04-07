@@ -1,5 +1,13 @@
 debconf (1.4.30.13) UNRELEASED; urgency=low
 
+  * Joey Hess
+    - Make debconf-set-selections not fail if it encounters an unknown
+      question type. This is for future expansion post-sarge, when we may add
+      new types of questions or override the type field to do seen flag
+      handling. This needs to get into sarge so that installs of sarge done
+      with newer versions of the installer that may make use of such
+      extensions will work and not choke on the extensions in the preseed
+      files.
   * Translations:
     - Update German translation by Helge Kreutzmann
     - Spanish updated. Closes: #301126
