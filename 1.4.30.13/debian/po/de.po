@@ -1,0 +1,133 @@
+#
+# This file is from the DDTP, the Debian Description Translation Project
+#
+# See http://ddtp.debian.org/ for more information.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debconf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-28 19:07-0500\n"
+"PO-Revision-Date: 2005-03-08 11:50-0100\n"
+"Last-Translator: Helge Kreutzmann <kreutzm@itp.uni-hannover.de>\n"
+"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: select
+#. Choices
+#: ../templates:3
+msgid "Dialog, Readline, Gnome, Kde, Editor, Noninteractive"
+msgstr "Dialog, Readline, GNOME, KDE, Editor, nicht-interaktiv"
+
+#  Template: debconf/frontend
+#  ddtp-prioritize: 54
+#
+#. Type: select
+#. Description
+#: ../templates:5
+msgid "What interface should be used for configuring packages?"
+msgstr ""
+"Welche Schnittstelle soll zum Konfigurieren der Pakete verwendet werden?"
+
+#
+#. Type: select
+#. Description
+#: ../templates:5
+msgid ""
+"Packages that use debconf for configuration share a common look and feel. "
+"You can select the type of user interface they use."
+msgstr ""
+"Pakete, die Debconf für die Konfiguration verwenden, teilen ein gemeinsames "
+"»look and feel«. Sie können wählen, welche Benutzerschnittstelle sie "
+"benutzen."
+
+#
+#. Type: select
+#. Description
+#: ../templates:5
+msgid ""
+"The dialog frontend is a full-screen, character based interface, while the "
+"readline frontend uses a more traditional plain text interface, and both the "
+"gnome and kde frontends are modern X interfaces, fitting the respective "
+"desktops (but may be used in any X environment). The editor frontend lets "
+"you configure things using your favorite text editor. The noninteractive "
+"frontend never asks you any questions."
+msgstr ""
+"Das Dialog-Oberfläche ist eine zeichenbasierte Vollbildschnittstelle, "
+"während die Readline-Oberfläche eine eher traditionelle einfache "
+"Textschnittstelle verwendet, und sowohl die GNOME- als auch das KDE-"
+"Oberläche sind moderne X-Schnittstellen, die in den jeweiligen Desktop "
+"eingepasst sind (aber in beliebigen X-Umgebungen verwendet werden können). "
+"Die Editor-Oberfläche läßt Sie die Dinge mit Ihrem Lieblingseditor "
+"konfigurieren. Die nicht-interaktive Oberfläche fragt Sie nie irgendeine "
+"Frage."
+
+#. Type: select
+#. Choices
+#: ../templates:18
+msgid "critical, high, medium, low"
+msgstr "kritisch, hoch, mittel, niedrig"
+
+#  Template: debconf/priority
+#  ddtp-prioritize: 54
+#
+#. Type: select
+#. Description
+#: ../templates:20
+msgid "See only questions that are of what priority and higher?"
+msgstr "Nur Fragen mit welcher Priorität (und höher) anzeigen?"
+
+#
+#. Type: select
+#. Description
+#: ../templates:20
+msgid ""
+"Debconf prioritizes the questions it asks you. Pick the lowest priority of "
+"question you want to see:\n"
+"  - 'critical' only prompts you if the system might break.\n"
+"    Pick it if you are a newbie, or in a hurry.\n"
+"  - 'high' is for rather important questions\n"
+"  - 'medium' is for normal questions\n"
+"  - 'low' is for control freaks who want to see everything"
+msgstr ""
+"Debconf priorisiert die Fragen an Sie.  Wählen Sie die niedrigste Priorität "
+"der Fragen, die Sie sehen möchten:\n"
+"  - »kritisch« fragt Sie nur, wenn das System zerstört werden\n"
+"    könnte.  Nehmen Sie dies, falls Sie Neuling oder in Eile sind.\n"
+"  - »hoch« ist für eher wichtige Fragen\n"
+"  - »mittel« ist für normale Fragen\n"
+"  - »niedrig« ist für Freunde der vollen Kontrolle, die alles sehen \n"
+"    möchten"
+
+#
+#. Type: select
+#. Description
+#: ../templates:20
+msgid ""
+"Note that no matter what level you pick here, you will be able to see every "
+"question if you reconfigure a package with dpkg-reconfigure."
+msgstr ""
+"Beachten Sie, daß Sie unabhängig von der hier gewählten Stufe jede Frage "
+"sehen können, wenn Sie ein Paket mit dpkg-reconfigure neu konfigurieren."
+
+#
+#~ msgid ""
+#~ "Debconf normally only asks you any given question once. Then it remembers "
+#~ "your answer and never asks you that question again. If you prefer, "
+#~ "debconf can ask you questions over and over again, each time you upgrade "
+#~ "or reinstall a package that asks them."
+#~ msgstr ""
+#~ "Debconf fragt normal jede Frage nur einmal. Danach erinnert es sich an "
+#~ "Ihre Antwort und fragt Sie diese Frage nie mehr. Wenn Sie es vorziehen, "
+#~ "kann debconf Sie die Fragen immer wieder stellen wenn das entsprechende "
+#~ "Paket installiert oder erneuert wird."
+
+#
+#~ msgid ""
+#~ "Note that no matter what you choose here, you can see old questions again "
+#~ "by using the dpkg-reconfigure program."
+#~ msgstr ""
+#~ "Beachten Sie: egal was Sie hier auswählen, Sie können alte Fragen mit den "
+#~ "Programm dpkg-reconfigure erneut stellen lassen."
