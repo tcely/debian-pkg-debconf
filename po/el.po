@@ -181,7 +181,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Το πρότυπο #%s στο %s έχει διπλά ορισμένο πεδίο \"%s\" με νέα τιμή \"%s\". "
 "Πιθανόν δύο πρότυπα δεν είναι σωστά χωρισμένα με κενή γραμμή.\n"

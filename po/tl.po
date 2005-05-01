@@ -171,7 +171,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Ang template #%s sa %s ay may nadobleng field \"%s\" na may bagong halagang "
 "\"%s\". Maaring ang dalawang template ay hindi nahiwalay ng tugma na mag-"

@@ -162,7 +162,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Skabelon nr. %s i %s har et dubletfelt \"%s\" med en ny værdi \"%s\". Det "
 "kan være fordi at to skabeloner ikke er adskilt rigtigt med en tom ny "

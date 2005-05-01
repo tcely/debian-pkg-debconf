@@ -153,7 +153,7 @@ msgstr "警告：数据库可能已被损坏。将会尝试修复缺失的项目
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "%2$s 中的第 %1$s 模板有一个重复字段“%3$s”，其中新值为“%4$s”。造成问题的原因可"
 "能是两个模板没有以正确地用换行符分隔开。\n"

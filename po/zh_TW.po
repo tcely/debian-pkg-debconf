@@ -153,7 +153,7 @@ msgstr "警告：資料庫可能已受損壞。將會賞試修復遺失的項目
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "%2$s 中的第 %1$s 樣板有一個重複區塊 \"%3$s\"，其中新值為 \"%4$s\"。造成問題的"
 "原因可能是兩個樣板沒有正確的用換行字元分開。\n"

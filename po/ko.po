@@ -161,7 +161,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "%2$s의 템플릿 #%1$s은(는) 새 값이 \"%4$s\"인 중복된 필드 \"%3$s\"을(를) 가지"
 "고 있습니다. 두 템플릿이 하나의 개행문자로 정확하게 분리되지 않은 것 같습니"

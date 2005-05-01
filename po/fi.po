@@ -167,7 +167,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Kyselypohjassa #%s tiedostossa %s toistuu kenttä \"%s\" uudella arvolla \"%s"
 "\". Mahdollisesti kahta eri pohjaa ei ole erotettu rivinvaihdolla "

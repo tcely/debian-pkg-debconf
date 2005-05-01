@@ -168,7 +168,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Шаблон номер %s в %s содержит повторяющееся поле \"%s\" с новым значением \"%"
 "s\". Наверно, какие-то два шаблона не разделены пустой строкой.\n"

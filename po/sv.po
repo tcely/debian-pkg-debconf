@@ -163,7 +163,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
-"Probably two templates are not properly seperated by a lone newline.\n"
+"Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "Mall %s i %s har ett dubblerat \"%s\"-fält med det nya värdet \"%s\". Det "
 "beror troligen på att två mallar inte avdelats korrekt med en ensam "
