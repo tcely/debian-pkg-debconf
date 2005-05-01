@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-04 20:14-0500\n"
-"PO-Revision-Date: 2005-04-30 22:25+0930\n"
+"POT-Creation-Date: 2005-05-01 08:14+0200\n"
+"PO-Revision-Date: 2005-05-01 14:45+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,10 @@ msgstr ""
 msgid "Debconf on %s"
 msgstr "Debconf trên %s"
 
+#: ../Debconf/FrontEnd/Teletype.pm:96
+msgid "More"
+msgstr "Thêm"
+
 #: ../Debconf/FrontEnd/Web.pm:65
 #, c-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
@@ -59,10 +63,6 @@ msgstr "Quay lui"
 #: ../Debconf/FrontEnd/Web.pm:167
 msgid "Next"
 msgstr "Tới"
-
-#: ../Debconf/FrontEnd/Teletype.pm:96
-msgid "More"
-msgstr "Thêm"
 
 #: ../Debconf/FrontEnd/Dialog.pm:50
 msgid "TERM is not set, so the dialog frontend is not usable."
@@ -106,6 +106,98 @@ msgstr "Lối vào này cần thiết một tty điều khiển."
 #: ../Debconf/FrontEnd/Readline.pm:58
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU không tương thích với bộ đệm hệ vỏ emacs."
+
+#: ../Debconf/Element/Gnome/Note.pm:52
+msgid "Save (mail) Note"
+msgstr "Lưu (gởi thư) chú thích"
+
+#: ../Debconf/Element/Gnome/Note.pm:53
+msgid "Debconf was asked to save this note, so it mailed it to you."
+msgstr "Đã báo Debconf lưu chú thích này, vậy nó đã gởi chú thích cho bạn rồi."
+
+#: ../Debconf/Element/Gnome/Note.pm:55
+msgid "Information"
+msgstr "Thông tin"
+
+#: ../Debconf/Element/Gnome/Note.pm:56
+msgid "The note has been mailed."
+msgstr "Đã gởi chú thích ấy rồi."
+
+#: ../Debconf/Element/Gnome/Note.pm:60
+msgid "Error"
+msgstr "Lỗi"
+
+#: ../Debconf/Element/Gnome/Note.pm:61
+msgid "Unable to save note."
+msgstr "Không lưu được chú thích."
+
+#: ../Debconf/Element/Editor/Multiselect.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:30
+#: ../Debconf/Element/Editor/Select.pm:31
+msgid "Choices"
+msgstr "Tùy chọn"
+
+#: ../Debconf/Element/Editor/Multiselect.pm:32
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgstr ""
+"(Hãy nhập mục [số không hay nhiều] định, giới, bằng, dấu, phẩy, và, dấu, "
+"cách :) )"
+
+#: ../Debconf/Element/Editor/Boolean.pm:30
+#: ../Debconf/Element/Editor/Boolean.pm:36
+#: ../Debconf/Element/Editor/Boolean.pm:59
+#: ../Debconf/Element/Teletype/Boolean.pm:28
+msgid "yes"
+msgstr "có"
+
+#: ../Debconf/Element/Editor/Boolean.pm:30
+#: ../Debconf/Element/Editor/Boolean.pm:39
+#: ../Debconf/Element/Editor/Boolean.pm:62
+#: ../Debconf/Element/Teletype/Boolean.pm:29
+msgid "no"
+msgstr "không"
+
+#: ../Debconf/Element/Noninteractive/Note.pm:40
+msgid ""
+"Debconf was not configured to display this note, so it mailed it to you."
+msgstr ""
+"Chưa cấu hình Debconf để hiển thị chú thích này, thì nó gởi chú thích cho "
+"bạn."
+
+#: ../Debconf/Element/Noninteractive/Note.pm:64
+msgid "Debconf"
+msgstr "Debconf"
+
+#: ../Debconf/Element/Noninteractive/Note.pm:87
+#, c-format
+msgid "Debconf, running at %s"
+msgstr "Debconf, đang chạy vào %s"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:27
+msgid "none of the above"
+msgstr "không ở trên"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:47
+msgid "Enter the items you want to select, separated by spaces."
+msgstr "Hãy nhận những mục mà bạn muốn chọn, định giới bằng dấu cách."
+
+#: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
+#, c-format
+msgid ""
+"Input value, \"%s\" not found in C choices! This should never happen. "
+"Perhaps the templates were incorrectly localized."
+msgstr ""
+"Không tìm thấy giá trị \"%s\" trong C tùy chọn. Không bao giờ nên xảy ra như "
+"thế. Có lẽ những mẫu chưa được địa phương hóa cho đúng."
+
+#: ../Debconf/Element/Gnome.pm:183
+msgid "_Help"
+msgstr "Trợ _giúp"
+
+#: ../Debconf/Element/Gnome.pm:185
+msgid "Help"
+msgstr "Trợ giúp"
 
 #: ../Debconf/AutoSelect.pm:76
 #, c-format
@@ -184,98 +276,6 @@ msgstr "Gặp lỗi phân tách mẫu, gần `%s', trong đoạn dòng #%s của
 #, c-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Mẫu #%s trong %s không chứa một dòng 'Template:' (Mẫu).\n"
-
-#: ../Debconf/Element/Gnome.pm:183
-msgid "_Help"
-msgstr "Trợ _giúp"
-
-#: ../Debconf/Element/Gnome.pm:185
-msgid "Help"
-msgstr "Trợ giúp"
-
-#: ../Debconf/Element/Gnome/Note.pm:52
-msgid "Save (mail) Note"
-msgstr "Lưu (gởi thư) chú thích"
-
-#: ../Debconf/Element/Gnome/Note.pm:53
-msgid "Debconf was asked to save this note, so it mailed it to you."
-msgstr "Đã báo Debconf lưu chú thích này, vậy nó đã gởi chú thích cho bạn rồi."
-
-#: ../Debconf/Element/Gnome/Note.pm:55
-msgid "Information"
-msgstr "Thông tin"
-
-#: ../Debconf/Element/Gnome/Note.pm:56
-msgid "The note has been mailed."
-msgstr "Đã gởi chú thích ấy rồi."
-
-#: ../Debconf/Element/Gnome/Note.pm:60
-msgid "Error"
-msgstr "Lỗi"
-
-#: ../Debconf/Element/Gnome/Note.pm:61
-msgid "Unable to save note."
-msgstr "Không lưu được chú thích."
-
-#: ../Debconf/Element/Editor/Multiselect.pm:31
-#: ../Debconf/Element/Editor/Select.pm:31
-#: ../Debconf/Element/Editor/Boolean.pm:30
-msgid "Choices"
-msgstr "Tùy chọn"
-
-#: ../Debconf/Element/Editor/Multiselect.pm:32
-msgid ""
-"(Enter zero or more items separated by a comma followed by a space (', ').)"
-msgstr ""
-"(Hãy nhập mục [số không hay nhiều] định, giới, bằng, dấu, phẩy, và, dấu, "
-"cách :) )"
-
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:36
-#: ../Debconf/Element/Editor/Boolean.pm:59
-#: ../Debconf/Element/Teletype/Boolean.pm:28
-msgid "yes"
-msgstr "có"
-
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:39
-#: ../Debconf/Element/Editor/Boolean.pm:62
-#: ../Debconf/Element/Teletype/Boolean.pm:29
-msgid "no"
-msgstr "không"
-
-#: ../Debconf/Element/Noninteractive/Note.pm:40
-msgid ""
-"Debconf was not configured to display this note, so it mailed it to you."
-msgstr ""
-"Chưa cấu hình Debconf để hiển thị chú thích này, thì nó gởi chú thích cho "
-"bạn."
-
-#: ../Debconf/Element/Noninteractive/Note.pm:64
-msgid "Debconf"
-msgstr "Debconf"
-
-#: ../Debconf/Element/Noninteractive/Note.pm:87
-#, c-format
-msgid "Debconf, running at %s"
-msgstr "Debconf, đang chạy vào %s"
-
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
-msgid "none of the above"
-msgstr "không ở trên"
-
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
-msgstr "Hãy nhận những mục mà bạn muốn chọn, định giới bằng dấu cách."
-
-#: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
-#, c-format
-msgid ""
-"Input value, \"%s\" not found in C choices! This should never happen. "
-"Perhaps the templates were incorrectly localized."
-msgstr ""
-"Không tìm thấy giá trị \"%s\" trong C tùy chọn. Không bao giờ nên xảy ra như "
-"thế. Có lẽ những mẫu chưa được địa phương hóa cho đúng."
 
 #: ../Debconf/FrontEnd.pm:131
 #, c-format
@@ -378,6 +378,64 @@ msgstr "%s quá hạn"
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s quá hạn; đang thả toàn mẫu."
 
-#, fuzzy
-msgid "preconfiguring %s (%s)"
-msgstr "Đang cấu hình %s..."
+#~ msgid ""
+#~ "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
+#~ "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
+#~ "       --terse\t\t\tEnable terse mode.\n"
+#~ msgstr ""
+#~ "  -f,  --frontend\t\tGhi rõ _tiền tiêu_ debconf cần sử dụng.\n"
+#~ "  -p,  --priority\t\tSGhi rõ _ưu tiên_ tối thiểu cân hiển thị.\n"
+#~ "       --terse\t\t\tHiệu lực chế độ _ngắn gọn_.\n"
+
+#~ msgid ""
+#~ "Usage: dpkg-reconfigure [options] packages\n"
+#~ "  -a,  --all\t\t\tReconfigure all packages.\n"
+#~ "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#~ "       --default-priority\tUse default priority instead of low.\n"
+#~ "       --force\t\t\tForce reconfiguration of broken packages."
+#~ msgstr ""
+#~ "Cách sử dụng: dpkg-reconfigure [tùy_chọn] những_gói\n"
+#~ "(reconfigure: cấu hình lại)\n"
+#~ "\n"
+#~ "  -a,  --all\t\t\tCấu hình lại _mọi_ gói.\n"
+#~ "  -u,  --unseen-only\t\tHiển thị _chỉ_ những câu hỏi _chưa xem_.\n"
+#~ "       --default-priority\tSử dụng _ưu tiên mặc định_ thay vào ưu tiên "
+#~ "thấp.\n"
+#~ "       --force\t\t\t_Buộc_ cấu hình lại các gói bị ngắt."
+
+#~ msgid "Usage: debconf-communicate [options] [package]"
+#~ msgstr ""
+#~ "Cách sử dụng: debconf-communicate [tùy_chọn] [gói]\n"
+#~ "(communicate: truyền thông)"
+
+#~ msgid ""
+#~ "debconf-mergetemplate: This utility is deprecated. You should switch to "
+#~ "using po-debconf's po2debconf program."
+#~ msgstr ""
+#~ "debconf-mergetemplate: tiện ích này bị phản đối. Như thế thì bạn nên "
+#~ "chuyển đổi sang sử dụng chương trình po2debconf của po-debconf. "
+#~ "(mergetemplate: phối các mẫu với nhau)"
+
+#~ msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
+#~ msgstr ""
+#~ "Cách sử dụng: debconf-mergetemplate [tùy_chọn] [mẫu.ll ...] mẫu\n"
+#~ "(mergetemplate: phối các mẫu với nhau)"
+
+#~ msgid ""
+#~ "\n"
+#~ "        --outdated\t\tMerge in even outdated translations.\n"
+#~ "\t--drop-old-templates\tDrop entire outdated templates."
+#~ msgstr ""
+#~ "\n"
+#~ "        --outdated\t\tPhối ngay cả bản dịch _hết hạn_ với nhau.\n"
+#~ "\t--drop-old-templates\t_Thả_ toàn bộ _các mẫu hết hạn_."
+
+#~ msgid "Usage: debconf [options] command [args]"
+#~ msgstr "Cách sử dụng: debconf [tùy_chọn] lệnh [đối_số]"
+
+#~ msgid ""
+#~ "\n"
+#~ "  -o,  --owner=package\t\tSet the package that owns the command."
+#~ msgstr ""
+#~ "\n"
+#~ "  -o,  --owner=package\t\tLập _gói sở hữu_ lệnh ấy."
