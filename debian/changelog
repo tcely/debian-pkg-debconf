@@ -7,8 +7,10 @@ debconf (1.4.30.14) UNRELEASED; urgency=low
   * Fix typo in Debconf/Template.pm : s/speerated/separated
     Unfuzzy translations
     Closes: #307165
+  * Christian Perrier
+    - Man pages typos corrected. Closes: #309010, #309011, #309013
 
- -- Christian Perrier <bubulle@debian.org>  Sun,  1 May 2005 19:53:55 +0200
+ -- Christian Perrier <bubulle@debian.org>  Sat, 21 May 2005 09:10:13 +0200
 
 debconf (1.4.30.13) testing-proposed-updates; urgency=low
 
