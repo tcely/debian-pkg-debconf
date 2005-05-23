@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-04 20:14-0500\n"
-"PO-Revision-Date: 2005-01-23 23:11+0100\n"
+"POT-Creation-Date: 2005-05-01 12:45-0600\n"
+"PO-Revision-Date: 2005-05-22 22:51+0200\n"
 "Last-Translator: Stefano Canepa <sc@linux.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,18 +69,18 @@ msgstr "Ancora"
 #: ../Debconf/FrontEnd/Dialog.pm:50
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
-"TERM non è impostata per cui il frontend a dialoghi non può essere usato."
+"TERM non è impostata per cui il frontend dialog non può essere usato."
 
 #: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "Dialog frontend is incompatible with emacs shell buffers"
-msgstr "Il frontend a dialoghi è incompatibile con i buffer di shell di emacs"
+msgstr "Il frontend dialog è incompatibile con i buffer di shell di emacs"
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
 msgstr ""
-"Il frontend a dialoghi non funziona su dumb terminal, un buffer di shell di "
+"Il frontend dialog non funziona su dumb terminal, un buffer di shell di "
 "emacs o senza un terminale di controllo"
 
 #: ../Debconf/FrontEnd/Dialog.pm:102
@@ -89,14 +89,12 @@ msgid ""
 "cannot be used."
 msgstr ""
 "Non è installato nessun programma di gestione di dialoghi utilizzabile, "
-"pertanto non può essere usato nessun fontend a dialoghi."
+"pertanto non può essere usato nessun fontend dialog."
 
 #: ../Debconf/FrontEnd/Dialog.pm:109
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
-msgstr ""
-"Il frontend a dialoghi richiede uno schermo che misuri almeno 13 righe in "
-"altezza e 31 colonne in larghezza."
+msgstr "Il frontend dialog richiede uno schermo che misuri almeno 13 righe in altezza e 31 colonne in larghezza."
 
 #: ../Debconf/FrontEnd/Dialog.pm:282
 msgid "Debian Configuration"
@@ -225,8 +223,8 @@ msgid "Unable to save note."
 msgstr "Impossibile salvare la nota."
 
 #: ../Debconf/Element/Editor/Multiselect.pm:31
-#: ../Debconf/Element/Editor/Select.pm:31
 #: ../Debconf/Element/Editor/Boolean.pm:30
+#: ../Debconf/Element/Editor/Select.pm:31
 msgid "Choices"
 msgstr "Scelte"
 

@@ -4,13 +4,14 @@ debconf (1.4.30.14) UNRELEASED; urgency=low
     - Italian updated from trunk
   * Programs translations:
     - Vietnamese updated from trunk
+    - Italian updated from trunk. Closes: #310288
   * Fix typo in Debconf/Template.pm : s/speerated/separated
     Unfuzzy translations
     Closes: #307165
   * Christian Perrier
     - Man pages typos corrected. Closes: #309010, #309011, #309013
 
- -- Christian Perrier <bubulle@debian.org>  Sat, 21 May 2005 09:10:13 +0200
+ -- Christian Perrier <bubulle@kheops.frmug.org>  Mon, 23 May 2005 10:44:00 +0200
 
 debconf (1.4.30.13) testing-proposed-updates; urgency=low
 
