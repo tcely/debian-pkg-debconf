@@ -1,10 +1,10 @@
-debconf (1.5.11etch1) UNRELEASED; urgency=low
+debconf (1.5.11etch1) stable; urgency=low
 
   [ Colin Watson ]
   * Make sure that apt status commands and debconf protocol commands under
     debconf-apt-progress are properly interleaved. Closes: #425397
 
- -- Jérémy Bobbio <lunar@debian.org>  Thu, 27 Sep 2007 11:55:53 +0200
+ -- Jérémy Bobbio <lunar@debian.org>  Thu, 27 Sep 2007 12:23:27 +0200
 
 debconf (1.5.11) unstable; urgency=low
 
