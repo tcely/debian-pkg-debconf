@@ -1,90 +1,10 @@
-debconf (1.5.15) UNRELEASED; urgency=low
+debconf (1.5.11etch1) UNRELEASED; urgency=low
 
   [ Colin Watson ]
-  * Add manual page description for debconf-set-selections. Closes: #435954
-  * Ignore AttributeError in the Python DebconfCommunicator destructor, so
-    that you don't get a confusing exception message if you give the wrong
-    number of arguments to the constructor.
-
-  [ Debconf Translations ]
-  * Nepali updated. Closes: #435388
-
-  [ Programs Translations ]
-  * Nepali added. Closes: #435389
-
-  [ Joey Hess ]
-  * Applied Davor Ocelic's patch adding a keybykey option to the LDAP
-    DbDriver. Closes: #440857
-    (Note that it currently has some minor uninitialised value warnings.)
-
- -- Joey Hess <joeyh@debian.org>  Tue, 04 Sep 2007 17:43:54 -0400
-
-debconf (1.5.14) unstable; urgency=low
-
-  [ Colin Watson ]
-  * Retry flock() on EINTR. Failing that, print the errno if flock() fails
-    so that we have a better chance of working out why.
-  * Install Python confmodule for python2.5 as well.
-  * Add confmodule bindings for the DATA command.
-  * Somebody looking at confmodule(3) probably actually wants
-    debconf-devel(7). Add a reference in SEE ALSO.
   * Make sure that apt status commands and debconf protocol commands under
     debconf-apt-progress are properly interleaved. Closes: #425397
 
-  [ Debconf Translations ]
-  * Marathi added. Closes: #416805
-  * Basque updated. Closes: #418897
-
-  [ Programs Translations ]
-  * Marathi added. Closes: #416805
-  * Punjabi added. Closes: #427327
-  * Basque updated. Closes: #418902
-  * Esperanto added. Closes: #428275
-
-  [ Joey Hess ]
-  * Increase selectspacer to 13 for dialog. May be needed due to changes in
-    new versions of dialog.
-  * Update url to web site in README.
-
-  [ Trent Buck ]
-  * Fix bash_completion syntax. Closes: #425676
-
- -- Colin Watson <cjwatson@debian.org>  Wed, 25 Jul 2007 14:58:39 +0100
-
-debconf (1.5.13) unstable; urgency=low
-
-  [ Man pages translations ]
-    - French updated
-
-  [ Joey Hess ]
-  * Fix kde frontend to "show" noninteractive elements so they can handle
-    setting their values appropriately. Closes: #413509 (except possibly for
-    the strange and unreproducible bits)
-  * Avoid initialising kde until the first question is found that needs to be
-    displayed using it. The Qt module could fail in some ugly ways during
-    destruction if kde stuff was initialised but never used. (See #413509)
-
- -- Joey Hess <joeyh@debian.org>  Tue,  6 Mar 2007 12:53:58 -0500
-
-debconf (1.5.12) unstable; urgency=low
-
-  [ Debconf Translations ]
-    - Updated Esperanto. Closes: #404588
-    - Updated Slovenian. Closes: #405581
-    - Added Malayalam. Closes: #405910
-
-  [ Joey Hess ]
-  * Bubulle requested I include a copy of debconf.pot in the source, rather
-    than cleaning it, so here it is. Note that it's not included in svn, to
-    avoid churn.
-
-  [ Christian Perrier ]
-  * Fix typos in debconf-devel(7) and debconf(7). Closes: #410168, #410169
-
-  [ Joey Hess ]
-  * po/Makefile: Smarter detection of no-op changes to po files.
-
- -- Joey Hess <joeyh@debian.org>  Mon, 26 Feb 2007 20:46:20 -0500
+ -- Jérémy Bobbio <lunar@debian.org>  Thu, 27 Sep 2007 11:55:53 +0200
 
 debconf (1.5.11) unstable; urgency=low
 
