@@ -467,6 +467,10 @@ sub run_progress ($$@) {
 	# make sure that the progress bar always gets to the end
 	Debconf::Client::ConfModule::progress('SET', $to) if $progress;
 
+	if ($status & 127) {
+		return 127;
+	}
+
 	return ($status >> 8);
 }
 
