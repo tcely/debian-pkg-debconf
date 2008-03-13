@@ -1,3 +1,18 @@
+debconf (1.5.11etch2) UNRELEASED; urgency=low
+
+  * Backport changes to make debconf-apt-progress compatible with the Lenny
+    debian-installer:
+    - Add --no-progress option intended to be used by apt-install in d-i.
+    - Notice if the child exited abnormally, and exit nonzero.
+    - Add --dlwaypoint option (without the cancel changes).
+    - Fix tasksel hangs when $debconf_command_eof never became true
+      because of buggy daemons. STATUS_READ should be the last fd to close, so
+      checking $status_eof is sufficient. (LP: #141601)
+    - Fix use of 'next' rather than 'return' in debconf-apt-progress
+      handle_status.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Thu, 13 Mar 2008 10:28:44 +0100
+
 debconf (1.5.11etch1) stable; urgency=low
 
   [ Colin Watson ]
