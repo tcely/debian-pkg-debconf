@@ -1,41 +1,10 @@
-debconf (1.5.38) unstable; urgency=low
-
-  [ Colin Watson ]
-  * Correctly handle disabling the backup capability in a confmodule after
-    it was previously enabled.
+debconf (1.5.36.1) testing; urgency=low
 
   [ Christian Perrier ]
   * Fix encoding in Spanish translation. Closes: #607688
   * Fix encoding in Hebrew debconf translation.
 
-  [ Joey Hess ]
-  * Update copyright file to use DEP5 syntax, and expand with some
-    historical data.
-
- -- Joey Hess <joeyh@debian.org>  Fri, 14 Jan 2011 19:46:27 -0400
-
-debconf (1.5.37) unstable; urgency=low
-
-  [ Manpages translation ]
-  * Spanish added (huge thanks to Omar Campagne). Closes: #599401
-  * French completed (Christian Perrier).
-
-  [ Debconf translations ]
-  * Icelandic (Sveinn í Felli).
-  * Serbian (Janos Guljas).  Closes: #600142
-  * Catalan (Jordi Mallach).  Closes: #600626
-  * Dutch (Eric Spreen).  Closes: #603953
-  * Greek (Emmanuel Galatoulas).  Closes: #604451
-  * Dzongkha (dawa pemo).  Closes: #604458
-
-  [ Helge Kreutzmann ]
-  * Fix (mostly) typos. Thanks Florian Rehnisch <eixman@gmx.de> for noticing.
-    Addresses: #518395.
-    Also unfuzzy all translations as far as possible.
-  * Update German translation where unfuzzing was not enough (actually a no-op
-    as Florian already translated appropriately).
-
- -- Colin Watson <cjwatson@debian.org>  Mon, 29 Nov 2010 18:11:22 +0000
+ -- Joey Hess <joeyh@debian.org>  Sun, 30 Jan 2011 14:28:03 -0400
 
 debconf (1.5.36) unstable; urgency=low
 
