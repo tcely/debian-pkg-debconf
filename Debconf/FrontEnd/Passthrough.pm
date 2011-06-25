@@ -11,6 +11,7 @@ use strict;
 use Carp;
 use IO::Socket;
 use IO::Handle;
+use IO::Select;
 use Debconf::FrontEnd;
 use Debconf::Element;
 use Debconf::Element::Select;
@@ -74,15 +75,19 @@ sub init {
 	$this->need_tty(0);
 }
 
-=head2 talk
+=head2 talk_with_timeout
 
 Communicates with the UI agent. Joins all parameters together to create a
-command, sends it to the agent, and reads and processes its reply.
+command, sends it to the agent, and reads and processes its reply. If timeout
+is specified (the first argument), the subroutine will only wait a speficied
+number of seconds for the other end to reply. If timeout occurs, undef will be
+returned.
 
 =cut
 
-sub talk {
+sub talk_with_timeout {
 	my $this=shift;
+	my $timeout=shift;
 	my $command=join(' ', map { Debconf::Encoding::to_Unicode($_) } @_);
 	my $reply;
 	
@@ -92,6 +97,13 @@ sub talk {
 	debug developer => "----> (passthrough) $command";
 	print $writefh $command."\n";
 	$writefh->flush;
+
+	if (defined $timeout) {
+	    my $select = IO::Select->new($readfh);
+	    return undef if !$select->can_read($timeout);
+	}
+	return undef if ($readfh->eof());
+
 	$reply = <$readfh>;
 	chomp($reply);
 	debug developer => "<---- (passthrough) $reply";
@@ -101,6 +113,17 @@ sub talk {
 
 	return ($tag, $val) if wantarray;
 	return $tag;
+}
+
+=head2 talk
+
+Same as talk_with_timeout() just waits for the answer infinitely.
+
+=cut
+
+sub talk {
+	my $this=shift;
+	return $this->talk_with_timeout(undef, @_);
 }
 
 =head2 makeelement
