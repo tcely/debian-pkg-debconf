@@ -89,12 +89,12 @@ sub talk {
 	my $readfh = $this->{readfh} || croak "Broken pipe";
 	my $writefh = $this->{writefh} || croak "Broken pipe";
 	
-	debug developer => "----> $command";
+	debug developer => "----> (passthrough) $command";
 	print $writefh $command."\n";
 	$writefh->flush;
 	$reply = <$readfh>;
 	chomp($reply);
-	debug developer => "<---- $reply";
+	debug developer => "<---- (passthrough) $reply";
 	my ($tag, $val) = split(' ', $reply, 2);
 	$val = '' unless defined $val;
 	$val = Debconf::Encoding::convert("UTF-8", $val);
