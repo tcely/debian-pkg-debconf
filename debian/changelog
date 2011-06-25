@@ -2,6 +2,7 @@ debconf (1.5.68) UNRELEASED; urgency=medium
 
   [ Modestas Vainius ]
   * Rename current Kde frontend to Qt.
+  * Add Debian/{FrontEnd,Element}/Qt* to debian/copyright.
 
  -- Modestas Vainius <modax@debian.org>  Wed, 18 Jul 2018 21:12:23 +0100
 
