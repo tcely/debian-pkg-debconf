@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Password - password entry widget
+Debconf::Element::Qt::Password - password entry widget
 
 =cut
 
-package Debconf::Element::Kde::Password;
+package Debconf::Element::Qt::Password;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 
 =head1 DESCRIPTION
 

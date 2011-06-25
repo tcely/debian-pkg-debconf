@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Select - select list widget
+Debconf::Element::Qt::Select - select list widget
 
 =cut
 
-package Debconf::Element::Kde::Select;
+package Debconf::Element::Qt::Select;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde Debconf::Element::Select);
+use base qw(Debconf::Element::Qt Debconf::Element::Select);
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION

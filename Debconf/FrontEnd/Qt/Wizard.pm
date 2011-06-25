@@ -2,24 +2,24 @@
 
 =head1 NAME
 
-Debconf::FrontEnd::Kde::Wizard - Wizard interface for Kde frontend
+Debconf::FrontEnd::Qt::Wizard - Wizard interface for Qt frontend
 
 =cut
 
-package Debconf::FrontEnd::Kde::Wizard;
+package Debconf::FrontEnd::Qt::Wizard;
 use strict;
 use utf8;
 use Debconf::Log ':all';
 use QtCore4;
 use QtGui4;
-use QtCore4::isa qw(Qt::Widget Debconf::FrontEnd::Kde::Ui_DebconfWizard);
+use QtCore4::isa qw(Qt::Widget Debconf::FrontEnd::Qt::Ui_DebconfWizard);
 use QtCore4::slots 'goNext' => [], 'goBack' => [], 'goBye' => [];
-use Debconf::FrontEnd::Kde::Ui_DebconfWizard;
+use Debconf::FrontEnd::Qt::Ui_DebconfWizard;
 
 =head1 DESCRIPTION
 
 This module ties together the WizardUI module, which is automatically
-generated and constructs the actual wizard UI, with the Kde FrontEnd.
+generated and constructs the actual wizard UI, with the Qt FrontEnd.
 
 =head1 METHODS
 

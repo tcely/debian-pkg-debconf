@@ -2,16 +2,16 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Note - a note to show to the user
+Debconf::Element::Qt::Note - a note to show to the user
 
 =cut
 
-package Debconf::Element::Kde::Note;
+package Debconf::Element::Qt::Note;
 use strict;
 use Debconf::Gettext;
 use Qt;
 use Debconf::Element::Noninteractive::Note;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 
 =head1 DESCRIPTION
 

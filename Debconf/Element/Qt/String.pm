@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::String
+Debconf::Element::Qt::String
 
 =cut
 
-package Debconf::Element::Kde::String;
+package Debconf::Element::Qt::String;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION

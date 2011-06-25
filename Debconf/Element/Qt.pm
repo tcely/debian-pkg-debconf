@@ -2,11 +2,11 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::ElementWidget - Kde UI Widget
+Debconf::Element::Qt::ElementWidget - Qt UI Widget
 
 =cut
 
-package Debconf::Element::Kde::ElementWidget;
+package Debconf::Element::Qt::ElementWidget;
 use QtCore4;
 use QtCore4::isa @ISA = qw(Qt::Widget);
 use QtGui4;
@@ -14,7 +14,7 @@ use QtGui4;
 
 =head1 DESCRIPTION
 
-This is a helper module for Debconf::Element::Kde, it represents one KDE
+This is a helper module for Debconf::Element::Qt, it represents one Qt
 widget that is part of a debconf display Element.
 
 =head1 METHODS
@@ -110,22 +110,22 @@ Sune Vuorela <sune@vuorela.dk>
 
 =head1 NAME
 
-Debconf::Element::Kde - kde UI element
+Debconf::Element::Qt - Qt UI element
 
 =cut
 
-package Debconf::Element::Kde;
+package Debconf::Element::Qt;
 use strict;
 use QtCore4;
 use QtGui4;
 use Debconf::Gettext;
 use base qw(Debconf::Element);
-use Debconf::Element::Kde::ElementWidget;
+use Debconf::Element::Qt::ElementWidget;
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION
 
-This is a type of Element used by the kde FrontEnd.
+This is a type of Element used by the Qt FrontEnd.
 
 =head1 METHODS
 
@@ -140,7 +140,7 @@ Called to create a the necessary Qt widgets for the element..
 sub create {
 	my $this=shift;
 	$this->parent(shift);
-	$this->top(Debconf::Element::Kde::ElementWidget($this->parent, undef,
+	$this->top(Debconf::Element::Qt::ElementWidget($this->parent, undef,
 	                                                undef, undef));
 	$this->top->init;
 	$this->top->show;
@@ -189,7 +189,7 @@ sub description {
 
 sub startsect {
 	my $this = shift;
-	my $ew = Debconf::Element::Kde::ElementWidget($this->top);
+	my $ew = Debconf::Element::Qt::ElementWidget($this->top);
 	$ew->init;
 	$this->cur($ew);
 	$this->top->addwidget($ew);

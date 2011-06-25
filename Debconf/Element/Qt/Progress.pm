@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Progress - progress bar widget
+Debconf::Element::Qt::Progress - progress bar widget
 
 =cut
 
-package Debconf::Element::Kde::Progress;
+package Debconf::Element::Qt::Progress;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION

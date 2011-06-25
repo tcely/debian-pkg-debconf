@@ -2,16 +2,16 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Error - an error message to show to the user
+Debconf::Element::Qt::Error - an error message to show to the user
 
 =cut
 
-package Debconf::Element::Kde::Error;
+package Debconf::Element::Qt::Error;
 use strict;
 use Debconf::Gettext;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 
 =head1 DESCRIPTION
 

@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Boolean - check box widget
+Debconf::Element::Qt::Boolean - check box widget
 
 =cut
 
-package Debconf::Element::Kde::Boolean;
+package Debconf::Element::Qt::Boolean;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde);
+use base qw(Debconf::Element::Qt);
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION

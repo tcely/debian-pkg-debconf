@@ -2,11 +2,11 @@
 
 =head1 NAME
 
-Debconf::FrontEnd::Kde - GUI Kde frontend
+Debconf::FrontEnd::Qt - GUI Qt frontend
 
 =cut
 
-package Debconf::FrontEnd::Kde;
+package Debconf::FrontEnd::Qt;
 use strict;
 use utf8;
 use Debconf::Gettext;
@@ -17,7 +17,7 @@ BEGIN {
 	eval { require QtGui4 };
 	die "Unable to load QtGui -- is libqtgui4-perl installed?\n" if $@;
 }
-use Debconf::FrontEnd::Kde::Wizard;
+use Debconf::FrontEnd::Qt::Wizard;
 use Debconf::Log ':all';
 use base qw{Debconf::FrontEnd};
 use Debconf::Encoding qw(to_Unicode);
@@ -28,7 +28,7 @@ use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION
 
-This FrontEnd is a Kde/Qt UI for Debconf.
+This FrontEnd is a Qt UI for Debconf.
 
 =head1 METHODS
 
@@ -37,11 +37,11 @@ This FrontEnd is a Kde/Qt UI for Debconf.
 =item init
 
 Set up the UI. Most of the work is really done by
-Debconf::FrontEnd::Kde::Wizard and Debconf::FrontEnd::Kde::WizardUi.
+Debconf::FrontEnd::Qt::Wizard and Debconf::FrontEnd::Qt::WizardUi.
 
 =cut
 
-our @ARGV_KDE=();
+our @ARGV_QT=();
 
 sub init {
 	my $this=shift;
@@ -63,34 +63,34 @@ sub init {
 		}
 	}
 	else {
-		$this->qtapp(Qt::Application(\@ARGV_KDE));
+		$this->qtapp(Qt::Application(\@ARGV_QT));
 		exit(0); # success
 	}
 	
-	# Kde will be initted only if really needed, to avoid being slow,
+	# Qt will be initted only if really needed, to avoid being slow,
 	# plus avoid nastiness as described in #413509.
 	$this->window_initted(0);
-	$this->kde_initted(0);
+	$this->qt_initted(0);
 }
 
-sub init_kde {
+sub init_qt {
 	my $this=shift;
 
-	return if $this->kde_initted;
+	return if $this->qt_initted;
 
 	debug frontend => "QTF: initializing app";
-	$this->qtapp(Qt::Application(\@ARGV_KDE));
-	$this->kde_initted(1);
+	$this->qtapp(Qt::Application(\@ARGV_QT));
+	$this->qt_initted(1);
 }
 
 sub init_window {
 	my $this=shift;
-	$this->init_kde();
+	$this->init_qt();
 	return if $this->window_initted;
 	$this->{vbox} = Qt::VBoxLayout;
 
 	debug frontend => "QTF: initializing wizard";
-	$this->win(Debconf::FrontEnd::Kde::Wizard(undef,undef, $this));
+	$this->win(Debconf::FrontEnd::Qt::Wizard(undef,undef, $this));
 	debug frontend => "QTF: setting size";
 	$this->win->resize(620, 430);
 	my $hostname = `hostname`;
@@ -241,7 +241,7 @@ Called to terminate the UI.
 
 sub shutdown {
 	my $this = shift;
-	if ($this->kde_initted) {
+	if ($this->qt_initted) {
 		if($this->win) {
 			$this->win->destroy;
 		}

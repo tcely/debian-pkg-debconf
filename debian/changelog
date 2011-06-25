@@ -1,3 +1,10 @@
+debconf (1.5.68) UNRELEASED; urgency=medium
+
+  [ Modestas Vainius ]
+  * Rename current Kde frontend to Qt.
+
+ -- Modestas Vainius <modax@debian.org>  Wed, 18 Jul 2018 21:12:23 +0100
+
 debconf (1.5.67) unstable; urgency=medium
 
   [ Translations ]

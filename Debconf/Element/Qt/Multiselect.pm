@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-Debconf::Element::Kde::Multiselect - group of check boxes
+Debconf::Element::Qt::Multiselect - group of check boxes
 
 =cut
 
-package Debconf::Element::Kde::Multiselect;
+package Debconf::Element::Qt::Multiselect;
 use strict;
 use QtCore4;
 use QtGui4;
-use base qw(Debconf::Element::Kde Debconf::Element::Multiselect);
+use base qw(Debconf::Element::Qt Debconf::Element::Multiselect);
 use Debconf::Encoding qw(to_Unicode);
 
 =head1 DESCRIPTION
