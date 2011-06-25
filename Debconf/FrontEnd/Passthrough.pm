@@ -399,6 +399,22 @@ sub progress_stop {
 	return $this->talk('PROGRESS', 'STOP');
 }
 
+sub shutdown {
+	my $this=shift;
+	$this->SUPER::shutdown();
+	# Close readfh if it is not the same as writefh (in case of socket)
+	if (defined $this->{readfh} &&
+	   (!defined $this->{writefh} || $this->{readfh} != $this->{writefh}))
+	{
+		close $this->{readfh};
+		delete $this->{readfh};
+	}
+	if (defined $this->{writefh}) {
+		close $this->{writefh};
+		delete $this->{writefh};
+	}
+}
+
 =back
 
 =head1 AUTHOR
