@@ -20,16 +20,6 @@ use Debconf::Log qw(:all);
 use Debconf::Encoding;
 use base qw(Debconf::FrontEnd);
 
-my ($READFD, $WRITEFD, $SOCKET);
-if (defined $ENV{DEBCONF_PIPE}) {
-        $SOCKET = $ENV{DEBCONF_PIPE};
-} elsif (defined $ENV{DEBCONF_READFD} && defined $ENV{DEBCONF_WRITEFD}) {
-        $READFD = $ENV{DEBCONF_READFD};
-        $WRITEFD = $ENV{DEBCONF_WRITEFD};
-} else {
-        die "Neither DEBCONF_PIPE nor DEBCONF_READFD and DEBCONF_WRITEFD were set\n";
-}
-
 =head1 DESCRIPTION
 
 This is a IPC pass-through frontend for Debconf. It is meant to enable 
@@ -52,27 +42,55 @@ Set up the pipe to the UI agent and other housekeeping chores.
 sub init {
 	my $this=shift;
 
-        if (defined $SOCKET) {
-                $this->{readfh} = $this->{writefh} = IO::Socket::UNIX->new(
-		        Type => SOCK_STREAM,
-		        Peer => $SOCKET
-	        ) || croak "Cannot connect to $SOCKET: $!";
-        } else {
-                $this->{readfh} = IO::Handle->new_from_fd(int($READFD), "r") || croak "Failed to open fd $READFD: $!";
-                $this->{writefh} = IO::Handle->new_from_fd(int($WRITEFD), "w") || croak "Failed to open fd $WRITEFD: $!";
-        }
+	# If readfh and writefh were not initialized before (by child class),
+	# initialize them from environment
+	if (!defined $this->{readfh} || !defined $this->{writefh}) {
+		if (!defined $this->init_fh_from_env()) {
+			die "Neither DEBCONF_PIPE nor DEBCONF_READFD and DEBCONF_WRITEFD were set\n";
+		}
+	}
 
 	binmode $this->{readfh}, ":utf8";
 	binmode $this->{writefh}, ":utf8";
 
 	$this->{readfh}->autoflush(1);
 	$this->{writefh}->autoflush(1);
-	
+
 	# Note: SUPER init is not called, since it does several things
 	# inappropriate for passthrough frontends, including clearing the capb.
 	$this->elements([]);
 	$this->interactive(1);
 	$this->need_tty(0);
+}
+
+=head2 init_fh_from_env
+
+Initialize file handles from the environment variables: DEBCONF_PIPE - socket,
+DEBCONF_READFD and DEBCONF_WRITEFD - file descriptors of the FIFO pipes.
+
+=cut
+
+sub init_fh_from_env {
+	my $this = shift;
+	my ($socket_path, $readfd, $writefd);
+
+	if (defined $ENV{DEBCONF_PIPE}) {
+		my $socket_path = $ENV{DEBCONF_PIPE};
+		$this->{readfh} = $this->{writefh} = IO::Socket::UNIX->new(
+		    Type => SOCK_STREAM,
+		    Peer => $socket_path
+		) || croak "Cannot connect to $socket_path: $!";
+		return "socket";
+	} elsif (defined $ENV{DEBCONF_READFD} && defined $ENV{DEBCONF_WRITEFD}) {
+		$readfd = $ENV{DEBCONF_READFD};
+		$writefd = $ENV{DEBCONF_WRITEFD};
+		$this->{readfh} = IO::Handle->new_from_fd(int($readfd), "r")
+			or croak "Failed to open fd $readfd: $!";
+		$this->{writefh} = IO::Handle->new_from_fd(int($writefd), "w")
+			or croak "Failed to open fd $writefd: $!";
+		return "fifo";
+	}
+	return undef;
 }
 
 =head2 talk_with_timeout
