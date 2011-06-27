@@ -97,6 +97,9 @@ Qt frontend:
 * Blocks and stuff (need to read some docs and/or code first)
 * More?
 
+Kde frontend:
+* Improve error handling when debconf-kde-helper terminates unexpectedly.
+
 Web based frontend:
 * Well, a little security would be nice! It only allows connections
   from localhost, but even that isn't good enough at all.

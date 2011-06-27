@@ -94,6 +94,12 @@ requires a valid DISPLAY to work; debconf will fall back to other frontends
 if it can't work. Note that this frontend requires you have the
 libgtk3-perl package installed.
 .TP
+.B kde
+This frontend provides a modern X GUI based on the KDE Platform. You of course
+need a DISPLAY to use this frontend and you must install debconf-kde-helper
+package. The frontend will fall back to dialog if some of the prerequisites are
+not met.
+.TP
 .B qt
 This frontend provides a simple X GUI written with the Qt library. You of
 course need a DISPLAY to use this frontend and must install libqtgui4-perl.
