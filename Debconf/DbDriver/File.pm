@@ -9,6 +9,7 @@ Debconf::DbDriver::File - store database in flat file
 package Debconf::DbDriver::File;
 use strict;
 use Debconf::Log qw(:all);
+use Cwd 'abs_path';
 use POSIX ();
 use Fcntl qw(:DEFAULT :flock);
 use IO::Handle;
@@ -80,6 +81,8 @@ sub init {
 	}
 
 	$this->error("No filename specified") unless $this->{filename};
+
+	$this->{filename} = abs_path($this->{filename});
 
 	debug "db $this->{name}" => "started; filename is $this->{filename}";
 	
