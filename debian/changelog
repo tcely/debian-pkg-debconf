@@ -6,6 +6,11 @@ debconf (1.5.44) UNRELEASED; urgency=low
   * Lithuanian (Rimas Kudelis).  Closes: #675699
   * Welsh (Daffyd Tomos).
 
+  [ Joey Hess ]
+  * File DbDriver: Get actual filename, following symlinks.
+    This makes it possible to switch back and forth between
+    debconf and cdebconf. Thanks, Regis Boudin
+
  -- Christian Perrier <bubulle@debian.org>  Tue, 08 May 2012 10:05:40 +0200
 
 debconf (1.5.43) unstable; urgency=low
