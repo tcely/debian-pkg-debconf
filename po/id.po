@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf.po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
 "PO-Revision-Date: 2009-03-09 13:04+0700\n"
 "Last-Translator: Parlin Imanuel <parlin_i@yahoo.com>\n"
 "Language-Team: Debian Indonesia L10N Team <debid@yahoogroups.com>\n"
@@ -109,19 +109,20 @@ msgstr "_Panduan"
 msgid "Help"
 msgstr "Panduan"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Debconf tidak dikonfigurasi untuk menampilkan pesan kesalahan ini, jadi akan "
 "di-e-mailkan kepada Anda."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, berjalan pada %s"
@@ -153,15 +154,15 @@ msgstr "Tidak dapat memuat Debconf::Element::%s. Gagal karena: %s"
 msgid "Configuring %s"
 msgstr "Sedang mengonfigurasi %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM tidak diset, antarmuka dialog tidak berguna."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Antarmuka dialog tidak sesuai dengan penyangga (buffer) shell emacs"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -169,7 +170,7 @@ msgstr ""
 "Antar muka dialog tidak akan bekerja pada sebuah terminal dumb, sebuah "
 "penyangga shell emacs, atau tanpa sebuah terminal pengendali"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -177,13 +178,13 @@ msgstr ""
 "Tidak ada program dialog yang dapat dipakai. Antarmuka berbasis dialog tidak "
 "dapat digunakan"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Antarmuka dialog membutuhkan layar minimal berukuran 13 baris dan 31 kolom."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Konfigurasi Paket"
 
@@ -212,7 +213,8 @@ msgstr ""
 "dan keluar. Pada titik ini debconf akan membaca berkas yang telah diubah, "
 "dan menggunakan nilai yang Anda masukkan untuk mengonfigurasi sistem."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf pada %s"
@@ -277,50 +279,50 @@ msgstr ""
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Template #%s dalam %s tidak berisi sebuah baris 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "harus menentukan beberapa deb untuk prakonfigurasi"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "menunda konfigurasi paket karena apt-utils tidak terpasang"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "Tidak dapat membuka stdin: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates gagal: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Extract template dari paket: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Prakonfigurasi paket ... \n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "Kesalahan penguraian template: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: chmod gagal: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Prakonfigurasi %s gagal dengan status %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:105
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -a,  --all\t\t\tReconfigure all packages.\n"
@@ -337,26 +339,26 @@ msgstr ""
 "       --no-reload\t\tJangan muat kembali templet-templet. (Gunakan secara "
 "hati-hati)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s harus dijalankan sebagai root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
 msgstr "Mohon tentukan sebuah paket untuk dikonfigurasi ulang"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s tidak dipasang"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s rusak atau tidak sepenuhnya terpasang"
 
-#: ../dpkg-reconfigure:254
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Tak dapat membaca berkas status: %s"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.32\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-08 19:52+0100\n"
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
 "PO-Revision-Date: 2010-06-09 10:05+0100\n"
 "Last-Translator: Vanja Cvelbar <cvelbar@gmail.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -109,19 +109,20 @@ msgstr "_Pomoč"
 msgid "Help"
 msgstr "Pomoč"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Debconf ni bil nastavljen, da prikaže sledeče poročilo o napaki, zato vam ga "
 "je poslal po pošti."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, zagnan pri %s"
@@ -153,15 +154,15 @@ msgstr "Ni bilo mogoče naložiti Debconf::Element::%s. Napaka zaradi: %s"
 msgid "Configuring %s"
 msgstr "Nastavljanje %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM ni nastavljen, zaradi tega ni mogoče uporabiti začelja za dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Začelje za dialog ni združljivo z emacsovimi medpomnilniki lupine"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -169,7 +170,7 @@ msgstr ""
 "Začelje za dialog ne bo delovalo s pasivnim terminalom, z emacsovim "
 "medpomnilnikom lupine ali pa brez nadzornega terminala"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -177,14 +178,14 @@ msgstr ""
 "Noben dialogu podoben program ni nameščen, zaradi tega začelja za dialog ni "
 "mogoče uporabljati."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Začelje za dialog potrebuje zaslon visok vsak 13 vrstic in širok vsaj 31 "
 "stolpcev."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Nastavljanje paketa"
 
@@ -213,7 +214,8 @@ msgstr ""
 "spremenjeno datoteko in uporabil vrednosti, ki ste jih vpisali za nastavitev "
 "sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf pri %s"
@@ -277,50 +279,50 @@ msgstr "Napaka v predlogi v bližini `%s', v stavku #%s od %s\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Predloga #%s v %s ne vsebuje vrstice 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "določiti morate nekaj paketov deb za prednastavitev"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "zakasnitev nastavitve paketov ker apt-utils ni nameščen"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "ni mogoče ponovno odprti stdin: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates ni uspel: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Razširjanje predlog iz paketov: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Prednastavljanje paketov ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "napaka pri razćlenjevanju predloge: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ni mogoče izvesti chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s napaka pri prednastavljanju, izhodno stanje %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:105
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -a,  --all\t\t\tReconfigure all packages.\n"
@@ -336,26 +338,26 @@ msgstr ""
 "       --force\t\t\tVsili ponovno nastavitev polomljenih paketov.\n"
 "       --no-reload\t\tNe nalagaj ponovno predlog. (Uporabljajte pazljivo.)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s mora zagnati sistemski skrbnik"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
 msgstr "določite paket za ponovno nastavitev"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s bo nameščen"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s je polomljen ali ne popolnoma nameščen"
 
-#: ../dpkg-reconfigure:254
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Ni mogoče brati datoteke s stanjem: %s"

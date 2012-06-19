@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
 "PO-Revision-Date: 2010-03-09 17:53+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -107,19 +107,20 @@ msgstr "Trợ g_iúp"
 msgid "Help"
 msgstr "Trợ giúp"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Trình Debconf không được cấu hình để hiển thị thông điệp lỗi này, vì vậy nó "
 "đã gửi cho bạn trong một thư."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, đang chạy ở %s"
@@ -151,17 +152,17 @@ msgstr "Không thể nạp « Debconf::Element::%s ». Thất bại vì: %s."
 msgid "Configuring %s"
 msgstr "Đang cấu hình %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "Chưa đặt TERM nên không thể sử dụng giao diện cung cấp hộp thoại."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr ""
 "Giao diện cung cấp hộp thoại thì không tương thích với bộ đệm trình bao của "
 "emacs."
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -170,7 +171,7 @@ msgstr ""
 "câm, trong bộ đệm trình bao của emacs, hoặc khi không có thiết bị cuối điều "
 "khiển."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -178,14 +179,14 @@ msgstr ""
 "Chưa cài đặt chương trình kiểu hộp thoại có thể sử dụng được nên không thể "
 "sử dụng giao diện cung cấp hộp thoại."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Giao diện cung cấp hộp thoại thì yêu cầu một màn hình có ít nhất chiều cao "
 "13 dòng và chiều rộng 31 cột."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Cấu hình gói"
 
@@ -214,7 +215,8 @@ msgstr ""
 "debconf sẽ đọc tập tin đã chỉnh sửa, và sử dụng những giá trị được bạn chỉnh "
 "sửa để cấu hình hệ thống."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf trên %s"
@@ -281,52 +283,52 @@ msgstr ""
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Mẫu #%s trong %s không chứa một dòng « Template: » (Mẫu)\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "phải ghi rõ một số deb (tập tin gói Debian) để cấu hình sẵn"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr ""
 "đang tri hoãn việc cấu hình gói vì chưa cài đặt « apt-utils » (các tiện ích "
 "apt)"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "không thể mở lại đầu vào tiêu chuẩn: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates (giải nén các mẫu) bị lỗi: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Đang giải nén các mẫu từ gói: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Đang cấu hình sẵn các gói ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "lỗi phân tích cú pháp của mẫu : %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: không thể chmod (thay đổi chế độ): %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s lỗi cấu hình sẵn, có trang thái thoát %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:105
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -a,  --all\t\t\tReconfigure all packages.\n"
@@ -346,26 +348,26 @@ msgstr ""
 "       --force\t\t\t_Buộc_ cấu hình lại các gói bị ngắt.\n"
 "       --no-reload\t\tĐừng nạp lại mẫu. (Hãy sử dụng cẩn thận.)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s phải được chạy dưới người chủ (root)"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
 msgstr "hãy ghi rõ một gói cần cấu hình lại"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s chưa được cài đặt"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s bị hỏng hoặc chưa được cài đặt hoàn thành"
 
-#: ../dpkg-reconfigure:254
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Không thể đọc tập tin trạng thái: %s"

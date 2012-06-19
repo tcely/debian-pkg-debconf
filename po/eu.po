@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
 "PO-Revision-Date: 2007-04-12 18:07+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale <librezale@librezale.org>\n"
@@ -111,19 +111,20 @@ msgstr "_Laguntza"
 msgid "Help"
 msgstr "Laguntza"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Debconf ez dago errore mezu hau erakusteko konfiguraturik beraz postaz "
 "bidaliko dizu."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s-n abiarazirik"
@@ -155,15 +156,15 @@ msgstr "Ezin izan da Debconf::Element::%s kargatu. Errorea : %s"
 msgid "Configuring %s"
 msgstr "%s konfiguratzen"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM ez dago ezarririk, beraz elkarrizketa interfazea ezin da erabili."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Elkarrizketa interfazea ezin da emacs shell bufferrekin erabili."
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -171,7 +172,7 @@ msgstr ""
 "Elkarrizketa interfazeak ez du funtzionatuko terminal tonto, emacs shell "
 "buffer edo kontrolpeko terminal batetan."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -179,14 +180,14 @@ msgstr ""
 "Ez dago elkarrizketa egiteko programarik instalaturik, beraz elkarrizketa "
 "interfazea ezin da erabili."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Elkarrizketa interfazeak 13 lerro altuerako eta 31 zutabe zabalerako "
 "pantaila bat beharko du behintzat."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Pakete  konfiguraketa"
 
@@ -216,7 +217,8 @@ msgstr ""
 "Momentu horretan debconf-ek editaturiko fitxategia irakurri eta aukeratutako "
 "aukerekin sistema konfiguratuko du."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf %s-n"
@@ -280,51 +282,51 @@ msgstr "'%s' gertu txantiloi errorea, #%s parrafoan %s-n.\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "#%s txantiloiak ez du 'Template:' lerro bat %s-n:\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "aurrekonfiguratzeko deb batzuek ezarri behar dituzu"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr ""
 "pakete konfigurazio atzeratu egingo da apt-utils ez bait dago instalaturik."
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "Ezin izan da stdin berrireki: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates-ek huts egin du: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Txantiloiak paketeetatik ateratzen: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Paketeak aurrekonfiguratzen ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "Errorea txantiloia analizatzerakoan: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ezin da chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s huts aurrekonfiguratzerakoan, %s irteera kodeaz."
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:105
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
@@ -341,26 +343,26 @@ msgstr ""
 "ordez.\n"
 "       --force\t\t\tApurtutako paketeen birkonfiguraketa indartu."
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s root bezala abiarazi behar da"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
 msgstr "Mesedez ezarri berkonfiguratu nahi duzun paketea"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ez dago instalaturik"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s hondaturik edo erdi instalaturik dago"
 
-#: ../dpkg-reconfigure:254
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Ezin da egoera fitxategia irakurri: %s"

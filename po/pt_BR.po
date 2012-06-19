@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
 "PO-Revision-Date: 2006-10-05 21:07-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -110,19 +110,20 @@ msgstr "Aj_uda"
 msgid "Help"
 msgstr "Ajuda"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "O Debconf não foi configurado para mostrar esta mensagem de erro, portanto o "
 "mesmoi a enviou para você."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, rodando em %s"
@@ -154,16 +155,16 @@ msgstr "Impossível carregar Debconf::Element::%s. Falhou porque: %s"
 msgid "Configuring %s"
 msgstr "Configurando %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
 "A variável TERM não está definida, então o frontend Dialog não é usável."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "O frontend Dialog é incompatível com buffers shell do emacs."
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -171,7 +172,7 @@ msgstr ""
 "O frontend Dialog não vai funcionar em um terminal burro, num buffer shell "
 "do emacs ou sem um terminal controlador."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -179,14 +180,14 @@ msgstr ""
 "Nenhum programa estilo-dialog está instalado, então o frontend baseado em "
 "dialog não pode ser usado."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Caso você seja iniciante no sistema Debian GNU/Linux escolhe 'crítica' agora "
 "e veja somente as questões mais importantes."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Configuração de Pacotes"
 
@@ -216,7 +217,8 @@ msgstr ""
 "arquivo\n"
 "editado e usar os valores que você digitou para configurar o sistema. "
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf em %s"
@@ -280,50 +282,50 @@ msgstr "Erro na análise do template perto de `%s', instãncie #%s de %s\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Template #%s em %s não contém uma linha 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "é necessário especificar debs para preconfigurar"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "adiando configuração de pacotes, já que o apt-utils não está instalado"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "Impossível reabrir o stdin: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates falhou : %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Extraíndo templates de pacotes : %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Pré-configurando pacotes ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "erro na análise de template: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: impossível fazer chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s falhou na preconfiguração com estado de saída %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:105
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
@@ -339,26 +341,26 @@ msgstr ""
 "      --default-priority\tUse a prioridade padrão ao invés de baixa.\n"
 "      --force\t\t\tForça reconfiguração de pacotes quebrados."
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s deve ser rodado como root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
 msgstr "especifique um pacote para reconfigurar"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s não está instalado"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s está quebrado ou não completamente instalado"
 
-#: ../dpkg-reconfigure:254
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Impossível ler o estado do arquivo: %s"

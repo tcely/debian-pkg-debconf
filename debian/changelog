@@ -1,4 +1,4 @@
-debconf (1.5.44) UNRELEASED; urgency=low
+debconf (1.5.44) unstable; urgency=low
 
   [ Debconf translations ]
   * Vietnamese (Hai Lang)
@@ -11,7 +11,7 @@ debconf (1.5.44) UNRELEASED; urgency=low
     This makes it possible to switch back and forth between
     debconf and cdebconf. Thanks, Regis Boudin
 
- -- Christian Perrier <bubulle@debian.org>  Tue, 08 May 2012 10:05:40 +0200
+ -- Joey Hess <joeyh@debian.org>  Tue, 19 Jun 2012 19:03:42 -0400
 
 debconf (1.5.43) unstable; urgency=low
 
