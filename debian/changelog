@@ -1,3 +1,10 @@
+debconf (1.5.45) UNRELEASED; urgency=low
+
+  [ Programs translations ]
+  * German updated.
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Sun, 01 Jul 2012 14:29:43 +0200
+
 debconf (1.5.44) unstable; urgency=low
 
   [ Debconf translations ]

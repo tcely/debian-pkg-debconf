@@ -2,14 +2,14 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004, 2006
-# Helge Kreutzmann <debian@helgefjell.de>, 2009.
+# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.28\n"
+"Project-Id-Version: debconf 1.5.44\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2009-10-24 17:34+0200\n"
+"PO-Revision-Date: 2012-07-01 14:29+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -109,13 +109,12 @@ msgid "Help"
 msgstr "Hilfe"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf wurde nicht konfiguriert, diese Fehlernachricht anzuzeigen, daher "
-"sendet es sie Ihnen."
+"Debconf war sich nicht sicher, dass diese Fehlermeldung angezeigt wurde, "
+"daher wurde sie Ihnen zugesendet."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
