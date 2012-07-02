@@ -1,4 +1,4 @@
-debconf (1.5.45) UNRELEASED; urgency=low
+debconf (1.5.45) unstable; urgency=low
 
   [ Programs translations ]
   * German updated.
@@ -7,7 +7,7 @@ debconf (1.5.45) UNRELEASED; urgency=low
   * dpkg-reconfigure: Fix dpkg-query parsing when detecting which triggers
     are pending (LP: #1018884).
 
- -- Helge Kreutzmann <debian@helgefjell.de>  Sun, 01 Jul 2012 14:29:43 +0200
+ -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jul 2012 15:57:38 +0100
 
 debconf (1.5.44) unstable; urgency=low
 
