@@ -309,6 +309,7 @@ sub triggers_pending {
 	open (QUERY, '-|', 'dpkg-query', '-W',
 		'-f', '${Package} ${binary:Package}\t${Triggers-Pending}\n');
 	while (<QUERY>) {
+		chomp;
 		my ($pkgnames, $triggers) = split /\t/;
 		if (length $triggers) {
 			# Handle multiarch.
