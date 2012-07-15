@@ -1756,7 +1756,7 @@ msgid ""
 msgstr ""
 " debconf-show nomdupaquet [...] [--db=nomdb]\n"
 " debconf-show --listowners [--db=nomdb]\n"
-" debconf-show --listsdbs\n"
+" debconf-show --listdbs\n"
 "\n"
 
 # type: textblock
