@@ -1,12 +1,13 @@
 debconf (1.5.46) UNRELEASED; urgency=low
 
-  * Fix typo in the french translation of debconf-show(1)
-    LP: #1025045
+  [ Manpages translations ]
   * Put the Danish translation of manpages from #664901 in the right
     place (and also convert its encoding that was broken by a BTS bug)
   
   [ Programs translations ]
   * Danish (Joe Dalton). Closes: #683191
+  * Fix typo in the french translation of debconf-show(1)
+    LP: #1025045    
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 15 Jul 2012 15:22:46 -0600
 
