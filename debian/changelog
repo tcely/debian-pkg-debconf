@@ -16,6 +16,9 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Esperanto updated (Felipe Castro).
   * Indonesian updated (Andika Triwidada).
 
+  [ David Prévot ]
+  * Make sure to keep the previous strings while updating PO files.
+
  -- Christian Perrier <bubulle@debian.org>  Sun, 15 Jul 2012 15:22:46 -0600
 
 debconf (1.5.45) unstable; urgency=low
