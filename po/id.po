@@ -2,13 +2,15 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc
 # This file is distributed under the same license as debian-installer.
 # Debian Indonesia L10N Team <debian-l10n-id@gurame.fisika.ui.ac.id>, 2004.
+# Andika Triwidada <andika@gmail.com>, 2012.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf.po\n"
+"Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2009-03-09 13:04+0700\n"
-"Last-Translator: Parlin Imanuel <parlin_i@yahoo.com>\n"
+"PO-Revision-Date: 2012-07-29 23:56+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Debian Indonesia L10N Team <debid@yahoogroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +27,7 @@ msgstr "kembali ke antarmuka: %s"
 #: ../Debconf/AutoSelect.pm:84
 #, perl-format
 msgid "unable to initialize frontend: %s"
-msgstr "Tak dapat menyiapkan antarmuka: %s"
+msgstr "tak dapat menyiapkan antarmuka: %s"
 
 #: ../Debconf/AutoSelect.pm:90
 #, perl-format
@@ -110,13 +112,12 @@ msgid "Help"
 msgstr "Panduan"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf tidak dikonfigurasi untuk menampilkan pesan kesalahan ini, jadi akan "
-"di-e-mailkan kepada Anda."
+"Debconf tidak yakin bahwa pesan kesalahan ini ditampilkan, sehingga mengirimnya "
+"melalui surel kepada Anda."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -133,7 +134,7 @@ msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
-"Nilai masukkan, \"%s\" tidak ditemukan dalam pilihan C! Hal ini tidak boleh "
+"Nilai masukan, \"%s\" tidak ditemukan dalam pilihan C! Hal ini tidak boleh "
 "terjadi. Mungkin lokalisasi template salah."
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
@@ -142,7 +143,7 @@ msgstr "tak satupun di atas"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
 msgid "Enter the items you want to select, separated by spaces."
-msgstr "Masukkan item yang ingin Anda pilih, dipisahkan dengan koma."
+msgstr "Masukkan item yang ingin Anda pilih, dipisahkan dengan spasi."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
@@ -160,7 +161,7 @@ msgstr "TERM tidak diset, antarmuka dialog tidak berguna."
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
-msgstr "Antarmuka dialog tidak sesuai dengan penyangga (buffer) shell emacs"
+msgstr "Antarmuka dialog tidak sesuai dengan penyangga shell emacs"
 
 #: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
@@ -186,7 +187,7 @@ msgstr ""
 
 #: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
-msgstr "Konfigurasi Paket"
+msgstr "Konfigurasi paket"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
 msgid ""
@@ -291,7 +292,7 @@ msgstr "menunda konfigurasi paket karena apt-utils tidak terpasang"
 #: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
-msgstr "Tidak dapat membuka stdin: %s"
+msgstr "tidak dapat membuka stdin: %s"
 
 #: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
@@ -301,7 +302,7 @@ msgstr "apt-extracttemplates gagal: %s"
 #: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
-msgstr "Extract template dari paket: %d%%"
+msgstr "Ekstrak template dari paket: %d%%"
 
 #: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
@@ -310,7 +311,7 @@ msgstr "Prakonfigurasi paket ... \n"
 #: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
-msgstr "Kesalahan penguraian template: %s"
+msgstr "kesalahan penguraian template: %s"
 
 #: ../dpkg-preconfigure:221
 #, perl-format
@@ -346,7 +347,7 @@ msgstr "%s harus dijalankan sebagai root"
 
 #: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
-msgstr "Mohon tentukan sebuah paket untuk dikonfigurasi ulang"
+msgstr "mohon tentukan sebuah paket untuk dikonfigurasi ulang"
 
 #: ../dpkg-reconfigure:177
 #, perl-format

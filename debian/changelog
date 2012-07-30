@@ -14,6 +14,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Japanese (Kenshi Muto). Closes: #683223
   * Bengali PO file header fixed
   * Esperanto updated (Felipe Castro).
+  * Indonesian updated (Andika Triwidada).
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 15 Jul 2012 15:22:46 -0600
 
