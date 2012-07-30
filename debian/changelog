@@ -3,6 +3,8 @@ debconf (1.5.46) UNRELEASED; urgency=low
   [ Manpages translations ]
   * Put the Danish translation of manpages from #664901 in the right
     place (and also convert its encoding that was broken by a BTS bug)
+  * Activate Danish translation of manpages by adding the needed addenda
+    Closes: #664901
   
   [ Programs translations ]
   * Danish (Joe Dalton). Closes: #683191
