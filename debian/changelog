@@ -11,6 +11,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Fix typo in the french translation of debconf-show(1)
     LP: #1025045    
   * Polish (Marcin Owsiany). Closes: #683207
+  * Japanese (Kenshi Muto). Closes: #683223
 
  -- Christian Perrier <bubulle@debian.org>  Sun, 15 Jul 2012 15:22:46 -0600
 

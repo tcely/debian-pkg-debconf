@@ -2,13 +2,13 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # Keita Maehara <maehara@debian.org>
 # Junichi Uekawa <dancer@debian.org>, 2002, 2003, 2004
-# Kenshi Muto <kmuto@debian.org>, 2004
+# Kenshi Muto <kmuto@debian.org>, 2004-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2010-03-09 00:08+0900\n"
+"PO-Revision-Date: 2012-07-30 07:05+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
 "Language: ja\n"
@@ -108,13 +108,10 @@ msgid "Help"
 msgstr "ヘルプ"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
-msgstr ""
-"このエラーメッセージを表示するようには設定されていないので、debconf があなた"
-"にメールを送りました。"
+msgstr "このエラーメッセージが表示されるかどうか不明なので、debconf があなたにメールを送りました。"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
