@@ -15,6 +15,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Bengali PO file header fixed
   * Esperanto updated (Felipe Castro).
   * Indonesian updated (Andika Triwidada).
+  * Simplified Chinese updated (Xingyou Chen).
 
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
