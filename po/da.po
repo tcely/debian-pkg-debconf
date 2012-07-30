@@ -1,18 +1,17 @@
-# Danish translation debconf.
-# Copyright (C) 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the debconf package.
-# Joe Hansen <joedalton2@yahoo.dk>, 2012.
-#
-# ask questions -> stille spørgsmål
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# Morten Brix Pedersen <morten@wtf.dk>, 2001-2002.
+# Morten Bo Johansen <mbj@spamcop.net>, 2002-.
+# Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2006.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf\n"
+"Project-Id-Version: debconf 1.5.38\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:11-0400\n"
-"PO-Revision-Date: 2012-03-21 10:20+0100\n"
+"POT-Creation-Date: 2012-07-29 12:24-0400\n"
+"PO-Revision-Date: 2012-07-29 20:27+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
-"Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
+"Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,36 +20,39 @@ msgstr ""
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
 msgid "falling back to frontend: %s"
-msgstr ""
+msgstr "falder tilbage på brugerflade: %s"
 
 #: ../Debconf/AutoSelect.pm:84
 #, perl-format
 msgid "unable to initialize frontend: %s"
-msgstr ""
+msgstr "kunne ikke klargøre brugerflade: %s"
 
 #: ../Debconf/AutoSelect.pm:90
 #, perl-format
 msgid "Unable to start a frontend: %s"
-msgstr ""
+msgstr "Kunne ikke starte en brugerflade: %s"
 
 #: ../Debconf/Config.pm:130
 msgid "Config database not specified in config file."
-msgstr ""
+msgstr "Opsætningsdatabase ikke angivet i opsætningsfil."
 
 #: ../Debconf/Config.pm:134
 msgid "Template database not specified in config file."
-msgstr ""
+msgstr "Skabelondatabase ikke angivet i opsætningsfil."
 
 #: ../Debconf/Config.pm:139
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
+"Sigils- og Smileys-tilvalg bruges ikke længere i opsætningsfilen. Fjern dem "
+"venligst."
 
 #: ../Debconf/Config.pm:153
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
+"Opsætning af database, defineret ved kombination %s af %s, gav problemer."
 
 #: ../Debconf/Config.pm:228
 msgid ""
@@ -58,65 +60,71 @@ msgid ""
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
 "       --terse\t\t\tEnable terse mode.\n"
 msgstr ""
+"  -f,  --brugerflade\t\tAnfør hvilken brugerflade til debconf der skal "
+"bruges.\n"
+"  -p,  --prioritet\t\tAnfør hvor lavt prioriterede spørgsmål der vises.\n"
+"       --terse\t\t\tSkær spørgsmål og information ned til et minimum.\n"
 
 #: ../Debconf/Config.pm:308
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
-msgstr ""
+msgstr "Ignorerer ugyldig prioritering \"%s\""
 
 #: ../Debconf/Config.pm:309
 #, perl-format
 msgid "Valid priorities are: %s"
-msgstr ""
+msgstr "Gyldige prioriteringer er: %s"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Multiselect.pm:31
 #: ../Debconf/Element/Editor/Select.pm:31
 msgid "Choices"
-msgstr ""
+msgstr "Valg"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:36
 #: ../Debconf/Element/Editor/Boolean.pm:59
 #: ../Debconf/Element/Teletype/Boolean.pm:28
 msgid "yes"
-msgstr ""
+msgstr "ja"
 
 #: ../Debconf/Element/Editor/Boolean.pm:30
 #: ../Debconf/Element/Editor/Boolean.pm:39
 #: ../Debconf/Element/Editor/Boolean.pm:62
 #: ../Debconf/Element/Teletype/Boolean.pm:29
 msgid "no"
-msgstr ""
+msgstr "nej"
 
 #: ../Debconf/Element/Editor/Multiselect.pm:32
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
+"(Vælg nul eller flere punkter, adskilt af komma fulgt af mellemrum (', ').)"
 
 #: ../Debconf/Element/Gnome.pm:182
 msgid "_Help"
-msgstr ""
+msgstr "_Hjælp"
 
 #: ../Debconf/Element/Gnome.pm:184
 msgid "Help"
-msgstr ""
+msgstr "Hjælp"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
+"Debconf var ikke sikker på, at denne fejlmeddelelse blev vist, så den sendte "
+"den til dig."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
-#, fuzzy
 msgid "Debconf"
-msgstr "L<debconf(7)>"
+msgstr "Debconf"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
-msgstr ""
+msgstr "Debconf, kørende på %s"
 
 #: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
 #, perl-format
@@ -124,59 +132,68 @@ msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
+"Værdi på inddata \"%s\" fandtes ikke i C-valg! Dette burde aldrig ske. Måske "
+"var sprogtilpasningen af skabelonerne forkert."
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
 msgid "none of the above"
-msgstr ""
+msgstr "ingen af ovenstående"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
 msgid "Enter the items you want to select, separated by spaces."
-msgstr ""
+msgstr "Vælg de ønskede punkter, adskilt af mellemrum."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
-msgstr ""
+msgstr "Kunne ikke indlæse Debconf::Element::%s. Fejlede pga.: %s"
 
 #: ../Debconf/FrontEnd.pm:333
 #, perl-format
 msgid "Configuring %s"
-msgstr ""
+msgstr "Sætter %s op"
 
 #: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
-msgstr ""
+msgstr "TERM er ikke sat, så dialog-brugerfladen kan ikke bruges."
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
-msgstr ""
+msgstr "Dialog-brugerflade er ikke forenelig med Emacs-skalbuffere"
 
 #: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
 msgstr ""
+"Dialog-brugerfladen vil ikke virke på en 'dum' terminal, en Emacs-skalbuffer "
+"eller uden en styrende terminal."
 
 #: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
 msgstr ""
+"Der er ikke installeret noget brugbart dialoglignende program, så den "
+"dialogbaserede brugerflade kan ikke bruges."
 
 #: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
+"Dialog-brugerfladen behøver en skærm, min. 13 linjer høj og 31 kolonner bred."
 
 #: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
-msgstr ""
+msgstr "Pakkeopsætning"
 
 #: ../Debconf/FrontEnd/Editor.pm:94
 msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
 msgstr ""
+"Du bruger debconfs editorbaserede brugerflade til at sætte dit system op. Se "
+"slutningen af dette dokument for detaljerede instruktioner."
 
 #: ../Debconf/FrontEnd/Editor.pm:111
 msgid ""
@@ -187,38 +204,43 @@ msgid ""
 "items as necessary, and then save it and exit. At that point, debconf will "
 "read the edited file, and use the values you entered to configure the system."
 msgstr ""
+"Debconfs editorbaserede brugerflade giver dig en eller flere tekstfiler til "
+"redigering. Dette er en sådan tekstfil. Hvis du er bekendt med standard Unix-"
+"opsætningsfiler, vil denne fil se bekendt ud - den indeholder kommentarer og "
+"opsætningselementer. Redigér filen, ændr alle elementer i det omfang det er "
+"nødvendigt, gem den og afslut så. Derefter vil debconf læse den redigerede "
+"fil og bruge værdierne du indtastede til at sætte systemet op."
 
 #: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
-msgstr ""
+msgstr "Debconf på %s"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
-msgstr ""
+msgstr "Denne brugerflade behøver en styrende tty."
 
 #: ../Debconf/FrontEnd/Readline.pm:58
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
-msgstr ""
+msgstr "Term::ReadLine::GNU er ikke forenelig med Emacs-skalbuffere."
 
 #: ../Debconf/FrontEnd/Teletype.pm:96
 msgid "More"
-msgstr ""
+msgstr "Mere"
 
 #: ../Debconf/FrontEnd/Web.pm:66
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
-msgstr ""
+msgstr "Bemærk: Debconf kører i webtilstand. Gå til http://localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:166
-#, fuzzy
 msgid "Back"
-msgstr "B<Sikkerhedskopi>"
+msgstr "Tilbage"
 
 #: ../Debconf/FrontEnd/Web.pm:168
 msgid "Next"
-msgstr ""
+msgstr "Næste"
 
 #: ../Debconf/Template.pm:91
 #, perl-format
@@ -226,6 +248,8 @@ msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
 "missing question %s."
 msgstr ""
+"advarsel: database måske ødelagt. Vil forsøge at reparere ved at gentilføje "
+"manglende spørgsmål %s."
 
 #: ../Debconf/Template.pm:206
 #, perl-format
@@ -233,67 +257,67 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
+"Skabelon nr. %s i %s har et dubletfelt \"%s\" med en ny værdi \"%s\". Det "
+"kan være fordi at to skabeloner ikke er adskilt rigtigt med en tom ny "
+"linje.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
-msgstr ""
+msgstr "Ukendt skabelonfelt `%s', i kombination nr. %s af %s\n"
 
 #: ../Debconf/Template.pm:257
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
-msgstr ""
+msgstr "Fortolkningsfejl i skabelon, nær `%s', i kombination nr. %s af %s\n"
 
 #: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
-msgstr ""
+msgstr "Skabelon nr. %s i %s indeholder ikke en 'Template:'-linje\n"
 
 #: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
-msgstr ""
+msgstr "er nødt til at angive nogle debianpakker for at prækonfigurere"
 
 #: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
-msgstr ""
+msgstr "udsætter pakkeopsætning da apt-utils ikke er installeret"
 
 #: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
-msgstr ""
+msgstr "kunne ikke genåbne standardinddata: %s"
 
 #: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
-msgstr ""
+msgstr "apt-extracttemplates fejlede: %s"
 
 #: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
-msgstr ""
+msgstr "Udtrækker skabeloner fra pakker: %d%%"
 
 #: ../dpkg-preconfigure:195
-#, fuzzy
 msgid "Preconfiguring packages ...\n"
-msgstr ""
-" dpkg-reconfigure [tilvalg] pakker\n"
-"\n"
+msgstr "Prækonfigurerer pakker ...\n"
 
 #: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
-msgstr ""
+msgstr "fortolkningsfejl i skabelon: %s"
 
 #: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
-msgstr ""
+msgstr "debconf: kan ikke chmod: %s"
 
 #: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
-msgstr ""
+msgstr "%s fejlede i prækonfigurering med afslutningsstatus %s"
 
 #: ../dpkg-reconfigure:105
 msgid ""
@@ -304,49 +328,52 @@ msgid ""
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
+"Brug: dpkg-reconfigure [tilvalg] pakker\n"
+"  -a, --all\t\t\tGenopsæt alle pakker.\n"
+"  -u, --unseen-only\t\tVis kun spørgsmål som ikke tidligere har være vist.\n"
+"      --default-priority\tBrug standardprioritering i stedet for lav.\n"
+"      --force\t\t\tGennemtving genopsætning af brudte pakker.       --no-"
+"reload\t\tGenindlæs ikke skabeloner. (Brug med forsigtighed.)"
 
 #: ../dpkg-reconfigure:119
 #, perl-format
 msgid "%s must be run as root"
-msgstr ""
+msgstr "%s skal køres som root"
 
 #: ../dpkg-reconfigure:152
 msgid "please specify a package to reconfigure"
-msgstr ""
+msgstr "angiv venligst pakken som skal genopsættes"
 
 #: ../dpkg-reconfigure:177
 #, perl-format
 msgid "%s is not installed"
-msgstr ""
+msgstr "%s er ikke installeret"
 
 #: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
-msgstr ""
+msgstr "%s har brudte afhængigheder eller ikke fuldt installeret"
 
 #: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
-msgstr ""
+msgstr "Kan ikke læse statusfil: %s"
 
 #: ../debconf-communicate:53
-#, fuzzy
 msgid "Usage: debconf-communicate [options] [package]"
-msgstr ""
-" dpkg-reconfigure [tilvalg] pakker\n"
-"\n"
+msgstr "Brug: debconf-communicate [tilvalg] [pakke]"
 
 #: ../debconf-mergetemplate:14
-#, fuzzy
 msgid ""
 "debconf-mergetemplate: This utility is deprecated. You should switch to "
 "using po-debconf's po2debconf program."
 msgstr ""
-"Bemærk: Dette redskab er forældet; du bør skifte til pakken po-debconf."
+"debconf-mergetemplate: Det frarådes at bruge dette program. Du bør i stedet "
+"bruge programmet po2debconf fra pakken po-debconf."
 
 #: ../debconf-mergetemplate:66
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
-msgstr ""
+msgstr "Brug: debconf-mergetemplate [tilvalg] [skabeloner.ll ...] skabeloner"
 
 #: ../debconf-mergetemplate:71
 msgid ""
@@ -354,1121 +381,50 @@ msgid ""
 "        --outdated\t\tMerge in even outdated translations.\n"
 "\t--drop-old-templates\tDrop entire outdated templates."
 msgstr ""
+"\n"
+"        --outdated\t\tIndflet også forældede oversættelser.\n"
+"\t--drop-old-templates\tUdelad forældede skabeloner i deres helhed."
 
 #: ../debconf-mergetemplate:119
 #, perl-format
 msgid "%s is missing"
-msgstr ""
+msgstr "%s mangler"
 
 #: ../debconf-mergetemplate:123
 #, perl-format
 msgid "%s is missing; dropping %s"
-msgstr ""
+msgstr "%s mangler; udelader %s"
 
 #: ../debconf-mergetemplate:146
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s"
-msgstr ""
+msgstr "%s er uafklaret ved byte %s: %s"
 
 #: ../debconf-mergetemplate:151
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s; dropping it"
-msgstr ""
+msgstr "%s er uafklaret ved byte %s: %s; udelader den"
 
 #: ../debconf-mergetemplate:168
 #, perl-format
 msgid "%s is outdated"
-msgstr ""
+msgstr "%s er forældet"
 
 #: ../debconf-mergetemplate:173
 #, perl-format
 msgid "%s is outdated; dropping whole template!"
-msgstr ""
+msgstr "%s er forældet; udelader hele skabelonen!"
 
 #: ../debconf:95
-#, fuzzy
 msgid "Usage: debconf [options] command [args]"
-msgstr ""
-" debconf [tilvalg] kommando [argumenter]\n"
-"\n"
+msgstr "Brug: debconf [tilvalg] kommando [argumenter]"
 
 #: ../debconf:97
 msgid ""
 "\n"
 "  -o,  --owner=package\t\tSet the package that owns the command."
 msgstr ""
+"\n"
+"  -o,  --owner=pakke\t\tSæt pakke der ejer kommando."
 
-#~ msgid "NAME"
-#~ msgstr "NAVN"
 
-#~ msgid "debconf - run a debconf-using program"
-#~ msgstr "debconf - kør et debconf-brugende program"
-
-#~ msgid "SYNOPSIS"
-#~ msgstr "OVERSIGT"
-
-#~ msgid "DESCRIPTION"
-#~ msgstr "BESKRIVELSE"
-
-#~ msgid ""
-#~ "Debconf is a configuration system for Debian packages. For a debconf "
-#~ "overview and documentation for sysadmins, see L<debconf(7)> (in the "
-#~ "debconf-doc package)."
-#~ msgstr ""
-#~ "Debconf er et konfigurationssystem for Debianpakker. For et overblik over "
-#~ "debconf og dokumentation for systemadministratorer så se L<debconf(7)> (i "
-#~ "pakken debconf-doc)."
-
-#~ msgid ""
-#~ "The B<debconf> program runs a program under debconf's control, setting it "
-#~ "up to talk with debconf on stdio. The program's output is expected to be "
-#~ "debconf protocol commands, and it is expected to read result codes on "
-#~ "stdin. See L<debconf-devel(7)> for details about the debconf protocol."
-#~ msgstr ""
-#~ "Programmet B<debconf> kører et program under debconfs kontrol, sætter det "
-#~ "op til at snakke med debconf på stdio. Programmets uddata forventes at "
-#~ "blive protokolkommandoer for debconf, og det forventes at læse "
-#~ "resultatkoder på standardind. Se L<debconf-devel(7)> for detaljer om "
-#~ "debconf-protokollen."
-
-#~ msgid ""
-#~ "The command to be run under debconf must be specified in a way that will "
-#~ "let your PATH find it."
-#~ msgstr ""
-#~ "Kommandoen der skal køres under debconf skal angives på en måde som vil "
-#~ "lade din PATH finde den."
-
-#~ msgid ""
-#~ "This command is not the usual way that debconf is used. It's more typical "
-#~ "for debconf to be used via L<dpkg-preconfigure(8)> or L<dpkg-reconfigure"
-#~ "(8)>."
-#~ msgstr ""
-#~ "Denne kommando er ikke den normale måde som debconf bruges på. Det er "
-#~ "mere typisk for debconf at blive brugt via L<dpkg-preconfigure(8)> eller "
-#~ "L<dpkg-reconfigure(8)>."
-
-#~ msgid "OPTIONS"
-#~ msgstr "TILVALG"
-
-#~ msgid "B<-o>I<package>, B<--owner=>I<package>"
-#~ msgstr "B<-o>I<pakke>, B<--owner=>I<pakke>"
-
-#~ msgid ""
-#~ "Tell debconf what package the command it is running is a part of. This is "
-#~ "necessary to get ownership of registered questions right, and to support "
-#~ "unregister and purge commands properly."
-#~ msgstr ""
-#~ "Fortæl debconf fra hvilken pakke kommandoen den kører kommer fra. Dette "
-#~ "er nødvendigt for at få ejerskab over registrerede spørgsmål korrekt, og "
-#~ "for ordentligt at understøtte ikke registrerede kommandoer og kommandoer "
-#~ "for afinstallation."
-
-#~ msgid "B<-f>I<type>, B<--frontend=>I<type>"
-#~ msgstr "B<-f>I<type>, B<--frontend=>I<type>"
-
-#~ msgid "Select the frontend to use."
-#~ msgstr "Vælg hvilken brugerflade der skal bruges."
-
-#~ msgid "B<-p>I<value>, B<--priority=>I<value>"
-#~ msgstr "B<-p>I<værdi>, B<--priority=>I<værdi>"
-
-#~ msgid "Specify the minimum priority of question that will be displayed."
-#~ msgstr "Angiv den minimale prioritet for spørgsmål som vil blive vist."
-
-#~ msgid "B<--terse>"
-#~ msgstr "B<--terse>"
-
-#~ msgid "Enables terse output mode. This affects only some frontends."
-#~ msgstr ""
-#~ "Aktiverer uddatatilstanden terse. Dette påvirker kun nogle brugerflader."
-
-#~ msgid "EXAMPLES"
-#~ msgstr "EKSEMPLER"
-
-#~ msgid "To debug a shell script that uses debconf, you might use:"
-#~ msgstr "For at fejlsøge et skalskript, som bruger debconf, kan du bruge:"
-
-#~ msgid ""
-#~ " DEBCONF_DEBUG=developer debconf my-shell-prog\n"
-#~ "\n"
-#~ msgstr ""
-#~ " DEBCONF_DEBUG=developer debconf mit-skal-program\n"
-#~ "\n"
-
-#~ msgid "Or, you might use this:"
-#~ msgstr "Eller du kan bruge denne:"
-
-#~ msgid ""
-#~ " debconf --frontend=readline sh -x my-shell-prog\n"
-#~ "\n"
-#~ msgstr ""
-#~ " debconf --frontend=readline sh -x mit-skal-program\n"
-#~ "\n"
-
-#~ msgid "SEE ALSO"
-#~ msgstr "SE OGSÅ"
-
-#~ msgid "L<debconf-devel(7)>, L<debconf(7)>"
-#~ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
-
-#~ msgid "AUTHOR"
-#~ msgstr "FORFATTER"
-
-#~ msgid "Joey Hess <joeyh@debian.org>"
-#~ msgstr "Joey Hess <joeyh@debian.org>"
-
-#~ msgid "Debconf::Client::ConfModule - client module for ConfModules"
-#~ msgstr "Debconf::Client::ConfModule - klientmodul for ConfModules"
-
-#~ msgid ""
-#~ " use Debconf::Client::ConfModule ':all';\n"
-#~ " version('2.0');\n"
-#~ " my $capb=capb('backup');\n"
-#~ " input(\"medium\", \"foo/bar\");\n"
-#~ " my @ret=go();\n"
-#~ " if ($ret[0] == 30) {\n"
-#~ " \t# Back button pressed.\n"
-#~ " \t...\n"
-#~ " }\n"
-#~ " ...\n"
-#~ "\n"
-#~ msgstr ""
-#~ " brug Debconf::Client::ConfModule ':all';\n"
-#~ " version('2.0');\n"
-#~ " my $capb=capb('backup');\n"
-#~ " input(\"medium\", \"foo/bar\");\n"
-#~ " my @ret=go();\n"
-#~ " if ($ret[0] == 30) {\n"
-#~ " \t# Slet tilbage trykke ned.\n"
-#~ " \t...\n"
-#~ " }\n"
-#~ " ...\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "This is a module to ease writing ConfModules for Debian's configuration "
-#~ "management system. It can communicate with a FrontEnd via the debconf "
-#~ "protocol (which is documented in full in the debconf_specification in "
-#~ "Debian policy)."
-#~ msgstr ""
-#~ "Dette er et modul til at gøre skrivning af ConfModules for Debians "
-#~ "konfigurationshåndteringssystem nemmere. Modulet kan kommunikere med en "
-#~ "brugerflade (FrontEnd) via debconf-protokollen (som er dokumenteret fuldt "
-#~ "ud i debconf_specifikationen i politikken for Debian)."
-
-#~ msgid ""
-#~ "The design is that each command in the protocol is represented by one "
-#~ "function in this module (with the name lower-cased).  Call the function "
-#~ "and pass in any parameters you want to follow the command. If the "
-#~ "function is called in scalar context, it will return any textual return "
-#~ "code. If it is called in list context, an array consisting of the numeric "
-#~ "return code and the textual return code will be returned."
-#~ msgstr ""
-#~ "Designet er udført så at hver kommando i protokollen repræsenteres af en "
-#~ "funktion i dette modul (med navnet i små bogstaver). Kald funktionen og "
-#~ "skriv parametre du ønsker skal efterfølge kommandoen. Hvis funktionen "
-#~ "kaldes i scalarkontekst, så vil den returnere en eventuel tekstmæssig "
-#~ "returkode. Hvis den kaldes i listekontekst, så vil en array bestående af "
-#~ "den numeriske returkode og den tekstmæssige returkode blive returneret."
-
-#~ msgid ""
-#~ "This module uses Exporter to export all functions it defines. To import "
-#~ "everything, simply import \":all\"."
-#~ msgstr ""
-#~ "Dette modul bruger Exporter til at eksportere alle funktioner den "
-#~ "definerer. For at importere alt, så importer »:all«."
-
-#~ msgid "import"
-#~ msgstr "import"
-
-#~ msgid ""
-#~ "Ensure that a FrontEnd is running.  It's a little hackish. If "
-#~ "DEBIAN_HAS_FRONTEND is set, a FrontEnd is assumed to be running.  If not, "
-#~ "one is started up automatically and stdin and out are connected to it. "
-#~ "Note that this function is always run when the module is loaded in the "
-#~ "usual way."
-#~ msgstr ""
-#~ "Sikr dig at en brugerflade (FrontEnd) kører. Det er lidt hackeragtigt. "
-#~ "Hvis DEBIAN_HAS_FRONTEND er sat, så antages det at en brugerflade kører. "
-#~ "Hvis ikke så startes en op automatisk og standardind og standardud "
-#~ "forbindes til den. Bemærk at denne funktion altid køres når modulet "
-#~ "indlæses på den normale måde."
-
-#~ msgid "stop"
-#~ msgstr "stop"
-
-# engelsk fejl?
-#~ msgid ""
-#~ "The frontend doesn't send a return code here, so we cannot try to read it "
-#~ "or we'll block."
-#~ msgstr ""
-#~ "Brugerfladen sender ikke en returkode her, så vi kan ikke forsøge at læse "
-#~ "den eller vi blokerer den."
-
-#~ msgid "AUTOLOAD"
-#~ msgstr "AUTOINDLÆS"
-
-#~ msgid "Creates handler functions for commands on the fly."
-#~ msgstr "Opretter løbende håndtagsfunktioner for kommandoer."
-
-#~ msgid ""
-#~ "The debconf specification (/usr/share/doc/debian-policy/"
-#~ "debconf_specification.txt.gz)."
-#~ msgstr ""
-#~ "Debconf-specifikationen (/usr/share/doc/debian-policy/"
-#~ "debconf_specification.txt.gz)."
-
-#~ msgid ""
-#~ "debconf-apt-progress - install packages using debconf to display a "
-#~ "progress bar"
-#~ msgstr ""
-#~ "debconf-apt-progress - installer pakker med brug af debconf for at vise "
-#~ "en statusbjælke"
-
-#~ msgid ""
-#~ " debconf-apt-progress [--] command [args ...]\n"
-#~ " debconf-apt-progress --config\n"
-#~ " debconf-apt-progress --start\n"
-#~ " debconf-apt-progress --from waypoint --to waypoint [--] command "
-#~ "[args ...]\n"
-#~ " debconf-apt-progress --stop\n"
-#~ "\n"
-#~ msgstr ""
-#~ " debconf-apt-progress [--] kommando [argumenter ...]\n"
-#~ " debconf-apt-progress --config\n"
-#~ " debconf-apt-progress --start\n"
-#~ " debconf-apt-progress --from punkt --to punkt [--] kommando "
-#~ "[argumenter ...]\n"
-#~ " debconf-apt-progress --stop\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "B<debconf-apt-progress> installs packages using debconf to display a "
-#~ "progress bar. The given I<command> should be any command-line apt "
-#~ "frontend; specifically, it must send progress information to the file "
-#~ "descriptor selected by the C<APT::Status-Fd> configuration option, and "
-#~ "must keep the file descriptors nominated by the C<APT::Keep-Fds> "
-#~ "configuration option open when invoking debconf (directly or indirectly), "
-#~ "as those file descriptors will be used for the debconf passthrough "
-#~ "protocol."
-#~ msgstr ""
-#~ "B<debconf-apt-progress> installerer pakker der bruger debconf for at vise "
-#~ "en statusbjælke. Den angivne I<kommando> skal være en kommandolinje apt-"
-#~ "brugerflade; specifikt, skal den sende statusinformation til "
-#~ "filbeskrivelsen valgt af konfigurationstilvalget C<APT::Status-Fd>, og "
-#~ "skal bevare filbeskrivelserne nomineret af konfigurationstilvalget C<APT::"
-#~ "Keep-Fds> åbne, når debconf startes op (direkte eller indirekte), da "
-#~ "disse filbeskrivelser vil blive brugt af deboncfs gennemløbsprotokol."
-
-#~ msgid ""
-#~ "The arguments to the command you supply should generally include B<-y> "
-#~ "(for B<apt-get> or B<aptitude>) or similar to avoid the apt frontend "
-#~ "prompting for input. B<debconf-apt-progress> cannot do this itself "
-#~ "because the appropriate argument may differ between apt frontends."
-#~ msgstr ""
-#~ "Argumenterne for kommandoen du angiver skal generelt inkludere B<-y> (for "
-#~ "B<apt-get> eller B<aptitude>) eller lignende for at undgå at apt-"
-#~ "brugerfladen spørger efter inddata. B<debconf-apt-progress> kan ikke "
-#~ "udføre dette selv, da det passende argument kan være forskelligt mellem "
-#~ "apt-brugerflader."
-
-#~ msgid ""
-#~ "The B<--start>, B<--stop>, B<--from>, and B<--to> options may be used to "
-#~ "create a progress bar with multiple segments for different stages of "
-#~ "installation, provided that the caller is a debconf confmodule. The "
-#~ "caller may also interact with the progress bar itself using the debconf "
-#~ "protocol if it so desires."
-#~ msgstr ""
-#~ "Tilvalgene B<--start>, B<--stop>, B<--from> og B<--to> kan bruges til at "
-#~ "oprette en statusbjælke med flere segmenter for forskellige "
-#~ "installationsstadier, så længe at kalderen er et konfigurationsmodul for "
-#~ "debconf. Kalderen kan også interagere med selve statusbjælken via "
-#~ "protokollen for debconf såfremt dette ønskes."
-
-#~ msgid ""
-#~ "debconf locks its config database when it starts up, which makes it "
-#~ "unfortunately inconvenient to have one instance of debconf displaying the "
-#~ "progress bar and another passing through questions from packages being "
-#~ "installed. If you're using a multiple-segment progress bar, you'll need "
-#~ "to eval the output of the B<--config> option before starting the debconf "
-#~ "frontend to work around this. See L<the EXAMPLES section/EXAMPLES> below."
-#~ msgstr ""
-#~ "debconf låser sin konfigurationsdatabase når den starter op, hvilket "
-#~ "desværre gør det upassende at have en instans af debconf vise "
-#~ "statusbjælken og en anden sende spørgsmål igennem fra pakker der bliver "
-#~ "installeret. Hvis du bruger en flersegments statusbjælke, så skal du "
-#~ "evaluere uddata for tilvalget B<--config> før du starter brugerfladen for "
-#~ "debconf til at omgå dette. Se L<EKSEMPEL-afsnittet/EKSEMPLER> nedenfor."
-
-#~ msgid "B<--config>"
-#~ msgstr "B<--config>"
-
-#~ msgid ""
-#~ "Print environment variables necessary to start up a progress bar frontend."
-#~ msgstr ""
-#~ "Vis miljøvariabler nødvendige for at opstarte en brugerflade for "
-#~ "statusbjælke."
-
-#~ msgid "B<--start>"
-#~ msgstr "B<--start>"
-
-#~ msgid ""
-#~ "Start up a progress bar, running from 0 to 100 by default. Use B<--from> "
-#~ "and B<--to> to use other endpoints."
-#~ msgstr ""
-#~ "Opstart en statusbjælke, løbende fra 0 til 100 som standard. Brug B<--"
-#~ "from> og B<--to> for andre slutpunkter."
-
-#~ msgid "B<--from> I<waypoint>"
-#~ msgstr "B<--from> I<punkt>"
-
-#~ msgid ""
-#~ "If used with B<--start>, make the progress bar begin at I<waypoint> "
-#~ "rather than 0."
-#~ msgstr ""
-#~ "Hvis brugt med B<--start>, så lad statusbjælken begynde ved I<punkt> "
-#~ "fremfor 0."
-
-#~ msgid ""
-#~ "Otherwise, install packages with their progress bar beginning at this "
-#~ "\"waypoint\". Must be used with B<--to>."
-#~ msgstr ""
-#~ "Ellers så installaer pakker med deres statusbjælke begyndende ved dette "
-#~ "»punkt«. Skal bruges med B<--to>."
-
-#~ msgid "B<--to> I<waypoint>"
-#~ msgstr "B<--to> I<punkt>"
-
-#~ msgid "B<--stop>"
-#~ msgstr "B<--stop>"
-
-#~ msgid "Stop a running progress bar."
-#~ msgstr "Stop en kørende statusbjælke."
-
-#~ msgid "B<--no-progress>"
-#~ msgstr "B<--no-progress>"
-
-#~ msgid "B<--logfile> I<file>"
-#~ msgstr "B<--logfile> I<fil>"
-
-#~ msgid "Send the normal output from apt to the given file."
-#~ msgstr "Send de normale uddata fra apt til den givne fil."
-
-#~ msgid "B<--logstderr>"
-#~ msgstr "B<--logstderr>"
-
-#~ msgid "B<-->"
-#~ msgstr "B<-->"
-
-#~ msgid ""
-#~ "Install the GNOME desktop and an X window system development environment "
-#~ "within a progress bar:"
-#~ msgstr ""
-#~ "Installer GNOME-skrivebordet og et udviklingsmiljø for X-vinduessystemet "
-#~ "i en statusbjælke:"
-
-#~ msgid ""
-#~ " debconf-apt-progress -- aptitude -y install gnome x-window-system-dev\n"
-#~ "\n"
-#~ msgstr ""
-#~ " debconf-apt-progress -- aptitude -y installer gnome x-window-system-dev\n"
-#~ "\n"
-
-#~ msgid "RETURN CODE"
-#~ msgstr "RETURKODE"
-
-#~ msgid "AUTHORS"
-#~ msgstr "FORFATTERE"
-
-#~ msgid "Colin Watson <cjwatson@debian.org>"
-#~ msgstr "Colin Watson <cjwatson@debian.org>"
-
-#~ msgid "L<debconf-devel(7)> (available in the debconf-doc package)"
-#~ msgstr "L<debconf-devel(7)> (tilgængelig i pakken debconf-doc)"
-
-#~ msgid "debconf-communicate - communicate with debconf"
-#~ msgstr "debconf-communicate - kommuniker med debconf"
-
-#~ msgid ""
-#~ "The commands are executed in sequence. The textual return code of each is "
-#~ "printed out to standard output."
-#~ msgstr ""
-#~ "Kommandoerne udføres i sekvens. Den tekstmæssige returkode for hver vises "
-#~ "i standardud."
-
-#~ msgid ""
-#~ "The return value of this program is the numeric return code of the last "
-#~ "executed command."
-#~ msgstr ""
-#~ "Returværdien for dette program er den numeriske returkode for den sidst "
-#~ "udførte kommando."
-
-#~ msgid "EXAMPLE"
-#~ msgstr "EKSEMPEL"
-
-#~ msgid "Print out the value of the debconf/frontend question."
-#~ msgstr "Vis værdien for debconf/brugerflade spørgsmålet."
-
-#~ msgid "WARNING"
-#~ msgstr "ADVARSEL"
-
-#~ msgid "L<debconf-loadtemplate(1)>"
-#~ msgstr "L<debconf-loadtemplate(1)>"
-
-#~ msgid "debconf-copydb - copy a debconf database"
-#~ msgstr "debconf-copydb - kopier en debconfdatabase"
-
-#~ msgid ""
-#~ "The name of the source database. Typically it will be defined in your "
-#~ "debconf.conf (or .debconfrc) file."
-#~ msgstr ""
-#~ "Navn på kildedatabasen. Typisk vil den være defineret i filen debconf."
-#~ "conf (eller .debconfrc)."
-
-#~ msgid "B<-p> I<pattern>, B<--pattern> I<pattern>"
-#~ msgstr "B<-p> I<mønster>, B<--pattern> I<mønster>"
-
-#~ msgid "L<debconf.conf(5)>"
-#~ msgstr "L<debconf.conf(5)>"
-
-#~ msgid "debconf-getlang - extract a language from a templates file"
-#~ msgstr "debconf-getlang - udtræk et sprog fra en skabelonfil"
-
-#~ msgid ""
-#~ "This program helps make and manage translations of debconf templates.  "
-#~ "There are basically three situations in which this program might be "
-#~ "called:"
-#~ msgstr ""
-#~ "Dette program hjælper med at lave og håndtere oversættelse af "
-#~ "debconfskabeloner. Der er grundlæggende tre situationer hvor dette "
-#~ "programmer kan kaldes:"
-
-#~ msgid "A translation is just being started."
-#~ msgstr "En oversættelse er netop igangsat."
-
-#~ msgid "A translation is well under way."
-#~ msgstr "En oversættelse er undervejs."
-
-#~ msgid "Checking the status of a translation"
-#~ msgstr "Kontroller status for en oversættelse"
-
-#~ msgid "NOTE"
-#~ msgstr "BEMÆRK"
-
-#~ msgid ""
-#~ "Note that the text in the generated templates may be word-wrapped by "
-#~ "debconf."
-#~ msgstr ""
-#~ "Bemærk at teksten i de oprettede skabelon kan være orddelt af debconf."
-
-#~ msgid "debconf-get-selections - output contents of debconf database"
-#~ msgstr "debconf-get-selections - vis indholdet af debconfdatabasen"
-
-#~ msgid "debconf-get-selections [--installer]"
-#~ msgstr "debconf-get-selections [--installer]"
-
-#~ msgid ""
-#~ "Output the current debconf database in a format understandable by debconf-"
-#~ "set-selections."
-#~ msgstr ""
-#~ "Vis den aktuelle debconfdatabase i et format som kan forstås af debconf-"
-#~ "set-selections."
-
-#~ msgid ""
-#~ "To dump the debconf database of the debian-installer, from /var/log/"
-#~ "installer/cdebconf, use the --installer parameter."
-#~ msgstr ""
-#~ "For at dumpe debconfdatabasen for debian-installer, fra /var/log/"
-#~ "installer/cdebconf, så brug parameteren --installer."
-
-#~ msgid "Petter Reinholdtsen <pere@hungry.com>"
-#~ msgstr "Petter Reinholdtsen <pere@hungry.com>"
-
-#~ msgid "debconf-loadtemplate - load template file into debconf database"
-#~ msgstr "debconf-loadtemplate - indlæs skabelonfil i debconfdatabasen"
-
-#~ msgid "Joey Hess <joeyh@debian.org> and Sylvain Ferriol"
-#~ msgstr "Joey Hess <joeyh@debian.org> and Sylvain Ferriol"
-
-#~ msgid ""
-#~ "dpkg-preconfigure - let packages ask questions prior to their installation"
-#~ msgstr ""
-#~ "dpkg-preconfigure - lad pakker stille spørgsmål før deres installation"
-
-#~ msgid ""
-#~ " dpkg-preconfigure [options] package.deb\n"
-#~ "\n"
-#~ msgstr ""
-#~ " dpkg-preconfigure [tilvalg] pakke.deb\n"
-#~ "\n"
-
-#~ msgid ""
-#~ " dpkg-preconfigure --apt\n"
-#~ "\n"
-#~ msgstr ""
-#~ " dpkg-preconfigure --apt\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "B<dpkg-preconfigure> lets packages ask questions before they are "
-#~ "installed.  It operates on a set of debian packages, and all packages "
-#~ "that use debconf will have their config script run so they can examine "
-#~ "the system and ask questions."
-#~ msgstr ""
-#~ "B<dpkg-preconfigure> lader pakker stille spørgsmål før de installeres. "
-#~ "Den fungerer på et sæt af debianpakker, og alle pakker som bruger debconf "
-#~ "vil have deres konfigurationsskript kørt, så at de kan undersøge systemet "
-#~ "og stille spørgsmål."
-
-#~ msgid "B<-h>, B<--help>"
-#~ msgstr "B<-h>, B<--help>"
-
-#~ msgid "Display usage help."
-#~ msgstr "Vis hjælpetekst."
-
-#~ msgid "dpkg-reconfigure - reconfigure an already installed package"
-#~ msgstr "dpkg-reconfigure - rekonfigurer en allerede installeret pakke"
-
-#~ msgid ""
-#~ "You can mark any database as readonly and debconf will not write "
-#~ "anything\n"
-#~ "to it.\n"
-#~ "  Readonly: true\n"
-#~ msgstr ""
-#~ "Du kan markere databaser som skrivebeskyttet og debconf vil så ikke "
-#~ "skrive\n"
-#~ "noget til databasen.\n"
-#~ "  Skrivebeskyttet: true (sand)\n"
-
-#~ msgid ""
-#~ "You can also limit what types of data can go into the database with "
-#~ "Accept- and Reject- lines; see ACCESS CONTROLS, below."
-#~ msgstr ""
-#~ "Du kan også begrænse hvilken slags data som kan tilføres databasen med "
-#~ "linjerne Accept- og Reject-; se ACCESS CONTROLS nedenfor."
-
-#~ msgid "DRIVERS"
-#~ msgstr "DRIVERE"
-
-#~ msgid ""
-#~ "A number of drivers are available, and more can be written with little "
-#~ "difficulty. Drivers come in two general types. First there are real "
-#~ "drivers -- drivers that actually access and store data in some kind of "
-#~ "database, which might be on the local filesystem, or on a remote system. "
-#~ "Then there are meta-drivers that combine other drivers together to form "
-#~ "more interesting systems. Let's start with the former."
-#~ msgstr ""
-#~ " Et antal drivere er tilgængelige, og flere kan skrives uden de store "
-#~ "problemer. Drivere laves i to generelle typer. Først er der reelle "
-#~ "drivere - drivere som reelt tilgår og gemmer data i en slags database, "
-#~ "som kan være på det lokale filsystem eller på et eksternt system. "
-#~ "Derudover er der metadreivere som kombinerer andre drivere så de udgør "
-#~ "mere interessante systemer. Lad os starte med den første."
-
-#~ msgid "B<File>"
-#~ msgstr "B<Fil>"
-
-#~ msgid ""
-#~ "This database driver allows debconf to store a whole database in a single "
-#~ "flat text file. This makes it easy to archive, transfer between machines, "
-#~ "and edit. It is one of the more compact database formats in terms of disk "
-#~ "space used. It is also one of the slowest."
-#~ msgstr ""
-#~ "Denne databasedriver tillader debconf at gemme en hel database i en enkel "
-#~ "flad tekstfil. Dette gør det nemt at arkivere, overføre mellem maskiner, "
-#~ "og redigere. Det er en af de mere kompakte databaseformater i form af "
-#~ "brugt diskplads. Det er også en af de langsomste."
-
-#~ msgid ""
-#~ "On the downside, the entire file has to be read in each time debconf "
-#~ "starts up, and saving it is also slow."
-#~ msgstr ""
-#~ "Hele filen skal læses ind hver gang debconf starter op og det at gemme "
-#~ "den tager også lang tid."
-
-#~ msgid "The following things are configurable for this driver."
-#~ msgstr "De følgende områder kan konfigureres for denne driver."
-
-#~ msgid "B<Filename>"
-#~ msgstr "B<Filnavn>"
-
-#~ msgid "The file to use as the database. This is a required field."
-#~ msgstr "Filen at bruge som database. Dette er et obligatorisk felt."
-
-#~ msgid "B<Mode>"
-#~ msgstr "B<Tilstand>"
-
-#~ msgid ""
-#~ "The permissions to create the file with if it does not exist. Defaults to "
-#~ "600, since the file could contain passwords in some circumstances."
-#~ msgstr ""
-#~ "Rettighederne til at oprette filen med hvis den ikke findes. Standarden "
-#~ "er 600, da filen kunen indeholde adgangskoder i nogle tilfælde."
-
-#~ msgid "B<Format>"
-#~ msgstr "B<Format>"
-
-#~ msgid ""
-#~ "The format of the file. See FORMATS below. Defaults to using a rfc-822 "
-#~ "like format."
-#~ msgstr ""
-#~ "Formatet for filen. Se FORMATS nedenfor. Standarden er et rfc-822-"
-#~ "lignende format."
-
-#~ msgid ""
-#~ "Whether a backup should be made of the old file before changing it.  "
-#~ "Defaults to true."
-#~ msgstr ""
-#~ "Hvorvidt en sikkerhedskopi skal udføres på den gamle fil før den ændres. "
-#~ "Standarden er true (sand)."
-
-#~ msgid ""
-#~ "  Name: mydb\n"
-#~ "  Driver: File\n"
-#~ "  Filename: /var/cache/debconf/mydb.dat\n"
-#~ msgstr ""
-#~ "  Navn: mydb\n"
-#~ "  Driver: File\n"
-#~ "  Filnavn: /var/cache/debconf/mydb.dat\n"
-
-#~ msgid "The directory to put the files in. Required."
-#~ msgstr "Mappen at placere filerne i. Obligatorisk."
-
-#~ msgid "ENVIRONMENT"
-#~ msgstr "MILJØ"
-
-#~ msgid "B<DEBIAN_FRONTEND>"
-#~ msgstr "B<DEBIAN_FRONTEND (DEBIAN_BRUGERFLADE)>"
-
-#~ msgid "Used to temporarily change the frontend debconf uses. See above."
-#~ msgstr ""
-#~ "Brugt til midlertidigt at ændre den brugerflade som debconf bruger Se "
-#~ "ovenfor."
-
-#~ msgid "B<DEBIAN_PRIORITY>"
-#~ msgstr "B<DEBIAN_PRIORITY (DEBIAN-PRIORITET)>"
-
-#~ msgid "B<DEBCONF_DEBUG>"
-#~ msgstr "B<DEBCONF_DEBUG (DEBCONF_FEJLSØG)>"
-
-#~ msgid "B<user>"
-#~ msgstr "B<user (bruger)>"
-
-#~ msgid "Debugging info of interest to a debconf user."
-#~ msgstr "Fejlsøgningsinformation af interesse for en debconfbruger."
-
-#~ msgid "B<developer>"
-#~ msgstr "B<developer (udvikler)>"
-
-#~ msgid "Debugging info of interest to a package developer."
-#~ msgstr "Fejlsøgningsinformation af interesse for en pakkeudvikler."
-
-#~ msgid "B<db>"
-#~ msgstr "B<db (database)>"
-
-#~ msgid "Debugging info about the backend database."
-#~ msgstr "Fejlsøgningsinformation om motorens database."
-
-#~ msgid "B<DEBCONF_NOWARNINGS>"
-#~ msgstr "B<DEBCONF_NOWARNINGS (DEBCONF_INGEN ADVARSLER>"
-
-#~ msgid ""
-#~ "Set to \"yes\" to disable some warnings that debconf may display. Does "
-#~ "not suppress display of fatal errors."
-#~ msgstr ""
-#~ "Sat til yes (ja) for at deaktivere nogle advarsler som debconf måske "
-#~ "viser. Undertrykker ikke visning af fatale fejl."
-
-#~ msgid "BUGS"
-#~ msgstr "FEJL"
-
-#~ msgid "Probably quite a few, there's a lot of code here."
-#~ msgstr "Sikkert en del, der er meget kode her."
-
-#~ msgid ""
-#~ "If you do file a bug report, be sure to include the following information:"
-#~ msgstr ""
-#~ "Hvis du indsender en fejlrapport, så sikr dig at du inkluderer den "
-#~ "følgende information:"
-
-#~ msgid "B<*>"
-#~ msgstr "B<*>"
-
-#~ msgid "The debconf frontend you were using when the problem occurred"
-#~ msgstr "Brugerfladen for debconf som du brugt da problemet opstod"
-
-#~ msgid "What you did to trigger the problem."
-#~ msgstr "Hvad du gjorde som udløste problemet."
-
-#~ msgid ""
-#~ "The full text of any error messages. If you can reproduce the bug, do so "
-#~ "with DEBCONF_DEBUG='.*' set and exported. This speeds up debugging a lot."
-#~ msgstr ""
-#~ "Den fulde tekst for eventuelle fejlbeskeder. Hvis du kan genskabe fejlen, "
-#~ "så gør det med DEBCONF_DEBUG=».*« angivet og eksporteret. Dette øger "
-#~ "markant hastigheden for fejlsøgning."
-
-#~ msgid "debconf - developers guide"
-#~ msgstr "debconf - vejledning for udviklere"
-
-#~ msgid "This is a guide for developing packages that use debconf."
-#~ msgstr "Dette er en vejledning for udvikling af pakker som bruger debconf."
-
-#~ msgid ""
-#~ "This manual assumes that you are familiar with debconf as a user, and are "
-#~ "familiar with the basics of debian package construction."
-#~ msgstr ""
-#~ "Denne manual antager at du er bekendt med debconf som en bruger, og at du "
-#~ "er bekendt med den grundlæggende konstruktion for en debianpakke."
-
-#~ msgid "The config script can be run in one of three ways:"
-#~ msgstr "Konfigurationsskriptet kan køres på en af tre måder:"
-
-#~ msgid "B<1>"
-#~ msgstr "B<1>"
-
-#~ msgid "B<2>"
-#~ msgstr "B<2>"
-
-#~ msgid "B<3>"
-#~ msgstr "B<3>"
-
-#~ msgid "THE TEMPLATES FILE"
-#~ msgstr "SKABELONFILEN"
-
-#~ msgid ""
-#~ "A package that uses debconf probably wants to ask some questions. These "
-#~ "questions are stored, in template form, in the templates file."
-#~ msgstr ""
-#~ "En pakke som bruger debconf vil sikkert ønske at stille nogle spørgsmål. "
-#~ "Disse spørgsmål gemmes, i skabelonform, i skabelonfilen."
-
-#~ msgid "B<Type>"
-#~ msgstr "B<Type>"
-
-#~ msgid ""
-#~ "The type of the template determines what kind of widget is displayed to "
-#~ "the user. The currently supported types are:"
-#~ msgstr ""
-#~ "Skabelonstypen bestemmer hvilken slags kontrol der vises for brugeren. De "
-#~ "aktuelt understøttede typer er:"
-
-#~ msgid "B<string>"
-#~ msgstr "B<string (streng)>"
-
-#~ msgid ""
-#~ "Results in a free-form input field that the user can type any string into."
-#~ msgstr ""
-#~ "Resulterer i et inddatafelt i fri form som brugeren kan indtaste alle "
-#~ "slags strenge i."
-
-#~ msgid "B<password>"
-#~ msgstr "B<password (adgangskode)>"
-
-#~ msgid ""
-#~ "Prompts the user for a password. Use this with caution; be aware that the "
-#~ "password the user enters will be written to debconf's database. You "
-#~ "should probably clean that value out of the database as soon as is "
-#~ "possible."
-#~ msgstr ""
-#~ "Spørger brugeren om en adgangskode. Brug denne med forsigtighed; vær "
-#~ "opmærksom på at adgangskoden som brugeren indtaster vil blive skrevet til "
-#~ "debconfs database. Det er sikkert en god ide at fjerne denne værdi fra "
-#~ "databasen så snart som muligt."
-
-#~ msgid "B<boolean>"
-#~ msgstr "B<boolean (boolesk)>"
-
-#~ msgid "A true/false choice."
-#~ msgstr "Et valg med sand/falsk."
-
-#~ msgid "B<select>"
-#~ msgstr "B<select (vælg)>"
-
-#~ msgid ""
-#~ "A choice between one of a number of values. The choices must be specified "
-#~ "in a field named 'Choices'. Separate the possible values with commas and "
-#~ "spaces, like this:"
-#~ msgstr ""
-#~ "Et valg mellem et antal værdier. Valgene skal være angivet i et felt med "
-#~ "navnet »Choices«. Adskil de mulige værdier med kommaer og mellemrum, "
-#~ "således:"
-
-#~ msgid "  Choices: yes, no, maybe\n"
-#~ msgstr "  Valg: ja, nej, måske\n"
-
-#~ msgid "B<multiselect>"
-#~ msgstr "B<multiselect (flere valg)>"
-
-#~ msgid ""
-#~ "Like the select data type, except the user can choose any number of items "
-#~ "from the choices list (or choose none of them)."
-#~ msgstr ""
-#~ "Ligner vælg datatype, med undtagelse af at brugeren kan vælge et antal "
-#~ "punkter fra listen over valgmuligheder (eller undlade at vælge nogen af "
-#~ "dem)."
-
-#~ msgid "B<note>"
-#~ msgstr "B<note (bemærk)>"
-
-#~ msgid ""
-#~ "Rather than being a question per se, this datatype indicates a note that "
-#~ "can be displayed to the user. It should be used only for important notes "
-#~ "that the user really should see, since debconf will go to great pains to "
-#~ "make sure the user sees it; halting the install for them to press a key.  "
-#~ "It's best to use these only for warning about very serious problems, and "
-#~ "the error datatype is often more suitable."
-#~ msgstr ""
-#~ "Fremfor at være et spørgsmål, så indikerer denne datatype en bemærkning, "
-#~ "som kan vises for brugeren. Den skal kun bruges for vigtige bemærkninger, "
-#~ "som det er vigtigt at brugeren ser, da debconf vil gøre sit yderste for "
-#~ "at sikre sig, at brugeren rent faktisk ser bemærkningen; ved at stoppe "
-#~ "installationen indtil der trykkes på en tast. Det er bedst kun at bruge "
-#~ "disse for advarsler om meget alvorlige problemer, og datatypen error "
-#~ "(fejl) vil derfor ofte være mere egnet."
-
-#~ msgid "B<error>"
-#~ msgstr "B<error (fejl>"
-
-#~ msgid ""
-#~ "This datatype is used for error messages, such as input validation "
-#~ "errors.  Debconf will show a question of this type even if the priority "
-#~ "is too high or the user has already seen it."
-#~ msgstr ""
-#~ "Denne datatype bruges for fejlbeskeder, såsom fejl ved inddatavalidering. "
-#~ "Debconf vil vise et spørgsmål af denne type selv om prioriteten er for "
-#~ "høj eller brugeren allerede har set den."
-
-#~ msgid "B<title>"
-#~ msgstr "B<title (titel)>"
-
-#~ msgid ""
-#~ "This datatype is used for titles, to be set with the SETTITLE command."
-#~ msgstr ""
-#~ "Denne datatype bruges for titler, som sættes med kommandoen SETTITLE."
-
-#~ msgid "B<text>"
-#~ msgstr "B<text (tekst)>"
-
-#~ msgid ""
-#~ "This datatype can be used for fragments of text, such as labels, that can "
-#~ "be used for cosmetic reasons in the displays of some frontends. Other "
-#~ "frontends will not use it at all. There is no point in using this "
-#~ "datatype yet, since no frontends support it well. It may even be removed "
-#~ "in the future."
-#~ msgstr ""
-#~ "Denne datatype kan bruges for tekstfragmenter, såsom etiketter, som kan "
-#~ "bruges af kosmetiske årsager i visningen på nogle brugerflader. Andre "
-#~ "brugerflader vil slet ikke bruge den. Der er endnu ingen ide i at bruge "
-#~ "denne datatype, da ingen brugerflader endnu understøtter den godt. Den "
-#~ "kan endda blive fjernet igen."
-
-#~ msgid "B<Default>"
-#~ msgstr "B<Default (standard)>"
-
-#~ msgid ""
-#~ "The 'Default' field tells debconf what the default value should be. For "
-#~ "multiselect, it can be a list of choices, separated by commas and spaces, "
-#~ "similar to the 'Choices' field. For select, it should be one of the "
-#~ "choices. For boolean, it is \"true\" or \"false\", while it can be "
-#~ "anything for a string, and it is ignored for passwords."
-#~ msgstr ""
-#~ "Feltet »Default« (standard) fortæller debconf hvad standardværdien skal "
-#~ "være. For flere valg, kan det være en liste af valgmuligheder, adskilt af "
-#~ "komma eller mellemrum, på samme måde som felter »Choises«. For select, "
-#~ "skal det være en af valgene. For boolesk, er det »true« (sand) eller "
-#~ "»false« (falsk), mens det kan være alt for en streng, og det ignoreres "
-#~ "for adgangskoder."
-
-#~ msgid ""
-#~ "Don't make the mistake of thinking that the default field contains the "
-#~ "\"value\" of the question, or that it can be used to change the value of "
-#~ "the question. It does not, and cannot, it just provides a default value "
-#~ "for the first time the question is displayed. To provide a default that "
-#~ "changes on the fly, you'd have to use the SET command to change the value "
-#~ "of a question."
-#~ msgstr ""
-#~ "Gør ikke den fejltagelse at tro, at standardfeltet indeholder »værdien« "
-#~ "for spørgsmålet, eller at den kan bruges til at ændre værdien for "
-#~ "spørgsmålet. Det gør feltet ikke, og kan ikke gøre det, det giver kun en "
-#~ "standardværdi for den første gang spørgsmålet vises. For at tilbyde en "
-#~ "standard der ændrer sig løbende, skal du bruge kommandoen SET for at "
-#~ "ændre værdien for et spørgsmål."
-
-#~ msgid "B<Description>"
-#~ msgstr "B<Description (beskrivelse)>"
-
-#~ msgid ""
-#~ "The 'Description' field, like the description of a Debian package, has "
-#~ "two parts: A short description and an extended description. Note that "
-#~ "some debconf frontends don't display the long description, or might only "
-#~ "display it if the user asks for help. So the short description should be "
-#~ "able to stand on its own."
-#~ msgstr ""
-#~ "Feltet Description (beskrivelse), såsom beskrivelsen af en Debianpakke, "
-#~ "har to dele: En kort beskrivelse og en udvidet beskrivelse. Bemærk at "
-#~ "nogle debconfbrugerflader ikke viser den lange beskrivelse, eller måske "
-#~ "kun viser den hvis brugeren spørger efter hjælp. Så den korte beskrivelse "
-#~ "skal være forklarende i sig selv."
-
-#~ msgid ""
-#~ "If you can't think up a long description, then first, think some more. "
-#~ "Post to debian-devel. Ask for help. Take a writing class! That extended "
-#~ "description is important. If after all that you still can't come up with "
-#~ "anything, leave it blank. There is no point in duplicating the short "
-#~ "description."
-#~ msgstr ""
-#~ "Hvis du ikke kan finde på en lang beskrivelse, så prøv først igen. Spørg "
-#~ "på debian-devl. Spørg om hjælp. Tag et skrivekursus! Den udvidede "
-#~ "beskrivelse er vigtig. Hvis du stadig ikke kan finde på noget, så "
-#~ "efterlad den blank. Der er ingen ide i at kopiere den korte beskrivelse."
-
-#~ msgid ""
-#~ "Text in the extended description will be word-wrapped, unless it is "
-#~ "prefixed by additional whitespace (beyond the one required space). You "
-#~ "can break it up into separate paragraphs by putting \" .\" on a line by "
-#~ "itself between them."
-#~ msgstr ""
-#~ "Tekst i den udvidede beskrivelse vil blive orddelt, medmindre den er "
-#~ "udarbejdet med yderligere mellemrum (udover det ene krævede mellemrum). "
-#~ "Du kan opdele beskrivelsen i separate afsnit ved at placere » .« på en "
-#~ "separat linje mellem afsnitene."
-
-#~ msgid "QUESTIONS"
-#~ msgstr "SPØRGSMÅL"
-
-#~ msgid "SHARED TEMPLATES"
-#~ msgstr "DELTE SKABELONER"
-
-#~ msgid "THE DEBCONF PROTOCOL"
-#~ msgstr "DEBCONF-PROTOKOLLEN"
-
-#~ msgid ""
-#~ "For now, here are the commands in the protocol. This is not the "
-#~ "definitive definition, see Debian policy's debconf specification document "
-#~ "for that."
-#~ msgstr ""
-#~ "For nu så er her kommandoerne i protokollen. Dette er ikke den endelige "
-#~ "definition, se Debians politiks debconf-specifikationsdokument for den."
-
-#~ msgid "B<VERSION number>"
-#~ msgstr "B<VERSION number (versionsnummer)>"
-
-#~ msgid "B<SETTITLE question>"
-#~ msgstr "B<SETTITLE question (SETTITLE-spørgsmål)>"
-
-#~ msgid "B<TITLE string>"
-#~ msgstr "B<TITLE string (titelstreng)>"
-
-#~ msgid "Normal items that have reasonable defaults."
-#~ msgstr "Normale punkter som har fornuftige standarder."
-
-#~ msgid "Items that don't have a reasonable default."
-#~ msgstr "Punkter som ikke har en fornuftig standard."
-
-#~ msgid "B<GO>"
-#~ msgstr "B<GO (gå igang)>"
-
-#~ msgid ""
-#~ "Tells debconf to display the accumulated set of questions (from INPUT "
-#~ "commands) to the user."
-#~ msgstr ""
-#~ "Giver debconf besked om at vise det akkumulerede sæt af spørgsmål fra "
-#~ "INPUT-kommandoer) til brugeren."
-
-#~ msgid "B<CLEAR>"
-#~ msgstr "B<CLEAR (ryd)>"
-
-#~ msgid ""
-#~ "Clears the accumulated set of questions (from INPUT commands) without "
-#~ "displaying them."
-#~ msgstr ""
-#~ "Rydder det akkumulrede sæt af spørgsmål (fra INPUT-kommandoer) uden at "
-#~ "vise dem."
-
-#~ msgid "B<STOP>"
-#~ msgstr "B<STOP>"
-
-#~ msgid ""
-#~ "This command tells debconf that you're done talking to it. Often debconf "
-#~ "can detect termination of your program and this command is not necessary."
-#~ msgstr ""
-#~ "Denne kommando fortæller debconf at du er færdig med at snakke med den. "
-#~ "Ofte kan debconf detektere afslutning af dit program og så er denne "
-#~ "kommando ikke nødvendig."
-
-#~ msgid "B<GET question>"
-#~ msgstr "B<GET question (hent sprøgsmål)>"
-
-#~ msgid ""
-#~ "Questions can have flags associated with them. The flags can have a value "
-#~ "of \"true\" or \"false\". This command returns the value of a flag."
-#~ msgstr ""
-#~ "Spørgsmål kan have flag associeret med dem. Flagende kan have en værdien "
-#~ "»true« (sand) eller »false« (falsk). Denne kommando returnerer værdien "
-#~ "for et flag."
-
-#~ msgid ""
-#~ "This sets the value of a question's flag. The value must be either \"true"
-#~ "\" or \"false\"."
-#~ msgstr ""
-#~ "Denne indstilling angiver værdien for et spørgsmåls flag. Værdien skal "
-#~ "være enten »true« (sand) eller »false« (falsk)."
-
-#~ msgid ""
-#~ "One common flag is the \"seen\" flag. It is normally only set if a user "
-#~ "has already seen a question. Debconf usually only displays questions to "
-#~ "users if they have the seen flag set to \"false\" (or if it is "
-#~ "reconfiguring a package).  Sometimes you want the user to see a question "
-#~ "again -- in these cases you can set the seen flag to false to force "
-#~ "debconf to redisplay it."
-#~ msgstr ""
-#~ "Et udbredt flag er flaget »seen«. Det angives normalt kune hvis en bruger "
-#~ "allerede har set et spørgsmål. Debconf viser normalt kun spørgsmål for "
-#~ "brugerne hvis de har sat flaget seen til »false« (falsk) (eller hvis "
-#~ "programmet rekonfigurerer en pakke). Undertiden ønsker du at brugeren "
-#~ "skal se et spørgsmål igen - i disse tilfælde kan du angive flaget seen "
-#~ "til false (falsk) for at tvinge debconf til at vise det igen."
-
-#~ msgid "B<METAGET question field>"
-#~ msgstr "B<METAGET spørgsmålsfelt>"
-
-#~ msgid ""
-#~ "Call this in your postrm when your package is purged. It removes all of "
-#~ "your package's questions from debconf's database."
-#~ msgstr ""
-#~ "Kald denne i din postrm når din pakke afinstalleres. Den fjerner alle din "
-#~ "pakkes spørgsmål fra debconfs database."
-
-#~ msgid "Here is a simple example of the debconf protocol in action."
-#~ msgstr "Her er et simpelt eksempel på debconf-protokollen i aktion."
-
-#~ msgid "LIBRARIES"
-#~ msgstr "BIBLIOTEKER"
-
-#~ msgid "OTHER SCRIPTS"
-#~ msgstr "ANDRE SKRIPTER"
-
-#~ msgid "ADVANCED PROGRAMMING WITH DEBCONF"
-#~ msgstr "AVANCERET PROGRAMMERING MED DEBCONF"
-
-#~ msgid ""
-#~ " # Ask questions.\n"
-#~ " db_input medium mypackage/foo || true\n"
-#~ " db_input medium mypackage/bar || true\n"
-#~ " db_go || true\n"
-#~ msgstr ""
-#~ " # Stil spørgsmål.\n"
-#~ " db_input medium mypackage/foo || true\n"
-#~ " db_input medium mypackage/bar || true\n"
-#~ " db_go || true\n"
-
-#~ msgid "B<debconf>(7)  is the debconf user's guide."
-#~ msgstr "B<debconf>(7) er brugervejledning for debconf."
-
-#~ msgid ""
-#~ "B<debconf.conf>(5)  has much useful information, including some info "
-#~ "about the backend database."
-#~ msgstr ""
-#~ "B<debconf.conf>(5) har mange brugbare informationer, inklusiv lidt "
-#~ "information om den bagvedliggende database."
