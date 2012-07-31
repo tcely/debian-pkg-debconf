@@ -17,6 +17,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Indonesian updated (Andika Triwidada).
   * Simplified Chinese updated (Xingyou Chen).
   * Bulgarian updated (Damyan Ivanov). Closes: #683245
+  * Russian (Yuri Kozlov). Closes: #683306
 
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
