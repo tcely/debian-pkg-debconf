@@ -1,13 +1,13 @@
 # Czech translation of debconf package.
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# Miroslav Kure <kurem@debian.cz>, 2004--2010.
+# Miroslav Kure <kurem@debian.cz>, 2004--2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2010-03-15 14:15+0100\n"
+"PO-Revision-Date: 2012-08-01 18:19+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
 "Language: cs\n"
@@ -64,7 +64,7 @@ msgstr ""
 #: ../Debconf/Config.pm:308
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
-msgstr "Ignoruji neplatnou prioritu \"%s\""
+msgstr "Ignoruji neplatnou prioritu „%s“"
 
 #: ../Debconf/Config.pm:309
 #, perl-format
@@ -96,7 +96,7 @@ msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Zadejte nula nebo více položek oddělených čárkou, za kterou následuje "
-"mezera (', ').)"
+"mezera („, “).)"
 
 #: ../Debconf/Element/Gnome.pm:182
 msgid "_Help"
@@ -107,12 +107,11 @@ msgid "Help"
 msgstr "Nápověda"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf nebyl nastaven pro zobrazení této chybové hlášky, takže vám ji "
+"Debconf si není jistý, zda se tato chybová hláška zobrazila, takže vám ji "
 "poslal."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
@@ -130,7 +129,7 @@ msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
-"Vstupní hodnota \"%s\" není v C volbách! To se nikdy nemělo stát. Možná jsou "
+"Vstupní hodnota „%s“ není v C volbách! To se nikdy nemělo stát. Možná jsou "
 "šablony špatně lokalizovány."
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
@@ -258,23 +257,23 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
-"Šablona č.%s v %s má duplicitní pole \"%s\" s novou hodnotou \"%s\". Některé "
+"Šablona č.%s v %s má duplicitní pole „%s“ s novou hodnotou „%s“. Některé "
 "dvě šablony pravděpodobně nejsou odděleny prázdným řádkem.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
-msgstr "Neznámé pole '%s' šablony v části č.%s z %s\n"
+msgstr "Neznámé pole „%s“ šablony v části č.%s z %s\n"
 
 #: ../Debconf/Template.pm:257
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
-msgstr "Chyba zpracování šablony poblíž '%s' v části č.%s z %s\n"
+msgstr "Chyba zpracování šablony poblíž „%s“ v části č.%s z %s\n"
 
 #: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
-msgstr "Šablona č.%s v %s neobsahuje řádek 'Template:'\n"
+msgstr "Šablona č.%s v %s neobsahuje řádek „Template:“\n"
 
 #: ../dpkg-preconfigure:126
 #, perl-format
@@ -302,7 +301,7 @@ msgstr "Extrahuji z balíků šablony: %d%%"
 
 #: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
-msgstr "Přednastavuji balíky...\n"
+msgstr "Přednastavuji balíky…\n"
 
 #: ../dpkg-preconfigure:207
 #, perl-format
@@ -373,7 +372,7 @@ msgstr ""
 
 #: ../debconf-mergetemplate:66
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
-msgstr "Použití: debconf-mergetemplate [volby] [šablony.ll ...] šablony"
+msgstr "Použití: debconf-mergetemplate [volby] [šablony.ll …] šablony"
 
 #: ../debconf-mergetemplate:71
 msgid ""
