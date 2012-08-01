@@ -26,7 +26,7 @@ clean:
 
 %.po: debconf.pot
 	@echo -n "Merging debconf.pot and $@"
-	@msgmerge $@ debconf.pot -o $@.new
+	@msgmerge --previous $@ debconf.pot -o $@.new
 # Typically all that changes was a date or line number. I'd prefer not to
 # commit such changes, so detect and ignore them.
 	@if [ "`diff $@ $@.new | grep '[<>]' | grep -v '[<>] #:' | wc -l`" -ne 2 ]; then \
