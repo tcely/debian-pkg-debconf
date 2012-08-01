@@ -20,6 +20,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Russian (Yuri Kozlov). Closes: #683306
   * Slovak (Ivan Masár). Closes: #683341
   * French (Steve Petruzzello).
+  * Basque (Iñaki Larrañaga Murgoitio). Closes: #683527
 
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
