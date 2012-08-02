@@ -1,14 +1,14 @@
 # Portuguese translation of Debconf for the Debian Installer
 # Copyright (C) 2004 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as the debconf package.
-# Miguel Figueiredo <elmig@debianpt.org>, 2004-2010.
+# Miguel Figueiredo <elmig@debianpt.org>, 2004-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2010-04-12 22:57+0100\n"
+"PO-Revision-Date: 2012-07-30 10:14+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../Debconf/Config.pm:134
 msgid "Template database not specified in config file."
-msgstr "Base de dados template não especificada no ficheiro de configuração."
+msgstr "Base de dados de templates não especificada no ficheiro de configuração."
 
 #: ../Debconf/Config.pm:139
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 "  -f,  --frontend\t\tEspecificar o frontend do debconf a utilizar.\n"
 "  -p,  --prority\t\tEspecificar a prioridade mínima das perguntas a "
 "mostrar.\n"
-"       --terse\t\t\tHabilitar o modo abreviado.\n"
+"       --terse\t\t\tActivar o modo abreviado.\n"
 
 #: ../Debconf/Config.pm:308
 #, perl-format
@@ -98,8 +98,8 @@ msgstr "não"
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
-"(Introduza os itens que deseja escolher separados por uma vírgula seguida de "
-"um espaço (', ').)"
+"(Introduza zero ou mais itens separados por uma vírgula seguida de um espaço "
+"(', ').)"
 
 #: ../Debconf/Element/Gnome.pm:182
 msgid "_Help"
@@ -110,12 +110,11 @@ msgid "Help"
 msgstr "Ajuda"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"O Debconf não foi configurado para mostrar esta mensagem de erro, por isso "
+"O Debconf não está confiante que esta mensagem de erro foi mostrada, por isso "
 "enviou-a por mail para si."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
@@ -156,7 +155,7 @@ msgstr "A configurar %s"
 
 #: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
-msgstr "TERM não está definida, logo o frontend dialog não é utilizável."
+msgstr "TERM não está definida, por isso o frontend dialog não é utilizável."
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
@@ -182,8 +181,8 @@ msgstr ""
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
-"O frontend Dialog requer um ecrã de pelo menos 13 linhas de altura e 31 "
-"colunas de largura."
+"O frontend Dialog necessita de um ecrã com pelo menos 13 linhas de altura e "
+"31 colunas de largura."
 
 #: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
@@ -211,7 +210,7 @@ msgstr ""
 "familiarizado com os ficheiros de configuração standard de unix, este "
 "ficheiro vai-lhe parecer familiar -- contém comentários intercalados com "
 "itens de configuração. Edite o ficheiro, modificando qualquer item que ache "
-"necessário, depois grave-o e saia. Nesse ponto, o debconf irá ler o ficheiro "
+"necessário, depois grave-o e saia. Nessa altura, o debconf irá ler o ficheiro "
 "editado, e utilizar os valores que introduziu para configurar o sistema."
 
 #: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
@@ -235,8 +234,7 @@ msgstr "Mais"
 #: ../Debconf/FrontEnd/Web.pm:66
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
-msgstr ""
-"Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
+msgstr "Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:166
 msgid "Back"
@@ -263,7 +261,7 @@ msgid ""
 msgstr ""
 "Template #%s em %s tem um campo duplicado \"%s\" com o novo valor \"%s\". "
 "Provavelmente os dois templates não estão devidamente separados por uma "
-"única newline.\n"
+"única 'newline'.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
@@ -358,7 +356,7 @@ msgstr "%s não está instalado"
 #: ../dpkg-reconfigure:181
 #, perl-format
 msgid "%s is broken or not fully installed"
-msgstr "%s está defeituoso ou não totalmente instalado"
+msgstr "%s está estragado ou não totalmente instalado"
 
 #: ../dpkg-reconfigure:294
 #, perl-format
@@ -415,12 +413,12 @@ msgstr "%s é fuzzy no byte %s: %s; deixando-o"
 #: ../debconf-mergetemplate:168
 #, perl-format
 msgid "%s is outdated"
-msgstr "%s está ultrapassado"
+msgstr "%s está desactualizado"
 
 #: ../debconf-mergetemplate:173
 #, perl-format
 msgid "%s is outdated; dropping whole template!"
-msgstr "%s está ultrapassado; deixando todo o template!"
+msgstr "%s está desactualizado; a largar todo o template!"
 
 #: ../debconf:95
 msgid "Usage: debconf [options] command [args]"
