@@ -1,16 +1,16 @@
 # Thai translation of debconf.
-# Copyright (C) 2006 Software in the Public Interest, Inc.
+# Copyright (C) 2006-2012 Software in the Public Interest, Inc.
 # This file is distributed under the same license as the debconf package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2006.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2006-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2006-10-22 17:19+0700\n"
+"PO-Revision-Date: 2012-08-02 13:11+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
-"Language-Team: Thai <l10n@opentle.org>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,11 +104,10 @@ msgid "Help"
 msgstr "วิธีใช้"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
-msgstr "debconf ไม่ได้ตั้งค่าไว้ให้แสดงข้อผิดพลาด ดังนั้นจะส่งเมลแจ้งถึงคุณแทน"
+msgstr "debconf ไม่แน่ใจว่าข้อผิดพลาดนี้ได้แสดงบนหน้าจอหรือไม่ จึงส่งเมลแจ้งถึงคุณ"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -309,7 +308,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "ตั้งค่าขั้นต้นให้กับ %s ไม่สำเร็จ โดยจบด้วยสถานะ %s"
 
 #: ../dpkg-reconfigure:105
-#, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -a,  --all\t\t\tReconfigure all packages.\n"
@@ -322,7 +320,8 @@ msgstr ""
 "  -a,  --all\t\t\tตั้งค่าทุกแพกเกจใหม่\n"
 "  -u,  --unseen-only\t\tแสดงเฉพาะคำถามที่ยังไม่เคยผ่านมาก่อน\n"
 "       --default-priority\tใช้ระดับคำถามปริยายแทนการใช้ระดับต่ำ\n"
-"       --force\t\t\tบังคับตั้งค่าแพกเกจที่เสียหายใหม่"
+"       --force\t\t\tบังคับตั้งค่าแพกเกจที่เสียหายใหม่\n"
+"       --no-reload\t\tไม่ต้องโหลดต้นแบบคำถามซ้ำ (ใช้ด้วยความระมัดระวัง)"
 
 #: ../dpkg-reconfigure:119
 #, perl-format

@@ -22,6 +22,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * French (Steve Petruzzello).
   * Basque (Iñaki Larrañaga Murgoitio). Closes: #683527
   * Czech (Miroslav Kure). Closes: #683548
+  * Thai (Theppitak Karoonboonyanan). Closes: #683585
 
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
