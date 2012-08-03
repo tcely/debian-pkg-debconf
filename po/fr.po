@@ -66,9 +66,9 @@ msgid ""
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
 "       --terse\t\t\tEnable terse mode.\n"
 msgstr ""
-"  -f,  --frontend\t\tspécifie l'interface debconf à utiliser ;\n"
-"  -p,  --priority\t\tspécifie la priorité minimale à afficher ;\n"
-"       --terse\t\t\tactive le mode laconique (« terse »).\n"
+"  -f,  --frontend\t\tindique l'interface debconf à utiliser ;\n"
+"  -p,  --priority\t\tindique la priorité minimale à afficher ;\n"
+"       --terse\t\t\tactive le mode laconique (« terse »).\n"
 
 #: ../Debconf/Config.pm:308
 #, perl-format
@@ -338,15 +338,16 @@ msgid ""
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
-"Usage : dpkg-reconfigure [options] paquets\n"
-"  -a,  --all\t\t\treconfigure tous les paquets ;\n"
+"Utilisation : dpkg-reconfigure [options] paquets\n"
+"  -a,  --all\t\t\treconfigure tous les paquets ;\n"
 "  -u,  --unseen-only\t\taffiche seulement les questions qui n'ont\n"
 "                    \t\tpas encore été posées ;\n"
 "       --default-priority\tutilise la priorité par défaut plutôt\n"
 "                         \tque la priorité basse ;\n"
-"       --force\t\t\tforce la reconfiguration des paquets cassés.       --no-"
+"       --force\t\t\tforce la reconfiguration des paquets cassés.\n"
+"       --no-"
 "reload\t\tne pas recharger les modèles. (à utiliser\n"
-"                         \t avec précaution)"
+"                         \tavec précaution)"
 
 #: ../dpkg-reconfigure:119
 #, perl-format
@@ -386,7 +387,7 @@ msgstr ""
 
 #: ../debconf-mergetemplate:66
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
-msgstr "Usage : debconf-mergetemplate [options] [modèles.ll ...] modèles"
+msgstr "Utilisation : debconf-mergetemplate [options] [modèles.ll ...] modèles"
 
 #: ../debconf-mergetemplate:71
 msgid ""
