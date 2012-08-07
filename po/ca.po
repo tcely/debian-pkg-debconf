@@ -1,15 +1,15 @@
 # Debconf Catalan Translation
-# Copyright © 2001, 2002, 2004, 2005 Free Software Foundation, Inc.
+# Copyright © 2001, 2002, 2004, 2005, 2006, 2010, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
-# Jordi Mallach <jordi@debian.org>, 2001, 2002, 2004, 2005.
+# Jordi Mallach <jordi@debian.org>, 2001, 2002, 2004, 2005, 2012.
 # Guillem Jover <guillem@debian.org>, 2005, 2006, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.28\n"
+"Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-19 19:05-0400\n"
-"PO-Revision-Date: 2010-03-10 18:57+0100\n"
+"PO-Revision-Date: 2012-08-07 09:57+0200\n"
 "Last-Translator: Guillem Jover <guillem@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
@@ -115,13 +115,12 @@ msgid "Help"
 msgstr "Ajuda"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf no estava configurat per a mostrar aquesta missatge d'error, així "
-"que vos l'ha enviat per correu."
+"Debconf no està del tot segur que aquest missatge s'haja mostrat, així que "
+"vos l'ha enviat per correu."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
