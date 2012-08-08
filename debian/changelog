@@ -27,6 +27,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   * Finnish (Tommi Vainikainen). Closes: #683967
   * Catalan (Jordi Mallach).
   * Vietnamese (Nguyễn Vũ Hưng).
+  * Arabic (Ossama Khayat).
 
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
