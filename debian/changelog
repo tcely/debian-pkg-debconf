@@ -1,4 +1,4 @@
-debconf (1.5.46) UNRELEASED; urgency=low
+debconf (1.5.46) unstable; urgency=low
 
   [ Manpages translations ]
   * Put the Danish translation of manpages from #664901 in the right
@@ -33,7 +33,7 @@ debconf (1.5.46) UNRELEASED; urgency=low
   [ David Prévot ]
   * Make sure to keep the previous strings while updating PO files.
 
- -- Christian Perrier <bubulle@debian.org>  Sun, 15 Jul 2012 15:22:46 -0600
+ -- Colin Watson <cjwatson@debian.org>  Mon, 13 Aug 2012 13:17:14 +0100
 
 debconf (1.5.45) unstable; urgency=low
 
