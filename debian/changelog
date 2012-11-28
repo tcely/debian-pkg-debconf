@@ -3,6 +3,8 @@ debconf (1.5.47) UNRELEASED; urgency=low
   * GTK frontend: Do additional probing in child process to catch cases
     where trying to use GTK will cause an otherwise uncatchable crash.
     Closes: #690776 Thanks, James Hunt
+  * debconf-devel.7: Mention that CAPB capabilities are separated with spaces.
+    Closes: #694626
 
  -- Joey Hess <joeyh@debian.org>  Wed, 17 Oct 2012 13:15:40 -0400
 
