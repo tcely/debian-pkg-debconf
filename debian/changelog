@@ -1,5 +1,8 @@
 debconf (1.5.47) UNRELEASED; urgency=low
 
+  [ Manpages translations ]
+  * German updated.
+
   * GTK frontend: Do additional probing in child process to catch cases
     where trying to use GTK will cause an otherwise uncatchable crash.
     Closes: #690776 Thanks, James Hunt
