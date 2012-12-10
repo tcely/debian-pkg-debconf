@@ -1,9 +1,9 @@
-debconf (1.5.48) UNRELEASED; urgency=low
+debconf (1.5.48) unstable; urgency=low
 
   * dpkg-reconfigure: Fix incorrect scoping of control_path that broke
     handling of multiple packages (closes: #690755, LP: #1076322).
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:30:14 +0000
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:31:38 +0000
 
 debconf (1.5.47) unstable; urgency=low
 
