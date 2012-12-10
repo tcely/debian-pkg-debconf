@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
-"POT-Creation-Date: 2012-12-09 15:34+0100\n"
+"POT-Creation-Date: 2012-12-10 13:18+0000\n"
 "PO-Revision-Date: 2012-12-09 15:46+0100\n"
 "Last-Translator: Florian 'eix' Rehnisch <eixman@gmx.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
@@ -229,7 +229,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
-#: ../../dpkg-reconfigure:325 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -240,7 +240,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:327
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:328
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -5323,9 +5323,9 @@ msgid ""
 "capabilities it supports."
 msgstr ""
 "Im Allgemeinen brauchen Sie diesen Befehl nicht zu benutzen. Er tauscht mit "
-"Debconf eine Liste unterstützter Fähigkeiten (getrennt durch Leerzeichen) aus. Fähigkeiten, die sowohl "
-"Debconf und Sie unterstützen, werden benutzt, und Debconf antwortet mit "
-"allen Fähigkeiten, die es unterstützt."
+"Debconf eine Liste unterstützter Fähigkeiten (getrennt durch Leerzeichen) "
+"aus. Fähigkeiten, die sowohl Debconf und Sie unterstützen, werden benutzt, "
+"und Debconf antwortet mit allen Fähigkeiten, die es unterstützt."
 
 # FIXME Double space
 #. type: Plain text

@@ -30,7 +30,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.41\n"
-"POT-Creation-Date: 2011-07-29 12:37+0300\n"
+"POT-Creation-Date: 2012-12-10 13:18+0000\n"
 "PO-Revision-Date: 2011-08-02 11:03+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -254,8 +254,8 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
-#: ../../debconf-show:154 ../../dpkg-preconfigure:243
-#: ../../dpkg-reconfigure:268 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf-show:154 ../../dpkg-preconfigure:244
+#: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -266,7 +266,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:245 ../../dpkg-reconfigure:270
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:328
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -5295,11 +5295,17 @@ msgstr "B<CAPB funcionalidades>"
 
 #. type: Plain text
 #: debconf-devel.7:257
+#, fuzzy
+#| msgid ""
+#| "You generally don't need to use this command. It exchanges with debconf a "
+#| "list of supported capabilities. Capabilities that both you and debconf "
+#| "support will be used, and debconf will reply with all the capabilities it "
+#| "supports."
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
-"list of supported capabilities. Capabilities that both you and debconf "
-"support will be used, and debconf will reply with all the capabilities it "
-"supports."
+"list of supported capabilities (separated by spaces). Capabilities that both "
+"you and debconf support will be used, and debconf will reply with all the "
+"capabilities it supports."
 msgstr ""
 "Generalmente no tendrá que usar esta orden. Intercambia con debconf una "
 "lista de funcionalidades aceptadas. Se usarán la funcionalidades que el "

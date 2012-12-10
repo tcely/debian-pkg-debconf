@@ -1,4 +1,4 @@
-debconf (1.5.47) UNRELEASED; urgency=low
+debconf (1.5.47) unstable; urgency=low
 
   [ Manpages translations ]
   * German updated.
@@ -14,7 +14,7 @@ debconf (1.5.47) UNRELEASED; urgency=low
   * dpkg-reconfigure: Fix trigger processing to cope properly if some of the
     triggered packages use debconf (closes: #686071).
 
- -- Joey Hess <joeyh@debian.org>  Wed, 17 Oct 2012 13:15:40 -0400
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:18:46 +0000
 
 debconf (1.5.46) unstable; urgency=low
 
