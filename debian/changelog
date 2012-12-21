@@ -1,3 +1,12 @@
+debconf (1.5.49) UNRELEASED; urgency=low
+
+  * frontend: Don't set title in the maintainer script case when the
+    action is “triggered”. This totally confuses the Debian Installer
+    (“Configuring man-db” instead of “Configuring grub-pc”, notably).
+    Closes: #679327
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 21 Dec 2012 21:34:01 +0100
+
 debconf (1.5.48) unstable; urgency=low
 
   * dpkg-reconfigure: Fix incorrect scoping of control_path that broke
