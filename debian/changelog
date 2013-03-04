@@ -1,3 +1,10 @@
+debconf (1.5.50) UNRELEASED; urgency=low
+
+  * KDE frontend: Work around multiple bugs in the perl code generated
+    by puic4. The frontend works again. Closes: #702210
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 04 Mar 2013 15:04:32 -0400
+
 debconf (1.5.49) unstable; urgency=low
 
   * frontend: Don't set title in the maintainer script case when the
