@@ -2,6 +2,8 @@ debconf (1.5.50) UNRELEASED; urgency=low
 
   * KDE frontend: Work around multiple bugs in the perl code generated
     by puic4. The frontend works again. Closes: #702210
+  * doc/Makefile: Avoid adding duplicated =encoding to pod files.
+    Closes: #704866
 
  -- Joey Hess <joeyh@debian.org>  Mon, 04 Mar 2013 15:04:32 -0400
 

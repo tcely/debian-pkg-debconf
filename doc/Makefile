@@ -5,7 +5,7 @@ pod2man=pod2man -c Debconf -r '' --utf8
 manpages:
 	cd man && po4a po4a/po4a.cfg
 	for pod in man/*.pod; do \
-		perl -pi -e 'if (not $$seen and /^=head1/) { print "=encoding UTF-8\n\n"; $$seen = 1; }' $$pod; \
+		perl -pi -e '/^=encoding/ and $$seen = 1; if (not $$seen and /^=head1/) { print "=encoding UTF-8\n\n"; $$seen = 1; }' $$pod; \
 	done
 	install -d man/gen
 	for num in 1 3 8; do \
