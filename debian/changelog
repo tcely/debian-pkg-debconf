@@ -4,6 +4,8 @@ debconf (1.5.50) UNRELEASED; urgency=low
     by puic4. The frontend works again. Closes: #702210
   * doc/Makefile: Avoid adding duplicated =encoding to pod files.
     Closes: #704866
+  * Avoid find -perm +mode breakage caused by findutils 4.5.11,
+    by instead using -perm /mode. Thanks, Oron Peled
 
  -- Joey Hess <joeyh@debian.org>  Mon, 04 Mar 2013 15:04:32 -0400
 
