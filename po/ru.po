@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-05-04 23:47-0400\n"
 "PO-Revision-Date: 2012-07-30 20:49+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 "его и выйти из редактора. Затем программа debconf прочитает изменённый файл "
 "и использует введённые вами параметры для настройки системы."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -361,7 +361,7 @@ msgstr "Пакет %s не установлен"
 msgid "%s is broken or not fully installed"
 msgstr "Пакет %s сломан или установлен не полностью"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Ошибка чтения файла состояния: %s"
@@ -434,4 +434,3 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=пакет\t\tУказать пакет, которому принадлежит команда."
-

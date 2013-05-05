@@ -1,4 +1,4 @@
-debconf (1.5.50) UNRELEASED; urgency=low
+debconf (1.5.50) unstable; urgency=low
 
   * KDE frontend: Work around multiple bugs in the perl code generated
     by puic4. The frontend works again. Closes: #702210
@@ -7,7 +7,7 @@ debconf (1.5.50) UNRELEASED; urgency=low
   * Avoid find -perm +mode breakage caused by findutils 4.5.11,
     by instead using -perm /mode. Thanks, Oron Peled
 
- -- Joey Hess <joeyh@debian.org>  Mon, 04 Mar 2013 15:04:32 -0400
+ -- Joey Hess <joeyh@debian.org>  Sat, 04 May 2013 23:45:04 -0400
 
 debconf (1.5.49) unstable; urgency=low
 

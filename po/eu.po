@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-05-04 23:47-0400\n"
 "PO-Revision-Date: 2012-08-01 15:11+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
@@ -48,8 +48,8 @@ msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
-"Zeinu eta aurpegieren aukerak ez dira gehiago erabiliko "
-"konfigurazioko fitxategian. Ken itzazu."
+"Zeinu eta aurpegieren aukerak ez dira gehiago erabiliko konfigurazioko "
+"fitxategian. Ken itzazu."
 
 #: ../Debconf/Config.pm:153
 #, perl-format
@@ -172,8 +172,8 @@ msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
 msgstr ""
-"Elkarrizketa-koadroaren interfazeak ez du terminal tonto, emacs shell "
-"buffer edo kontrolik gabeko terminal  batean funtzionatuko."
+"Elkarrizketa-koadroaren interfazeak ez du terminal tonto, emacs shell buffer "
+"edo kontrolik gabeko terminal  batean funtzionatuko."
 
 #: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
@@ -181,16 +181,14 @@ msgid ""
 "cannot be used."
 msgstr ""
 "Ez dago elkarrizketa-koadro bezalako programarik instalatuta, ezingo da "
-"beraz "
-"elkarrizketa-koadroaren interfazea erabili."
+"beraz elkarrizketa-koadroaren interfazea erabili."
 
 #: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Elkarrizketa-koadroaren interfazeak gutxienez 13 lerro altuerako eta 31 "
-"zutabe zabalerako "
-"pantaila beharko du."
+"zutabe zabalerako pantaila beharko du."
 
 #: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
@@ -214,15 +212,15 @@ msgid ""
 "items as necessary, and then save it and exit. At that point, debconf will "
 "read the edited file, and use the values you entered to configure the system."
 msgstr ""
-"Editorean oinarritutako debconf interfazeak testu-fitxategi bat edo "
-"gehiago erakutsiko dizkizu editatzeko. Hau testu-fitxategi horietako "
-"bat da. Zu Unix-en konfigurazioko fitxategi arruntekin ohituta bazaude, "
-"fitxategi hau ezaguna egingo zaizu -- honek iruzkinak ditu konfigurazioko "
-"elementuen artean. Editatu fitxategia, aldatu behar diren elementuak, gero "
-"gorde eta itxi. Momentu horretan debconf-ek editatutako fitxategia "
-"irakurri eta zuk sartutako balioak erabiliko ditu sistema konfiguratzeko."
+"Editorean oinarritutako debconf interfazeak testu-fitxategi bat edo gehiago "
+"erakutsiko dizkizu editatzeko. Hau testu-fitxategi horietako bat da. Zu Unix-"
+"en konfigurazioko fitxategi arruntekin ohituta bazaude, fitxategi hau "
+"ezaguna egingo zaizu -- honek iruzkinak ditu konfigurazioko elementuen "
+"artean. Editatu fitxategia, aldatu behar diren elementuak, gero gorde eta "
+"itxi. Momentu horretan debconf-ek editatutako fitxategia irakurri eta zuk "
+"sartutako balioak erabiliko ditu sistema konfiguratzeko."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -244,8 +242,8 @@ msgstr "Gehiago"
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
 msgstr ""
-"Oharra: Debconf web moduan funtzionatzen ari da. Joan hona:  "
-"http://localhost:%i/"
+"Oharra: Debconf web moduan funtzionatzen ari da. Joan hona:  http://"
+"localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:166
 msgid "Back"
@@ -262,8 +260,7 @@ msgid ""
 "missing question %s."
 msgstr ""
 "abisua: datu-basea hondatuta egon daiteke. Konpontzen saiatuko da galdutako "
-"%s "
-"galdera gehitzen."
+"%s galdera gehitzen."
 
 #: ../Debconf/Template.pm:206
 #, perl-format
@@ -272,8 +269,8 @@ msgid ""
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
 "%s txantiloiak %s(e)n bikoiztutako \"%s\" eremu bat du \"%s\" balio "
-"berriarekin. "
-"Baliteke bi txantiloiak lerro berri bakar batez bereiztuta ez egotea.\n"
+"berriarekin. Baliteke bi txantiloiak lerro berri bakar batez bereiztuta ez "
+"egotea.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
@@ -370,7 +367,7 @@ msgstr "%s ez dago instalatuta"
 msgid "%s is broken or not fully installed"
 msgstr "%s hondatuta edo erabat instalatu gabe dago"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Ezin da egoeraren fitxategia irakurri: %s"
@@ -384,8 +381,8 @@ msgid ""
 "debconf-mergetemplate: This utility is deprecated. You should switch to "
 "using po-debconf's po2debconf program."
 msgstr ""
-"debconf-mergetemplate: Tresna hau zaharkituta dago. po-debconf-en "
-"po2debconf programa erabili beharko zenuke."
+"debconf-mergetemplate: Tresna hau zaharkituta dago. po-debconf-en po2debconf "
+"programa erabili beharko zenuke."
 
 #: ../debconf-mergetemplate:66
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
@@ -443,5 +440,3 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=paketea\t\tEzarri komandoaren jabe den paketea."
-
-

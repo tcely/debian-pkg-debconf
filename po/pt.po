@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-05-04 23:47-0400\n"
 "PO-Revision-Date: 2012-07-30 10:14+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -38,7 +38,8 @@ msgstr ""
 
 #: ../Debconf/Config.pm:134
 msgid "Template database not specified in config file."
-msgstr "Base de dados de templates não especificada no ficheiro de configuração."
+msgstr ""
+"Base de dados de templates não especificada no ficheiro de configuração."
 
 #: ../Debconf/Config.pm:139
 msgid ""
@@ -114,8 +115,8 @@ msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"O Debconf não está confiante que esta mensagem de erro foi mostrada, por isso "
-"enviou-a por mail para si."
+"O Debconf não está confiante que esta mensagem de erro foi mostrada, por "
+"isso enviou-a por mail para si."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -210,10 +211,11 @@ msgstr ""
 "familiarizado com os ficheiros de configuração standard de unix, este "
 "ficheiro vai-lhe parecer familiar -- contém comentários intercalados com "
 "itens de configuração. Edite o ficheiro, modificando qualquer item que ache "
-"necessário, depois grave-o e saia. Nessa altura, o debconf irá ler o ficheiro "
-"editado, e utilizar os valores que introduziu para configurar o sistema."
+"necessário, depois grave-o e saia. Nessa altura, o debconf irá ler o "
+"ficheiro editado, e utilizar os valores que introduziu para configurar o "
+"sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -234,7 +236,8 @@ msgstr "Mais"
 #: ../Debconf/FrontEnd/Web.pm:66
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
-msgstr "Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
+msgstr ""
+"Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:166
 msgid "Back"
@@ -358,7 +361,7 @@ msgstr "%s não está instalado"
 msgid "%s is broken or not fully installed"
 msgstr "%s está estragado ou não totalmente instalado"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Não pode ler o estado do ficheiro: %s"

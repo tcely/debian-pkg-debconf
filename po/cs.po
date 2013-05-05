@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-05-04 23:47-0400\n"
 "PO-Revision-Date: 2012-08-01 18:19+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -209,7 +209,7 @@ msgstr ""
 "potřeb, uložte jej a ukončete editor. V této fázi si debconf přečte upravený "
 "soubor a použije zadané hodnoty pro nastavení systému."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -257,8 +257,8 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
-"Šablona č.%s v %s má duplicitní pole „%s“ s novou hodnotou „%s“. Některé "
-"dvě šablony pravděpodobně nejsou odděleny prázdným řádkem.\n"
+"Šablona č.%s v %s má duplicitní pole „%s“ s novou hodnotou „%s“. Některé dvě "
+"šablony pravděpodobně nejsou odděleny prázdným řádkem.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
@@ -353,7 +353,7 @@ msgstr "%s není nainstalován"
 msgid "%s is broken or not fully installed"
 msgstr "%s je porušený, nebo není plně nainstalovaný"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Nemohu číst stavový soubor: %s"

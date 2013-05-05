@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-05-04 23:47-0400\n"
 "PO-Revision-Date: 2012-08-05 23:15+0300\n"
 "Last-Translator: Tommi Vainikainen <tvainika@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -113,7 +113,9 @@ msgstr "Ohje"
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
-msgstr "Debconf ei saanut varmuutta tämän virheviestin näyttämisestä, joten se postitettiin sinulle."
+msgstr ""
+"Debconf ei saanut varmuutta tämän virheviestin näyttämisestä, joten se "
+"postitettiin sinulle."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -210,7 +212,7 @@ msgstr ""
 "poistu, minkä jälkeen debconf lukee editoidun tiedoston ja säätää asetukset "
 "syöttämiesi tietojen perusteella."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -358,7 +360,7 @@ msgstr "%s ei ole täysin asennettu"
 msgid "%s is broken or not fully installed"
 msgstr "%s on rikki tai ei ole täysin asennettu"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Tilatiedoston luku epäonnistui: %s"
