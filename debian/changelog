@@ -1,3 +1,10 @@
+debconf (1.5.51) UNRELEASED; urgency=low
+
+  * Fix warning when /var/cache/debconf is missing.
+    Closes: #709928
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 26 May 2013 21:01:21 -0400
+
 debconf (1.5.50) unstable; urgency=low
 
   * KDE frontend: Work around multiple bugs in the perl code generated
