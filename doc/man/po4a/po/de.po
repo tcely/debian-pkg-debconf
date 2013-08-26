@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
-"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"POT-Creation-Date: 2013-08-26 13:27-0300\n"
 "PO-Revision-Date: 2012-12-09 15:46+0100\n"
 "Last-Translator: Florian 'eix' Rehnisch <eixman@gmx.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
@@ -76,9 +76,9 @@ msgid ""
 "overview and documentation for sysadmins, see L<debconf(7)> (in the debconf-"
 "doc package)."
 msgstr ""
-"Debconf ist ein Konfigurationssystem für Debian-Pakete. Lesen Sie L<debconf"
-"(7)> (im Paket debconf-doc) für einen Überblick und die Dokumentation von "
-"Debconf für Systemadministratoren."
+"Debconf ist ein Konfigurationssystem für Debian-Pakete. Lesen Sie "
+"L<debconf(7)> (im Paket debconf-doc) für einen Überblick und die "
+"Dokumentation von Debconf für Systemadministratoren."
 
 #. type: textblock
 #: ../../debconf:19
@@ -227,7 +227,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
 #: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
@@ -1253,7 +1253,7 @@ msgstr ""
 "cdebconf, auszugeben, benutzen Sie den Parameter »--installer«"
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1415,8 +1415,11 @@ msgstr "L<debconf-getlang(1)>"
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
+#, fuzzy
+#| msgid ""
+#| "debconf-set-selections - insert new default values into the debconf "
+#| "database"
+msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
 "debconf-set-selections - füge neue Vorgabewerte in die Debconf-Datenbank ein"
 
@@ -3561,10 +3564,10 @@ msgid ""
 "will need apt-utils installed for that to work."
 msgstr ""
 "Manchmal möchten Sie vielleicht ein Paket von Hand vorkonfigurieren, wenn "
-"Sie es nicht mit APT installieren. Sie können B<dpkg-preconfigure> (8)"
-"benutzen, um das zu machen, übergeben Sie einfach die Dateinamen der Pakete, "
-"die Sie vorkonfigurieren wollen. Damit dies funktioniert, muss das Paket apt-"
-"utils installiert sein."
+"Sie es nicht mit APT installieren. Sie können B<dpkg-preconfigure> "
+"(8)benutzen, um das zu machen, übergeben Sie einfach die Dateinamen der "
+"Pakete, die Sie vorkonfigurieren wollen. Damit dies funktioniert, muss das "
+"Paket apt-utils installiert sein."
 
 #. type: SH
 #: debconf.7:33
@@ -3647,9 +3650,9 @@ msgid ""
 "The default frontend, this uses the B<whiptail>(1)  or B<dialog>(1)  "
 "programs to display questions to you. It works in text mode."
 msgstr ""
-"Die vorgegeben Benutzerschnittstelle, diese benutzt die Programme B<whiptail>"
-"(1) oder B<dialog>(1), um die Fragen an Sie anzuzeigen. Sie arbeitet im "
-"Textmodus."
+"Die vorgegeben Benutzerschnittstelle, diese benutzt die Programme "
+"B<whiptail>(1) oder B<dialog>(1), um die Fragen an Sie anzuzeigen. Sie "
+"arbeitet im Textmodus."
 
 #. type: TP
 #: debconf.7:60
@@ -5836,8 +5839,9 @@ msgid ""
 "Perl programmers can use the B<Debconf::Client::ConfModule>(3pm)  perl "
 "module, and python programmers can use the debconf python module."
 msgstr ""
-"Perl-Programmierer können das Perl-Modul B<Debconf::\\:Client::\\:ConfModule>"
-"(3pm) und Python-Programmierer können das Python-Modul debconf benutzen."
+"Perl-Programmierer können das Perl-Modul B<Debconf::\\:Client::\\:"
+"ConfModule>(3pm) und Python-Programmierer können das Python-Modul debconf "
+"benutzen."
 
 #. type: Plain text
 #: debconf-devel.7:438
@@ -6116,12 +6120,12 @@ msgid ""
 "to translate the 'Default' field of a select or multiselect question, and "
 "the value of the question will be automatically returned in English."
 msgstr ""
-"Neben dem Feld »Description« sollten Sie das Feld »Choices« einer (Mehrfach-)"
-"Auswahl-Vorlage übersetzen. Stellen Sie sicher, dass Sie die übersetzten "
-"Optionen in derselben Reihenfolge auflisten, wie Sie in dem Hauptfeld "
-"»Choices« erscheinen. Sie brauchen nicht das Feld »Default« einer (Mehrfach-)"
-"Auswahl-Frage zu übersetzen, und der Wert der Frage wird automatisch auf "
-"Englisch zurückgegeben."
+"Neben dem Feld »Description« sollten Sie das Feld »Choices« einer "
+"(Mehrfach-)Auswahl-Vorlage übersetzen. Stellen Sie sicher, dass Sie die "
+"übersetzten Optionen in derselben Reihenfolge auflisten, wie Sie in dem "
+"Hauptfeld »Choices« erscheinen. Sie brauchen nicht das Feld »Default« einer "
+"(Mehrfach-)Auswahl-Frage zu übersetzen, und der Wert der Frage wird "
+"automatisch auf Englisch zurückgegeben."
 
 # FIXME Double spaces
 #. type: Plain text
@@ -6149,9 +6153,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 "Für die Details zu po-debconf lesen Sie seine Handbuchseite. Falls Sie "
 "debhelper benutzen, ist das Konvertieren nach po-debconf ein einfaches "

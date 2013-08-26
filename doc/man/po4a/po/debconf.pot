@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"POT-Creation-Date: 2013-08-26 13:27-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,7 +170,7 @@ msgid "L<debconf-devel(7)>, L<debconf(7)>"
 msgstr ""
 
 #. type: SH
-#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158 ../../debconf-escape:71 ../../debconf-communicate:73 ../../debconf-copydb:175 ../../debconf-getlang:255 ../../debconf-get-selections:74 ../../debconf-loadtemplate:47 ../../debconf-mergetemplate:180 ../../debconf-set-selections:227 ../../debconf-show:154 ../../dpkg-preconfigure:244 ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382 debconf-devel.7:968
+#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158 ../../debconf-escape:71 ../../debconf-communicate:73 ../../debconf-copydb:175 ../../debconf-getlang:255 ../../debconf-get-selections:74 ../../debconf-loadtemplate:47 ../../debconf-mergetemplate:180 ../../debconf-set-selections:223 ../../debconf-show:154 ../../dpkg-preconfigure:244 ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382 debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
@@ -954,7 +954,7 @@ msgid ""
 msgstr ""
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr ""
 
@@ -1079,7 +1079,7 @@ msgstr ""
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid "debconf-set-selections - insert new default values into the debconf database"
+msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
 
 #. type: verbatim

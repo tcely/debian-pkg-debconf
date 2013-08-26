@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.41\n"
-"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"POT-Creation-Date: 2013-08-26 13:27-0300\n"
 "PO-Revision-Date: 2012-01-16 20:27+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -252,7 +252,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
 #: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
@@ -1373,7 +1373,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1547,8 +1547,11 @@ msgstr "L<debconf-getlang(1)>"
 # type: textblock
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
+#, fuzzy
+#| msgid ""
+#| "debconf-set-selections - insert new default values into the debconf "
+#| "database"
+msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
 "debconf-set-selections - вставляет новые ответы по умолчанию в базу данных "
 "debconf"
@@ -6274,8 +6277,8 @@ msgid ""
 "Perl programmers can use the B<Debconf::Client::ConfModule>(3pm)  perl "
 "module, and python programmers can use the debconf python module."
 msgstr ""
-"Программисты на perl могут использовать модуль B<Debconf::Client::ConfModule>"
-"(3pm), а программисты на python могут использовать модуль debconf."
+"Программисты на perl могут использовать модуль B<Debconf::Client::"
+"ConfModule>(3pm), а программисты на python могут использовать модуль debconf."
 
 # type: Plain text
 #. type: Plain text
@@ -6599,9 +6602,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 "Подробней о po-debconf смотрите в его справочной странице. Если вы "
 "используете debhelper, переведите его в po-debconf просто запустив один раз "
@@ -6630,11 +6633,11 @@ msgid ""
 msgstr ""
 "Итак, у вас есть сценарий config, файл templates, сценарий postinst, "
 "использующие debconf и так далее. Поместить все эти части в пакет debian "
-"несложно. Вы можете сделать это вручную или с помощью B<dh_installdebconf>"
-"(1), которая объединяет переведённые шаблоны, копирует файлы в нужные места, "
-"и даже генерирует вызов PURGE, который должен быть в сценарии postrm. "
-"Убедитесь, что ваш пакет зависит от debconf (E<gt>= 0.5), так как более "
-"ранние версии несовместимы с всем описанным в руководстве. Всё."
+"несложно. Вы можете сделать это вручную или с помощью "
+"B<dh_installdebconf>(1), которая объединяет переведённые шаблоны, копирует "
+"файлы в нужные места, и даже генерирует вызов PURGE, который должен быть в "
+"сценарии postrm. Убедитесь, что ваш пакет зависит от debconf (E<gt>= 0.5), "
+"так как более ранние версии несовместимы с всем описанным в руководстве. Всё."
 
 # type: Plain text
 #. type: Plain text

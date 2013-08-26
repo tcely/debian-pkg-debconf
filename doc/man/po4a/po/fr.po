@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
-"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"POT-Creation-Date: 2013-08-26 13:27-0300\n"
 "PO-Revision-Date: 2010-10-17 21:04+0200\n"
 "Last-Translator: Florentin Duneau <fduneau@gmail.com>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -100,8 +100,8 @@ msgstr ""
 "configurant pour communiquer avec debconf sur l'entrée et la sortie "
 "standard. La sortie du programme sera l'une des commandes du protocole "
 "debconf, et les codes résultants seront lus sur l'entrée standard. Pour plus "
-"de détails sur le protocole de debconf, veuillez consulter L<debconf-devel(7)"
-">."
+"de détails sur le protocole de debconf, veuillez consulter L<debconf-"
+"devel(7)>."
 
 # type: textblock
 #. type: textblock
@@ -254,7 +254,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
 #: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
@@ -1387,7 +1387,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1565,8 +1565,11 @@ msgstr "L<debconf-getlang(1)>"
 # type: textblock
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
+#, fuzzy
+#| msgid ""
+#| "debconf-set-selections - insert new default values into the debconf "
+#| "database"
+msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
 "debconf-set-selections - insérer de nouvelles valeurs par défaut dans la "
 "base de données de debconf"
@@ -6723,9 +6726,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 "Pour plus de précisions sur po-debconf, consultez sa page de manuel. Si vous "
 "utilisez debhelper, la conversion vers po-debconf est aussi simple que de "

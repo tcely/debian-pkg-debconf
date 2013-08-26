@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
-"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"POT-Creation-Date: 2013-08-26 13:27-0300\n"
 "PO-Revision-Date: 2012-03-21 10:20+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
@@ -226,7 +226,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
 #: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
@@ -1104,7 +1104,7 @@ msgstr ""
 "cdebconf, så brug parameteren --installer."
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1229,9 +1229,10 @@ msgstr ""
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
-msgstr ""
+#, fuzzy
+#| msgid "debconf-get-selections - output contents of debconf database"
+msgid "debconf-set-selections - insert new values into the debconf database"
+msgstr "debconf-get-selections - vis indholdet af debconfdatabasen"
 
 #. type: verbatim
 #: ../../debconf-set-selections:21
@@ -4883,9 +4884,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 
 #. type: SH
