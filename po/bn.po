@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2009-04-19 16:07+0600\n"
 "Last-Translator: Md. Rezwan Shahid <rezwan@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -207,7 +207,7 @@ msgstr ""
 "আইটেম পরিবর্তন করুন, এবং তারপর সংরক্ষন করে প্রস্থান করুন। এখন debconf সম্পাদিত "
 "ফাইলটি পড়ে দেখবে, এবং সিস্টেম কনফিগার করার জন্য আপনার দেয়া মানগুলো ব্যবহার করবে।"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -350,7 +350,7 @@ msgstr "%s ইন্সটল করা নেই"
 msgid "%s is broken or not fully installed"
 msgstr "%s ভাঙ্গা বা সম্পূর্ণভাবে ইন্সটল করা নয়"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "স্ট্যাটাস ফাইল পড়া যায়নি: %s"

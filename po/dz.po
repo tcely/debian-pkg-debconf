@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2006-10-06 10:46+0530\n"
 "Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -216,7 +216,7 @@ msgstr ""
 "ཞུན་དག་འབད་ཡོད་པའི་ཡིག་སྣོད་འདི་ ལྷག་ཞིནམ་ལས་ ཁྱོད་ཀྱིས་རིམ་ལུགས་རིམ་སྒྲིག་གི་དོན་ལུ་ བཙུགས་ཡོའ་པའི་བེ་"
 "ལུ་ཚུ་ ལག་ལེན་འདབ་འོང་།"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -359,7 +359,7 @@ msgstr "%s འདི་གཞི་བཙུགས་མ་འབད་བས།
 msgid "%s is broken or not fully installed"
 msgstr "%s འདི་རྒྱུན་ཆད་ནུག་ ཡངན་ ཆ་ཚང་སྦེ་གཞི་བཙུགས་མ་འབད་བས།"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "གནས་ཚད་ཡིག་སྣོད་ལྷག་མི་ཚུགས་པས་: %s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.2.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2009-12-19 16:53+0800\n"
 "Last-Translator: Tetralet <tetralet@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -200,7 +200,7 @@ msgstr ""
 "一些說明以及設定項目。請編輯，並變更任何有必要修改的項目，然後儲存並離開。屆"
 "時，debconf 將會讀取這個修改後的檔案，然後使用其中您所輸入的值來設定系統。"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -340,7 +340,7 @@ msgstr "%s 並未安裝"
 msgid "%s is broken or not fully installed"
 msgstr "%s 已損壞或未安裝完成"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "不能讀取狀態檔：%s"

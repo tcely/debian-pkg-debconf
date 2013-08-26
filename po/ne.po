@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2007-07-31 17:23+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -208,7 +208,7 @@ msgstr ""
 "गर्नुहोस्, र त्यसपछि यसलाई बचत गर्नुहोस् र बाहिरिनुहोस् । यस्तो अवस्थामा, debconf ले "
 "सम्पादित फाइल पढ्नेछ, र तपाईँले प्रणाली कन्फिगर गर्न प्रविष्टि गरेका मान प्रयोग गर्नेछ ।"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -349,7 +349,7 @@ msgstr "%s स्थापना भएको छैन"
 msgid "%s is broken or not fully installed"
 msgstr "%s विच्छेद भएको छ वा पूर्णरुपमा स्थापना भएको छैन"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "वस्तुस्थिति फाइल पढ्न सकिँदैन: %s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2007-06-03 13:36+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
@@ -201,7 +201,7 @@ msgid ""
 "read the edited file, and use the values you entered to configure the system."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -343,7 +343,7 @@ msgstr "%s ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ"
 msgid "%s is broken or not fully installed"
 msgstr "%s ਟੁੱਟਿਆ ਹੈ ਜਾਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "ਹਾਲਤ ਫਾਇਲ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ: %s"

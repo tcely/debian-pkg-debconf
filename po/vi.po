@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2012-08-07 16:47+0700\n"
 "Last-Translator: Nguyen Vu Hung <vuhung16plus@gmail.com>\n"
 "Language-Team: MOST Project <du-an-most@lists.hanoilug.org>\n"
@@ -213,7 +213,7 @@ msgstr ""
 "debconf sẽ đọc tập tin đã chỉnh sửa, và sử dụng những giá trị được bạn chỉnh "
 "sửa để cấu hình hệ thống."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -365,7 +365,7 @@ msgstr "%s chưa được cài đặt"
 msgid "%s is broken or not fully installed"
 msgstr "%s bị hỏng hoặc chưa được cài đặt hoàn thành"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Không thể đọc tập tin trạng thái: %s"

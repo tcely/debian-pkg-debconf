@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2013-08-26 13:28-0400\n"
 "PO-Revision-Date: 2010-03-09 08:15+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -210,7 +210,7 @@ msgstr ""
 "ហើយ​ ចេញ​ ។ ក្នុង​ចំណុច​នោះដែរ debcon នឹង​អាន​ឯកសារ​ដែល​បាន​កែសម្រួល ហើយ​ប្រើ​តម្លៃ​ដែល​អ្នក​បាន​បញ្ចូល​ "
 "ដើម្បីកំណត់រចនាសម្ព័ន្ធ​របស់ប្រព័ន្ធ  ។"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -351,7 +351,7 @@ msgstr "មិនបានដំឡើង %s ទេ"
 msgid "%s is broken or not fully installed"
 msgstr "%s បាន​ខូច ឬ មិន​បាន​ដំឡើងចប់​ពេញលេញ"
 
-#: ../dpkg-reconfigure:294
+#: ../dpkg-reconfigure:279
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "មិន​អាច​អាន​ឯកសារ​ស្ថានភាព ៖ %s"
