@@ -3,6 +3,9 @@ debconf (1.5.52) UNRELEASED; urgency=low
    [ Programs translations ]
    * Russian (Yuri Kozlov). Closes: #718188
 
+   [ Manpages translations ]
+   * French updated. Closes: #697458
+
  -- Christian Perrier <bubulle@debian.org>  Tue, 27 Aug 2013 10:27:07 +0200
 
 debconf (1.5.51) unstable; urgency=low

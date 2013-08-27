@@ -5818,12 +5818,6 @@ msgstr "B<CAPB fonctionnalités>"
 # type: Plain text
 #. type: Plain text
 #: debconf-devel.7:257
-#, fuzzy
-#| msgid ""
-#| "You generally don't need to use this command. It exchanges with debconf a "
-#| "list of supported capabilities. Capabilities that both you and debconf "
-#| "support will be used, and debconf will reply with all the capabilities it "
-#| "supports."
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
 "list of supported capabilities (separated by spaces). Capabilities that both "
@@ -5831,9 +5825,9 @@ msgid ""
 "capabilities it supports."
 msgstr ""
 "Vous n'aurez, en général, pas besoin d'utiliser cette commande. Elle échange "
-"avec debconf une liste des fonctionnalités reconnues. Des fonctionnalités "
-"supportées par vous et debconf seront utilisées et debconf répondra avec "
-"toutes les fonctionnalités qu'il accepte."
+"avec debconf une liste des fonctionnalités reconnues (séparées par des "
+"espaces). Des fonctionnalités supportées par vous et debconf seront "
+"utilisées et debconf répondra avec toutes les fonctionnalités qu'il accepte."
 
 # type: Plain text
 #. type: Plain text
