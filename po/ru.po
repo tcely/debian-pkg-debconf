@@ -6,9 +6,13 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.5.45\n"
+"Project-Id-Version: 1.5.50\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
+"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+=======
 "POT-Creation-Date: 2013-08-26 13:28-0400\n"
+>>>>>>> 6283201d18ec722822c01b310224e3c41e6b77dc
 "PO-Revision-Date: 2012-07-30 20:49+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -105,7 +109,7 @@ msgstr ""
 
 #: ../Debconf/Element/Gnome.pm:182
 msgid "_Help"
-msgstr "_Help"
+msgstr "_Подсказка"
 
 #: ../Debconf/Element/Gnome.pm:184
 msgid "Help"
@@ -163,7 +167,7 @@ msgstr ""
 
 #: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
-msgstr "Интерфейс dialog не совместим с shelll буферами emacs"
+msgstr "Интерфейс dialog не совместим с буферами shell из emacs"
 
 #: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
@@ -198,7 +202,7 @@ msgid ""
 "See the end of this document for detailed instructions."
 msgstr ""
 "Вы указали пакету debconf, что для настройки системы необходимо использовать "
-"текстовый редактор. Подробную информацию вы найдете в конце этого документа."
+"текстовый редактор. Подробную информацию вы найдёте в конце этого документа."
 
 #: ../Debconf/FrontEnd/Editor.pm:111
 msgid ""
@@ -217,7 +221,7 @@ msgstr ""
 "его и выйти из редактора. Затем программа debconf прочитает изменённый файл "
 "и использует введённые вами параметры для настройки системы."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -361,7 +365,7 @@ msgstr "Пакет %s не установлен"
 msgid "%s is broken or not fully installed"
 msgstr "Пакет %s сломан или установлен не полностью"
 
-#: ../dpkg-reconfigure:279
+#: ../dpkg-reconfigure:294
 #, perl-format
 msgid "Cannot read status file: %s"
 msgstr "Ошибка чтения файла состояния: %s"
@@ -434,3 +438,4 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=пакет\t\tУказать пакет, которому принадлежит команда."
+
