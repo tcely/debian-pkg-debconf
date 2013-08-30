@@ -44,11 +44,6 @@ default priority is. See L<debconf(7)> for a list.
 Use whatever the default priority of question is, instead of forcing the
 priority to low.
 
-=item B<-a>, B<--all>
-
-Reconfigure all installed packages that use debconf. Warning: this may take
-a long time.
-
 =item B<-u>, B<--unseen-only>
 
 By default, all questions are shown, even if they have already been
@@ -97,18 +92,15 @@ use Debconf::Log qw(:all);
 Debconf::Config->priority('low');
 
 my $unseen_only=0;
-my $all=0;
 my $force=0;
 my $default_priority=0;
 my $reload=1;
 Debconf::Config->getopt(
 gettext(qq{Usage: dpkg-reconfigure [options] packages
-  -a,  --all			Reconfigure all packages.
   -u,  --unseen-only		Show only not yet seen questions.
        --default-priority	Use default priority instead of low.
        --force			Force reconfiguration of broken packages.
        --no-reload		Do not reload templates. (Use with caution.)}),
-	"all|a"			=> \$all,
 	"unseen-only|u"		=> \$unseen_only,
 	"default-priority"	=> \$default_priority,
 	"force"			=> \$force,
@@ -141,17 +133,10 @@ unless ($unseen_only) {
 	Debconf::Config->reshow(1);
 }
 
-my @packages;
-if ($all) {
-	@packages=allpackages();
-	exit unless @packages;
-}
-else {
-	@packages=@ARGV;
-	if (! @packages) {
-		print STDERR "$0: ".gettext("please specify a package to reconfigure")."\n";
-		exit 1;
-	}
+my @packages=@ARGV;
+if (! @packages) {
+	print STDERR "$0: ".gettext("please specify a package to reconfigure")."\n";
+	exit 1;
 }
 
 # This is a hack to let postinsts know when they're being reconfigured. It
@@ -269,22 +254,6 @@ do {
 $frontend->shutdown;
 
 Debconf::Db->save;
-
-# Returns a list of all installed packages.
-sub allpackages {
-	my @ret;
-	local $/="\n\n";
-	
-	open (STATUS, "</var/lib/dpkg/status")
-		|| die sprintf(gettext("Cannot read status file: %s"), $!);
-	while (<STATUS>) {
-		push @ret, $1
-			if m/Status:\s*.*\sinstalled\n/ && m/Package:\s*(.*)\n/;
-	}
-	close STATUS;
-
-	return sort @ret;
-}
 
 # Run an external program that does not itself use debconf, but that may run
 # other programs that do use debconf.  To do this safely, checkpoint the

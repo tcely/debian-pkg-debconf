@@ -6,6 +6,11 @@ debconf (1.5.52) UNRELEASED; urgency=low
    [ Manpages translations ]
    * French updated. Closes: #697458
 
+   [Joey Hess]
+   * Remove dpkg-reconfigure -a, which existed only to accumulate bug
+     reports about bugs in other packages.
+     Closes: #721329, #664825, #558262, #617618, #707987
+
  -- Christian Perrier <bubulle@debian.org>  Tue, 27 Aug 2013 10:27:07 +0200
 
 debconf (1.5.51) unstable; urgency=low
