@@ -1,15 +1,16 @@
 debconf (1.5.52) UNRELEASED; urgency=low
 
-   [ Programs translations ]
-   * Russian (Yuri Kozlov). Closes: #718188
+  [ Programs translations ]
+  * Russian (Yuri Kozlov). Closes: #718188
 
-   [ Manpages translations ]
-   * French updated. Closes: #697458
+  [ Manpages translations ]
+  * French updated. Closes: #697458
 
-   [Joey Hess]
-   * Remove dpkg-reconfigure -a, which existed only to accumulate bug
-     reports about bugs in other packages.
-     Closes: #721329, #664825, #558262, #617618, #707987
+  [Joey Hess]
+  * Remove dpkg-reconfigure -a, which existed only to accumulate bug
+    reports about bugs in other packages.
+    Closes: #721329, #664825, #558262, #617618, #707987
+  * Fix bad uses of length @array. Closes: #723841
 
  -- Christian Perrier <bubulle@debian.org>  Tue, 27 Aug 2013 10:27:07 +0200
 
