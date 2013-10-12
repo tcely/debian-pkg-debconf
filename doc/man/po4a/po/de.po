@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
 "POT-Creation-Date: 2013-08-26 13:27-0300\n"
-"PO-Revision-Date: 2012-12-09 15:46+0100\n"
+"PO-Revision-Date: 2013-10-12 14:12+0200\n"
 "Last-Translator: Florian 'eix' Rehnisch <eixman@gmx.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -1415,13 +1415,9 @@ msgstr "L<debconf-getlang(1)>"
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-#, fuzzy
-#| msgid ""
-#| "debconf-set-selections - insert new default values into the debconf "
-#| "database"
 msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
-"debconf-set-selections - füge neue Vorgabewerte in die Debconf-Datenbank ein"
+"debconf-set-selections - füge neue Werte in die Debconf-Datenbank ein"
 
 #. type: verbatim
 #: ../../debconf-set-selections:21

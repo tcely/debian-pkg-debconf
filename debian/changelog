@@ -5,6 +5,7 @@ debconf (1.5.52) UNRELEASED; urgency=low
 
   [ Manpages translations ]
   * French updated. Closes: #697458
+  * German updated.
 
   [Joey Hess]
   * Remove dpkg-reconfigure -a, which existed only to accumulate bug
