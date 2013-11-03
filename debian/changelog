@@ -1,4 +1,10 @@
-debconf (1.5.52) UNRELEASED; urgency=low
+debconf (1.5.52) unstable; urgency=low
+
+  [Joey Hess]
+  * Remove dpkg-reconfigure -a, which existed only to accumulate bug
+    reports about bugs in other packages.
+    Closes: #721329, #664825, #558262, #617618, #707987
+  * Fix bad uses of length @array. Closes: #723841
 
   [ Programs translations ]
   * Russian (Yuri Kozlov). Closes: #718188
@@ -7,13 +13,7 @@ debconf (1.5.52) UNRELEASED; urgency=low
   * French updated. Closes: #697458
   * German updated.
 
-  [Joey Hess]
-  * Remove dpkg-reconfigure -a, which existed only to accumulate bug
-    reports about bugs in other packages.
-    Closes: #721329, #664825, #558262, #617618, #707987
-  * Fix bad uses of length @array. Closes: #723841
-
- -- Christian Perrier <bubulle@debian.org>  Tue, 27 Aug 2013 10:27:07 +0200
+ -- Joey Hess <joeyh@debian.org>  Sun, 03 Nov 2013 14:15:51 -0400
 
 debconf (1.5.51) unstable; urgency=low
 
