@@ -8,11 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.5.50\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
-=======
 "POT-Creation-Date: 2013-08-26 13:28-0400\n"
->>>>>>> 6283201d18ec722822c01b310224e3c41e6b77dc
 "PO-Revision-Date: 2012-07-30 20:49+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
