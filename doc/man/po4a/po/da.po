@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
-"POT-Creation-Date: 2013-08-26 13:27-0300\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2012-03-21 10:20+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
@@ -210,7 +210,7 @@ msgstr ""
 #: ../../debconf-copydb:101 ../../debconf-getlang:73
 #: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
 #: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:78 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
 #: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
@@ -228,7 +228,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:244
-#: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -239,7 +239,7 @@ msgstr "FORFATTER"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:328
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -1492,17 +1492,17 @@ msgid ""
 msgstr ""
 
 #. type: =item
-#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:70
+#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:65
 msgid "B<-h>, B<--help>"
 msgstr "B<-h>, B<--help>"
 
 #. type: textblock
-#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:72
+#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:67
 msgid "Display usage help."
 msgstr "Vis hjælpetekst."
 
 #. type: textblock
-#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:80
+#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:75
 msgid "L<debconf(7)>"
 msgstr "L<debconf(7)>"
 
@@ -1582,23 +1582,11 @@ msgstr ""
 
 #. type: =item
 #: ../../dpkg-reconfigure:47
-msgid "B<-a>, B<--all>"
-msgstr ""
-
-#. type: textblock
-#: ../../dpkg-reconfigure:49
-msgid ""
-"Reconfigure all installed packages that use debconf. Warning: this may take "
-"a long time."
-msgstr ""
-
-#. type: =item
-#: ../../dpkg-reconfigure:52
 msgid "B<-u>, B<--unseen-only>"
 msgstr ""
 
 #. type: textblock
-#: ../../dpkg-reconfigure:54
+#: ../../dpkg-reconfigure:49
 msgid ""
 "By default, all questions are shown, even if they have already been "
 "answered. If this parameter is set though, only questions that have not yet "
@@ -1606,24 +1594,24 @@ msgid ""
 msgstr ""
 
 #. type: =item
-#: ../../dpkg-reconfigure:58
+#: ../../dpkg-reconfigure:53
 msgid "B<--force>"
 msgstr ""
 
 #. type: textblock
-#: ../../dpkg-reconfigure:60
+#: ../../dpkg-reconfigure:55
 msgid ""
 "Force dpkg-reconfigure to reconfigure a package even if the package is in an "
 "inconsistent or broken state. Use with caution."
 msgstr ""
 
 #. type: =item
-#: ../../dpkg-reconfigure:63
+#: ../../dpkg-reconfigure:58
 msgid "B<--no-reload>"
 msgstr ""
 
 #. type: textblock
-#: ../../dpkg-reconfigure:65
+#: ../../dpkg-reconfigure:60
 msgid ""
 "Prevent dpkg-reconfigure from reloading templates. Use with caution; this "
 "will prevent dpkg-reconfigure from repairing broken templates databases.  "

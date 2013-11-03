@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2005-01-23 19:33+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -324,39 +324,33 @@ msgstr "debconf: klarer ikkje chmod: %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s feila førehandsoppsettet med avsluttingsstatus %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s må køyrast som root"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "oppgje ein pakke som skal setjast opp på ny"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s er ikkje installert"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s er øydelagd eller ikkje fullstendig installert"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Klarer ikkje lese statusfil: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -418,6 +412,9 @@ msgid ""
 "\n"
 "  -o,  --owner=package\t\tSet the package that owns the command."
 msgstr ""
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Klarer ikkje lese statusfil: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Lagra (e-post) merknad"

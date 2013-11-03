@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2012-07-30 09:58+0300\n"
 "Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -316,10 +316,17 @@ msgstr "debconf: грешха при промяна на правата на ф�
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Грешка при предварителната настройка на %s. Код за грешка: %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -334,29 +341,24 @@ msgstr ""
 "       --no-reload\t\tБез презареждане на шаблоните. (Да се използва "
 "предпазливо)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s трябва да се изпълнява като потребител „root“"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "укажете пакет за пренастройка"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s не е инсталиран"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s има проблем в инсталацията"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Грешка при четене на файла със състоянията: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -425,3 +427,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o  --owner-package\t\tУказване на пакет, притежаващ командата."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Грешка при четене на файла със състоянията: %s"

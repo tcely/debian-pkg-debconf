@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2006-10-06 10:46+0530\n"
 "Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -324,11 +324,10 @@ msgstr "debconf:  chmodའབད་མི་ཚུགས་:%s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "ཕྱིར་འཐོན་གནས་ཚད་ %sདང་བཅས་ %s གིས་སྔ་གོང་རིམ་སྒྲིག་འབད་ནི་ འཐུས་ཤོར་བྱུང་ཡོདཔ།"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -340,29 +339,24 @@ msgstr ""
 "       --default-priority\t དམའ་བའི་ཚབ་ལུ་ སྔོན་སྒྲིག་གཙོ་རིམ་ལག་ལེན་འཐབ།\n"
 "       --force\t\t\t ཆད་ཡོད་པའི་ཐུམ་སྒྲིལ་ཚུའི་ བང་བཙོང་སླར་རིམ་སྒྲིག"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%sའདི་རྩ་བ་སྦེ་ གཡོག་བཀོལ་དགོ"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "ལོག་རིམ་སྒྲིག་འབད་ནི་ལུ་ ཐུམ་སྒྲིལ་ཅིག་གསལ་བཀོད་འབད་གནང་།"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s འདི་གཞི་བཙུགས་མ་འབད་བས།"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s འདི་རྒྱུན་ཆད་ནུག་ ཡངན་ ཆ་ཚང་སྦེ་གཞི་བཙུགས་མ་འབད་བས།"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "གནས་ཚད་ཡིག་སྣོད་ལྷག་མི་ཚུགས་པས་: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -431,3 +425,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\t བརྡ་བཀོད་བདག་དབང་བཟུང་མི་ཐུམ་སྒྲིལ་འདི་ གཞི་སྒྲིག་འབད།"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "གནས་ཚད་ཡིག་སྣོད་ལྷག་མི་ཚུགས་པས་: %s"

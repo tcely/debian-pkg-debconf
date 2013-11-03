@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2006-10-06 04:27+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -311,11 +311,10 @@ msgstr "debconf: sikertelen chmod: %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s előkonfigurálása meghiúsult e kóddal: %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -328,29 +327,24 @@ msgstr ""
 "helyett.\n"
 "       --force\t\t\tTörött csomagok kényszerített újrakonfigurálása."
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s -t root-ként kell lefuttatni"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "add meg egy újrakonfigurálandó csomagot"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s nincs telepítve"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s törött vagy nincs teljesen telepítve"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Sikertelen állapot fájl olvasás: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -419,6 +413,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=csomag\t\tBeállítja a parancsot birtokló csomagot"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Sikertelen állapot fájl olvasás: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Feljegyzés elmentése (küldése)"

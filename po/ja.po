@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2012-07-30 07:05+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
@@ -327,10 +327,17 @@ msgstr "debconf: chmod できません: %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s は終了コード %s で前設定に失敗しました"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -343,29 +350,24 @@ msgstr ""
 "       --force\t\t\t壊れたパッケージの再設定を強制的に行う。\n"
 "       --no-reload\t\tテンプレートを再読み込みしない。(注意して利用のこと)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s は root で実行する必要があります"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "再設定するパッケージを指定してください"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s はインストールされていません"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s は壊れているか、完全にインストールされていません"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "ステータスファイルを読み込めません: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -436,3 +438,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=パッケージ\t\tコマンドを所有するパッケージを設定する。"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "ステータスファイルを読み込めません: %s"

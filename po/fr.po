@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2012-07-30 23:25+0200\n"
 "Last-Translator: Steve Petruzzello <dlist@bluewin.ch>\n"
 "Language-Team: French Translators <debian-l10n-french@lists.debian.org>\n"
@@ -329,10 +329,17 @@ msgstr "debconf : impossible de changer le mode : %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Échec de la préconfiguration de %s, avec le code d'erreur %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -348,29 +355,24 @@ msgstr ""
 "       --no-reload\t\tne pas recharger les modèles. (à utiliser\n"
 "                         \tavec précaution)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s doit être lancé par le superutilisateur"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "Veuillez indiquer un paquet à reconfigurer."
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s n'est pas installé"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s est cassé ou partiellement installé"
-
-#: ../dpkg-reconfigure:279
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Impossible de lire le fichier d'état : %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -439,6 +441,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=paquet\t\tDéfinit le paquet auquel appartient la commande."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Impossible de lire le fichier d'état : %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Enregistrer la note (dans un courriel)"
