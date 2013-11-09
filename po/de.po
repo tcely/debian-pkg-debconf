@@ -2,14 +2,14 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004, 2006
-# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012.
+# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.44\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-03 14:17-0400\n"
-"PO-Revision-Date: 2012-07-01 14:29+0200\n"
+"PO-Revision-Date: 2013-11-09 18:54+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -326,14 +326,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s konnte nicht vorkonfiguriert werden, Exit-Status %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -342,7 +334,6 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Aufruf: dpkg-reconfigure [Optionen] Pakete\n"
-"  -a,  --all\t\t\tAlle Pakete neu konfigurieren.\n"
 "  -u,  --unseen-only\t\tNur noch nicht gestellte Fragen zeigen.\n"
 "       --default-priority\tVoreingestellte Priorität benutzen (statt "
 "niedrig).\n"
