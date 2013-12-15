@@ -2,6 +2,7 @@ debconf (1.5.53) UNRELEASED; urgency=low
 
   [ Programs translations ]
   * German.
+  * French (Christian Perrier).
 
  -- Helge Kreutzmann <debian@helgefjell.de>  Sat, 09 Nov 2013 18:56:43 +0100
 
