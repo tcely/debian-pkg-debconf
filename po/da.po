@@ -1,15 +1,16 @@
-# Copyright (C) 2011 Free Software Foundation, Inc.
+# Danish translation debconf.
+# Copyright (C) 2013 Free Software Foundation, Inc.
 # Morten Brix Pedersen <morten@wtf.dk>, 2001-2002.
 # Morten Bo Johansen <mbj@spamcop.net>, 2002-.
 # Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2006.
-# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.38\n"
+"Project-Id-Version: debconf 1.5.52\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-03 14:17-0400\n"
-"PO-Revision-Date: 2012-07-29 20:27+0200\n"
+"PO-Revision-Date: 2013-12-15 20:27+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
 "Language: da\n"
@@ -320,14 +321,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s fejlede i prækonfigurering med afslutningsstatus %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -336,11 +329,10 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Brug: dpkg-reconfigure [tilvalg] pakker\n"
-"  -a, --all\t\t\tGenopsæt alle pakker.\n"
 "  -u, --unseen-only\t\tVis kun spørgsmål som ikke tidligere har være vist.\n"
 "      --default-priority\tBrug standardprioritering i stedet for lav.\n"
-"      --force\t\t\tGennemtving genopsætning af brudte pakker.       --no-"
-"reload\t\tGenindlæs ikke skabeloner. (Brug med forsigtighed.)"
+"      --force\t\t\tGennemtving genopsætning af brudte pakker.\n"
+"      --no-reload\t\tGenindlæs ikke skabeloner. (Brug med forsigtighed.)"
 
 #: ../dpkg-reconfigure:111
 #, perl-format
