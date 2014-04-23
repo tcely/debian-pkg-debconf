@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2006-10-06 17:55+0300\n"
 "Last-Translator: Recai Oktaş <roktas@debian.org>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -227,7 +227,7 @@ msgstr "Bu önyüz, denetleyici bir tty gerektirir."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU emacs kabuk tamponlarıyla uyumsuzdur."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Daha"
 

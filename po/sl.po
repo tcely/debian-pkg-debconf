@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.32\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2010-06-09 10:05+0100\n"
 "Last-Translator: Vanja Cvelbar <cvelbar@gmail.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -228,7 +228,7 @@ msgstr "Začelje potrebuje nadzorni tty."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ni združljiv z medpomnilniki emacs za lupino."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Več"
 

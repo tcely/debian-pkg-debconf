@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2006-10-05 21:51+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@debian.org>\n"
 "Language-Team: Ukrainian\n"
@@ -233,7 +233,7 @@ msgstr "Для цієї оболонки потрібен керуючий те�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU не може працювати в буфері emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Більше"
 

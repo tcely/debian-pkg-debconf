@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2013-12-15 08:33+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -237,7 +237,7 @@ msgstr "Cette interface a besoin d'un terminal de contrôle."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU est incompatible avec les tampons shell d'Emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Suite"
 
@@ -333,13 +333,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Échec de la préconfiguration de %s, avec le code d'erreur %s"
 
 #: ../dpkg-reconfigure:99
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"

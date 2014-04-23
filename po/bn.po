@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2009-04-19 16:07+0600\n"
 "Last-Translator: Md. Rezwan Shahid <rezwan@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -221,7 +221,7 @@ msgstr "ফ্রন্টএন্ডের একটি নিয়ন্ত্�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "টার্ম::ReadLine::GNU emacs শেল বাফারের সাথে অসামঞ্জস্যপূর্ন।"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "আরো"
 

@@ -1,11 +1,15 @@
-debconf (1.5.53) UNRELEASED; urgency=low
+debconf (1.5.53) unstable; urgency=low
+
+  [ Apollon Oikonomopoulos ]
+  * Teletype: page only if screen has more than two rows
+    Closes: #745504
 
   [ Programs translations ]
   * German.
   * French (Christian Perrier).
   * Danish (Joe Hansen). Closes: #732167
 
- -- Helge Kreutzmann <debian@helgefjell.de>  Sat, 09 Nov 2013 18:56:43 +0100
+ -- Joey Hess <joeyh@debian.org>  Tue, 22 Apr 2014 20:03:26 -0400
 
 debconf (1.5.52) unstable; urgency=low
 

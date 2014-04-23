@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.5.50\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:28-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2012-07-30 20:49+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 "его и выйти из редактора. Затем программа debconf прочитает изменённый файл "
 "и использует введённые вами параметры для настройки системы."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -231,7 +231,7 @@ msgstr "Этот интерфейс работает только с управ�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU не может работать из-под буферов emacs'а."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Далее"
 
@@ -324,10 +324,17 @@ msgstr "debconf: не удалось изменить режим доступа 
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "не удалось выполнить начальную настройку пакета %s, код ошибки %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -342,29 +349,24 @@ msgstr ""
 "              \t\t\tпакетов.\n"
 "       --no-reload\t\tНе перезагружать шаблоны. (используйте осторожно.)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s требует выполнения с правами суперпользователя"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "укажите пакет, который нужно перенастроить"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "Пакет %s не установлен"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "Пакет %s сломан или установлен не полностью"
-
-#: ../dpkg-reconfigure:294
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Ошибка чтения файла состояния: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -435,3 +437,5 @@ msgstr ""
 "\n"
 "  -o,  --owner=пакет\t\tУказать пакет, которому принадлежит команда."
 
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Ошибка чтения файла состояния: %s"

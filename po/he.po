@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_1.5.6_he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2012-08-11 03:13+0300\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <>\n"
@@ -219,7 +219,7 @@ msgstr "ממשק זה דורש tty שולט."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU אינו תואם לבאפרי המעטפת של emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "עוד"
 

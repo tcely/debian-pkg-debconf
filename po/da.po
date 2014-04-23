@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.52\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2013-12-15 20:27+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
@@ -226,7 +226,7 @@ msgstr "Denne brugerflade behøver en styrende tty."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU er ikke forenelig med Emacs-skalbuffere."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Mere"
 

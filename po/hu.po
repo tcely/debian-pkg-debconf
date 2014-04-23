@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2006-10-06 04:27+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -218,7 +218,7 @@ msgstr "E felület egy tty felügyeletet kíván."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "A Term::ReadLine::GNU nem illik az emacs héj pufferhez."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Tovább"
 

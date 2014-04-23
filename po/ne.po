@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2007-07-31 17:23+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -222,7 +222,7 @@ msgstr "यो फ्रन्टइन्डलाई नियन्त्र�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "इमाक्स शेल बफरसँग Term::ReadLine::GNU मिलेको छैन ।"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "बढी"
 
