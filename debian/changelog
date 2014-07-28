@@ -2,6 +2,9 @@ debconf (1.5.54) UNRELEASED; urgency=medium
 
   * Update Vcs-* to current canonical URLs.
 
+  [ Manpages translations ]
+  * Portuguese updated. Closes: #756178
+
  -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:59:44 +0100
 
 debconf (1.5.53) unstable; urgency=low

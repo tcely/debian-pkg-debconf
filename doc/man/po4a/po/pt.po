@@ -2,13 +2,13 @@
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
 #
-# Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2012.
+# Américo Monteiro <a_monteiro@gmx.com>, 2010, 2012, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf\n"
+"Project-Id-Version: debconf 1.5.53\n"
 "POT-Creation-Date: 2013-11-03 14:17-0400\n"
-"PO-Revision-Date: 2012-01-15 19:49+0000\n"
-"Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
+"PO-Revision-Date: 2014-07-27 08:35+0100\n"
+"Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -1397,14 +1397,9 @@ msgstr "L<debconf-getlang(1)>"
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-#, fuzzy
-#| msgid ""
-#| "debconf-set-selections - insert new default values into the debconf "
-#| "database"
 msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
-"debconf-set-selections - insere novos valores predefinidos na base de dados "
-"do debconf"
+"debconf-set-selections - insere novos valores na base de dados do debconf"
 
 #. type: verbatim
 #: ../../debconf-set-selections:21
@@ -5202,12 +5197,6 @@ msgstr "B<CAPB capabilities>"
 
 #. type: Plain text
 #: debconf-devel.7:257
-#, fuzzy
-#| msgid ""
-#| "You generally don't need to use this command. It exchanges with debconf a "
-#| "list of supported capabilities. Capabilities that both you and debconf "
-#| "support will be used, and debconf will reply with all the capabilities it "
-#| "supports."
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
 "list of supported capabilities (separated by spaces). Capabilities that both "
@@ -5215,9 +5204,9 @@ msgid ""
 "capabilities it supports."
 msgstr ""
 "Geralmente você não precisa de usar este comando. Ele troca com o debconf "
-"uma lista das capacidades suportadas. As capacidades que ambos você e o "
-"debconf suportam serão usadas, e o debconf irá responder com todas as "
-"capacidades que suporta."
+"uma lista das capacidades suportadas (separadas por espaços). As capacidades "
+"que ambos você e o debconf suportam serão usadas, e o debconf irá responder "
+"com todas as capacidades que suporta."
 
 #. type: Plain text
 #: debconf-devel.7:267
