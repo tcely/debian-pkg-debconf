@@ -1,13 +1,13 @@
 # Czech translation of debconf package.
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# Miroslav Kure <kurem@debian.cz>, 2004--2012.
+# Miroslav Kure <kurem@debian.cz>, 2004--2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-08-01 18:19+0200\n"
+"PO-Revision-Date: 2014-10-05 06:38+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
 "Language: cs\n"
@@ -23,12 +23,12 @@ msgstr "uchyluji se k rozhraní: %s"
 #: ../Debconf/AutoSelect.pm:84
 #, perl-format
 msgid "unable to initialize frontend: %s"
-msgstr "nemohu inicializovat rozhraní: %s"
+msgstr "nelze inicializovat rozhraní: %s"
 
 #: ../Debconf/AutoSelect.pm:90
 #, perl-format
 msgid "Unable to start a frontend: %s"
-msgstr "Nemohu spustit rozhraní: %s"
+msgstr "Nelze spustit rozhraní: %s"
 
 #: ../Debconf/Config.pm:130
 msgid "Config database not specified in config file."
@@ -143,12 +143,12 @@ msgstr "Zadejte položky, které chcete vybrat, oddělené mezerami."
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
-msgstr "Nemohu nahrát Debconf::Element::%s. Selhal, protože: %s"
+msgstr "Nelze nahrát Debconf::Element::%s. Selhal, protože: %s"
 
 #: ../Debconf/FrontEnd.pm:333
 #, perl-format
 msgid "Configuring %s"
-msgstr "Nastavuji %s"
+msgstr "Nastavuje se %s"
 
 #: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
@@ -287,7 +287,7 @@ msgstr "odkládám nastavení balíků, protože apt-utils nejsou nainstalované
 #: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
-msgstr "nemohu znovu otevřít standardní vstup: %s"
+msgstr "nelze znovu otevřít standardní vstup: %s"
 
 #: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
@@ -297,11 +297,11 @@ msgstr "apt-extracttemplates selhal: %s"
 #: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
-msgstr "Extrahuji z balíků šablony: %d%%"
+msgstr "Extrahují se šablony z balíků: %d%%"
 
 #: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
-msgstr "Přednastavuji balíky…\n"
+msgstr "Přednastavují se balíky…\n"
 
 #: ../dpkg-preconfigure:207
 #, perl-format
@@ -311,7 +311,7 @@ msgstr "chyba zpracování šablony: %s"
 #: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
-msgstr "debconf: nemohu změnit práva: %s"
+msgstr "debconf: nelze změnit práva: %s"
 
 #: ../dpkg-preconfigure:232
 #, perl-format
@@ -319,14 +319,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s nemohl být přednastaven, skončil chybou %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -335,7 +327,6 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Použití: dpkg-reconfigure [volby] balíky\n"
-"  -a,  --all\t\t\tPřekonfiguruje všechny balíky.\n"
 "  -u,  --unseen-only\t\tZobrazí jen dosud nezobrazené otázky.\n"
 "       --default-priority\tMísto nízké použije výchozí prioritu.\n"
 "       --force\t\t\tVynutí překonfiguraci porušených balíků.\n"
@@ -429,7 +420,7 @@ msgstr ""
 "  -o,  --owner=balík\t\tNastaví balík, který vlastní příkaz."
 
 #~ msgid "Cannot read status file: %s"
-#~ msgstr "Nemohu číst stavový soubor: %s"
+#~ msgstr "Nelze číst stavový soubor: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Uložit poznámku (poslat poštou)"
@@ -455,4 +446,4 @@ msgstr ""
 #~ "Debconf nebyl nastaven pro zobrazení této poznámky, takže vám ji poslal."
 
 #~ msgid "preconfiguring %s (%s)"
-#~ msgstr "přednastavuji %s (%s)"
+#~ msgstr "přednastavuje se %s (%s)"
