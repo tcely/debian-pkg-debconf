@@ -6,10 +6,10 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.5.50\n"
+"Project-Id-Version: 1.5.53\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-07-30 20:49+0400\n"
+"PO-Revision-Date: 2014-10-19 10:49+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -325,14 +325,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "не удалось выполнить начальную настройку пакета %s, код ошибки %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -341,13 +333,13 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Использование: dpkg-reconfigure [параметры] пакеты\n"
-"  -a,  --all\t\t\tПеренастройка всех пакетов.\n"
 "  -u,  --unseen-only\t\tПоказывать только ещё не просмотренные вопросы.\n"
 "       --default-priority\tИспользовать приоритет по умолчанию\n"
 "                         \tвместо низкого.\n"
 "       --force\t\t\tПринудительная перенастройка сломанных\n"
 "              \t\t\tпакетов.\n"
-"       --no-reload\t\tНе перезагружать шаблоны. (используйте осторожно.)"
+"       --no-reload\t\tНе перезагружать шаблоны.\n"
+"                         \t(используйте осторожно.)"
 
 #: ../dpkg-reconfigure:111
 #, perl-format

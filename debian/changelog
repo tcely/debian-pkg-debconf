@@ -7,6 +7,7 @@ debconf (1.5.54) UNRELEASED; urgency=medium
 
   [ Programs translations ]
   * Czech updated. Closes: #764054
+  * Russian updated. Closes: #765914
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:59:44 +0100
 
