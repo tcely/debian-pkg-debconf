@@ -290,7 +290,7 @@ msgstr "az apt-extracttemplates meghiúsult: %s"
 #: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
-msgstr "Sablonok kicsomagolása e csomagokból: %d%%"
+msgstr "Sablonok kicsomagolása a csomagokból: %d%%"
 
 #: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
