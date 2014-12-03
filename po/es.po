@@ -1,21 +1,56 @@
-# debconf es.po
+# Traducción de los mensajes del programa debconf de Debian al español.
+# Translation of the debconf messages to Spanish.
+#
 # Copyright (C) 2003 Free Software Foundation, Inc.
-# Enrique Zanardi <ezanard@debian.org>, 2000.
-# Jordi Mallach <jordi@debian.org>, 2001.
-# Carlos Valdivia Yague <valyag@dat.etsit.upm.es>, 2003.
-# Javier Fernandez-Sanguino <jfs@debian.org>, 2004-2006, 2010
+#
+# This file is distributed under the same license as the debconf package.
+#
+# Current translator:
+#
+# Javier Fernandez-Sanguino <jfs@debian.org>, 2004-2006, 2010, 2014
+#
+#  Past Translators and reviewers:
+#
+#  - Enrique Zanardi <ezanard@debian.org>, 2000.
+#  - Jordi Mallach <jordi@debian.org>, 2001.
+#  - Carlos Valdivia Yague <valyag@dat.etsit.upm.es>, 2003.
+#
+#   Traductores, si no conoce el formato PO, merece la pena leer la
+#   documentación de gettext, especialmente las secciones dedicadas a este
+#   formato, por ejemplo ejecutando:
+#          info -n '(gettext)PO Files'
+#          info -n '(gettext)Header Entry'
+#
+#   Equipo de traducción al español, por favor lean antes de traducir
+#   los siguientes documentos:
+#
+#   - El proyecto de traducción de Debian al español
+#     https://www.debian.org/intl/spanish/
+#     especialmente las notas y normas de traducción en
+#     https://www.debian.org/intl/spanish/notas
+#
+#   Si tiene dudas o consultas sobre esta traducción consulte con el último
+#   traductor (campo Last-Translator) y ponga en copia a la lista de
+#   traducción de Debian al español (<debian-l10n-spanish@lists.debian.org>)
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.2.39\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2010-08-08 02:33+0200\n"
+"PO-Revision-Date: 2014-12-02 21:57+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian Spanish Team <debian-l10n-spanish@lists.debian.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: debconf drop frontend unseen utils Sigils apt\n"
+"X-POFile-SpellExtra: Template owner force ReadLine desactualizadas TERM\n"
+"X-POFile-SpellExtra: preconfigurar reload outdated ll priority only\n"
+"X-POFile-SpellExtra: Smileys emacs po localhost templates Term http\n"
+"X-POFile-SpellExtra: communicate Element Dialog debs dpkg mergetemplate\n"
+"X-POFile-SpellExtra: Debconf desactualizado extracttemplates default stdin\n"
+"X-POFile-SpellExtra: old desactualizada Preconfigurando dialog root\n"
 
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
@@ -115,13 +150,12 @@ msgid "Help"
 msgstr "Ayuda"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf no estaba configurado para mostrar este mensaje de error, así que se "
-"la ha enviado por correo."
+"Debconf no está seguro de que se hubiera mostrado este mensaje de error, así "
+"que se la ha enviado por correo."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -341,14 +375,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Fallo al preconfigurar %s, con el código de salida %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -357,13 +383,12 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Modo de uso: dpkg-reconfigure [opciones] paquetes\n"
-"  -a,  --all\t\t\tReconfigurar todos los paquetes.\n"
 "  -u,  --unseen-only\t\tMostrar sólo las preguntas que no se han mostrado "
 "aún.\n"
 "       --default-priority\tUtilizar la prioridad por omisión en lugar de la "
 "más baja.\n"
 "       --force\t\t\tFuerza la reconfiguración de los paquetes rotos.\n"
-"       --no-reload\t\t\tNo recarga las plantillas. (Utilizar con precaución)"
+"       --no-reload\t\tNo recarga las plantillas (utilizar con precaución)."
 
 #: ../dpkg-reconfigure:111
 #, perl-format
