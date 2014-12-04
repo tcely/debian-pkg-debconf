@@ -2,13 +2,13 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # Keita Maehara <maehara@debian.org>
 # Junichi Uekawa <dancer@debian.org>, 2002, 2003, 2004
-# Kenshi Muto <kmuto@debian.org>, 2004-2012
+# Kenshi Muto <kmuto@debian.org>, 2004-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-07-30 07:05+0900\n"
+"PO-Revision-Date: 2014-12-03 16:32+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
 "Language: ja\n"
@@ -328,14 +328,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s は終了コード %s で前設定に失敗しました"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -344,7 +336,6 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Usage: dpkg-reconfigure [オプション] パッケージ\n"
-"  -a,  --all\t\t\tすべてのパッケージを再設定する。\n"
 "  -u,  --unseen-only\t\tまだ示していない質問のみを表示する。\n"
 "       --default-priority\tlow の代わりにデフォルトの優先度を使う。\n"
 "       --force\t\t\t壊れたパッケージの再設定を強制的に行う。\n"
@@ -438,6 +429,3 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=パッケージ\t\tコマンドを所有するパッケージを設定する。"
-
-#~ msgid "Cannot read status file: %s"
-#~ msgstr "ステータスファイルを読み込めません: %s"
