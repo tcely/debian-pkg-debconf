@@ -15,6 +15,7 @@ debconf (1.5.54) UNRELEASED; urgency=medium
   * Catalan updated
   * Japanese updated. Closes: #771886
   * Basque updated. Closes: #771899
+  * Romanian updated. Closes: #772065
   * Fix typo in Hungarian translation. Closes: #770803
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:59:44 +0100
