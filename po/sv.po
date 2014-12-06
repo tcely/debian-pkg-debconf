@@ -2,21 +2,22 @@
 # Copyright 2000-2005 Peter Karlsson
 # Peter Karlsson <peterk@debian.org>, 2000-2005.
 # Peter Karlsson <peterk@debian.org>, 2005.
-#
+# Christoffer Holmstedt <christoffer.holmstedt@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2010-03-08 18:40+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"PO-Revision-Date: 2014-12-06 08:44+0100\n"
+"Last-Translator: Christoffer Holmstedt <christoffer.holmstedt@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Bookmarks: 53,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
@@ -110,13 +111,12 @@ msgid "Help"
 msgstr "Hjälp"
 
 #: ../Debconf/Element/Noninteractive/Error.pm:40
-#, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"Debconf blev inte inställt för att visa detta felmeddelande så det har sänts "
-"till dig via e-post."
+"Debconf är inte säker att detta felmeddelande visades, därför har det "
+"skickats som e-post till dig."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -323,14 +323,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s misslyckades med förkonfigurering, med slutkod %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -339,7 +331,6 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Användning: dpkg-reconfigure [flaggor] paket\n"
-"  -a,  --all\t\t\tKonfigurera om alla paket.\n"
 "  -u,  --unseen-only\t\tVisa bara osedda frågor.\n"
 "       --default-priority\tAnvänd standard prioritet istället för låg.\n"
 "       --force\t\t\tTvinga omkonfigurering av trasiga paket.\n"
