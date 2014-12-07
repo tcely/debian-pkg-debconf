@@ -1,7 +1,7 @@
 # translation to Esperanto
-# Copyright (C) 2007, 2010 Free Software Foundation, Inc.
+# Copyright (C) 2007,2010,2014 Free Software Foundation, Inc.
 # Serge Leblanc <serge.leblanc@wanadoo.fr>, 2007.
-# Felipe Castro <fefcas@gmail.com>, 2010.
+# Felipe Castro <fefcas@gmail.com>, 2010,2014.
 #
 msgid ""
 msgstr ""
@@ -319,14 +319,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s malsukcesis antaŭagordi, kun elir-stato %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -334,12 +326,11 @@ msgid ""
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
-"Uzado: dpkg-reconfigure [opcioj] pakoj\n"
-"  -a,  --all\t\t\tReagordi ĉiujn pakojn.\n"
-"  -u,  --unseen-only\t\tNur montri ne viditajn demandojn.\n"
+"Uzmaniero: dpkg-reconfigure [opcioj] pakoj\n"
+"  -u,  --unseen-only\t\tNur montri ne jam viditajn demandojn.\n"
 "       --default-priority\tUzi aprioran prioritaton anstataŭ malalta.\n"
 "       --force\t\t\tDevigi la reagordon de rompitaj pakoj.\n"
-"       --no-reload\t\tNe reŝargi je la ŝablonoj. (Uzu sin-garde.)"
+"       --no-reload\t\tNe reŝargi la ŝablonojn. (Uzu sin-garde.)"
 
 #: ../dpkg-reconfigure:111
 #, perl-format
