@@ -1,14 +1,14 @@
 # Portuguese translation of Debconf for the Debian Installer
 # Copyright (C) 2004 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as the debconf package.
-# Miguel Figueiredo <elmig@debianpt.org>, 2004-2012.
+# Miguel Figueiredo <elmig@debianpt.org>, 2004-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-07-30 10:14+0100\n"
+"PO-Revision-Date: 2014-12-06 09:46+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -326,14 +326,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s falhou a pré-configuração, com estado de saída %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -342,12 +334,11 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Utilização: dpkg-reconfigure [opções] pacotes\n"
-"  -a,  --all\t\t\tReconfigurar todos os pacotes.\n"
 "  -u,  --unseen-only\t\tMostrar apenas as questões ainda não vistas.\n"
 "       --default-priority\tUtilizar a prioridade predefinida em vez de "
 "baixa.\n"
-"       --force\t\t\tForçar a reconfiguração de pacotes com problemas.\t--no-"
-"reload\t\tNão carregar novamente os modelos. (Usar com cuidado.)"
+"       --force\t\t\tForçar a reconfiguração de pacotes com problemas.\n"
+"       --no-reload\t\tNão carregar novamente os modelos. (Usar com cuidado.)"
 
 #: ../dpkg-reconfigure:111
 #, perl-format
