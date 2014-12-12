@@ -22,6 +22,7 @@ debconf (1.5.54) UNRELEASED; urgency=medium
   * Esperanto updated
   * Portuguese updated. Closes: #772582
   * Turkish updated. Closes: #772813
+  * Thai updated. Closes: #772967
   * Fix typo in Hungarian translation. Closes: #770803
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:59:44 +0100
