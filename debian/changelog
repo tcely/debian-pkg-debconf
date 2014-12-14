@@ -1,5 +1,8 @@
-debconf (1.5.54) UNRELEASED; urgency=medium
+debconf (1.5.54) unstable; urgency=medium
 
+  * Team upload
+
+  [ Colin Watson ]
   * Update Vcs-* to current canonical URLs.
 
   [ Manpages translations ]
@@ -11,7 +14,7 @@ debconf (1.5.54) UNRELEASED; urgency=medium
   * Slovenian updated. Closes: #766199
   * Fix typo in Hungarian translation. Closes: #770803
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:59:44 +0100
+ -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
 
 debconf (1.5.53) unstable; urgency=low
 
