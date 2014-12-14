@@ -16,6 +16,7 @@ debconf (1.5.55) UNRELEASED; urgency=low
   * Esperanto updated
   * Portuguese updated. Closes: #772582
   * Turkish updated. Closes: #772813
+  * Brazilian Portuguese updated. Closes: #773076
   * Thai updated. Closes: #772967
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
