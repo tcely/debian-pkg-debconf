@@ -1,17 +1,8 @@
-debconf (1.5.54) unstable; urgency=medium
+debconf (1.5.55) UNRELEASED; urgency=low
 
   * Team upload
 
-  [ Colin Watson ]
-  * Update Vcs-* to current canonical URLs.
-
-  [ Manpages translations ]
-  * Portuguese updated. Closes: #756178
-
   [ Programs translations ]
-  * Czech updated. Closes: #764054
-  * Russian updated. Closes: #765914
-  * Slovenian updated. Closes: #766199
   * Dutch updated. Closes: #771731
   * Spanish updated. Closes: #771847
   * Indonesian updated
@@ -26,6 +17,23 @@ debconf (1.5.54) unstable; urgency=medium
   * Portuguese updated. Closes: #772582
   * Turkish updated. Closes: #772813
   * Thai updated. Closes: #772967
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
+
+debconf (1.5.54) unstable; urgency=medium
+
+  * Team upload
+
+  [ Colin Watson ]
+  * Update Vcs-* to current canonical URLs.
+
+  [ Manpages translations ]
+  * Portuguese updated. Closes: #756178
+
+  [ Programs translations ]
+  * Czech updated. Closes: #764054
+  * Russian updated. Closes: #765914
+  * Slovenian updated. Closes: #766199
   * Fix typo in Hungarian translation. Closes: #770803
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
