@@ -12,6 +12,20 @@ debconf (1.5.54) unstable; urgency=medium
   * Czech updated. Closes: #764054
   * Russian updated. Closes: #765914
   * Slovenian updated. Closes: #766199
+  * Dutch updated. Closes: #771731
+  * Spanish updated. Closes: #771847
+  * Indonesian updated
+  * Catalan updated
+  * Japanese updated. Closes: #771886
+  * Basque updated. Closes: #771899
+  * Romanian updated. Closes: #772065
+  * Bulgarian updated. Closes: #772077
+  * Polish updated
+  * Swedish updated
+  * Esperanto updated
+  * Portuguese updated. Closes: #772582
+  * Turkish updated. Closes: #772813
+  * Thai updated. Closes: #772967
   * Fix typo in Hungarian translation. Closes: #770803
 
  -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100

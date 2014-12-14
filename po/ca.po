@@ -2,14 +2,14 @@
 # Copyright © 2001, 2002, 2004, 2005, 2006, 2010, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
 # Jordi Mallach <jordi@debian.org>, 2001, 2002, 2004, 2005, 2012.
-# Guillem Jover <guillem@debian.org>, 2005, 2006, 2010.
+# Guillem Jover <guillem@debian.org>, 2005, 2006, 2010, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-08-07 09:57+0200\n"
+"PO-Revision-Date: 2014-12-03 17:31+0100\n"
 "Last-Translator: Guillem Jover <guillem@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
@@ -337,14 +337,6 @@ msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s ha fallat al preconfigurar, amb estat de sortida %s"
 
 #: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -353,12 +345,11 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Forma d'ús: dpkg-reconfigure [opcions] paquet\n"
-"  -a,  --all\t\t\tReconfigura tots els paquets.\n"
-"  -u,  --unseen-only\t\tMostra només preguntes encara no vistes.\n"
-"       --default-priority\tUsa la prioritat predeterminada en comptes de "
+"  -u, --unseen-only\t\tMostra només preguntes encara no vistes.\n"
+"      --default-priority\tUsa la prioritat predeterminada en comptes de "
 "baixa.\n"
-"       --force\t\t\tForça la reconfiguració de paquets trencats.\n"
-"       --no-reload\t\tNo actualitza les plantilles (empreu amb cura)."
+"      --force\t\t\tForça la reconfiguració de paquets trencats.\n"
+"      --no-reload\t\tNo actualitza les plantilles (empreu amb cura)."
 
 #: ../dpkg-reconfigure:111
 #, perl-format
