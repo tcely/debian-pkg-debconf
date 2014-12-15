@@ -1,4 +1,4 @@
-debconf (1.5.55) UNRELEASED; urgency=low
+debconf (1.5.55) unstable; urgency=low
 
   * Team upload
 
@@ -19,7 +19,7 @@ debconf (1.5.55) UNRELEASED; urgency=low
   * Brazilian Portuguese updated. Closes: #773076
   * Thai updated. Closes: #772967
 
- -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
+ -- Christian Perrier <bubulle@debian.org>  Sun, 14 Dec 2014 08:43:06 +0100
 
 debconf (1.5.54) unstable; urgency=medium
 
