@@ -1,3 +1,10 @@
+debconf (1.5.56) UNRELEASED; urgency=medium
+
+  * Tighten dependency on debconf for packages sharing their /usr/share/doc
+    to comply with Debian policy 12.3 (closes: #779420).
+
+ -- Helmut Grohne <helmut@subdivi.de>  Sat, 28 Feb 2015 11:21:46 +0100
+
 debconf (1.5.55) unstable; urgency=low
 
   * Team upload
