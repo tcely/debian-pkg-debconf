@@ -1,4 +1,4 @@
-debconf (1.5.56) UNRELEASED; urgency=medium
+debconf (1.5.56) unstable; urgency=medium
 
   [ Helmut Grohne ]
   * Tighten dependency on debconf for packages sharing their /usr/share/doc
@@ -8,7 +8,7 @@ debconf (1.5.56) UNRELEASED; urgency=medium
   * Make Debconf::DbDriver::File stop trying to mkdir the empty string if
     configured with a path that does not contain a slash (closes: #682959).
 
- -- Helmut Grohne <helmut@subdivi.de>  Sat, 28 Feb 2015 11:21:46 +0100
+ -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 00:54:33 +0000
 
 debconf (1.5.55) unstable; urgency=low
 
