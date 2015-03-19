@@ -1,3 +1,11 @@
+debconf (1.5.57) UNRELEASED; urgency=medium
+
+  * Drop alternative Suggests on gnome-utils.  It hasn't existed since
+    squeeze, it dropped gdialog in 2003, and debconf only supported gdialog
+    for about three weeks in 1999 anyway.
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 10:42:49 +0000
+
 debconf (1.5.56) unstable; urgency=medium
 
   [ Helmut Grohne ]
