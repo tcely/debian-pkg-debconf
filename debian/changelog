@@ -1,7 +1,12 @@
 debconf (1.5.56) UNRELEASED; urgency=medium
 
+  [ Helmut Grohne ]
   * Tighten dependency on debconf for packages sharing their /usr/share/doc
     to comply with Debian policy 12.3 (closes: #779420).
+
+  [ Colin Watson ]
+  * Make Debconf::DbDriver::File stop trying to mkdir the empty string if
+    configured with a path that does not contain a slash (closes: #682959).
 
  -- Helmut Grohne <helmut@subdivi.de>  Sat, 28 Feb 2015 11:21:46 +0100
 
