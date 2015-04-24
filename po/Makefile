@@ -16,7 +16,7 @@ install: all
 
 debconf.pot: $(POTFILES)
 	@echo "Rebuilding the pot file"
-	xgettext $(POTFILES) -o debconf.pot -Lperl
+	TZ=UTC xgettext $(POTFILES) -o debconf.pot -Lperl
 
 clean:
 	rm -f $(MOFILES) messages messages.mo
