@@ -6,7 +6,7 @@ debconf (1.5.57) UNRELEASED; urgency=medium
     for about three weeks in 1999 anyway.
 
   [ Jérémy Bobbio ]
-  * Use UTC when running xgettext for build reproducibility.
+  * Use UTC when running xgettext for build reproducibility. Closes: #783255
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 10:42:49 +0000
 
