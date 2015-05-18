@@ -8,6 +8,9 @@ debconf (1.5.57) UNRELEASED; urgency=medium
   [ Jérémy Bobbio ]
   * Use UTC when running xgettext for build reproducibility. Closes: #783255
 
+  [ Debconf translations ]
+  * Brazilian Portuguese (Adriano Rafael Gomes). Closes: #785464
+
  -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 10:42:49 +0000
 
 debconf (1.5.56) unstable; urgency=medium
