@@ -1,9 +1,9 @@
 debconf (1.5.57) UNRELEASED; urgency=medium
 
   [ Colin Watson ]
-  * Drop alternative Suggests on gnome-utils.  It hasn't existed since
-    squeeze, it dropped gdialog in 2003, and debconf only supported gdialog
-    for about three weeks in 1999 anyway.
+  * Drop alternative Suggests on gnome-utils (closes: #792219).  It hasn't
+    existed since squeeze, it dropped gdialog in 2003, and debconf only
+    supported gdialog for about three weeks in 1999 anyway.
   * Escape braces in regexes to avoid deprecation warning with Perl 5.22
     (closes: #786705).
 
