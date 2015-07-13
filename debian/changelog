@@ -6,6 +6,9 @@ debconf (1.5.57) UNRELEASED; urgency=medium
     supported gdialog for about three weeks in 1999 anyway.
   * Escape braces in regexes to avoid deprecation warning with Perl 5.22
     (closes: #786705).
+  * When creating a new template and finding that it already exists in the
+    database, ensure that a question of the same name exists too (closes:
+    #518322, #779920).
 
   [ Jérémy Bobbio ]
   * Use UTC when running xgettext for build reproducibility. Closes: #783255
