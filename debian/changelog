@@ -1,4 +1,4 @@
-debconf (1.5.57) UNRELEASED; urgency=medium
+debconf (1.5.57) unstable; urgency=medium
 
   [ Colin Watson ]
   * Drop alternative Suggests on gnome-utils (closes: #792219).  It hasn't
@@ -16,7 +16,7 @@ debconf (1.5.57) UNRELEASED; urgency=medium
   [ Debconf translations ]
   * Brazilian Portuguese (Adriano Rafael Gomes). Closes: #785464
 
- -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 10:42:49 +0000
+ -- Colin Watson <cjwatson@debian.org>  Thu, 16 Jul 2015 12:33:36 +0100
 
 debconf (1.5.56) unstable; urgency=medium
 
