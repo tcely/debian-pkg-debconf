@@ -27,7 +27,7 @@ An object of type Term::ReadLine, that is used to do the actual prompting.
 
 =item promptdefault
 
-Set if the varient of readline being used is so lame that it cannot display
+Set if the variant of readline being used is so lame that it cannot display
 defaults, so the default must be part of the prompt instead.
 
 =back
