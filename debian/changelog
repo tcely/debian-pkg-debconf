@@ -3,6 +3,7 @@ debconf (1.5.58) UNRELEASED; urgency=medium
   * Don't update po/debconf.pot unless doing so changes something other than
     the POT-Creation-Date header.  The basic approach here is from gettext,
     though implemented a bit more simply since we can assume perl.
+  * Show choices for teletype/readline boolean questions (closes: #802840).
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 08 Nov 2015 02:04:52 +0000
 
