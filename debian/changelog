@@ -2056,7 +2056,7 @@ debconf (1.4.31) unstable; urgency=low
 debconf (1.4.30) unstable; urgency=low
 
   * Fix and update German translation. Thanks, Michael Piefel. Closes: #260572
-  * Update Basque templates translation. Thanks, Piarres Beobide EgaÃ±a.
+  * Update Basque templates translation. Thanks, Piarres Beobide Egaña.
     Closes: #260678
 
  -- Joey Hess <joeyh@debian.org>  Sat, 24 Jul 2004 02:41:35 -0400
@@ -2089,7 +2089,7 @@ debconf (1.4.27) unstable; urgency=low
 
 debconf (1.4.26) unstable; urgency=low
 
-  * Add Basqe translation by Piarres Beobide EgaÃ±a. Closes: #247321
+  * Add Basqe translation by Piarres Beobide Egaña. Closes: #247321
   * German translation update. Closes: #251731
   * Catalan translation update. Closes: #251786
   * Remove soi-unsightly trailing blanks in debconf-show output.
@@ -2587,7 +2587,7 @@ debconf (1.2.41) unstable; urgency=low
 
 debconf (1.2.40) unstable; urgency=low
 
-  * Spanish translation update from Carlos Valdivia YagÃ¼e. Closes: #196672
+  * Spanish translation update from Carlos Valdivia Yagüe. Closes: #196672
 
  -- Joey Hess <joeyh@debian.org>  Mon,  9 Jun 2003 12:44:13 -0400
 
@@ -2957,7 +2957,7 @@ debconf (1.1.30) unstable; urgency=low
 debconf (1.1.29) unstable; urgency=low
 
   * Allow stacked dbdrivers with readonly databases on top.
-  * Patch from Michel DÃ¤nzer to put the hostname in the gnome window title.
+  * Patch from Michel Dänzer to put the hostname in the gnome window title.
     Closes: #141235
 
  -- Joey Hess <joeyh@debian.org>  Tue,  3 Sep 2002 12:24:55 -0400
@@ -3049,7 +3049,7 @@ debconf (1.1.17) unstable; urgency=low
   * Directory DbDriver is pure virtual now; I had to move exists and iterator
     out of it, and it is fairly useless by itself.
   * Seems that LDAP has no end of quoting problems, and Dagfinn Ilmari
-    MannsÃ¥ker sent in a patch to update more of them (changes the schema again
+    Mannsåker sent in a patch to update more of them (changes the schema again
     amoung other things). Closes: #152477
   * Stop leaking priority fields into the config database.
 
@@ -3077,7 +3077,7 @@ debconf (1.1.15) unstable; urgency=low
     of this type into it, use debconf-copydb to copy your existing databases
     into the new ones, and then make the new ones be used by default.
 
-  * Applied a patch from ilmari@ping.uio.no (Dagfinn Ilmari MannsÃ¥ker) to the
+  * Applied a patch from ilmari@ping.uio.no (Dagfinn Ilmari Mannsåker) to the
     LDAP dbdriver to change fields to IA5 text, skipping empty fields.
     Closes: #139779
   * Made more vocal about use of capitalized frontend names, which are
@@ -3456,7 +3456,7 @@ debconf (1.0.18) unstable; urgency=low
   * Another French update.
   * Danish translation by Morten Brix Pedersen <morten@wtf.dk>
   * frontend: don't glob unnecessarily, Closes: #117077
-  * Michel DÃ¤nzer <daenzer@debian.org> figured out how to turn off the gnome
+  * Michel Dänzer <daenzer@debian.org> figured out how to turn off the gnome
     session manager warnings. Closes: #116087
   * Turns out that the gnome frontend ARGV stomping was not being backed out
     if gtk failed to init due to a bad DISPLAY. Fixed that, which probably
@@ -3962,7 +3962,7 @@ debconf (0.9.55) unstable; urgency=low
 
   * A typo in debconf-getlang was making it incorrectly mark some things as
     fuzzy. Fumitoshi UKAI pointed out the fix, Closes: #97475
-  * Some Spanish updates by Carlos Valdivia YagÃ¼e.
+  * Some Spanish updates by Carlos Valdivia Yagüe.
 
  -- Joey Hess <joeyh@debian.org>  Mon, 14 May 2001 15:17:31 -0400
 
