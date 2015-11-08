@@ -1,4 +1,4 @@
-debconf (1.5.58) UNRELEASED; urgency=medium
+debconf (1.5.58) unstable; urgency=medium
 
   * Don't update po/debconf.pot unless doing so changes something other than
     the POT-Creation-Date header.  The basic approach here is from gettext,
@@ -6,7 +6,7 @@ debconf (1.5.58) UNRELEASED; urgency=medium
   * Show choices for teletype/readline boolean questions (closes: #802840).
   * Move bash completion file to /usr/share/bash-completion/completions/.
 
- -- Colin Watson <cjwatson@debian.org>  Sun, 08 Nov 2015 02:04:52 +0000
+ -- Colin Watson <cjwatson@debian.org>  Sun, 08 Nov 2015 03:27:10 +0000
 
 debconf (1.5.57) unstable; urgency=medium
 
