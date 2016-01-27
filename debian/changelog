@@ -1,6 +1,7 @@
 debconf (1.5.59) UNRELEASED; urgency=medium
 
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
+  * Set source format to 3.0 (native).
 
  -- Colin Watson <cjwatson@debian.org>  Wed, 27 Jan 2016 10:59:12 +0000
 
