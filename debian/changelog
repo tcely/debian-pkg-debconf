@@ -1,11 +1,11 @@
-debconf (1.5.59) UNRELEASED; urgency=medium
+debconf (1.5.59) unstable; urgency=medium
 
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
   * Set source format to 3.0 (native).
   * frontend: Load templates when we're being run from any maintainer
     script, not just preinst/postinst (closes: #817083).
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 27 Jan 2016 10:59:12 +0000
+ -- Colin Watson <cjwatson@debian.org>  Fri, 11 Mar 2016 10:59:28 +0000
 
 debconf (1.5.58) unstable; urgency=medium
 
