@@ -1,3 +1,10 @@
+debconf (1.5.60) UNRELEASED; urgency=medium
+
+  * French manpages translation. Thanks to Baptiste Jammet.
+    Closes: #849394
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 27 Dec 2016 08:05:46 +0100
+
 debconf (1.5.59) unstable; urgency=medium
 
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
