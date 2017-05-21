@@ -1,3 +1,11 @@
+debconf (1.5.61) UNRELEASED; urgency=medium
+
+  [ Niko Tyni ]
+  * Use File::Temp instead of the deprecated POSIX::tmpnam() in
+    Debconf::TmpFile (closes: #863071).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 21 May 2017 18:05:18 +0100
+
 debconf (1.5.60) unstable; urgency=medium
 
   [ Christian Perrier ]
