@@ -34,6 +34,9 @@ install-utils:
 install-i18n:
 	$(MAKE) -C po install
 
+PERL := perl
+PERL_VENDORLIB := $(shell $(PERL) -MConfig -e 'print $$Config{vendorlib}')
+
 # This would probably be easier if we used setup.py ...
 PYTHON2_SUPPORTED := $(shell pyversions -s)
 PYTHON_SITEDIR = $(prefix)/usr/lib/$(1)/$(if $(filter 2.0 2.1 2.2 2.3 2.4 2.5,$(patsubst python%,%,$(1))),site-packages,dist-packages)
@@ -52,10 +55,10 @@ install-rest:
 	cd $(CURDIR)/Debconf/FrontEnd/Kde/ && bash generateui.sh
 	# Make module directories.
 	find Debconf -type d |grep -v CVS | \
-		xargs -i install -d $(prefix)/usr/share/perl5/{}
+		xargs -i install -d $(prefix)/$(PERL_VENDORLIB)/{}
 	# Install modules.
 	find Debconf -type f -name '*.pm' |grep -v CVS | \
-		xargs -i install -m 0644 {} $(prefix)/usr/share/perl5/{}
+		xargs -i install -m 0644 {} $(prefix)/$(PERL_VENDORLIB)/{}
 	set -e; for dir in $(foreach python,$(PYTHON2_SUPPORTED),$(call PYTHON_SITEDIR,$(python))); do \
 		install -d $$dir; \
 		install -m 0644 debconf.py $$dir/; \
@@ -63,9 +66,9 @@ install-rest:
 	install -d $(prefix)/usr/lib/python3/dist-packages
 	install -m 0644 debconf.py $(prefix)/usr/lib/python3/dist-packages/
 	# Special case for back-compatability.
-	install -d $(prefix)/usr/share/perl5/Debian/DebConf/Client
+	install -d $(prefix)/$(PERL_VENDORLIB)/Debian/DebConf/Client
 	cp Debconf/Client/ConfModule.stub \
-		$(prefix)/usr/share/perl5/Debian/DebConf/Client/ConfModule.pm
+		$(prefix)/$(PERL_VENDORLIB)/Debian/DebConf/Client/ConfModule.pm
 	# Other libs and helper stuff.
 	install -m 0644 confmodule.sh confmodule $(prefix)/usr/share/debconf/
 	install frontend $(prefix)/usr/share/debconf/
@@ -77,7 +80,7 @@ install-rest:
 	find . -maxdepth 1 -perm /100 -type f -name debconf -or -name debconf-show -or -name debconf-copydb -or -name debconf-communicate -or -name debconf-set-selections -or -name debconf-apt-progress -or -name debconf-escape | \
 		xargs -i install {} $(prefix)/usr/bin
 	# Now strip all pod documentation from all .pm files and scripts.
-	find $(prefix)/usr/share/perl5/ $(prefix)/usr/sbin		\
+	find $(prefix)/$(PERL_VENDORLIB)/ $(prefix)/usr/sbin		\
 	     $(prefix)/usr/share/debconf/frontend 			\
 	     $(prefix)/usr/share/debconf/*.pl $(prefix)/usr/bin		\
 	     -name '*.pl' -or -name '*.pm' -or -name 'dpkg-*' -or	\
