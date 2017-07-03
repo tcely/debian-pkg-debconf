@@ -5,6 +5,8 @@ debconf (1.5.62) UNRELEASED; urgency=medium
     for splitting those out to separate binary packages (see #709198).
   * dpkg-preconfigure: Don't write "Extracting templates from packages:"
     progress output if stderr is not a terminal (closes: #701818).
+  * Change directory to / before executing maintainer scripts (closes:
+    #608648).
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 02:03:51 +0100
 

@@ -147,10 +147,16 @@ sub startup {
 	push @args, @_ if @_;
 	
 	debug developer => "starting ".join(' ',@args);
-	$this->pid(open2($this->read_handle(FileHandle->new),
-		         $this->write_handle(FileHandle->new),
-			 @args)) || die $!;
-		
+	my $pid = open2($this->read_handle(FileHandle->new),
+		        $this->write_handle(FileHandle->new),
+		        '-');
+	die "can't fork: $!\n" unless defined $pid;
+	unless ($pid) {
+		chdir('/');
+		exec(@args);
+	}
+	$this->pid($pid);
+
 	# Catch sigpipes so they don't kill us, and return 128 for them.
 	$this->caught_sigpipe('');
 	$SIG{PIPE}=sub { $this->caught_sigpipe(128) };
