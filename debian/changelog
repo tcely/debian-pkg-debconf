@@ -1,4 +1,4 @@
-debconf (1.5.62) UNRELEASED; urgency=medium
+debconf (1.5.62) unstable; urgency=medium
 
   * Upgrade to debhelper v9 and dh-exec.
   * Make debconf provide python-debconf and python3-debconf, in preparation
@@ -11,7 +11,7 @@ debconf (1.5.62) UNRELEASED; urgency=medium
   * Upgrade to copyright-format 1.0.
   * Policy version 4.0.0.
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 02:03:51 +0100
+ -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 06:38:14 +0100
 
 debconf (1.5.61) unstable; urgency=medium
 
