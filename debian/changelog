@@ -1,3 +1,9 @@
+debconf (1.5.62) UNRELEASED; urgency=medium
+
+  * Upgrade to debhelper v9 and dh-exec.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 02:03:51 +0100
+
 debconf (1.5.61) unstable; urgency=medium
 
   [ Niko Tyni ]
