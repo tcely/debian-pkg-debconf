@@ -1,6 +1,8 @@
 debconf (1.5.62) UNRELEASED; urgency=medium
 
   * Upgrade to debhelper v9 and dh-exec.
+  * Make debconf provide python-debconf and python3-debconf, in preparation
+    for splitting those out to separate binary packages (see #709198).
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 02:03:51 +0100
 
