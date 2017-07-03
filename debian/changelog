@@ -8,6 +8,7 @@ debconf (1.5.62) UNRELEASED; urgency=medium
   * Change directory to / before executing maintainer scripts (closes:
     #608648).
   * Install to $Config{vendorlib} rather than hardcoding /usr/share/perl5.
+  * Upgrade to copyright-format 1.0.
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 02:03:51 +0100
 
