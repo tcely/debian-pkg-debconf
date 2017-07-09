@@ -1,5 +1,9 @@
 debconf (1.5.64) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
+  * Split debconf.py out to new python-debconf and python3-debconf binary
+    packages (closes: #709198).
+
   [ Programs translations ]
   * German.
 

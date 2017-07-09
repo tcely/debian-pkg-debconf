@@ -10,6 +10,8 @@ export PERL5LIB=.
 override_dh_auto_install:
 	$(MAKE) prefix=`pwd`/debian/debconf-utils install-utils
 	$(MAKE) prefix=`pwd`/debian/debconf-i18n install-i18n
+	$(MAKE) prefix=`pwd`/debian/python-debconf install-python2
+	$(MAKE) prefix=`pwd`/debian/python3-debconf install-python3
 	$(MAKE) prefix=`pwd`/debian/debconf install-rest
 
 # Run dh_link earlier so that it has an opportunity to link documentation
