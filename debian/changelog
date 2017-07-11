@@ -1,3 +1,13 @@
+debconf (1.5.63) UNRELEASED; urgency=medium
+
+  * "Change directory to / before executing maintainer scripts" from 1.5.62
+    was too intrusive due to changing Debconf::ConfModule, and broke some
+    existing maintainer scripts that e.g. ran ucf with relative paths.
+    Instead, just chdir to / before running maintainer scripts in
+    dpkg-reconfigure and chdir back afterwards (closes: #608648).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 11 Jul 2017 23:59:03 +0100
+
 debconf (1.5.62) unstable; urgency=medium
 
   * Upgrade to debhelper v9 and dh-exec.
