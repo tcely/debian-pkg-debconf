@@ -1,4 +1,4 @@
-debconf (1.5.63) UNRELEASED; urgency=medium
+debconf (1.5.63) unstable; urgency=medium
 
   * "Change directory to / before executing maintainer scripts" from 1.5.62
     was too intrusive due to changing Debconf::ConfModule, and broke some
@@ -10,7 +10,7 @@ debconf (1.5.63) UNRELEASED; urgency=medium
     Original idea by Michael Vogt with an amendment by Joey Hess; some code
     by Martin Pitt.
 
- -- Colin Watson <cjwatson@debian.org>  Tue, 11 Jul 2017 23:59:03 +0100
+ -- Colin Watson <cjwatson@debian.org>  Wed, 12 Jul 2017 02:23:47 +0100
 
 debconf (1.5.62) unstable; urgency=medium
 
