@@ -89,6 +89,50 @@ sub prepare_callback {
 	$prev_page = $current_page;
 }
 
+sub close_callback {
+	my ($assistant) = @_;
+
+	my $title = gettext("Really quit configuration?");
+	my $text = gettext("If you quit this configuration dialog, then the package being configured will probably fail to install, and you may have to fix it manually. This may be especially difficult if you are in the middle of a large upgrade.")."\n\n".gettext("You may need to quit anyway if you are stuck in a configuration loop due to a buggy package.")."\n";
+	my $continue = gettext("Continue");
+
+	my $dialog = Gtk2::Dialog->new_with_buttons(to_Unicode($title),
+	                                            $assistant, "modal",
+	                                            "gtk-quit", "yes",
+	                                            to_Unicode($continue),
+	                                            "no");
+	$dialog->set_default_response("no");
+	$dialog->set_border_width(3);
+
+	my $hbox = Gtk2::HBox->new(0);
+	$dialog->vbox->pack_start($hbox, 1, 1, 5);
+	$hbox->show;
+	
+	my $alignment = Gtk2::Alignment->new(0.5, 0.0, 1.0, 0.0);
+	$hbox->pack_start($alignment, 1, 1, 3);
+	$alignment->show;
+	
+	my $image = Gtk2::Image->new_from_stock("gtk-dialog-info", "dialog");
+	$alignment->add($image);
+	$image->show;
+	
+	my $label = Gtk2::Label->new(to_Unicode($text));
+	$label->set_line_wrap(1);
+	$hbox->pack_start($label, 1, 1, 2);
+	$label->show;
+
+	my $response = $dialog->run;
+	$dialog->destroy;
+
+	exit 1 if $response eq "yes";
+}
+
+sub delete_event_callback {
+	my ($assistant, $event) = @_;
+
+	close_callback($assistant);
+}
+
 sub forward_page_func {
 	my ($current_page, $assistant) = @_;
 
@@ -159,7 +203,7 @@ sub init {
 	my $hostname = `hostname`;
 	chomp $hostname;
 	$this->assistant->set_title(to_Unicode(sprintf(gettext("Debconf on %s"), $hostname)));
-	$this->assistant->signal_connect("delete_event", sub { exit 1 });
+	$this->assistant->signal_connect("delete_event", \&delete_event_callback);
 
 	my $distribution='';
 	if (system('type lsb_release >/dev/null 2>&1') == 0) {
@@ -174,11 +218,21 @@ sub init {
 		$this->logo(Gtk2::Gdk::Pixbuf->new_from_file($logo));
 	}
 	
-	$this->assistant->signal_connect("cancel", sub { exit 1 });
-	$this->assistant->signal_connect("close", sub { exit 1 });
+	$this->assistant->signal_connect("close", \&close_callback);
 	$this->assistant->signal_connect("prepare", \&prepare_callback, $this);
 	$this->assistant->set_forward_page_func(\&forward_page_func, $this->assistant);
 	$this->create_assistant_page();
+
+	# Hide the cancel button to make it harder to quit by accident,
+	# since quitting can be quite destructive.  People who really want
+	# to quit can use the window close button, which will prompt for
+	# confirmation.
+	# Merely calling hide() after all our show() calls is insufficient,
+	# as this still causes the button to appear when going back.
+	$this->assistant->get_cancel_button->signal_connect("show", sub {
+		$this->assistant->get_cancel_button->hide();
+	});
+	$this->assistant->get_cancel_button->hide();
 
 	$this->assistant->show;
 }
