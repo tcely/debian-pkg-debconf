@@ -7,6 +7,8 @@ debconf (1.5.63) UNRELEASED; urgency=medium
     dpkg-reconfigure and chdir back afterwards (closes: #608648).
   * In the Gnome frontend, hide the cancel button, and prompt for
     confirmation when the close button is pressed (closes: #501767).
+    Original idea by Michael Vogt with an amendment by Joey Hess; some code
+    by Martin Pitt.
 
  -- Colin Watson <cjwatson@debian.org>  Tue, 11 Jul 2017 23:59:03 +0100
 
