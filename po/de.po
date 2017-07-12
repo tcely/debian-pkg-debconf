@@ -2,14 +2,14 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004, 2006
-# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013.
+# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.44\n"
+"Project-Id-Version: debconf 1.5.63\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-12 01:15+0000\n"
-"PO-Revision-Date: 2013-11-09 18:54+0100\n"
+"PO-Revision-Date: 2017-07-12 13:47+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -218,10 +218,8 @@ msgstr ""
 "Werte verwenden, um das System zu konfigurieren."
 
 #: ../Debconf/FrontEnd/Gnome.pm:95
-#, fuzzy
-#| msgid "Package configuration"
 msgid "Really quit configuration?"
-msgstr "Paketkonfiguration"
+msgstr "Konfiguration wirklich abbrechen?"
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
@@ -229,16 +227,22 @@ msgid ""
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
+"Falls Sie diesen Konfigurationsdialog abbrechen, dann wird das zu "
+"konfigurierende Paket wahrscheinlich nicht erfolgreich installiert und Sie "
+"müssen das manuell beheben. Dies kann besonders problematisch sein, falls Sie "
+"mitten in einem großen Upgrade sind."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
+"Sie müssen dennoch abbrechen, falls Sie in einer Konfigurationsschleife eines "
+"defekten Pakets feststecken."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "Continue"
-msgstr ""
+msgstr "Fortfahren"
 
 #: ../Debconf/FrontEnd/Gnome.pm:205 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104

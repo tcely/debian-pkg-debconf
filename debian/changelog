@@ -1,3 +1,10 @@
+debconf (1.5.64) UNRELEASED; urgency=medium
+
+  [ Programs translations ]
+  * German.
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Wed, 12 Jul 2017 13:46:23 +0200
+
 debconf (1.5.63) unstable; urgency=medium
 
   * "Change directory to / before executing maintainer scripts" from 1.5.62
