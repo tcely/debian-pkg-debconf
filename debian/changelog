@@ -3,6 +3,8 @@ debconf (1.5.64) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Split debconf.py out to new python-debconf and python3-debconf binary
     packages (closes: #709198).
+  * debconf.py: Allow the Debconf class to be used as a context manager
+    (closes: #877096).
 
   [ Programs translations ]
   * German.
