@@ -5,6 +5,8 @@ debconf (1.5.64) UNRELEASED; urgency=medium
     packages (closes: #709198).
   * debconf.py: Allow the Debconf class to be used as a context manager
     (closes: #877096).
+  * Simplify creation of documentation directory symlinks using
+    "dh_installdocs --link-doc".
 
   [ Programs translations ]
   * German.

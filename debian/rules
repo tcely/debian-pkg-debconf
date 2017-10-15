@@ -14,11 +14,9 @@ override_dh_auto_install:
 	$(MAKE) prefix=`pwd`/debian/python3-debconf install-python3
 	$(MAKE) prefix=`pwd`/debian/debconf install-rest
 
-# Run dh_link earlier so that it has an opportunity to link documentation
-# directories.
 override_dh_installdocs:
-	dh_link
-	dh_installdocs
+	dh_installdocs -Ndebconf-doc --link-doc=debconf
+	dh_installdocs -pdebconf-doc
 
 override_dh_installdebconf:
 	# Don't modify postrm, I purge differently than normal packages
