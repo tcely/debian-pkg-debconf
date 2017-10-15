@@ -1,4 +1,4 @@
-debconf (1.5.64) UNRELEASED; urgency=medium
+debconf (1.5.64) unstable; urgency=medium
 
   [ Colin Watson ]
   * Split debconf.py out to new python-debconf and python3-debconf binary
@@ -14,7 +14,7 @@ debconf (1.5.64) UNRELEASED; urgency=medium
   [ Debconf translations ]
   * Albanian (Eva Vranici).
 
- -- Helge Kreutzmann <debian@helgefjell.de>  Wed, 12 Jul 2017 13:46:23 +0200
+ -- Colin Watson <cjwatson@debian.org>  Sun, 15 Oct 2017 11:52:50 +0100
 
 debconf (1.5.63) unstable; urgency=medium
 
