@@ -1,3 +1,10 @@
+debconf (1.5.66) UNRELEASED; urgency=medium
+
+  [ Programs translations ]
+  * French (Baptiste Jammet; closes: #887754).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 20 Jan 2018 00:37:44 +0000
+
 debconf (1.5.65) unstable; urgency=medium
 
   * Declare Breaks on update-notifier-common (<< 3.187~) for the move of
