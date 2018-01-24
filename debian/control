@@ -6,8 +6,8 @@ Uploaders: Colin Watson <cjwatson@debian.org>
 Standards-Version: 4.0.0
 Build-Depends-Indep: perl (>= 5.10.0-16), python (>= 2.6.6-3~), python3 (>= 3.1.2-8), gettext (>= 0.13), libintl-perl, libqtgui4-perl
 Build-Depends: debhelper (>= 9~), dh-exec, dh-python, po-debconf, po4a (>= 0.23)
-Vcs-Git: https://anonscm.debian.org/git/debconf/debconf.git
-Vcs-Browser: https://anonscm.debian.org/cgit/debconf/debconf.git
+Vcs-Git: https://salsa.debian.org/pkg-debconf/debconf
+Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
 X-Python-Version: >= 2.6
 
 Package: debconf
