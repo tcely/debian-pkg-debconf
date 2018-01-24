@@ -45,6 +45,7 @@ Suggests: debian-policy (>= 3.5)
 Depends: ${misc:Depends}
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Description: debconf documentation
  This package contains lots of additional documentation for Debconf,
  including the debconf user's guide, documentation about using different
