@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-12 01:15+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2014-12-03 16:32+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "フロントエンドをフォールバックします: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "フロントエンドの初期化に失敗しました: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "フロントエンドの起動ができませんでした: %s"
@@ -99,11 +99,11 @@ msgid ""
 msgstr ""
 "(コンマと空白 (', ') で区切りながら 0 個以上の項目を入力してください。)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "ヘルプ"
 
@@ -233,14 +233,30 @@ msgid ""
 msgstr ""
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:205 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%s の Debconf"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "次へ"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "戻る"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."

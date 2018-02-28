@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.63\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-12 01:15+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2017-07-12 13:47+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "greife zurück auf die Oberfläche: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "kann Oberfläche nicht initialisieren: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Kann die Oberfläche nicht starten: %s"
@@ -100,11 +100,11 @@ msgstr ""
 "(Geben Sie keinen oder mehr Begriffe durch ein Komma und ein Leerzeichen "
 "(, ) getrennt ein.)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "Hilfe"
 
@@ -229,26 +229,42 @@ msgid ""
 msgstr ""
 "Falls Sie diesen Konfigurationsdialog abbrechen, dann wird das zu "
 "konfigurierende Paket wahrscheinlich nicht erfolgreich installiert und Sie "
-"müssen das manuell beheben. Dies kann besonders problematisch sein, falls Sie "
-"mitten in einem großen Upgrade sind."
+"müssen das manuell beheben. Dies kann besonders problematisch sein, falls "
+"Sie mitten in einem großen Upgrade sind."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
-"Sie müssen dennoch abbrechen, falls Sie in einer Konfigurationsschleife eines "
-"defekten Pakets feststecken."
+"Sie müssen dennoch abbrechen, falls Sie in einer Konfigurationsschleife "
+"eines defekten Pakets feststecken."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "Continue"
 msgstr "Fortfahren"
 
-#: ../Debconf/FrontEnd/Gnome.pm:205 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf auf %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "Weiter"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "Zurück"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
