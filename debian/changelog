@@ -1,4 +1,4 @@
-debconf (1.5.66) UNRELEASED; urgency=medium
+debconf (1.5.66) unstable; urgency=medium
 
   [ Programs translations ]
   * French (Baptiste Jammet; closes: #887754).
@@ -8,7 +8,7 @@ debconf (1.5.66) UNRELEASED; urgency=medium
   * Mark debconf-doc Multi-Arch: foreign.
   * Port the Gnome frontend to GTK+ 3 (closes: #883442, LP: #1736618).
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 20 Jan 2018 00:37:44 +0000
+ -- Colin Watson <cjwatson@debian.org>  Wed, 28 Feb 2018 09:50:20 +0000
 
 debconf (1.5.65) unstable; urgency=medium
 
