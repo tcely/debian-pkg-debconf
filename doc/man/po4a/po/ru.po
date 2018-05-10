@@ -2,19 +2,19 @@
 # Copyright (C) 2006, 2008, 2009, 2010 Free Software Foundation, Inc.
 #
 # Yuri Kozlov <kozlov.y@gmail.com>, 2006, 2008.
-# Yuri Kozlov <yuray@komyakino.ru>, 2009, 2010, 2011, 2012.
+# Yuri Kozlov <yuray@komyakino.ru>, 2009, 2010, 2011, 2012, 2018.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.41\n"
+"Project-Id-Version: debconf 1.5.66\n"
 "POT-Creation-Date: 2018-02-28 09:27+0000\n"
-"PO-Revision-Date: 2012-01-16 20:27+0400\n"
+"PO-Revision-Date: 2018-04-29 08:47+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -119,7 +119,7 @@ msgid ""
 "This command is not the usual way that debconf is used. It's more typical "
 "for debconf to be used via L<dpkg-preconfigure(8)> or L<dpkg-reconfigure(8)>."
 msgstr ""
-"Эта команда не используется тем же способом, обычным для debconf. Обычно, "
+"Такой способ запуска команды через debconf является нетипичным. Обычно, "
 "debconf запускается из L<dpkg-preconfigure(8)> или L<dpkg-reconfigure(8)>."
 
 # type: Content of: <refentry><refsect1><title>
@@ -1062,11 +1062,11 @@ msgid ""
 "dbname\" denotes the beginning of a new stanza."
 msgstr ""
 "в файле debconf.conf, возможно, за исключением того, что вы не будете "
-"использовать пробел в командной строке (или укажите в кавычках: \"Foo: bar"
-"\"). Вообще, это должно указываться несколько раз, чтобы построить полную "
-"строфу настройки. Так как для разделения строф в debconf.conf используются "
-"пустые строки, эта программа предполагает, что «Name:dbname» означает начало "
-"новой строфы."
+"использовать пробел в командной строке (или укажите в кавычках: «Foo: bar»). "
+"Вообще, это должно указываться несколько раз, чтобы построить полную строку "
+"настройки. Хотя для разделения строк в debconf.conf используются символы "
+"новой строки, эта программа предполагает, что «Name:dbname» означает начало "
+"новой строки."
 
 # type: verbatim
 #. type: verbatim
@@ -1546,14 +1546,8 @@ msgstr "L<debconf-getlang(1)>"
 # type: textblock
 #. type: textblock
 #: ../../debconf-set-selections:5
-#, fuzzy
-#| msgid ""
-#| "debconf-set-selections - insert new default values into the debconf "
-#| "database"
 msgid "debconf-set-selections - insert new values into the debconf database"
-msgstr ""
-"debconf-set-selections - вставляет новые ответы по умолчанию в базу данных "
-"debconf"
+msgstr "debconf-set-selections - вставляет новые ответы в базу данных debconf"
 
 # type: verbatim
 #. type: verbatim
@@ -2176,7 +2170,7 @@ msgid ""
 "one wholly blank line. Comment lines beginning with a \"#\" character are "
 "ignored."
 msgstr ""
-"Форматом файла является серия строф, отделённых друг от друга как минимум "
+"Форматом файла является серия строк, отделённых друг от друга как минимум "
 "одной полностью пустой строкой. Строки комментариев начинаются с символа «#» "
 "и игнорируются."
 
@@ -2187,8 +2181,8 @@ msgid ""
 "The first stanza of the file is special, is used to configure debconf as a "
 "whole. Two fields are required to be in this first stanza:"
 msgstr ""
-"Первая строфа файла имеет особое значение, она используется для настройки "
-"всего debconf. В первой строфе должны быть два поля:"
+"Первая строка файла имеет особое значение, она используется для настройки "
+"всего debconf. В первой строке должны быть два поля:"
 
 # type: TP
 #. type: TP
@@ -2371,7 +2365,7 @@ msgid ""
 "  Config: configdb\n"
 "  Templates: templatedb\n"
 msgstr ""
-"Например, первая строфа может выглядеть так:\n"
+"Например, первая строка может выглядеть так:\n"
 "  Config: configdb\n"
 "  Templates: templatedb\n"
 
@@ -2384,7 +2378,7 @@ msgid ""
 "begins by naming the database:\n"
 "  Name: configdb\n"
 msgstr ""
-"Остальные строфы в файле настраивают базу данных. Строфа базы данных\n"
+"Остальные строки в файле настраивают базу данных. Строка базы данных\n"
 "начинается с имени базы:\n"
 "  Name: configdb\n"
 
@@ -2450,7 +2444,7 @@ msgid ""
 "a directory to put the database in, so you might say:\n"
 "  Filename: /var/cache/debconf/config.dat\n"
 msgstr ""
-"Остальная часть строфы каждой базы данных используется для указания\n"
+"Остальная часть строки каждой базы данных используется для указания\n"
 "специальных для каждого драйвера параметров. Например, драйверу Text\n"
 "требуется указать каталог где лежит база данных, для этого нужно указать:\n"
 "  Filename: /var/cache/debconf/config.dat\n"
@@ -2585,7 +2579,7 @@ msgstr ""
 #. type: Plain text
 #: debconf.conf.5:151 debconf.conf.5:187 debconf.conf.5:209
 msgid "As example stanza setting up a database using this driver:"
-msgstr "Пример строфы с настройками базы данных, использующей этот драйвер:"
+msgstr "Пример строки с настройками базы данных, использующей этот драйвер:"
 
 # type: Plain text
 #. type: Plain text
@@ -2934,7 +2928,7 @@ msgid ""
 "An example stanza setting up a database using this driver, assuming the "
 "remote database is on example.com and can be accessed anonymously:"
 msgstr ""
-"Пример строфы с настройками базы данных, использующей этот драйвер; "
+"Пример строки с настройками базы данных, использующей этот драйвер; "
 "предполагается, что используется удалённая база данных на example.com и она "
 "доступна анонимно:"
 
@@ -3397,7 +3391,7 @@ msgid ""
 "  Log: developer\n"
 "  Debug: developer\n"
 msgstr ""
-"  # Эта строфа используется для общей настройки debconf.\n"
+"  # Эта строка используется для общей настройки debconf.\n"
 "  Config: stack\n"
 "  Templates: templates\n"
 "  Log: developer\n"
@@ -4024,22 +4018,16 @@ msgstr "B<gnome>"
 # type: Plain text
 #. type: Plain text
 #: debconf.7:96
-#, fuzzy
-#| msgid ""
-#| "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
-#| "requires a valid DISPLAY to work; debconf will fall back to other "
-#| "frontends if it can't work. Note that this frontend requires you have the "
-#| "libgnome2-perl package installed."
 msgid ""
 "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
 "requires a valid DISPLAY to work; debconf will fall back to other frontends "
 "if it can't work. Note that this frontend requires you have the libgtk3-perl "
 "package installed."
 msgstr ""
-"Это современный X интерфейс, использующий библиотеки gtk и gnome. "
-"Естественно, для этого требуется работающий DISPLAY, иначе debconf перейдёт "
-"на другие интерфейсы. Заметим, что этому интерфейсу требуется установленный "
-"пакет libgnome2-perl."
+"Это современный графический X-интерфейс, использующий библиотеки gtk и "
+"gnome. Естественно, для работы требуется правильное значение DISPLAY, иначе "
+"debconf перейдёт на другие интерфейсы. Заметим, что этому интерфейсу "
+"требуется установленный пакет libgtk3-perl."
 
 #. type: TP
 #: debconf.7:96
@@ -5160,8 +5148,9 @@ msgid ""
 "stanzas separated by blank lines, with each stanza having a RFC822-like form:"
 msgstr ""
 "Как и сценарий config, файл templates находится в секции control.tar.gz deb "
-"файла. Его формат похож на формат debian файла control; секции строф, "
-"разделённые пустыми строками, каждая строфа задана в RFC822-подобной форме:"
+"файла. Его формат похож на формат debian файла control; секции строк, "
+"разделённые символами новой строки, каждая строка задана в RFC822-подобной "
+"форме:"
 
 # type: Plain text
 #. type: Plain text
@@ -5699,21 +5688,15 @@ msgstr "B<CAPB возможности>"
 # type: Plain text
 #. type: Plain text
 #: debconf-devel.7:257
-#, fuzzy
-#| msgid ""
-#| "You generally don't need to use this command. It exchanges with debconf a "
-#| "list of supported capabilities. Capabilities that both you and debconf "
-#| "support will be used, and debconf will reply with all the capabilities it "
-#| "supports."
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
 "list of supported capabilities (separated by spaces). Capabilities that both "
 "you and debconf support will be used, and debconf will reply with all the "
 "capabilities it supports."
 msgstr ""
-"Обычно не нужно использовать эту команду. Она позволяет договориться с "
-"debconf о списке поддерживаемых возможностей. Будут использованы "
-"возможности, для которые есть поддержка и у вас и у debconf, а debconf "
+"Обычно не нужно использовать эту команду. Она позволяет обменяться с debconf "
+"списком поддерживаемых возможностей (разделяются пробелами). Будут "
+"использованы возможности, которые поддерживаются вами и debconf, а debconf "
 "вернёт список всех поддерживаемых им возможностей."
 
 # type: Plain text
