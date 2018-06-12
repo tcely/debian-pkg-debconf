@@ -1,4 +1,4 @@
-debconf (1.5.67) UNRELEASED; urgency=medium
+debconf (1.5.67) unstable; urgency=medium
 
   [ Translations ]
   * Russian (Yuri Kozlov; closes: #898134).
@@ -7,7 +7,7 @@ debconf (1.5.67) UNRELEASED; urgency=medium
   * Chase Vcs-Git redirection (thanks, Raphaël Hertzog).
   * Adjust IFS handling in confmodule to work around #901185.
 
- -- Colin Watson <cjwatson@debian.org>  Thu, 10 May 2018 17:16:32 +0100
+ -- Colin Watson <cjwatson@debian.org>  Tue, 12 Jun 2018 06:16:03 +0100
 
 debconf (1.5.66) unstable; urgency=medium
 
