@@ -5,6 +5,7 @@ debconf (1.5.67) UNRELEASED; urgency=medium
 
   [ Colin Watson ]
   * Chase Vcs-Git redirection (thanks, Raphaël Hertzog).
+  * Adjust IFS handling in confmodule to work around #901185.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 10 May 2018 17:16:32 +0100
 
