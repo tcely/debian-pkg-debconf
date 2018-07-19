@@ -11,6 +11,7 @@ use warnings;
 use IO::Handle;
 use Fcntl;
 use POSIX ":sys_wait_h";
+use Debconf::Config;
 use base "Debconf::FrontEnd::Passthrough";
 
 =head1 DESCRIPTION
@@ -18,6 +19,9 @@ use base "Debconf::FrontEnd::Passthrough";
 This frontend is a recommended KDE UI for Debconf. This frontend relays all
 requests to the debconf-kde-helper application via Debconf Passthrough
 protocol. The latter takes care of displaying actual UI.
+
+By default, debugging output from debconf-kde-helper is silenced.  If you need
+to see it, set C<DEBCONF_DEBUG=kde> in the environment.
 
 =cut
 
@@ -66,6 +70,9 @@ sub init {
 		# Clear FD_CLOEXEC flags
 		clear_fd_cloexec($dc2hp_readfh);
 		clear_fd_cloexec($hp2dc_writefh);
+		my $debug = Debconf::Config->debug;
+		local $ENV{QT_LOGGING_RULES} = 'org.kde.debconf.debug=false'
+			unless $debug && 'kde' =~ /$debug/;
 		my $fds = sprintf("%d,%d", $dc2hp_readfh->fileno(), $hp2dc_writefh->fileno());
 		if (!exec("debconf-kde-helper", "--fifo-fds=$fds")) {
 			print STDERR "Unable to execute debconf-kde-helper - is debconf-kde-helper installed?";
