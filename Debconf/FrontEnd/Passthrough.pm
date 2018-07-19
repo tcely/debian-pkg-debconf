@@ -44,8 +44,8 @@ sub init {
 
 	# If readfh and writefh were not initialized before (by child class),
 	# initialize them from environment
-	if (!defined $this->{readfh} || !defined $this->{writefh}) {
-		if (!defined $this->init_fh_from_env()) {
+	if (not defined $this->{readfh} or not defined $this->{writefh}) {
+		if (not defined $this->init_fh_from_env()) {
 			die "Neither DEBCONF_PIPE nor DEBCONF_READFD and DEBCONF_WRITEFD were set\n";
 		}
 	}
@@ -81,7 +81,7 @@ sub init_fh_from_env {
 		    Peer => $socket_path
 		) || croak "Cannot connect to $socket_path: $!";
 		return "socket";
-	} elsif (defined $ENV{DEBCONF_READFD} && defined $ENV{DEBCONF_WRITEFD}) {
+	} elsif (defined $ENV{DEBCONF_READFD} and defined $ENV{DEBCONF_WRITEFD}) {
 		$readfd = $ENV{DEBCONF_READFD};
 		$writefd = $ENV{DEBCONF_WRITEFD};
 		$this->{readfh} = IO::Handle->new_from_fd(int($readfd), "r")
@@ -404,7 +404,7 @@ sub shutdown {
 	$this->SUPER::shutdown();
 	# Close readfh if it is not the same as writefh (in case of socket)
 	if (defined $this->{readfh} &&
-	   (!defined $this->{writefh} || $this->{readfh} != $this->{writefh}))
+	   (not defined $this->{writefh} or $this->{readfh} != $this->{writefh}))
 	{
 		close $this->{readfh};
 		delete $this->{readfh};
