@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.66\n"
-"POT-Creation-Date: 2018-02-28 09:27+0000\n"
+"POT-Creation-Date: 2018-07-19 11:00+0100\n"
 "PO-Revision-Date: 2018-04-29 08:47+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -233,7 +233,7 @@ msgstr ""
 #: ../../debconf-copydb:101 ../../debconf-getlang:73
 #: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
 #: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:381
 #: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
@@ -253,7 +253,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
 #: ../../debconf-show:154 ../../dpkg-preconfigure:246
-#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:387
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -3640,7 +3640,7 @@ msgstr "B<debconf>(7)"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.conf.5:540 confmodule.3:43 debconf.7:383 debconf-devel.7:969
+#: debconf.conf.5:540 confmodule.3:43 debconf.7:388 debconf-devel.7:969
 msgid "Joey Hess E<lt>joeyh@debian.orgE<gt>"
 msgstr "Joey Hess E<lt>joeyh@debian.orgE<gt>"
 
@@ -4037,11 +4037,42 @@ msgstr "B<kde>"
 
 #. type: Plain text
 #: debconf.7:102
+#, fuzzy
+#| msgid ""
+#| "This frontend provides a simple X GUI written with the Qt library. It "
+#| "fits well the KDE desktop. You of course need a DISPLAY to use this "
+#| "frontend and must install libqt-perl. The frontend will fall back to "
+#| "dialog if some of the prerequisites are not met."
 msgid ""
-"This frontend provides a simple X GUI written with the Qt library. It fits "
-"well the KDE desktop. You of course need a DISPLAY to use this frontend and "
-"must install libqt-perl. The frontend will fall back to dialog if some of "
-"the prerequisites are not met."
+"This frontend provides a modern X GUI based on the KDE Platform. You of "
+"course need a DISPLAY to use this frontend and you must install debconf-kde-"
+"helper package. The frontend will fall back to dialog if some of the "
+"prerequisites are not met."
+msgstr ""
+"Этот интерфейс предоставляет простой графический интерфейс для X, "
+"использующий библиотеку Qt. Он хорошо подходит для рабочего стола KDE. "
+"Естественно, для этого требуется установленная переменная DISPLAY и пакет "
+"libqt-perl. Интерфейс переключится на диалоговый, если чего-то не хватит."
+
+#. type: TP
+#: debconf.7:102
+#, no-wrap
+msgid "B<qt>"
+msgstr ""
+
+#. type: Plain text
+#: debconf.7:107
+#, fuzzy
+#| msgid ""
+#| "This frontend provides a simple X GUI written with the Qt library. It "
+#| "fits well the KDE desktop. You of course need a DISPLAY to use this "
+#| "frontend and must install libqt-perl. The frontend will fall back to "
+#| "dialog if some of the prerequisites are not met."
+msgid ""
+"This frontend provides a simple X GUI written with the Qt library. You of "
+"course need a DISPLAY to use this frontend and must install libqtgui4-perl.  "
+"The frontend will fall back to dialog if some of the prerequisites are not "
+"met."
 msgstr ""
 "Этот интерфейс предоставляет простой графический интерфейс для X, "
 "использующий библиотеку Qt. Он хорошо подходит для рабочего стола KDE. "
@@ -4050,14 +4081,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:102
+#: debconf.7:107
 #, no-wrap
 msgid "B<editor>"
 msgstr "B<из текстового редактора>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:110
+#: debconf.7:115
 msgid ""
 "This is for those fanatics who have to do everything in a text editor. It "
 "runs your editor on a file that looks something like a typical unix config "
@@ -4073,14 +4104,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:110
+#: debconf.7:115
 #, no-wrap
 msgid "B<web>"
 msgstr "B<веб-интерфейс>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:120
+#: debconf.7:125
 msgid ""
 "This frontend acts as a web server, that you connect to with your web "
 "browser, to browse the questions and answer them.  It has a lot of promise, "
@@ -4096,7 +4127,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:126
+#: debconf.7:131
 msgid ""
 "Do keep in mind that this is not a very secure frontend.  Anyone who has "
 "access to the computer being configured can currently access the web server "
@@ -4110,7 +4141,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:133
+#: debconf.7:138
 #, no-wrap
 msgid ""
 "You can change the default frontend debconf uses by reconfiguring\n"
@@ -4127,7 +4158,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:141
+#: debconf.7:146
 msgid ""
 "The B<dpkg-reconfigure>(8)  and B<dpkg-preconfigure>(8)  commands also let "
 "you pass I<--frontend=> to them, followed by the frontend you want them to "
@@ -4138,7 +4169,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:145
+#: debconf.7:150
 msgid ""
 "Note that not all frontends will work in all circumstances. If a frontend "
 "fails to start up for some reason, debconf will print out a message "
@@ -4150,14 +4181,14 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: debconf.7:145
+#: debconf.7:150
 #, no-wrap
 msgid "Priorities"
 msgstr "Приоритеты"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:152
+#: debconf.7:157
 msgid ""
 "Another nice feature of debconf is that the questions it asks you are "
 "prioritized. If you don't want to be bothered about every little thing, you "
@@ -4173,14 +4204,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:152 debconf-devel.7:294
+#: debconf.7:157 debconf-devel.7:294
 #, no-wrap
 msgid "B<low>"
 msgstr "B<low>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:156
+#: debconf.7:161
 msgid ""
 "Very trivial questions that have defaults that will work in the vast "
 "majority of cases."
@@ -4190,46 +4221,46 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:156 debconf-devel.7:298
+#: debconf.7:161 debconf-devel.7:298
 #, no-wrap
 msgid "B<medium>"
 msgstr "B<medium>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:159
+#: debconf.7:164
 msgid "Normal questions that have reasonable defaults."
 msgstr "Обычные вопросы с разумными значениями по умолчанию."
 
 # type: TP
 #. type: TP
-#: debconf.7:159 debconf-devel.7:301
+#: debconf.7:164 debconf-devel.7:301
 #, no-wrap
 msgid "B<high>"
 msgstr "B<high>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:162
+#: debconf.7:167
 msgid "Questions that don't have a reasonable default."
 msgstr "Вопросы без разумных значений по умолчанию."
 
 # type: TP
 #. type: TP
-#: debconf.7:162 debconf-devel.7:304
+#: debconf.7:167 debconf-devel.7:304
 #, no-wrap
 msgid "B<critical>"
 msgstr "B<critical>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:165
+#: debconf.7:170
 msgid "Questions that you really, really need to see (or else)."
 msgstr "Вопросы, которые нужно, действительно нужно посмотреть (а не то...)."
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:175
+#: debconf.7:180
 msgid ""
 "Only questions with a priority equal to or greater than the priority you "
 "choose will be shown to you. You can set the priority value by reconfiguring "
@@ -4244,14 +4275,14 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: debconf.7:175
+#: debconf.7:180
 #, no-wrap
 msgid "Backend Database"
 msgstr "Среда хранения базы данных"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:187
+#: debconf.7:192
 msgid ""
 "Debconf uses a rather flexible and potentially complicated backend database "
 "for storing data such as the answers to questions. The file B</etc/debconf."
@@ -4271,14 +4302,14 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: debconf.7:187
+#: debconf.7:192
 #, no-wrap
 msgid "Unattended Package Installation"
 msgstr "Установка пакета без обслуживания"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:194
+#: debconf.7:199
 msgid ""
 "If you have many machines to manage you will sometimes find yourself in the "
 "position of needing to perform an unattended installation or upgrade of "
@@ -4295,7 +4326,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:198
+#: debconf.7:203
 msgid ""
 "You should really read B<debconf.conf>(5)  before this section, as you need "
 "to understand how debconf's databases work."
@@ -4305,7 +4336,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:205
+#: debconf.7:210
 msgid ""
 "The easiest way to set up the database is to install the packages on one "
 "machine and answer their questions as usual. Or you might just use B<dpkg-"
@@ -4321,7 +4352,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:209
+#: debconf.7:214
 msgid ""
 "Once you have the database, you need to figure out how to make the remote "
 "systems use it. This depends of course on the configuration of those systems "
@@ -4333,7 +4364,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:213
+#: debconf.7:218
 msgid ""
 "If you are using the LDAP debconf database, an entire network of debian "
 "machines can also have any or all package installation questions answered "
@@ -4345,7 +4376,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:222
+#: debconf.7:227
 msgid ""
 "But perhaps you're using something a little bit easier to set up like, say, "
 "the default debconf database configuration, or you just don't want your "
@@ -4366,7 +4397,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:226
+#: debconf.7:231
 #, no-wrap
 msgid ""
 "   cat /var/cache/debconf/config.dat | \\e\n"
@@ -4379,7 +4410,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:232
+#: debconf.7:237
 msgid ""
 "This makes the debconf on the remote host read in the data that is piped "
 "across the ssh connection and interpret it as a plain text format debconf "
@@ -4395,14 +4426,14 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:234
+#: debconf.7:239
 msgid "Here's another way to use the DEBCONF_DB_FALLBACK environment variable:"
 msgstr ""
 "Вот другой способ использования переменной окружения DEBCONF_DB_FALLBACK:"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:237
+#: debconf.7:242
 #, no-wrap
 msgid ""
 "  ssh -R 389:ldap:389 root@target \\e\n"
@@ -4413,7 +4444,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:242
+#: debconf.7:247
 msgid ""
 "Here ssh is used to set up a tunneled LDAP connection and run debconf.  "
 "Debconf is told to use the LDAP server as the fallback database. Note the "
@@ -4428,13 +4459,13 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:244
+#: debconf.7:249
 msgid "Here's another method:"
 msgstr "Другой метод:"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:247
+#: debconf.7:252
 #, no-wrap
 msgid ""
 "  scp config.dat root@target:\n"
@@ -4445,7 +4476,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:252
+#: debconf.7:257
 msgid ""
 "Here you copy the database over with scp, and then ssh over and make debconf "
 "use the file you copied over. This illustrates a shorthand you can use in "
@@ -4459,7 +4490,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:261
+#: debconf.7:266
 msgid ""
 "There is only one problem with these uses of the DEBCONF_DB_FALLBACK "
 "parameter: While the fallback database can provide answers to questions the "
@@ -4481,14 +4512,14 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: debconf.7:261
+#: debconf.7:266
 #, no-wrap
 msgid "Developing for Debconf"
 msgstr "Разработка с Debconf"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:266
+#: debconf.7:271
 msgid ""
 "Package developers and others who want to develop packages that use debconf "
 "should read B<debconf-devel>(7)  ."
@@ -4498,7 +4529,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:274
+#: debconf.7:279
 msgid ""
 "Briefly, debconf communicates with maintainer scripts or other programs via "
 "standard input and output, using a simple line-oriented command language "
@@ -4518,7 +4549,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:278
+#: debconf.7:283
 msgid ""
 "Debian packages which use debconf typically provide both a templates file "
 "and a \"config\" script (run to preconfigure the package) in the control "
@@ -4530,35 +4561,35 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: debconf.7:278
+#: debconf.7:283
 #, no-wrap
 msgid "ENVIRONMENT"
 msgstr "ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ"
 
 # type: TP
 #. type: TP
-#: debconf.7:279
+#: debconf.7:284
 #, no-wrap
 msgid "B<DEBIAN_FRONTEND>"
 msgstr "B<DEBIAN_FRONTEND>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:282
+#: debconf.7:287
 msgid "Used to temporarily change the frontend debconf uses. See above."
 msgstr ""
 "Используется для временного изменения интерфейса debconf. Смотрите ранее."
 
 # type: TP
 #. type: TP
-#: debconf.7:282
+#: debconf.7:287
 #, no-wrap
 msgid "B<DEBIAN_PRIORITY>"
 msgstr "B<DEBIAN_PRIORITY>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:286
+#: debconf.7:291
 msgid ""
 "Used to temporarily change the minimum priority of question debconf will "
 "display. See above."
@@ -4568,14 +4599,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:286 debconf-devel.7:576
+#: debconf.7:291 debconf-devel.7:576
 #, no-wrap
 msgid "B<DEBCONF_DEBUG>"
 msgstr "B<DEBCONF_DEBUG>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:292
+#: debconf.7:297
 msgid ""
 "Turns on debugging output on standard error. May be set to a facility name "
 "or a regular expression which matches a facility name (such as '.*' to "
@@ -4588,53 +4619,53 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:292
+#: debconf.7:297
 #, no-wrap
 msgid "B<user>"
 msgstr "B<user>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:295
+#: debconf.7:300
 msgid "Debugging info of interest to a debconf user."
 msgstr "Отладочная информация, интересная пользователю debconf."
 
 # type: TP
 #. type: TP
-#: debconf.7:295
+#: debconf.7:300
 #, no-wrap
 msgid "B<developer>"
 msgstr "B<developer>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:298
+#: debconf.7:303
 msgid "Debugging info of interest to a package developer."
 msgstr "Отладочная информация, интересная разработчику пакета."
 
 # type: TP
 #. type: TP
-#: debconf.7:298
+#: debconf.7:303
 #, no-wrap
 msgid "B<db>"
 msgstr "B<db>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:301
+#: debconf.7:306
 msgid "Debugging info about the backend database."
 msgstr "Отладочная информация о среде хранения базы данных."
 
 # type: TP
 #. type: TP
-#: debconf.7:302
+#: debconf.7:307
 #, no-wrap
 msgid "B<DEBCONF_NOWARNINGS>"
 msgstr "B<DEBCONF_NOWARNINGS>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:306
+#: debconf.7:311
 msgid ""
 "Set to \"yes\" to disable some warnings that debconf may display. Does not "
 "suppress display of fatal errors."
@@ -4644,14 +4675,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:306
+#: debconf.7:311
 #, no-wrap
 msgid "B<DEBCONF_TERSE>"
 msgstr "B<DEBCONF_TERSE>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:310
+#: debconf.7:315
 msgid ""
 "Set to \"yes\" to enable terse mode, in which debconf frontends cut down on "
 "the verbiage as much as possible."
@@ -4661,14 +4692,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:310
+#: debconf.7:315
 #, no-wrap
 msgid "B<DEBCONF_DB_FALLBACK>"
 msgstr "B<DEBCONF_DB_FALLBACK>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:320
+#: debconf.7:325
 msgid ""
 "Stack a database after the normally used databases, so that it is used as a "
 "fallback to get configuration information from. See \"Unattended Package "
@@ -4691,7 +4722,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:323
+#: debconf.7:328
 #, no-wrap
 msgid ""
 "Thus, this uses the fallbackdb in debconf.conf:\n"
@@ -4702,7 +4733,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:327
+#: debconf.7:332
 #, no-wrap
 msgid ""
 "While this sets up a new database of type File, and tells it a filename to\n"
@@ -4715,7 +4746,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:330
+#: debconf.7:335
 #, no-wrap
 msgid ""
 "And as a shorthand, this sets up a database of type File with a filename:\n"
@@ -4726,7 +4757,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:333
+#: debconf.7:338
 msgid ""
 "Note that if a fallback database is set up on the fly, it will be read-only "
 "by default."
@@ -4736,14 +4767,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:333
+#: debconf.7:338
 #, no-wrap
 msgid "B<DEBCONF_DB_OVERRIDE>"
 msgstr "B<DEBCONF_DB_OVERRIDE>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:338
+#: debconf.7:343
 msgid ""
 "Stack a database before the normally used databases, so that it can override "
 "values from them. The value of the variable works the same as does the value "
@@ -4755,14 +4786,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:338
+#: debconf.7:343
 #, no-wrap
 msgid "B<DEBCONF_DB_REPLACE>"
 msgstr "B<DEBCONF_DB_REPLACE>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:343
+#: debconf.7:348
 msgid ""
 "Use a given database instead of the normally used databases.  This may be "
 "useful for testing with a separate database without having to create a "
@@ -4774,14 +4805,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:343
+#: debconf.7:348
 #, no-wrap
 msgid "B<DEBCONF_SYSTEMRC>"
 msgstr "B<DEBCONF_SYSTEMRC>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:349
+#: debconf.7:354
 msgid ""
 "If this environment variable is set, debconf will ignore a user's ~/."
 "debconfrc file, and use the system one instead.  If it is set to the name of "
@@ -4795,14 +4826,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:349
+#: debconf.7:354
 #, no-wrap
 msgid "B<DEBCONF_FORCE_DIALOG>"
 msgstr "B<DEBCONF_FORCE_DIALOG>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:353
+#: debconf.7:358
 msgid ""
 "If this environment variable is set, debconf will use dialog in preference "
 "to whiptail for the dialog frontend."
@@ -4812,14 +4843,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:353
+#: debconf.7:358
 #, no-wrap
 msgid "B<DEBCONF_FORCE_XDIALOG>"
 msgstr "B<DEBCONF_FORCE_XDIALOG>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:357
+#: debconf.7:362
 msgid ""
 "If this environment variable is set, debconf will use Xdialog in preference "
 "to whiptail for the dialog frontend."
@@ -4829,14 +4860,14 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:357
+#: debconf.7:362
 #, no-wrap
 msgid "B<DEBCONF_NONINTERACTIVE_SEEN>"
 msgstr "B<DEBCONF_NONINTERACTIVE_SEEN>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:361
+#: debconf.7:366
 msgid ""
 "Set to \"true\" to cause the seen flag to be set for questions asked in the "
 "noninteractive frontend."
@@ -4846,20 +4877,20 @@ msgstr ""
 
 # type: Content of: <refentry><refsect1><title>
 #. type: SH
-#: debconf.7:361
+#: debconf.7:366
 #, no-wrap
 msgid "BUGS"
 msgstr "ОШИБКИ"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:363
+#: debconf.7:368
 msgid "Probably quite a few, there's a lot of code here."
 msgstr "Вероятно имеются как и в любом другом коде большого размера."
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:365
+#: debconf.7:370
 msgid ""
 "If you do file a bug report, be sure to include the following information:"
 msgstr ""
@@ -4867,7 +4898,7 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: debconf.7:365 debconf.7:368 debconf.7:371 debconf-devel.7:469
+#: debconf.7:370 debconf.7:373 debconf.7:376 debconf-devel.7:469
 #: debconf-devel.7:473 debconf-devel.7:479 debconf-devel.7:484
 #: debconf-devel.7:489
 #, no-wrap
@@ -4876,19 +4907,19 @@ msgstr "B<*>"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:368
+#: debconf.7:373
 msgid "The debconf frontend you were using when the problem occurred"
 msgstr "Название интерфейса debconf при работе с которым возникла ошибка"
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:371
+#: debconf.7:376
 msgid "What you did to trigger the problem."
 msgstr "Что вы сделали что возникла ошибка."
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:376
+#: debconf.7:381
 msgid ""
 "The full text of any error messages. If you can reproduce the bug, do so "
 "with DEBCONF_DEBUG='.*' set and exported. This speeds up debugging a lot."
@@ -4899,7 +4930,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: debconf.7:382
+#: debconf.7:387
 msgid ""
 "B<debconf.conf>(5), B<debconf-devel>(7), B<dpkg-preconfigure>(8), B<dpkg-"
 "reconfigure>(8), B<debconf>(1),"
