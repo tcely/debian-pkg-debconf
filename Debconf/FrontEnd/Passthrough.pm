@@ -77,8 +77,8 @@ sub init_fh_from_env {
 	if (defined $ENV{DEBCONF_PIPE}) {
 		my $socket_path = $ENV{DEBCONF_PIPE};
 		$this->{readfh} = $this->{writefh} = IO::Socket::UNIX->new(
-		    Type => SOCK_STREAM,
-		    Peer => $socket_path
+			Type => SOCK_STREAM,
+			Peer => $socket_path
 		) || croak "Cannot connect to $socket_path: $!";
 		return "socket";
 	} elsif (defined $ENV{DEBCONF_READFD} and defined $ENV{DEBCONF_WRITEFD}) {
@@ -117,8 +117,8 @@ sub talk_with_timeout {
 	$writefh->flush;
 
 	if (defined $timeout) {
-	    my $select = IO::Select->new($readfh);
-	    return undef if !$select->can_read($timeout);
+		my $select = IO::Select->new($readfh);
+		return undef if !$select->can_read($timeout);
 	}
 	return undef if ($readfh->eof());
 

@@ -68,8 +68,8 @@ sub init {
 		clear_fd_cloexec($hp2dc_writefh);
 		my $fds = sprintf("%d,%d", $dc2hp_readfh->fileno(), $hp2dc_writefh->fileno());
 		if (!exec("debconf-kde-helper", "--fifo-fds=$fds")) {
-				print STDERR "Unable to execute debconf-kde-helper - is debconf-kde-helper installed?";
-				exit(10);
+			print STDERR "Unable to execute debconf-kde-helper - is debconf-kde-helper installed?";
+			exit(10);
 		}
 	}
 
@@ -94,7 +94,7 @@ sub init {
 			# debconf-helper-kde has probably died already
 			die "debconf-kde-helper terminated abnormally (exit status: " . WEXITSTATUS($?) . ")\n";
 		} elsif (kill(0, $helper_pid) == 1) {
-			# It has hung of something like that. Kill it forcefully.
+			# It has hung or something like that. Kill it forcefully.
 			kill 9, $helper_pid;
 			# Collect zombie
 			waitpid($helper_pid, 0);
