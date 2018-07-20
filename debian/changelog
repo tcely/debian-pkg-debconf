@@ -1,3 +1,10 @@
+debconf (1.5.68+nmu1) UNRELEASED; urgency=medium
+
+  [ Manpages translations ]
+  * German.
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Fri, 20 Jul 2018 11:17:49 +0200
+
 debconf (1.5.68) unstable; urgency=medium
 
   [ Modestas Vainius ]
