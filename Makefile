@@ -17,8 +17,6 @@ clean:
 	rm -rf __pycache__
 	$(MAKE) -C doc clean
 	$(MAKE) -C po clean
-	#remove generated file
-	rm -f Debconf/FrontEnd/Qt/Ui_DebconfWizard.pm
 
 # Does not attempt to install documentation, as that can be fairly system
 # specific.
@@ -63,8 +61,6 @@ install-rest:
 	install -m 0644 debian-logo.png $(prefix)/usr/share/pixmaps/
 	# This one is the ultimate backup copy.
 	grep -v '^#' debconf.conf > $(prefix)/usr/share/debconf/debconf.conf
-	#build the Qt ui file
-	cd $(CURDIR)/Debconf/FrontEnd/Qt/ && bash generateui.sh
 	# Make module directories.
 	find Debconf -type d |grep -v CVS | \
 		xargs -i install -d $(prefix)/$(PERL_VENDORLIB)/{}
