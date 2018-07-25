@@ -1,4 +1,4 @@
-debconf (1.5.69) UNRELEASED; urgency=medium
+debconf (1.5.69) unstable; urgency=medium
 
   [ Manpages translations ]
   * German.
@@ -10,7 +10,7 @@ debconf (1.5.69) UNRELEASED; urgency=medium
   * Remove the Qt frontend (formerly Kde), as qt4-perl is on its way out
     (closes: #629405).
 
- -- Colin Watson <cjwatson@debian.org>  Sun, 22 Jul 2018 00:04:18 +0100
+ -- Colin Watson <cjwatson@debian.org>  Wed, 25 Jul 2018 09:42:35 +0100
 
 debconf (1.5.68) unstable; urgency=medium
 
