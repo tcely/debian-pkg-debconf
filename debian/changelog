@@ -3,6 +3,9 @@ debconf (1.5.69) UNRELEASED; urgency=medium
   [ Manpages translations ]
   * German.
 
+  [ Programs translations ]
+  * Dutch (Frans Spiesschaert; closes: #874287).
+
   [ Colin Watson ]
   * Remove the Qt frontend (formerly Kde), as qt4-perl is on its way out
     (closes: #629405).

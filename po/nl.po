@@ -3,21 +3,21 @@
 #
 # Frans Pop <aragorn@tiscali.nl>, 2005, 2006.
 # Frans Pop <elendil@planet.nl>, 2010.
-# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2014.
+# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2014, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: nl\n"
+"Project-Id-Version: debconf_1.5.63\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 09:48+0000\n"
-"PO-Revision-Date: 2014-11-09 23:44+0100\n"
+"PO-Revision-Date: 2017-08-12 17:01+0200\n"
 "Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
 "Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../Debconf/AutoSelect.pm:88
@@ -222,10 +222,8 @@ msgstr ""
 "de waarden die u heeft ingevoerd gebruiken om het systeem te configureren."
 
 #: ../Debconf/FrontEnd/Gnome.pm:95
-#, fuzzy
-#| msgid "Package configuration"
 msgid "Really quit configuration?"
-msgstr "Pakketconfiguratie"
+msgstr "De configuratie echt afsluiten?"
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
@@ -233,12 +231,18 @@ msgid ""
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
+"Indien u deze configuratiedialoog afsluit, zal het installeren van het "
+"pakket dat geconfigureerd wordt, wellicht mislukken en zult u dit mogelijk "
+"handmatig moeten repareren. Dit kan extra moeilijk zijn als u zich in het "
+"midden van een grote opwaardering bevindt."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
+"Mogelijk moet u desondanks toch afsluiten omdat u vastzit in een "
+"configuratielus die te wijten is aan een fout in het pakket."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "_Quit"
@@ -246,7 +250,7 @@ msgstr ""
 
 #: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "Continue"
-msgstr ""
+msgstr "Doorgaan"
 
 #: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
@@ -256,13 +260,11 @@ msgstr "Debconf op %s"
 
 #: ../Debconf/FrontEnd/Gnome.pm:238
 #, fuzzy
-#| msgid "Next"
 msgid "_Next"
 msgstr "Volgende"
 
 #: ../Debconf/FrontEnd/Gnome.pm:245
 #, fuzzy
-#| msgid "Back"
 msgid "_Back"
 msgstr "Vorige"
 
