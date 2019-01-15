@@ -1,7 +1,11 @@
 debconf (1.5.70) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
   * When using whiptail, trim select/multiselect items to fit if necessary
     (closes: #478281).
+
+  [ Manpages translations ]
+  * French (Jean-Philippe MENGUAL; closes: #916598).
 
  -- Colin Watson <cjwatson@debian.org>  Tue, 15 Jan 2019 10:02:08 +0000
 
