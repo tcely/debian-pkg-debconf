@@ -45,12 +45,13 @@ sub show {
 	my $c=1;
 	my $selectspacer = $this->frontend->selectspacer;
 	foreach (@choices) {
-		push @params, $_, '';
+		my $choice = $this->frontend->ellipsize($_);
+		push @params, $choice, '';
 		
 		# Choices wider than the description text? (Only needed for
 		# whiptail BTW.)
-		if ($columns < width($_) + $selectspacer) {
-			$columns = width($_) + $selectspacer;
+		if ($columns < width($choice) + $selectspacer) {
+			$columns = width($choice) + $selectspacer;
 		}
 	}
 	
