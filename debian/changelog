@@ -1,4 +1,4 @@
-debconf (1.5.70) UNRELEASED; urgency=medium
+debconf (1.5.70) unstable; urgency=medium
 
   [ Colin Watson ]
   * When using whiptail, trim select/multiselect items to fit if necessary
@@ -10,7 +10,7 @@ debconf (1.5.70) UNRELEASED; urgency=medium
   [ Programs translations ]
   * French (Baptiste Jammet; closes: #918939).
 
- -- Colin Watson <cjwatson@debian.org>  Tue, 15 Jan 2019 10:02:08 +0000
+ -- Colin Watson <cjwatson@debian.org>  Wed, 16 Jan 2019 10:02:24 +0000
 
 debconf (1.5.69) unstable; urgency=medium
 
