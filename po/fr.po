@@ -6,13 +6,13 @@
 # Martin Quinson <Martin.Quinson@tuxfamily.org>, 2000,2001,2002.
 # Steve Petruzzello <dlist@bluewin.ch>, 2012.
 # Christian Perrier <bubulle@debian.org>, 2013.
-# Baptiste Jammet <baptiste@mailoo.org>, 2017.
+# Baptiste Jammet <baptiste@mailoo.org>, 2017, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf_1.5.65\n"
+"Project-Id-Version: debconf_1.5.69\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 09:48+0000\n"
-"PO-Revision-Date: 2017-12-27 18:20+0100\n"
+"PO-Revision-Date: 2019-01-10 16:54+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "_Quit"
-msgstr ""
+msgstr "_Quitter"
 
 #: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "Continue"
@@ -262,16 +262,14 @@ msgid "Debconf on %s"
 msgstr "Debconf sur %s"
 
 #: ../Debconf/FrontEnd/Gnome.pm:238
-#, fuzzy
 #| msgid "Next"
 msgid "_Next"
-msgstr "Suivant"
+msgstr "_Suivant"
 
 #: ../Debconf/FrontEnd/Gnome.pm:245
-#, fuzzy
 #| msgid "Back"
 msgid "_Back"
-msgstr "Retour"
+msgstr "_Retour"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."

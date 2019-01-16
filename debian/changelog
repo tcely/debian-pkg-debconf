@@ -7,6 +7,9 @@ debconf (1.5.70) UNRELEASED; urgency=medium
   [ Manpages translations ]
   * French (Jean-Philippe MENGUAL; closes: #916598).
 
+  [ Programs translations ]
+  * French (Baptiste Jammet; closes: #918939).
+
  -- Colin Watson <cjwatson@debian.org>  Tue, 15 Jan 2019 10:02:08 +0000
 
 debconf (1.5.69) unstable; urgency=medium
