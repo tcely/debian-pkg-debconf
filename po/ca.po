@@ -2,14 +2,14 @@
 # Copyright © 2001, 2002, 2004, 2005, 2006, 2010, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
 # Jordi Mallach <jordi@debian.org>, 2001, 2002, 2004, 2005, 2012.
-# Guillem Jover <guillem@debian.org>, 2005, 2006, 2010.
+# Guillem Jover <guillem@debian.org>, 2005, 2006, 2010, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
-"PO-Revision-Date: 2012-08-07 09:57+0200\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"PO-Revision-Date: 2014-12-03 17:31+0100\n"
 "Last-Translator: Guillem Jover <guillem@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "s'està provant ara la interfície: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "no s'ha pogut iniciar la interfície: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "No s'ha pogut iniciar una interfície: %s"
@@ -106,11 +106,11 @@ msgstr ""
 "(Introduïu zero o més elements separats per una coma seguida d'un espai (', "
 "'))."
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "Ajuda"
 
@@ -222,11 +222,50 @@ msgstr ""
 "deseu i sortiu. En aquest moment, debconf llegirà el fitxer editat, i "
 "utilitzarà els valors que heu introduir per configurar el sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "Configuració del paquet"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf en %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "Següent"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "Anterior"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -255,7 +294,7 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Següent"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -264,7 +303,7 @@ msgstr ""
 "avís: hi ha una possible corrupció de la base de dades. S'intentarà reparar-"
 "la afegint la pregunta que falta, %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -274,19 +313,19 @@ msgstr ""
 "Probablement dos plantilles no estan separades adequadament per un sol "
 "retorn de carro.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "El camp de plantilla «%s» és desconegut, en l'estrofa #%s de %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr ""
 "S'ha produït un error d'anàlisi de plantilla prop de «%s», en l'estrofa #%s "
 "de %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "La plantilla #%s en %s no conté una línia «Template:»\n"
@@ -307,44 +346,36 @@ msgstr ""
 msgid "unable to re-open stdin: %s"
 msgstr "no s'ha pogut tornar a obrir stdin: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates ha fallat: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "S'estan extraient les plantilles dels paquets: %d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "S'estan preconfigurant els paquets...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "s'ha produït un error d'anàlisi de plantilla: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: no es pot fer chmod: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s ha fallat al preconfigurar, amb estat de sortida %s"
 
-#: ../dpkg-reconfigure:99
-#, fuzzy
-#| msgid ""
-#| "Usage: dpkg-reconfigure [options] packages\n"
-#| "  -a,  --all\t\t\tReconfigure all packages.\n"
-#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
-#| "       --default-priority\tUse default priority instead of low.\n"
-#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
-#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
+#: ../dpkg-reconfigure:100
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -353,28 +384,27 @@ msgid ""
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Forma d'ús: dpkg-reconfigure [opcions] paquet\n"
-"  -a,  --all\t\t\tReconfigura tots els paquets.\n"
-"  -u,  --unseen-only\t\tMostra només preguntes encara no vistes.\n"
-"       --default-priority\tUsa la prioritat predeterminada en comptes de "
+"  -u, --unseen-only\t\tMostra només preguntes encara no vistes.\n"
+"      --default-priority\tUsa la prioritat predeterminada en comptes de "
 "baixa.\n"
-"       --force\t\t\tForça la reconfiguració de paquets trencats.\n"
-"       --no-reload\t\tNo actualitza les plantilles (empreu amb cura)."
+"      --force\t\t\tForça la reconfiguració de paquets trencats.\n"
+"      --no-reload\t\tNo actualitza les plantilles (empreu amb cura)."
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s s'ha d'executar com a root"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "si us plau, especifiqueu un paquet a reconfigurar"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s no està instal·lat"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s està trencat o no està instal·lat completament"
