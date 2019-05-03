@@ -3,6 +3,9 @@ debconf (1.5.72) UNRELEASED; urgency=medium
   [ Manpages translations ]
   * Portuguese (Américo Monteiro; closes: #927421).
 
+  [ Heitor Alves de Siqueira ]
+  * Fix readline prompts when run via run-parts (closes: #928182).
+
  -- Colin Watson <cjwatson@debian.org>  Fri, 19 Apr 2019 19:57:33 +0100
 
 debconf (1.5.71) unstable; urgency=medium
