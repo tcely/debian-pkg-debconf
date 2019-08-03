@@ -1,3 +1,9 @@
+debconf (1.5.73) UNRELEASED; urgency=medium
+
+  * Use debhelper-compat instead of debian/compat.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 03 Aug 2019 11:37:30 +0100
+
 debconf (1.5.72) unstable; urgency=medium
 
   [ Manpages translations ]
