@@ -1,6 +1,7 @@
 debconf (1.5.73) UNRELEASED; urgency=medium
 
   * Use debhelper-compat instead of debian/compat.
+  * Remove ancient X-Python-Version field.
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 03 Aug 2019 11:37:30 +0100
 
