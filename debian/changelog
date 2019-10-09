@@ -2,6 +2,7 @@ debconf (1.5.74) UNRELEASED; urgency=medium
 
   * Trim trailing whitespace.
   * Bump debhelper from old 9 to 12.
+  * Add missing colon in closes line.
 
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 09 Oct 2019 07:29:51 +0000
 
@@ -5840,7 +5841,7 @@ debconf (0.2.107) unstable; urgency=low
     causing problems with apt-setup in base-config, making
     http.us.debian.org be incorrectly picked as the default when users try
     to set up apt to use a country that just has one mirror on file.
-  * Closes #60160 (important)
+  * Closes: #60160 (important)
 
  -- Joey Hess <joeyh@debian.org>  Mon, 13 Mar 2000 13:30:52 -0800
 
