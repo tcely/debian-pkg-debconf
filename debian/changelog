@@ -3,6 +3,7 @@ debconf (1.5.74) UNRELEASED; urgency=medium
   * Trim trailing whitespace.
   * Bump debhelper from old 9 to 12.
   * Add missing colon in closes line.
+  * Fix day-of-week for changelog entries 0.1.43.
 
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 09 Oct 2019 07:29:51 +0000
 
@@ -7154,7 +7155,7 @@ debconf (0.1.43) unstable; urgency=low
   * Added data-dumper dependancy, since some perl's don't include it.
     (Closes: #46147)
 
- -- Joey Hess <joeyh@debian.org>  Mon, 28 Sep 1999 17:17:42 -0700
+ -- Joey Hess <joeyh@debian.org>  Tue, 28 Sep 1999 17:17:42 -0700
 
 debconf (0.1.42) unstable; urgency=low
 
