@@ -5,6 +5,9 @@ debconf (1.5.74) UNRELEASED; urgency=medium
   * Add missing colon in closes line.
   * Fix day-of-week for changelog entries 0.1.43.
 
+  [ Fabrice BAUZAC ]
+  * Teletype mode: add support for range-based selection.
+
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 09 Oct 2019 07:29:51 +0000
 
 debconf (1.5.73) unstable; urgency=medium
