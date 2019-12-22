@@ -76,7 +76,7 @@ sub show {
 	my $default;
 	if (Debconf::Config->terse eq 'false') {
 		$this->printlist(@choices);
-		$this->frontend->display("\n(".gettext("Enter the items you want to select, separated by spaces.").")\n");
+		$this->frontend->display("\n(".gettext("Enter the items or ranges you want to select, separated by spaces.").")\n");
 		push @completions, 1..@choices;
 		$default=join(" ", map { $choicenum{$_} }
 		                   grep { $value{$_} } @choices);
