@@ -36,20 +36,20 @@ Expand ranges of numbers input by the user.
 =cut
 
 sub expand_ranges {
-    my @ranges = @_;
-    my @accumulator;
-    for my $item (@ranges) {
-        if ($item =~ /\A(\d+)-(\d+)\Z/) {
-            my ($begin, $end) = ($1, $2);
-            for (my $i = $begin; $i <= $end; $i++) {
-                push @accumulator, $i;
-            }
-        }
-        else {
-            push @accumulator, $item;
-        }
-    }
-    return @accumulator;
+	my @ranges = @_;
+	my @accumulator;
+	for my $item (@ranges) {
+		if ($item =~ /\A(\d+)-(\d+)\Z/) {
+			my ($begin, $end) = ($1, $2);
+			for (my $i = $begin; $i <= $end; $i++) {
+				push @accumulator, $i;
+			}
+		}
+		else {
+			push @accumulator, $item;
+		}
+	}
+	return @accumulator;
 }
 
 sub show {
@@ -100,7 +100,7 @@ sub show {
 		# with whitespace or commas.
 		@selected=split(/[	 ,]+/, $_);
 
-                @selected=expand_ranges(@selected);
+		@selected=expand_ranges(@selected);
 
 		# Expand what they entered.
 		@selected=map { $this->expandabbrev($_, @choices) } @selected;
