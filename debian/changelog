@@ -9,6 +9,9 @@ debconf (1.5.74) UNRELEASED; urgency=medium
   [ Fabrice BAUZAC ]
   * Teletype mode: add support for range-based selection.
 
+  [ Programs translations ]
+  * German (Helge Kreutzmann).
+
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 09 Oct 2019 07:29:51 +0000
 
 debconf (1.5.73) unstable; urgency=medium
