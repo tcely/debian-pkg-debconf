@@ -1,4 +1,4 @@
-debconf (1.5.74) UNRELEASED; urgency=medium
+debconf (1.5.74) unstable; urgency=medium
 
   [ Debian Janitor ]
   * Trim trailing whitespace.
@@ -15,7 +15,7 @@ debconf (1.5.74) UNRELEASED; urgency=medium
   [ Niels Thykier ]
   * Remove some obsolete maintainer script code.
 
- -- Debian Janitor <janitor@jelmer.uk>  Wed, 09 Oct 2019 07:29:51 +0000
+ -- Colin Watson <cjwatson@debian.org>  Sat, 18 Apr 2020 12:10:08 +0100
 
 debconf (1.5.73) unstable; urgency=medium
 
