@@ -1,3 +1,10 @@
+debconf (1.5.75) UNRELEASED; urgency=medium
+
+  [ Philip Hands ]
+  * Replace broken debian-logo.png with proper version (closes: #983200).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 28 Feb 2021 17:47:19 +0000
+
 debconf (1.5.74) unstable; urgency=medium
 
   [ Debian Janitor ]
