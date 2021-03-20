@@ -1,4 +1,4 @@
-debconf (1.5.76) UNRELEASED; urgency=medium
+debconf (1.5.76) unstable; urgency=medium
 
   [ Colin Watson ]
   * Check that whiptail or dialog is actually usable (closes: #985572).
@@ -6,7 +6,7 @@ debconf (1.5.76) UNRELEASED; urgency=medium
   [ Programs translations ]
   * Dutch (Frans Spiesschaert; closes: #906948).
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 20 Mar 2021 12:45:42 +0000
+ -- Colin Watson <cjwatson@debian.org>  Sat, 20 Mar 2021 13:14:50 +0000
 
 debconf (1.5.75) unstable; urgency=medium
 
