@@ -1,3 +1,9 @@
+debconf (1.5.76) UNRELEASED; urgency=medium
+
+  * Check that whiptail or dialog is actually usable (closes: #985572).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 20 Mar 2021 12:45:42 +0000
+
 debconf (1.5.75) unstable; urgency=medium
 
   [ Philip Hands ]
