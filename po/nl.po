@@ -3,34 +3,34 @@
 #
 # Frans Pop <aragorn@tiscali.nl>, 2005, 2006.
 # Frans Pop <elendil@planet.nl>, 2010.
-# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2014, 2017, 2018.
+# Frans Spiesschaert <Frans.Spiesschaert@yucom.be>, 2014, 2017, 2018, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf_1.5.69\n"
+"Project-Id-Version: debconf_1.5.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-20 13:11+0000\n"
-"PO-Revision-Date: 2018-07-31 20:35+0200\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"PO-Revision-Date: 2021-03-22 21:13+0100\n"
 "Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
 "Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../Debconf/AutoSelect.pm:89
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "er wordt teruggevallen op frontend: %s"
 
-#: ../Debconf/AutoSelect.pm:97
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "kan het frontend niet initialiseren: %s"
 
-#: ../Debconf/AutoSelect.pm:103
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Kan geen frontend starten: %s"
@@ -140,15 +140,14 @@ msgstr ""
 "nooit mogen gebeuren. Mogelijk is de taallokalisatie van de sjablonen niet "
 "correct."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:59
+#: ../Debconf/Element/Teletype/Multiselect.pm:27
 msgid "none of the above"
 msgstr "geen van bovenstaande"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:79
-#, fuzzy
-#| msgid "Enter the items you want to select, separated by spaces."
+#: ../Debconf/Element/Teletype/Multiselect.pm:47
 msgid "Enter the items or ranges you want to select, separated by spaces."
-msgstr "Geef de waarden die u wilt selecteren, gescheiden door spaties."
+msgstr ""
+"Voer de items of bereiken in die u wilt selecteren, gescheiden door spaties."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
@@ -177,7 +176,7 @@ msgstr ""
 "Het dialoog-frontend werkt niet op een domme terminal, een shell-buffer van "
 "emacs en bij gebrek aan een sturende terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:107
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -185,14 +184,14 @@ msgstr ""
 "Er is geen bruikbaar dialoog-achtig programma geïnstalleerd; hierdoor kan "
 "het op dialogen gebaseerde frontend niet worden gebruikt."
 
-#: ../Debconf/FrontEnd/Dialog.pm:114
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Het dialoog-frontend vereist een scherm dat tenminste 13 regels hoog en 31 "
 "kolommen breed is."
 
-#: ../Debconf/FrontEnd/Dialog.pm:331
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Pakketconfiguratie"
 
@@ -254,7 +253,8 @@ msgstr "_Afsluiten"
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: ../Debconf/FrontEnd/Gnome.pm:218
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf op %s"
@@ -272,7 +272,7 @@ msgid "This frontend requires a controlling tty."
 msgstr "Dit frontend vereist een sturende tty."
 
 #
-#: ../Debconf/FrontEnd/Readline.pm:62
+#: ../Debconf/FrontEnd/Readline.pm:58
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU is niet compatibel met shell-buffers van emacs."
 
@@ -473,6 +473,3 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=pakket\t\tPakket dat eigenaar is van de opdracht instellen."
-
-#~ msgid "Cannot read status file: %s"
-#~ msgstr "Kan statusbestand niet lezen: %s"
