@@ -2,6 +2,7 @@ debconf (1.5.77) UNRELEASED; urgency=medium
 
   [ Programs translations ]
   * Dutch (Frans Spiesschaert; closes: #986167).
+  * Polish (Mmobilea; closes: #976044).
 
   [ Debconf translations ]
   * Fix double UTF-8 encoding in Finnish translation (closes: #989692).
