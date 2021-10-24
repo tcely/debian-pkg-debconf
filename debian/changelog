@@ -1,7 +1,15 @@
 debconf (1.5.78) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
   * debconf-set-selections: Disable non-fatal warnings when loading database
     in --checkonly mode (closes: #587380).
+
+  [ Helmut Grohne ]
+  * delete debconf postinst script and transition_db.pl as they only handle
+    upgrades from pre-etch (closes: #989567)
+
+  [ Johannes Schauer Marin Rodrigues ]
+  * add support for DPKG_ROOT set in maintainer scripts (closes: #983425)
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 19 Jun 2021 12:55:19 +0100
 
