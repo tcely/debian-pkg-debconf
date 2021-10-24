@@ -114,7 +114,7 @@ sub load {
 	
 	if (! $cf) {
 		for my $file (@config_files) {
-			$file = "$ENV{DPKG_ROOT}$file";
+			$file = "$ENV{DPKG_ROOT}$file" if exists $ENV{DPKG_ROOT};
 			$cf=$file, last if -e $file;
 		}
 	}
