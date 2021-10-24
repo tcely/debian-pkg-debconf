@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.54\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2014-12-03 13:17+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Debian Indonesia L10N Team <debid@yahoogroups.com>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "kembali ke antarmuka: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "tak dapat menyiapkan antarmuka: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Tak dapat memulai sebuah antarmuka: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "Basis data konfigurasi tidak ditentukan dalam berkas konfigurasi."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "Basis data template belum ditentukan dalam berkas konfigurasi."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,13 +49,13 @@ msgstr ""
 "Pilihan Sigils dan Smileys dalam berkas konfigurasi tidak lagi digunakan. "
 "Silakan hapus saja."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Ada masalah saat menyetel basis data yang ditentukan oleh bait %s dari %s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -65,12 +65,12 @@ msgstr ""
 "  -p,  --priority\t\tTentukan prioritas pertanyaan minimum yg ditampilkan.\n"
 "       --terse\t\t\tMampukan mode terse.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Abaikan prioritas \"%s\" yang tidak sah"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Prioritas yang sah adalah: %s"
@@ -136,11 +136,11 @@ msgstr ""
 "Nilai masukan, \"%s\" tidak ditemukan dalam pilihan C! Hal ini tidak boleh "
 "terjadi. Mungkin lokalisasi template salah."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "tak satupun di atas"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -172,7 +172,7 @@ msgstr ""
 "Antar muka dialog tidak akan bekerja pada sebuah terminal dumb, sebuah "
 "penyangga shell emacs, atau tanpa sebuah terminal pengendali"
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -180,13 +180,13 @@ msgstr ""
 "Tidak ada program dialog yang dapat dipakai. Antarmuka berbasis dialog tidak "
 "dapat digunakan"
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Antarmuka dialog membutuhkan layar minimal berukuran 13 baris dan 31 kolom."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Konfigurasi paket"
 
@@ -242,8 +242,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf pada %s"
@@ -264,7 +263,7 @@ msgstr "Kembali"
 msgid "This frontend requires a controlling tty."
 msgstr "Antarmuka ini membutuhkan sebuah tty pengendali."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU tidak sesuai dengan penyangga shell emacs."
 
