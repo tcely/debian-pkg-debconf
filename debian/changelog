@@ -1,4 +1,4 @@
-debconf (1.5.78) UNRELEASED; urgency=medium
+debconf (1.5.78) unstable; urgency=medium
 
   [ Colin Watson ]
   * debconf-set-selections: Disable non-fatal warnings when loading database
@@ -11,7 +11,7 @@ debconf (1.5.78) UNRELEASED; urgency=medium
   [ Johannes Schauer Marin Rodrigues ]
   * add support for DPKG_ROOT set in maintainer scripts (closes: #983425)
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 19 Jun 2021 12:55:19 +0100
+ -- Colin Watson <cjwatson@debian.org>  Sun, 24 Oct 2021 13:28:56 +0100
 
 debconf (1.5.77) unstable; urgency=medium
 
