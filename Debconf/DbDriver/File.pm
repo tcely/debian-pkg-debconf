@@ -88,7 +88,7 @@ sub init {
 	}
 
 	if (exists $this->{root}) {
-	    $this->{filename} = $this->{root} . $this->{filename};
+		$this->{filename} = $this->{root} . $this->{filename};
 	}
 	$this->{filename} = abs_path($this->{filename});
 
