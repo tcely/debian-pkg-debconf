@@ -1,3 +1,10 @@
+debconf (1.5.79) UNRELEASED; urgency=medium
+
+  [ Programs translations ]
+  * Occitan (Quentin PAGÈS).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 27 Oct 2021 21:44:40 +0100
+
 debconf (1.5.78) unstable; urgency=medium
 
   [ Colin Watson ]
