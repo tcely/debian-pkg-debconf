@@ -1,4 +1,4 @@
-debconf (1.5.79) UNRELEASED; urgency=medium
+debconf (1.5.79) unstable; urgency=medium
 
   [ Colin Watson ]
   * Restore a minimal postinst that just loads the confmodule (closes:
@@ -9,7 +9,7 @@ debconf (1.5.79) UNRELEASED; urgency=medium
   [ Programs translations ]
   * Occitan (Quentin PAGÈS).
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 27 Oct 2021 21:44:40 +0100
+ -- Colin Watson <cjwatson@debian.org>  Fri, 29 Oct 2021 14:04:59 +0100
 
 debconf (1.5.78) unstable; urgency=medium
 
