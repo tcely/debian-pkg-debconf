@@ -4,6 +4,7 @@ debconf (1.5.79) UNRELEASED; urgency=medium
   * Restore a minimal postinst that just loads the confmodule (closes:
     #998068).
   * Remove obsolete Qt entries from debian/copyright.
+  * Convert debian/po/tr.po to UTF-8 to pacify Lintian.
 
   [ Programs translations ]
   * Occitan (Quentin PAGÈS).
