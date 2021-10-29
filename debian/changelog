@@ -3,6 +3,7 @@ debconf (1.5.79) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Restore a minimal postinst that just loads the confmodule (closes:
     #998068).
+  * Remove obsolete Qt entries from debian/copyright.
 
   [ Programs translations ]
   * Occitan (Quentin PAGÈS).
