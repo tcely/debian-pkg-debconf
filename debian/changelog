@@ -2,6 +2,9 @@ debconf (1.5.80) UNRELEASED; urgency=medium
 
   * Simplify a debhelper override slightly.
 
+  [ Programs translations ]
+  * Indonesian (Andika Triwidada; closes: #1007991).
+
  -- Colin Watson <cjwatson@debian.org>  Wed, 29 Dec 2021 01:15:58 +0000
 
 debconf (1.5.79) unstable; urgency=medium
