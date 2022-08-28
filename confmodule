@@ -12,9 +12,14 @@ if [ ! "${DEBIAN_HAS_FRONTEND:-}" ]; then
 	# Since there is no FrontEnd, this program execs a FrontEnd.
 	# It will then run a new copy of $0 that can talk to it.
 	if [ "${DEBCONF_USE_CDEBCONF:-}" ]; then
+		# Use cdebconf if explicitly requested.
 		exec /usr/lib/cdebconf/debconf $0 "$@"
-	else
+	elif [ -x /usr/share/debconf/frontend ]; then
+		# Fall back to debconf, but only if installed.
 		exec /usr/share/debconf/frontend $0 "$@"
+	elif [ -x /usr/lib/cdebconf/debconf ]; then
+		# Last resort: use cdebconf although not explicity requested.
+		exec /usr/lib/cdebconf/debconf $0 "$@"
 	fi
 fi
 
