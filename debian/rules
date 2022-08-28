@@ -8,14 +8,15 @@ export PERL5LIB=.
 	dh $@ --with python3
 
 override_dh_auto_install:
+	$(MAKE) prefix=`pwd`/debian/debconf-common install-common
 	$(MAKE) prefix=`pwd`/debian/debconf-utils install-utils
 	$(MAKE) prefix=`pwd`/debian/debconf-i18n install-i18n
 	$(MAKE) prefix=`pwd`/debian/python3-debconf install-python3
 	$(MAKE) prefix=`pwd`/debian/debconf install-rest
 
 override_dh_installdocs:
-	dh_installdocs -Ndebconf-doc --link-doc=debconf
-	dh_installdocs -pdebconf-doc
+	dh_installdocs -Ndebconf-doc -Ndebconf-common --link-doc=debconf
+	dh_installdocs -pdebconf-doc -pdebconf-common
 
 override_dh_installdebconf:
 	# Don't modify postrm, I purge differently than normal packages

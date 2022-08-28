@@ -20,7 +20,12 @@ clean:
 
 # Does not attempt to install documentation, as that can be fairly system
 # specific.
-install: install-utils install-python3 install-rest
+install: install-common install-utils install-python3 install-rest
+
+# Install files shared with cdebconf
+install-common:
+	install -d $(prefix)/usr/share/debconf
+	install -m 0644 confmodule.sh confmodule $(prefix)/usr/share/debconf/
 
 # Anything that goes in the debconf-utils package.
 install-utils:
@@ -61,7 +66,6 @@ install-rest:
 	cp Debconf/Client/ConfModule.stub \
 		$(prefix)/$(PERL_VENDORLIB)/Debian/DebConf/Client/ConfModule.pm
 	# Other libs and helper stuff.
-	install -m 0644 confmodule.sh confmodule $(prefix)/usr/share/debconf/
 	install frontend $(prefix)/usr/share/debconf/
 	install -m 0755 fix_db.pl $(prefix)/usr/share/debconf/
 	# Install essential programs.
