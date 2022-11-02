@@ -5,6 +5,27 @@ debconf (1.5.80) UNRELEASED; urgency=medium
   [ Programs translations ]
   * Indonesian (Andika Triwidada; closes: #1007991).
 
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + Build-Depends: Drop versioned constraint on po4a.
+    + Build-Depends-Indep: Drop versioned constraint on gettext, perl and
+      python3.
+    + debconf: Drop versioned constraint on debconf-kde-helper in Suggests.
+    + debconf: Drop versioned constraint on apt-utils in Recommends.
+    + debconf: Drop versioned constraint on perl-base in Pre-Depends.
+    + debconf: Drop versioned constraint on apt, cdebconf, debconf-utils,
+      dialog, menu and whiptail in Conflicts.
+    + debconf: Drop versioned constraint on apt-listchanges in Breaks.
+    + debconf-i18n: Drop versioned constraint on debconf-utils in Conflicts.
+    + debconf-i18n: Drop versioned constraint on debconf and debconf-utils in
+      Replaces.
+    + debconf-doc: Drop versioned constraint on debian-policy in Suggests.
+    + debconf-doc: Drop versioned constraint on debconf in Conflicts.
+    + debconf-utils: Drop versioned constraint on debconf in Conflicts.
+    + debconf-utils: Drop versioned constraint on debconf in Replaces.
+    + python3-debconf: Drop versioned constraint on debconf in Replaces.
+    + python3-debconf: Drop versioned constraint on debconf in Breaks.
+
  -- Colin Watson <cjwatson@debian.org>  Wed, 29 Dec 2021 01:15:58 +0000
 
 debconf (1.5.79) unstable; urgency=medium
