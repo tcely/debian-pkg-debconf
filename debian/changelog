@@ -26,6 +26,10 @@ debconf (1.5.80) UNRELEASED; urgency=medium
     + python3-debconf: Drop versioned constraint on debconf in Replaces.
     + python3-debconf: Drop versioned constraint on debconf in Breaks.
 
+  [ Colin Watson ]
+  * debconf: Drop version constraint on ubiquity and update-notifier-common
+    in Breaks.
+
  -- Colin Watson <cjwatson@debian.org>  Wed, 29 Dec 2021 01:15:58 +0000
 
 debconf (1.5.79) unstable; urgency=medium
