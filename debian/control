@@ -18,8 +18,7 @@ Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
 
 Package: debconf
 Priority: important
-Conflicts:
-           debconf-tiny,
+Conflicts: debconf-tiny,
            whiptail-utf8 (<= 0.50.17-13),
 Breaks: ubiquity (<< 17.10.2),
         update-notifier-common (<< 3.187~),
