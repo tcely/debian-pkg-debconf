@@ -5,6 +5,7 @@ debconf (1.5.80) UNRELEASED; urgency=medium
   [ Programs translations ]
   * Indonesian (Andika Triwidada; closes: #1007991).
   * Russian (Ukraine) (Bohdan Horbeshko).
+  * French (Baptiste Jammet; closes: #1008655).
 
   [ Debian Janitor ]
   * Remove constraints unnecessary since buster (oldstable):

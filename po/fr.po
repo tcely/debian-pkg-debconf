@@ -6,13 +6,13 @@
 # Martin Quinson <Martin.Quinson@tuxfamily.org>, 2000,2001,2002.
 # Steve Petruzzello <dlist@bluewin.ch>, 2012.
 # Christian Perrier <bubulle@debian.org>, 2013.
-# Baptiste Jammet <baptiste@mailoo.org>, 2017, 2019.
+# Baptiste Jammet <baptiste@mailoo.org>, 2017, 2019, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf_1.5.69\n"
+"Project-Id-Version: debconf_1.5.79\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-24 12:27+0000\n"
-"PO-Revision-Date: 2019-01-10 16:54+0100\n"
+"PO-Revision-Date: 2021-11-27 08:20+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -150,10 +150,11 @@ msgid "none of the above"
 msgstr "aucun des éléments mentionnés"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:79
-#, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
-msgstr "Entrez les éléments que vous voulez choisir, séparés par des espaces."
+msgstr ""
+"Veuillez saisir les éléments ou les intervalles que vous voulez choisir, "
+"séparés par des espaces."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
@@ -387,8 +388,8 @@ msgstr ""
 "       --default-priority\tutilise la priorité par défaut plutôt\n"
 "                         \tque la priorité basse ;\n"
 "       --force\t\t\tforce la reconfiguration des paquets cassés.\n"
-"       --no-reload\t\tne pas recharger les modèles. (à utiliser\n"
-"                         \tavec précaution)"
+"       --no-reload\t\tne pas recharger les modèles (à utiliser\n"
+"                         \tavec précaution)."
 
 #: ../dpkg-reconfigure:112
 #, perl-format
