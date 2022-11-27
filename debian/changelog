@@ -1,6 +1,9 @@
 debconf (1.5.80) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
   * Simplify a debhelper override slightly.
+  * debconf: Drop version constraint on ubiquity and update-notifier-common
+    in Breaks.
 
   [ Programs translations ]
   * Indonesian (Andika Triwidada; closes: #1007991).
@@ -27,10 +30,6 @@ debconf (1.5.80) UNRELEASED; urgency=medium
     + debconf-utils: Drop versioned constraint on debconf in Replaces.
     + python3-debconf: Drop versioned constraint on debconf in Replaces.
     + python3-debconf: Drop versioned constraint on debconf in Breaks.
-
-  [ Colin Watson ]
-  * debconf: Drop version constraint on ubiquity and update-notifier-common
-    in Breaks.
 
   [ Dave Jones ]
   * dpkg-reconfigure: fix restart of services declared with
