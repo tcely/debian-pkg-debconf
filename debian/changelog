@@ -32,6 +32,10 @@ debconf (1.5.80) UNRELEASED; urgency=medium
   * debconf: Drop version constraint on ubiquity and update-notifier-common
     in Breaks.
 
+  [ Dave Jones ]
+  * dpkg-reconfigure: fix restart of services declared with
+    --no-restart-after-upgrade (closes: #1006147, LP: #1959054).
+
  -- Colin Watson <cjwatson@debian.org>  Wed, 29 Dec 2021 01:15:58 +0000
 
 debconf (1.5.79) unstable; urgency=medium
