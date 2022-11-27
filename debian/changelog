@@ -1,4 +1,4 @@
-debconf (1.5.80) UNRELEASED; urgency=medium
+debconf (1.5.80) unstable; urgency=medium
 
   [ Colin Watson ]
   * Simplify a debhelper override slightly.
@@ -35,7 +35,7 @@ debconf (1.5.80) UNRELEASED; urgency=medium
   * dpkg-reconfigure: fix restart of services declared with
     --no-restart-after-upgrade (closes: #1006147, LP: #1959054).
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 29 Dec 2021 01:15:58 +0000
+ -- Colin Watson <cjwatson@debian.org>  Sun, 27 Nov 2022 20:39:29 +0000
 
 debconf (1.5.79) unstable; urgency=medium
 
