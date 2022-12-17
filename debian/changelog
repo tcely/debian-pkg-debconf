@@ -1,3 +1,10 @@
+debconf (1.5.81) UNRELEASED; urgency=medium
+
+  [ martin f krafft ]
+  * confmodule: Allow use from scripts with "set -u" (closes: #369953).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 17 Dec 2022 11:45:39 +0000
+
 debconf (1.5.80) unstable; urgency=medium
 
   [ Colin Watson ]
