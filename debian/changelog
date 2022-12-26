@@ -7,6 +7,9 @@ debconf (1.5.81) UNRELEASED; urgency=medium
   * dpkg-preconfigure: Extract into /var/cache/debconf/tmp.ci, to avoid
     problems if /tmp is mounted noexec (closes: #223683, LP: #90085).
 
+  [ Jakub Wilk ]
+  * debconf-get-selections: Sort output by question name (closes: #968814).
+
  -- Colin Watson <cjwatson@debian.org>  Sat, 17 Dec 2022 11:45:39 +0000
 
 debconf (1.5.80) unstable; urgency=medium
