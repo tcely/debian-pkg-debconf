@@ -14,6 +14,9 @@ debconf (1.5.81) UNRELEASED; urgency=medium
   [ Matthijs Kooijman ]
   * Display unsupported commands in debug logging (closes: #657626).
 
+  [ Anders Kaseorg ]
+  * Make Readline frontend check that stdin is a tty (closes: #929417).
+
  -- Colin Watson <cjwatson@debian.org>  Sat, 17 Dec 2022 11:45:39 +0000
 
 debconf (1.5.80) unstable; urgency=medium
