@@ -1,3 +1,9 @@
+debconf (1.5.82) UNRELEASED; urgency=medium
+
+  * Bump debhelper from old 12 to 13.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jan 2023 13:04:53 -0000
+
 debconf (1.5.81) unstable; urgency=medium
 
   [ martin f krafft ]
