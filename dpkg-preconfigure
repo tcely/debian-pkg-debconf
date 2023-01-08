@@ -141,7 +141,7 @@ if (! $have_tty && $frontend->need_tty) {
 }
 
 my $tempdir='/var/cache/debconf/tmp.ci';
-remove_tree($tempdir, { safe => 1 });
+remove_tree($tempdir, { safe => 1, keep_root => 1 });
 make_path($tempdir);
 
 # Use the external package scanner for speed. It takes a list of debs
@@ -248,7 +248,7 @@ $frontend->shutdown;
 # Save state.
 Debconf::Db->save;
 
-remove_tree($tempdir, { safe => 1 });
+remove_tree($tempdir, { safe => 1, keep_root => 1 });
 
 =head1 AUTHOR
 
