@@ -1,10 +1,10 @@
-debconf (1.5.82) UNRELEASED; urgency=medium
+debconf (1.5.82) unstable; urgency=medium
 
   * Bump debhelper from old 12 to 13.
   * Don't remove /var/cache/debconf/tmp.ci, to avoid warnings if it's a
     mountpoint (closes: #1028128).
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jan 2023 13:04:53 -0000
+ -- Colin Watson <cjwatson@debian.org>  Sun, 08 Jan 2023 21:50:51 +0000
 
 debconf (1.5.81) unstable; urgency=medium
 
