@@ -152,6 +152,10 @@ sub go {
 	$this->_direction(1);
 	for (; $current > -1 && $current < @elements; $current += $this->_direction) {
 		my $value=$elements[$current]->show;
+		if (not defined $value) {
+			$this->_didbackup(1);
+			return;
+		}
 	}
 
 	if ($current < 0) {
