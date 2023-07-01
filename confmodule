@@ -86,33 +86,33 @@ _db_cmd () {
 	return "$_db_status"
 }
 
-db_beginblock ()	{ _db_cmd "BEGINBLOCK $@"; }
-db_capb ()	{ _db_cmd "CAPB $@"; }
-db_clear ()	{ _db_cmd "CLEAR $@"; }
-db_data ()	{ _db_cmd "DATA $@"; }
-db_endblock ()	{ _db_cmd "ENDBLOCK $@"; }
-db_fget ()	{ _db_cmd "FGET $@"; }
-db_fset ()	{ _db_cmd "FSET $@"; }
-db_get ()	{ _db_cmd "GET $@"; }
-db_go ()	{ _db_cmd "GO $@"; }
-db_info ()	{ _db_cmd "INFO $@"; }
-db_input ()	{ _db_cmd "INPUT $@"; }
-db_metaget ()	{ _db_cmd "METAGET $@"; }
-db_progress ()	{ _db_cmd "PROGRESS $@"; }
-db_purge ()	{ _db_cmd "PURGE $@"; }
-db_register ()	{ _db_cmd "REGISTER $@"; }
-db_reset ()	{ _db_cmd "RESET $@"; }
-db_set ()	{ _db_cmd "SET $@"; }
-db_settitle ()	{ _db_cmd "SETTITLE $@"; }
-db_subst ()	{ _db_cmd "SUBST $@"; }
-db_title ()	{ _db_cmd "TITLE $@"; }
-db_unregister ()	{ _db_cmd "UNREGISTER $@"; }
-db_version ()	{ _db_cmd "VERSION $@"; }
-db_x_loadtemplatefile ()	{ _db_cmd "X_LOADTEMPLATEFILE $@"; }
+db_beginblock ()	{ _db_cmd "BEGINBLOCK" "$@"; }
+db_capb ()	{ _db_cmd "CAPB" "$@"; }
+db_clear ()	{ _db_cmd "CLEAR" "$@"; }
+db_data ()	{ _db_cmd "DATA" "$@"; }
+db_endblock ()	{ _db_cmd "ENDBLOCK" "$@"; }
+db_fget ()	{ _db_cmd "FGET" "$@"; }
+db_fset ()	{ _db_cmd "FSET" "$@"; }
+db_get ()	{ _db_cmd "GET" "$@"; }
+db_go ()	{ _db_cmd "GO" "$@"; }
+db_info ()	{ _db_cmd "INFO" "$@"; }
+db_input ()	{ _db_cmd "INPUT" "$@"; }
+db_metaget ()	{ _db_cmd "METAGET" "$@"; }
+db_progress ()	{ _db_cmd "PROGRESS" "$@"; }
+db_purge ()	{ _db_cmd "PURGE" "$@"; }
+db_register ()	{ _db_cmd "REGISTER" "$@"; }
+db_reset ()	{ _db_cmd "RESET" "$@"; }
+db_set ()	{ _db_cmd "SET" "$@"; }
+db_settitle ()	{ _db_cmd "SETTITLE" "$@"; }
+db_subst ()	{ _db_cmd "SUBST" "$@"; }
+db_title ()	{ _db_cmd "TITLE" "$@"; }
+db_unregister ()	{ _db_cmd "UNREGISTER" "$@"; }
+db_version ()	{ _db_cmd "VERSION" "$@"; }
+db_x_loadtemplatefile ()	{ _db_cmd "X_LOADTEMPLATEFILE" "$@"; }
 
 # An old alias for input.
 db_text () {
-	db_input $@
+	db_input "$@"
 }
 
 # Cannot read a return code, since there is none and it would block.
