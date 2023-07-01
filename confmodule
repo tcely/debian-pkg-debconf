@@ -52,7 +52,7 @@ export DEBCONF_OLD_FD_BASE
 # Commands.
 
 _db_cmd () {
-	_db_internal_IFS="$IFS"
+	local _db_internal_IFS="$IFS"
 	IFS=' '
 	printf '%s\n' "$*" >&3
 	# Set to newline to get whole line.
@@ -60,6 +60,7 @@ _db_cmd () {
 '
 	read -r _db_internal_line
 	IFS="$_db_internal_IFS"
+
 	# Disgusting, but it's the only good way to split the line,
 	# preserving all other whitespace.
 	RET="${_db_internal_line#[! 	][ 	]}"
