@@ -74,7 +74,12 @@ _db_cmd () {
 	local _db_status="${_db_internal_line%%[ 	]*}"
 	case "$_db_status" in
 		1)	# escaped data
-			RET="$(printf '%s' "$RET" | debconf-escape -u)"
+			if [ "$_DEBCONF_IMPL" = cdebconf ]; then
+				_DEBCONF_ESCAPE=/usr/lib/cdebconf/debconf-escape
+			else
+				_DEBCONF_ESCAPE=debconf-escape
+			fi
+			RET="$(printf '%s' "$RET" | $_DEBCONF_ESCAPE -u)"
 			return 0
 			;;
 	esac
