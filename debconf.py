@@ -10,7 +10,7 @@
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
 #    documentation and/or other materials provided with the distribution.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY AUTHORS AND CONTRIBUTORS ``AS IS'' AND
 # ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -23,13 +23,20 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-from __future__ import print_function
+from __future__ import annotations
 
-import sys, os
 import errno
-import re
-import subprocess
 import fcntl
+import re
+import os
+import subprocess
+import sys
+from types import TracebackType
+from typing import IO, Protocol
+
+class Command(Protocol):
+    def __call__(self, *params: str | int) -> str:
+       ...
 
 class DebconfError(Exception):
     pass
@@ -56,11 +63,23 @@ class Debconf:
         db = debconf.Debconf(run_frontend=True)
         print(db.get('debconf/frontend'))
     """
+    version_: Command
+    capb: Command
+    title: Command
+    input: Command
+    get: Command
+    go: Command
 
-    def __init__(self, title=None, read=None, write=None, run_frontend=False):
+    def __init__(
+        self,
+        title: str | None = None,
+        read: IO[str] | None = None,
+        write: IO[str] | None = None,
+        run_frontend: bool = False
+    ) -> None:
         for command in ('capb set reset title input beginblock endblock go get'
                         ' register unregister subst fset fget previous_module'
-                        ' visible purge metaget exist version settitle'
+                        ' visible purge metaget exist version_ settitle'
                         ' info progress data').split():
             self.setCommand(command)
         self.read = read or sys.stdin
@@ -70,19 +89,21 @@ class Debconf:
             runFrontEnd()
         self.setUp(title)
 
-    def setUp(self, title):
-        self.version = self.version(2)
+    def setUp(self, title: str | None) -> None:
+        self.version = self.version_(2)
         if self.version[:2] != '2.':
             raise DebconfError(256, "wrong version: %s" % self.version)
         self.capabilities = self.capb().split()
         if title:
             self.title(title)
 
-    def setCommand(self, command):
+    def setCommand(self, command: str) -> None:
         setattr(self, command,
                lambda *args, **kw: self.command(command, *args, **kw))
 
-    def command(self, command, *params):
+    def command(self, command: str, *params: str | int) -> str:
+        if command == 'version_':
+            command = 'version'
         command = command.upper()
         self.write.write("%s %s\n" % (command, ' '.join(map(str, params))))
         self.write.flush()
@@ -98,10 +119,10 @@ class Debconf:
                     raise
 
         if ' ' in resp:
-            status, data = resp.split(' ', 1)
+            status_, data = resp.split(' ', 1)
         else:
-            status, data = resp, ''
-        status = int(status)
+            status_, data = resp, ''
+        status = int(status_)
         if status == 0:
             return data
         elif status == 1:   # unescaped data
@@ -118,11 +139,11 @@ class Debconf:
         else:
             raise DebconfError(status, data)
 
-    def stop(self):
+    def stop(self) -> None:
         self.write.write('STOP\n')
         self.write.flush()
 
-    def forceInput(self, priority, question):
+    def forceInput(self, priority: str, question: str) -> int:
         try:
             self.input(priority, question)
             return 1
@@ -131,24 +152,34 @@ class Debconf:
                 raise
         return 0
 
-    def getBoolean(self, question):
+    def getBoolean(self, question: str) -> bool:
         result = self.get(question)
         return result == 'true'
 
-    def getString(self, question):
+    def getString(self, question: str) -> str:
         return self.get(question)
 
-    def __enter__(self):
+    def __enter__(self) -> Debconf:
         return self
 
-    def __exit__(self, exc_type, exc_value, exc_tb):
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        exc_tb: TracebackType | None
+    ) -> None:
         self.stop()
 
 
 class DebconfCommunicator(Debconf, object):
-    def __init__(self, owner, title=None, cloexec=False):
+    def __init__(
+        self,
+        owner: str,
+        title: str | None = None,
+        cloexec: bool = False
+    ) -> None:
         args = ['debconf-communicate', '-fnoninteractive', owner]
-        self.dccomm = subprocess.Popen(
+        self.dccomm: subprocess.Popen[str] | None = subprocess.Popen(
             args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
             close_fds=True, universal_newlines=True)
         super(DebconfCommunicator, self).__init__(title=title,
@@ -158,15 +189,17 @@ class DebconfCommunicator(Debconf, object):
             fcntl.fcntl(self.read.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
             fcntl.fcntl(self.write.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
 
-    def shutdown(self):
+    def shutdown(self) -> None:
         if self.dccomm is not None:
+            assert self.dccomm.stdin is not None
+            assert self.dccomm.stdout is not None
             self.dccomm.stdin.close()
             self.dccomm.stdout.close()
             self.dccomm.wait()
             self.dccomm = None
 
     # Don't rely on this; call .shutdown() explicitly.
-    def __del__(self):
+    def __del__(self) -> None:
         try:
             self.shutdown()
         except AttributeError:
@@ -179,7 +212,7 @@ if ('DEBCONF_USE_CDEBCONF' in os.environ and
 else:
     _frontEndProgram = '/usr/share/debconf/frontend'
 
-def runFrontEnd():
+def runFrontEnd() -> None:
     if 'DEBIAN_HAS_FRONTEND' not in os.environ:
         os.environ['PERL_DL_NONLAZY']='1'
         os.execv(_frontEndProgram, [_frontEndProgram, sys.executable]+sys.argv)
