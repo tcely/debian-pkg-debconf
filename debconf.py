@@ -63,12 +63,26 @@ class Debconf:
         db = debconf.Debconf(run_frontend=True)
         print(db.get('debconf/frontend'))
     """
-    version_: Command
+    beginblock: Command
     capb: Command
-    title: Command
-    input: Command
+    endblock: Command
+    exist: Command
+    fset: Command
     get: Command
     go: Command
+    info: Command
+    input: Command
+    progress: Command
+    purge: Command
+    register: Command
+    reset: Command
+    set: Command
+    settitle: Command
+    subst: Command
+    title: Command
+    unregister: Command
+    version_: Command
+    visible: Command
 
     def __init__(
         self,
