@@ -1,3 +1,15 @@
+debconf (1.5.83) UNRELEASED; urgency=medium
+
+  [ Ani Hay ]
+  * Recompress debian-logo.png.
+
+  [ Alexandre Detiste ]
+  * debconf.py: Add typing information to ease apt-listchanges testing.
+  * Rename debian/postinst to debian/debconf.postinst for debhelper 14/15
+    compatibility.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 14 Oct 2023 14:05:39 +0100
+
 debconf (1.5.82) unstable; urgency=medium
 
   * Bump debhelper from old 12 to 13.
