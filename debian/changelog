@@ -8,6 +8,9 @@ debconf (1.5.83) UNRELEASED; urgency=medium
   * Rename debian/postinst to debian/debconf.postinst for debhelper 14/15
     compatibility.
 
+  [ Colin Watson ]
+  * Avoid Perl's unsafe "<>" operator (closes: #1041329).
+
  -- Colin Watson <cjwatson@debian.org>  Sat, 14 Oct 2023 14:05:39 +0100
 
 debconf (1.5.82) unstable; urgency=medium

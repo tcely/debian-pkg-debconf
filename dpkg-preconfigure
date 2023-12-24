@@ -112,7 +112,7 @@ my $have_tty=1;
 
 # If running from apt, read package filenames on stdin.
 if ($apt) {
-	while (<>) {
+	while (<STDIN>) {
 		chomp;
 		push @debs, $_ if length $_;
 	}

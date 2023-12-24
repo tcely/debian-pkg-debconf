@@ -58,7 +58,7 @@ $confmodule->owner(shift) if @ARGV;
 my $code=127;
 autoflush STDOUT 1;
 
-while (<>) {
+while (<STDIN>) {
 	chomp;
 	my $ret=$confmodule->process_command($_);
 	($code, undef)=split(/ /, $ret, 2);

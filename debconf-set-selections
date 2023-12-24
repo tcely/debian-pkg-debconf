@@ -190,27 +190,37 @@ GetOptions(
 
 $error = 0;
 
-while (<>) {
-	$_=mungeline($_);
-	while (/\\$/ && ! eof) {
-		s/\\$//;
-		$_.=mungeline(<>);
+unshift @ARGV, '-' unless @ARGV;
+foreach my $filename (@ARGV) {
+	my $input;
+	if ($filename eq '-') {
+		$input = \*STDIN;
+	} elsif (not open $input, '<', $filename) {
+		warn $!;
+		next;
 	}
-	next if /^\s*$/ || /^\s*\#/;
-	# Allow multiple spaces between all values except the last one.
-	# Extra whitespace in the content is significant.
-	my ($owner, $label, $type, $content) = /^\s*(\S+)\s+(\S+)\s+(\S+)(?:\s(.*))?/;
-	if (! defined $content) {
-		$content='';
-	}
-	if (ok_format($owner, $label, $type, $content)) {
-		if (grep { $_ eq $type } @knownflags) {
-			info "Trying to set '$type' flag to '$content'";
-			set_flag($owner, $label, $type, $content);
+	while (<$input>) {
+		$_=mungeline($_);
+		while (/\\$/ && ! eof) {
+			s/\\$//;
+			$_.=mungeline(<$input>);
 		}
-		else {
-			info "Trying to set '$label' [$type] to '$content'";
-			load_answer($owner, $label, $type, $content);
+		next if /^\s*$/ || /^\s*\#/;
+		# Allow multiple spaces between all values except the last one.
+		# Extra whitespace in the content is significant.
+		my ($owner, $label, $type, $content) = /^\s*(\S+)\s+(\S+)\s+(\S+)(?:\s(.*))?/;
+		if (! defined $content) {
+			$content='';
+		}
+		if (ok_format($owner, $label, $type, $content)) {
+			if (grep { $_ eq $type } @knownflags) {
+				info "Trying to set '$type' flag to '$content'";
+				set_flag($owner, $label, $type, $content);
+			}
+			else {
+				info "Trying to set '$label' [$type] to '$content'";
+				load_answer($owner, $label, $type, $content);
+			}
 		}
 	}
 }

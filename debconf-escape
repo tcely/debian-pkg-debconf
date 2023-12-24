@@ -54,13 +54,13 @@ if ($escape == $unescape) {
 }
 
 if ($escape) {
-	while (<>) {
+	while (<STDIN>) {
 		s/\\/\\\\/g;
 		s/\n/\\n/g;
 		print;
 	}
 } else {
-	while (<>) {
+	while (<STDIN>) {
 		for (split /(\\.)/) {
 			s/\\(.)/$1 eq "n" ? "\n" : $1/eg;
 			print;
