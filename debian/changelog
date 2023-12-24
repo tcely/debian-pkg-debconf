@@ -1,4 +1,4 @@
-debconf (1.5.83) UNRELEASED; urgency=medium
+debconf (1.5.83) unstable; urgency=medium
 
   [ Ani Hay ]
   * Recompress debian-logo.png.
@@ -11,7 +11,7 @@ debconf (1.5.83) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Avoid Perl's unsafe "<>" operator (closes: #1041329).
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 14 Oct 2023 14:05:39 +0100
+ -- Colin Watson <cjwatson@debian.org>  Sun, 24 Dec 2023 12:34:57 +0000
 
 debconf (1.5.82) unstable; urgency=medium
 
