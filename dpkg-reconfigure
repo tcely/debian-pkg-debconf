@@ -80,11 +80,12 @@ L<debconf(7)>
 
 =cut
 
+use strict;
+
 if (exists $ENV{DEBCONF_USE_CDEBCONF} and $ENV{DEBCONF_USE_CDEBCONF} ne '') {
     exec "/usr/lib/cdebconf/dpkg-reconfigure", @ARGV;
 }
 
-use strict;
 use Cwd;
 use Debconf::Db;
 use Debconf::Gettext;

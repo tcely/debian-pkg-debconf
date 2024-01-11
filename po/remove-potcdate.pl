@@ -1,5 +1,9 @@
 #! /usr/bin/perl -n
 
+use strict;
+
+my $seen_potcdate;
+
 BEGIN {
     $seen_potcdate = 0;
 }

@@ -4,18 +4,6 @@
 
 debconf-set-selections - insert new values into the debconf database
 
-=cut
-
-sub usage {
-	print STDERR <<EOF;
-Usage: debconf-set-selections [-vcu] [file]
-  -v, --verbose     verbose output
-  -c, --checkonly   only check the input file format
-  -u, --unseen      do not set the 'seen' flag when preseeding values
-EOF
-	exit(1);
-}
-
 =head1 SYNOPSIS
 
  debconf-set-selections file
@@ -93,6 +81,16 @@ use Debconf::Template;
 use Getopt::Long;
 
 use vars qw(%opts $filename $debug $error $checkonly $unseen);
+
+sub usage {
+	print STDERR <<EOF;
+Usage: debconf-set-selections [-vcu] [file]
+  -v, --verbose     verbose output
+  -c, --checkonly   only check the input file format
+  -u, --unseen      do not set the 'seen' flag when preseeding values
+EOF
+	exit(1);
+}
 
 sub info {
 	my $msg = shift;

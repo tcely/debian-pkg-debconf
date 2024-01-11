@@ -1,10 +1,10 @@
-my $tmp_base_dir = "/tmp/debconf-test";
-
 package CopyDBTestSetup;
 
 use strict;
 use Test::Debconf::DbDriver::SLAPD;
 use base qw(Test::Unit::Setup);
+
+my $tmp_base_dir = "/tmp/debconf-test";
 
 sub set_up{
 	my $self = shift();

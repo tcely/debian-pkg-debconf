@@ -62,6 +62,8 @@ L<debconf(7)>
 
 =cut
 
+use strict;
+
 # This program may be running from apt. If so, if it fails, apt is going to
 # fail as well, which will make it hard for people to fix whatever the failure
 # was. One thing someone encountered was perl failing to install. Apt then
@@ -70,7 +72,6 @@ L<debconf(7)>
 # an error message, but a return code of 0 so apt continues.
 BEGIN {
 	eval qq{
-		use strict;
 		use File::Path qw(make_path remove_tree);
 		use FileHandle;
 		use Debconf::Log qw(:all);

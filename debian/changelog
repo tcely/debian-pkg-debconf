@@ -1,3 +1,10 @@
+debconf (1.5.84) UNRELEASED; urgency=medium
+
+  * perlcritic fixes:
+    - Move "use strict" above all code.
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
+
 debconf (1.5.83) unstable; urgency=medium
 
   [ Ani Hay ]

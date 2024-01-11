@@ -1,5 +1,9 @@
 #!/usr/bin/perl -w -I.
 
+use strict;
+use Test::Unit::TestRunner;
+use Getopt::Long;
+
 sub usage {
 	print STDERR <<EOF;
 Usage: 
@@ -8,10 +12,6 @@ Usage:
 EOF
 	exit(1);
 }
-
-use strict;
-use Test::Unit::TestRunner;
-use Getopt::Long;
 
 my $all=0;
 my $test=0;
