@@ -133,7 +133,7 @@ COLUMN:	for ($num_cols = $max_cols; $num_cols >= 0; $num_cols--) {
 	}
 
 	# Remove unnecessary whitespace at ends of lines.
-	@output = map { s/\s+$//; $_ } @output;
+	for (@output) { s/\s+$//; }
 
 	map { $this->frontend->display_nowrap($_) } @output;
 }
