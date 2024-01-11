@@ -3,6 +3,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
   * perlcritic fixes:
     - Move "use strict" above all code.
     - Avoid declaring variables in conditional statements.
+    - Don't use bareword file/directory handles.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 

@@ -216,14 +216,14 @@ foreach my $pkg (@packages) {
 
 		if ($script ne 'config') {
 			# Test to see if the script uses debconf.
-			open (IN, "<$path_script");
-			while (<IN>) {
+			open (my $in, "<$path_script");
+			while (<$in>) {
 				if (/confmodule/i) {
 					$is_confmodule=1;
 					last;
 				}
 			}
-			close IN;
+			close $in;
 		}
 		
 		chdir('/');
@@ -289,9 +289,9 @@ sub triggers_pending {
 	my @ret;
 	local $_;
 
-	open (QUERY, '-|', 'dpkg-query', '-W',
+	open (my $query, '-|', 'dpkg-query', '-W',
 		'-f', '${Package} ${binary:Package}\t${Triggers-Pending}\n');
-	while (<QUERY>) {
+	while (<$query>) {
 		chomp;
 		my ($pkgnames, $triggers) = split /\t/;
 		if (length $triggers) {
@@ -300,7 +300,7 @@ sub triggers_pending {
 			push @ret, (length $binpkg ? $binpkg : $pkg);
 		}
 	}
-	close QUERY;
+	close $query;
 
 	return @ret;
 }

@@ -48,15 +48,15 @@ elsif ($ARGV[0]=~m!^.*/(.*?)\.(?:postinst|postrm|prerm)$!) {
 elsif (-e "$root/var/lib/dpkg/tmp.ci/control") {
 	# The preinst is running, presumably. Now it gets really ugly, because
 	# I have to parse the control file.
-	open (CONTROL, "< $root/var/lib/dpkg/tmp.ci/control")
+	open (my $control, "< $root/var/lib/dpkg/tmp.ci/control")
 		|| die "Debconf: unable to open control file: $!";
-	while (<CONTROL>) {
+	while (<$control>) {
 		if (/^Package: (.*)/) {
 			$package=$1;
 			last;
 		}
 	}
-	close CONTROL;
+	close $control;
 	if (! exists $ENV{PERL_DL_NONLAZY} || ! $ENV{PERL_DL_NONLAZY}) {
 		warn "PERL_DL_NONLAZY is not set, if debconf is running from a preinst script, this is not safe";
 	}

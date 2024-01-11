@@ -257,8 +257,8 @@ sub db_init {
 	# build conf file
 	$self->{conf_file} = new File::Temp( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
-	open(OUTFILE, ">$self->{conf_filename}");
-	print OUTFILE gettext(<<EOF);
+	open(my $outfile, ">$self->{conf_filename}");
+	print $outfile gettext(<<EOF);
 Config: configdb
 Templates: templatedb
 
@@ -301,7 +301,7 @@ Filename: $self->{template_filename}
 
 EOF
 
-	close OUTFILE;
+	close $outfile;
 	
 	# the only solution to test debconf-copydb with
 	# different conf file => VERY UGLY

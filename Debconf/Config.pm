@@ -120,11 +120,11 @@ sub load {
 	}
 	die "No config file found" unless $cf;
 
-	open (DEBCONF_CONFIG, $cf) or die "$cf: $!\n";
+	open (my $debconf_config, $cf) or die "$cf: $!\n";
 	local $/="\n\n"; # read a stanza at a time
 
 	# Read global options stanza.
-	1 until _hashify(<DEBCONF_CONFIG>, $config) || eof DEBCONF_CONFIG;
+	1 until _hashify(<$debconf_config>, $config) || eof $debconf_config;
 
 	# Verify that all options are sane.
 	if (! exists $config->{config}) {
@@ -141,7 +141,7 @@ sub load {
 	}
 
 	# Now read in each database driver, and set it up.
-	while (<DEBCONF_CONFIG>) {
+	while (<$debconf_config>) {
 		my %config=(@defaults);
 		if (exists $ENV{DEBCONF_DB_REPLACE}) {
 			$config{readonly} = "true";
@@ -158,7 +158,7 @@ sub load {
 			die $@;
 		}
 	}
-	close DEBCONF_CONFIG;
+	close $debconf_config;
 
 	# DEBCONF_DB_REPLACE bypasses the normal databases. We do still need
 	# to set up the normal databases anyway so that the template

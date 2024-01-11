@@ -152,7 +152,8 @@ my ($package, $version, $template, $config);
 # deal with the package, because apt-extracttemplates skips over any
 # package that depends on a version of debconf newer than what is
 # installed.
-unless (open(INFO, "-|")) {
+my $info;
+unless (open($info, "-|")) {
 	# The kernel can accept command lines up to 20k worth of
 	# characters. It has happened that the list of packages to
 	# configure is more than that, which requires splitting it up into
@@ -198,7 +199,7 @@ unless (open(INFO, "-|")) {
 # only the first and last use debconf. The first is preconfigured. Then
 # the user watches their UI lock up until it scans all the way to the last..
 # Blowing a bit of memory on a buffer seems like a saner approach.
-my @buffer=<INFO>;
+my @buffer=<$info>;
 if ($apt && @buffer) {
 	print gettext("Preconfiguring packages ...\n");
 }

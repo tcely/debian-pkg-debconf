@@ -122,8 +122,8 @@ sub go {
 	# pass the text into it to be processed.
 	# FIXME: this isn't really very robust. Syntax errors are ignored.
 	my %eltname=map { $_->question->name => $_ } @elements;
-	open (IN, "<".Debconf::TmpFile::filename());
-	while (<IN>) {
+	open (my $in, "<".Debconf::TmpFile::filename());
+	while (<$in>) {
 		next if /^\s*#/;
 
 		if (/(.*?)="(.*)"/ && $eltname{$1}) {
@@ -132,7 +132,7 @@ sub go {
 			$eltname{$1}->value($2);
 		}
 	}
-	close IN;
+	close $in;
 	
 	Debconf::TmpFile::cleanup();
 

@@ -285,14 +285,14 @@ sub startdialog {
 		join(",", $this->program, @_);
 
 	# Save stdout, stdin, the open3 below messes with them.
-	use vars qw{*SAVEOUT *SAVEIN};
-	open(SAVEOUT, ">&STDOUT") || die $!;
-	$this->dialog_saveout(\*SAVEOUT);
+	our ($saveout, $savein);
+	open($saveout, ">&STDOUT") || die $!;
+	$this->dialog_saveout($saveout);
 	if ($wantinputfd) {
 		$this->dialog_savein(undef);
 	} else {
-		open(SAVEIN, "<&STDIN") || die $!;
-		$this->dialog_savein(\*SAVEIN);
+		open($savein, "<&STDIN") || die $!;
+		$this->dialog_savein($savein);
 	}
 
 	# If warnings are enabled by $^W, they are actually printed to

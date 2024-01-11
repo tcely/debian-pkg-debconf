@@ -17,8 +17,8 @@ foreach my $file (@ARGV) {
 	my $package='';
 	my $desc='';
 	my @isa=();
-	open (IN,$file) || die "$file: $!";
-	while (<IN>) {
+	open (my $in, $file) || die "$file: $!";
+	while (<$in>) {
 		if (/package\s(\w+.*?);/) {
 			$package=$1;
 		}
@@ -30,7 +30,7 @@ foreach my $file (@ARGV) {
 			$desc=$1;
 		}
 	}
-	close IN;
+	close $in;
 	
 	if ($package) {
 		$descs{$package}=$desc;
