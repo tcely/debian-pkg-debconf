@@ -90,7 +90,7 @@ sub get {
 		$this->{name}=$name;
 		return $question{$name}=$this;
 	}
-	return undef;
+	return;
 }
 
 =item iterator

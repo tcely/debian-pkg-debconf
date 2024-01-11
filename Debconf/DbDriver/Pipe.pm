@@ -140,7 +140,7 @@ Sorry bud, if it's not in the cache, it doesn't exist.
 =cut
 
 sub load {
-	return undef;
+	return;
 }
 
 =head1 AUTHOR

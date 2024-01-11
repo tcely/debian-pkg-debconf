@@ -145,7 +145,7 @@ sub get {
 		$this->{template}=$template;
 		return $template{$template}=$this;
 	}
-	return undef;
+	return;
 }
 
 =head2 i18n

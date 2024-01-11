@@ -96,7 +96,7 @@ sub iterator {
 				return $ret;
 			}
 			$i = pop @iterators;
-			return undef unless defined $i;
+			return unless defined $i;
 		}
 	});
 }
@@ -316,7 +316,7 @@ sub _nochange {
 
 	# If the thing does not have the same value, there will be a change.
 	return $currentvalue if $currentvalue eq $value;
-	return undef;
+	return;
 }
 
 sub addowner	{ $_[0]->_change('addowner', @_)	}

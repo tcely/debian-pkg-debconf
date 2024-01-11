@@ -128,7 +128,7 @@ sub iterator {
 			next unless $i=~s/$this->{extension}$//;
 			return $currentdir.$i;
 		}
-		return undef;
+		return;
 	});
 
 	$this->SUPER::iterator($iterator);

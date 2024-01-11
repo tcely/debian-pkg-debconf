@@ -7,6 +7,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Make all loop iterators lexical.
     - Don't modify $_ in list functions.
     - Don't use subroutine prototypes.
+    - Use bare return rather than "return undef".
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 

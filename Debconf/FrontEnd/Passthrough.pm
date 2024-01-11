@@ -90,7 +90,7 @@ sub init_fh_from_env {
 			or croak "Failed to open fd $writefd: $!";
 		return "fifo";
 	}
-	return undef;
+	return;
 }
 
 =head2 talk_with_timeout
@@ -118,9 +118,9 @@ sub talk_with_timeout {
 
 	if (defined $timeout) {
 		my $select = IO::Select->new($readfh);
-		return undef if !$select->can_read($timeout);
+		return if !$select->can_read($timeout);
 	}
-	return undef if ($readfh->eof());
+	return if ($readfh->eof());
 
 	$reply = <$readfh>;
 	chomp($reply);

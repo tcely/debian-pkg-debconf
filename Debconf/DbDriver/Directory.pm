@@ -218,9 +218,9 @@ sub remove {
 	return if $this->{readonly} or not $this->accept($name);
 	debug "db $this->{name}" => "removing $name";
 	my $file=$this->{directory}.'/'.$this->filename($name);
-	unlink $file or return undef;
+	unlink $file or return;
 	if (-e $file."-old") {
-		unlink $file."-old" or return undef;
+		unlink $file."-old" or return;
 	}
 	return 1;
 }

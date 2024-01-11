@@ -404,7 +404,7 @@ sub waitdialog {
 	my $ret=$? >> 8;
 	if ($ret == 255 || ($ret == 1 && join(' ', @_) !~ m/--yesno\s/)) {
 		$this->backup(1);
-		return undef;
+		return;
 	}
 
 	if (wantarray) {
