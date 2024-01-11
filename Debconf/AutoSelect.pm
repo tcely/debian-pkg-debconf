@@ -82,20 +82,23 @@ sub make_frontend {
 	}
 
 	my $showfallback=0;
-	foreach $type ($starttype, @{$fallback{$starttype}}, 'Noninteractive') {
+	foreach my $trytype ($starttype, @{$fallback{$starttype}}, 'Noninteractive') {
 		if (! $showfallback) {
-			debug user => "trying frontend $type";
+			debug user => "trying frontend $trytype";
 		}
 		else {
-			warn(sprintf(gettext("falling back to frontend: %s"), $type));
+			warn(sprintf(gettext("falling back to frontend: %s"), $trytype));
 		}
 		$frontend=eval qq{
-			use Debconf::FrontEnd::$type;
-			Debconf::FrontEnd::$type->new();
+			use Debconf::FrontEnd::$trytype;
+			Debconf::FrontEnd::$trytype->new();
 		};
-		return $frontend if defined $frontend;
+		if (defined $frontend) {
+			$type = $trytype;
+			return $frontend;
+		}
 
-		warn sprintf(gettext("unable to initialize frontend: %s"), $type);
+		warn sprintf(gettext("unable to initialize frontend: %s"), $trytype);
 		$@=~s/\n.*//s;
 		warn "($@)";
 		$showfallback=1;

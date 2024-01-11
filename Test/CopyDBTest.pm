@@ -202,8 +202,7 @@ sub copydb {
 		
 		if (defined $owner_pattern) {
 			my $fit_owner = 0;
-			my $owner;
-			foreach $owner ($src_driver->owners($item)){
+			foreach my $owner ($src_driver->owners($item)){
 				$fit_owner = 1 if $owner =~ /$owner_pattern/;
 			}
 			next unless $fit_owner;
