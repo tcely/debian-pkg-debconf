@@ -1,0 +1,3 @@
+# We use signatures instead of prototypes (except for a few subroutines used
+# with sort), but perlcritic doesn't understand that.
+[-Subroutines::ProhibitSubroutinePrototypes]

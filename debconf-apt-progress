@@ -142,6 +142,7 @@ cancel button on the progress bar. If the cancel button was hit, a value of
 =cut
 
 use strict;
+use feature qw(signatures);
 use POSIX;
 use Fcntl;
 use Getopt::Long;
@@ -154,46 +155,41 @@ my $dlwaypoint=15;
 my ($logfile, $logstderr);
 my $had_frontend;
 
-sub checkopen (@) {
-	my $file = $_[0];
+sub checkopen ($file) {
 	my $fd = POSIX::open($file, &POSIX::O_RDONLY);
 	defined $fd or die "$0: can't open $_[0]: $!\n";
 	return $fd;
 }
 
-sub checkclose ($) {
-	my $fd = $_[0];
+sub checkclose ($fd) {
 	unless (POSIX::close($fd)) {
 		return if $! == &POSIX::EBADF;
 		die "$0: can't close fd $fd: $!\n";
 	}
 }
 
-sub checkdup2 ($$) {
-	my ($oldfd, $newfd) = @_;
+sub checkdup2 ($oldfd, $newfd) {
 	checkclose($newfd);
 	POSIX::dup2($oldfd, $newfd)
 		or die "$0: can't dup fd $oldfd to $newfd: $!\n";
 }
 
-sub nocloexec ($) {
-	my $fh = shift;
+sub nocloexec ($fh) {
 	my $flags = fcntl($fh, F_GETFD, 0);
 	fcntl($fh, F_SETFD, $flags & ~FD_CLOEXEC);
 }
 
-sub nonblock ($) {
-	my $fh = shift;
+sub nonblock ($fh) {
 	my $flags = fcntl($fh, F_GETFL, 0);
 	fcntl($fh, F_SETFL, $flags | O_NONBLOCK);
 }
 
 # Open the given file descriptors to make sure they won't accidentally be
 # used by Perl, leading to confusion.
-sub reservefds (@) {
+sub reservefds (@fds) {
 	my $null = checkopen('/dev/null');
 	my $close = 1;
-	for my $fd (@_) {
+	for my $fd (@fds) {
 		if ($null == $fd) {
 			$close = 0;
 		} else {
@@ -207,12 +203,11 @@ sub reservefds (@) {
 }
 
 # Does this environment variable exist, and is it non-empty?
-sub envnonempty ($) {
-	my $name = shift;
+sub envnonempty ($name) {
 	return (exists $ENV{$name} and $ENV{$name} ne '');
 }
 
-sub start_debconf (@) {
+sub start_debconf (@saved_argv) {
 	if (! $ENV{DEBIAN_HAS_FRONTEND}) {
 		# Save existing environment variables.
 		if (envnonempty('DEBCONF_DB_REPLACE')) {
@@ -237,13 +232,13 @@ sub start_debconf (@) {
 
 		# Restore @ARGV so that
 		# Debconf::Client::ConfModule::import() can use it.
-		@ARGV = @_;
+		@ARGV = @saved_argv;
 	}
 
 	import Debconf::Client::ConfModule;
 }
 
-sub passthrough (@) {
+sub passthrough (@argv) {
 	my $priority = Debconf::Client::ConfModule::get('debconf/priority');
 
 	defined(my $pid = fork) or die "$0: can't fork: $!\n";
@@ -282,7 +277,7 @@ sub passthrough (@) {
 			$ENV{DEBCONF_DB_REPLACE} = 'configdb';
 			$ENV{DEBCONF_DB_OVERRIDE} = 'Pipe{infd:none outfd:none}';
 		}
-		exec @_;
+		exec @argv;
 	}
 
 	close $status_write;
@@ -292,8 +287,7 @@ sub passthrough (@) {
 	return $pid;
 }
 
-sub handle_status ($$$) {
-	my ($from, $to, $line) = @_;
+sub handle_status ($from, $to, $line) {
 	my ($status, $pkg, $percent, $description) = split ':', $line, 4;
 
 	my ($min, $len);
@@ -339,9 +333,7 @@ sub handle_status ($$$) {
 	}
 }
 
-sub handle_debconf_command ($) {
-	my $line = shift;
-
+sub handle_debconf_command ($line) {
 	# Debconf::Client::ConfModule has already dealt with checking
 	# DEBCONF_REDIR.
 	print "$line\n" || die "can't write to stdout: $!";
@@ -352,10 +344,8 @@ sub handle_debconf_command ($) {
 }
 
 my $pid;
-sub run_progress ($$@) {
-	my $from = shift;
-	my $to = shift;
-	my $command = shift;
+sub run_progress ($from, $to, @argv) {
+	my $command = shift @argv;
 	local ($status_read, $status_write);
 	local ($command_read, $command_write);
 	local ($debconf_command_read, $debconf_command_write);
@@ -419,7 +409,7 @@ sub run_progress ($$@) {
 		'-o', 'APT::Status-Fd=4',
 		'-o', 'APT::Keep-Fds::=5',
 		'-o', 'APT::Keep-Fds::=6',
-		@_;
+		@argv;
 
 	my $status_eof = 0;
 	my $debconf_command_eof = 0;
@@ -542,8 +532,7 @@ sub cancel () {
 	}
 }
 
-sub start_bar ($$) {
-	my ($from, $to) = @_;
+sub start_bar ($from, $to) {
 	if ($progress) {
 		Debconf::Client::ConfModule::progress(
 			'START', $from, $to, 'debconf-apt-progress/title');
