@@ -180,7 +180,7 @@ sub shutdown
 
 	return if $this->{readonly};
 
-	if (grep $this->{dirty}->{$_}, keys %{$this->{cache}}) {
+	if (grep { $this->{dirty}->{$_} } keys %{$this->{cache}}) {
 		debug "db $this->{name}" => "saving changes";
 	} else {
 		debug "db $this->{name}" => "no database changes, not saving";

@@ -227,7 +227,7 @@ sub showtext {
 		else {
 			# Dialog has to use a temp file.
 			my $fh=Debconf::TmpFile::open();
-			print $fh join("\n", map &hide_escape, @lines);
+			print $fh join("\n", map { &hide_escape } @lines);
 			close $fh;
 			@args=("--textbox", Debconf::TmpFile::filename());
 		}
@@ -435,7 +435,7 @@ sub showdialog {
 	my $this=shift;
 	my $question=shift;
 
-	@_=map &hide_escape, @_;
+	@_=map { &hide_escape } @_;
 
 	# It's possible to ask questions in the middle of a progress bar.
 	# However, whiptail doesn't like having two instances of itself

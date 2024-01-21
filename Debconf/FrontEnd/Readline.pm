@@ -130,14 +130,14 @@ sub go {
 	my $this=shift;
 
 	# First, take care of any noninteractive elements in the block.
-	foreach my $element (grep ! $_->visible, @{$this->elements}) {
+	foreach my $element (grep { ! $_->visible } @{$this->elements}) {
 		my $value=$element->show;
 		return if $this->backup && $this->capb_backup;
 		$element->question->value($value);
 	}
 
 	# Now we only have to deal with the interactive elements.
-	my @elements=grep $_->visible, @{$this->elements};
+	my @elements=grep { $_->visible } @{$this->elements};
 	unless (@elements) {
 		$this->_didbackup('');
 		return 1;

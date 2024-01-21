@@ -178,10 +178,10 @@ foreach my $pkg (@packages) {
 	}
 
 	my @control_paths=`dpkg-query --control-path $pkg`;
-	map chomp, @control_paths;
+	map { my $line = $_; chomp $line; $line } @control_paths;
 	my $control_path = sub {
 		my $file = shift;
-		my $path = (grep /\.\Q$file\E$/, @control_paths)[0];
+		my $path = (grep { /\.\Q$file\E$/ } @control_paths)[0];
 		chomp($path) if defined $path;
 		return $path;
 	};

@@ -260,7 +260,7 @@ the UI agent.
 sub go {
 	my $this = shift;
 
-	my @elements=grep $_->visible, @{$this->elements};
+	my @elements=grep { $_->visible } @{$this->elements};
 	foreach my $element (@elements) {
 		my $question = $element->question;
 		my $tag = $question->template->template;
