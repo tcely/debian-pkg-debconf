@@ -98,7 +98,7 @@ class Debconf:
     ) -> None:
         for command in (
             "capb set reset title input beginblock endblock go get"
-            " register unregister subst fset fget previous_module"
+            " register unregister subst fset fget"
             " visible purge metaget exist version_ settitle"
             " info progress data"
         ).split():
