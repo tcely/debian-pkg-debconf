@@ -118,8 +118,13 @@ sub new {
 	foreach my $field (keys %params) {
 		if ($field eq 'readonly' || $field eq 'required' || $field eq 'backup') {
 			# Convert from true/false strings to numbers.
-			$this->{$field}=1,next if lc($params{$field}) eq "true";
-			$this->{$field}=0,next if lc($params{$field}) eq "false";
+			if (lc($params{$field}) eq "true") {
+				$this->{$field}=1;
+				next;
+			} elsif (lc($params{$field}) eq "false") {
+				$this->{$field}=0;
+				next;
+			}
 		}
 		elsif ($field=~/^(accept|reject)_/) {
 			# Internally, store these as pre-compiled regexps.

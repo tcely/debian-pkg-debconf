@@ -311,7 +311,10 @@ sub _nochange {
 	# If the thing doesn't exist yet, there will be a change.
 	my $exists=0;
 	foreach my $i (@list) {
-		$exists=1, last if $thing eq $i;
+		if ($thing eq $i) {
+			$exists=1;
+			last;
+		}
 	}
 	return $currentvalue unless $exists;
 

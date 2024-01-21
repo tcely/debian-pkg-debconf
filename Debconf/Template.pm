@@ -401,9 +401,9 @@ sub _getlocalelist {
 	     (\..+)?        #  Charset
 	     /x);
 	my (@ret) = ($lang);
-	@ret = map { $_.$modifier, $_} @ret if defined $modifier;
-	@ret = map { _addterritory($_,$territory), $_} @ret if defined $territory;
-	@ret = map { _addcharset($_,$charset), $_} @ret if defined $charset;
+	@ret = map { ($_.$modifier, $_) } @ret if defined $modifier;
+	@ret = map { (_addterritory($_,$territory), $_) } @ret if defined $territory;
+	@ret = map { (_addcharset($_,$charset), $_) } @ret if defined $charset;
 	return @ret;
 }
 

@@ -107,7 +107,10 @@ sub load ($class, $cf, @defaults) {
 	if (! $cf) {
 		for my $file (@config_files) {
 			$file = "$ENV{DPKG_ROOT}$file" if exists $ENV{DPKG_ROOT};
-			$cf=$file, last if -e $file;
+			if (-e $file) {
+				$cf = $file;
+				last;
+			}
 		}
 	}
 	die "No config file found" unless $cf;
