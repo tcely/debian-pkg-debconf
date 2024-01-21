@@ -22,7 +22,7 @@ sub set_up{
 
 sub tear_down{
 	my $self = shift();
-    
+
 	$self->{slapd}->slapd_stop();
 }
 
@@ -59,13 +59,13 @@ sub new_driver {
 		binddn => "cn=admin,dc=debian,dc=org",
 		bindpasswd => "debian",
 	);
-    
+
 	$self->{driver} = Debconf::DbDriver::LDAP->new(%params);
 }
 
 sub set_up {
 	my $self = shift;
-	
+
 	$self->new_driver();
 }
 
@@ -80,7 +80,7 @@ sub suite {
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
 	my $wrapper = LDAPTestSetup->new($testsuite);
-    
+
 	return $wrapper;
 }
 

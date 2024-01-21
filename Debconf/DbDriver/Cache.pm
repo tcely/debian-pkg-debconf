@@ -194,7 +194,7 @@ format as the cacheadd() entry parameter.
 sub cachedata {
 	my $this=shift;
 	my $item=shift;
-	
+
 	return $this->{cache}->{$item};
 }
 
@@ -231,7 +231,7 @@ Returns true unless any of the operations fail.
 
 sub shutdown {
 	my $this=shift;
-	
+
 	return if $this->{readonly};
 
 	my $ret=1;
@@ -334,7 +334,7 @@ sub getfield {
 	my $this=shift;
 	my $item=shift;
 	my $field=shift;
-	
+
 	return unless $this->cached($item);
 	return $this->{cache}->{$item}->{fields}->{$field};
 }
@@ -354,7 +354,7 @@ sub setfield {
 	return if $this->{readonly};
 	return unless $this->cached($item);
 	$this->{dirty}->{$item}=1;
-	return $this->{cache}->{$item}->{fields}->{$field} = $value;	
+	return $this->{cache}->{$item}->{fields}->{$field} = $value;
 }
 
 =head2 removefield(itemname, fieldname)
@@ -383,7 +383,7 @@ Pulls the field list out of the cache.
 sub fields {
 	my $this=shift;
 	my $item=shift;
-	
+
 	return unless $this->cached($item);
 	return keys %{$this->{cache}->{$item}->{fields}};
 }
@@ -398,7 +398,7 @@ sub getflag {
 	my $this=shift;
 	my $item=shift;
 	my $flag=shift;
-	
+
 	return unless $this->cached($item);
 	return $this->{cache}->{$item}->{flags}->{$flag}
 		if exists $this->{cache}->{$item}->{flags}->{$flag};

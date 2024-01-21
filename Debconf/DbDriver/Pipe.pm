@@ -78,7 +78,7 @@ sub init {
 				$this->error("could not open file descriptor #$this->{infd}: $!");
 		}
 	}
-	else {	
+	else {
 		open ($fh, '<', \*STDIN);
 	}
 
@@ -118,7 +118,7 @@ sub shutdown {
 	else {
 		open ($fh, '>', \*STDOUT);
 	}
-	
+
 	if (defined $fh) {
 		$this->{format}->beginfile;
 		foreach my $item (sort keys %{$this->{cache}}) {

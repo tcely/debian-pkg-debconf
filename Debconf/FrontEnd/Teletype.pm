@@ -56,7 +56,7 @@ text will not be shown in terse mode,
 sub display {
 	my $this=shift;
 	my $text=shift;
-	
+
 	$Debconf::Encoding::columns=$this->screenwidth;
 	$this->display_nowrap(wrap('','',$text));
 }
@@ -78,7 +78,7 @@ sub display_nowrap {
 	# Silly split elides trailing null matches.
 	my @lines=split(/\n/, $text);
 	push @lines, "" if $text=~/\n$/;
-	
+
 	# Add to the display any pending title.
 	my $title=$this->title;
 	if (length $title) {
@@ -116,7 +116,7 @@ sub display_nowrap {
 Prompts the user for input, and returns it. If a title is pending,
 it will be displayed before the prompt.
 
-This function will return undef if the user opts to skip the question 
+This function will return undef if the user opts to skip the question
 (by backing up or moving on to the next question). Anything that uses this
 function should catch that and handle it, probably by exiting any
 read/validate loop it is in.

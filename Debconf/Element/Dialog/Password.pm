@@ -19,7 +19,7 @@ field on it.
 
 sub show {
 	my $this=shift;
-	
+
 	my ($text, $lines, $columns)=
 		$this->frontend->makeprompt($this->question);
 

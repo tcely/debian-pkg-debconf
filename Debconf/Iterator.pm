@@ -17,7 +17,7 @@ just as you would use anything else derived from Debconf::Base.
 
 =head1 FIELDS
 
-Generally any you want. By convention prefix any field names you use with 
+Generally any you want. By convention prefix any field names you use with
 your module's name, to prevent conflicts when multiple modules need to use
 the same iterator.
 

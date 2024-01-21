@@ -119,9 +119,9 @@ if ($apt) {
 		chomp;
 		push @debs, $_ if length $_;
 	}
-	
+
 	exit unless @debs;
-	
+
 	# We have now reached the end of the first file on stdin.
 	# Future reads from stdin should get input from the user, so re-open.
 	$have_tty=0 unless open (STDIN, "<", "/dev/tty");
@@ -183,7 +183,7 @@ unless (open($info, "-|")) {
 				$progress += @collect;
 				printf STDERR "\r".gettext("Extracting templates from packages: %d%%"), $progress * 100 / @debs;
 			}
-				
+
 			@collect=($deb);
 			$len=$static_len + length($deb) + 1;
 		}
@@ -207,7 +207,7 @@ if ($apt && @buffer) {
 }
 foreach my $line (@buffer) {
 	($package, $version, $template, $config)=split /\s/, $line;
-	
+
 	# Load templates if any.
 	if (defined $template && length $template) {
 		eval {
@@ -259,4 +259,3 @@ remove_tree($tempdir, { safe => 1, keep_root => 1 });
 Joey Hess <joeyh@debian.org>
 
 =cut
-

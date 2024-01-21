@@ -29,7 +29,7 @@ sub init {
 
 	my $default='';
 	$default=$this->question->value if defined $this->question->value;
-	
+
 	$this->widget->set_text(to_Unicode($default));
 
 	$this->adddescription;

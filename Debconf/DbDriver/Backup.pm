@@ -85,7 +85,7 @@ Saves both databases.
 
 sub shutdown {
 	my $this=shift;
-	
+
 	$this->{backupdb}->shutdown(@_);
 	$this->{db}->shutdown(@_);
 }
@@ -98,7 +98,7 @@ sub _query {
 	my $this=shift;
 	my $command=shift;
 	shift; # this again
-	
+
 	return $this->{db}->$command(@_);
 }
 

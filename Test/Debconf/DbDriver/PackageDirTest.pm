@@ -23,13 +23,13 @@ sub new_driver {
 		name => "packdirdb",
 		directory => $self->{tmpdir},
 	);
-    
+
 	$self->{driver} = Debconf::DbDriver::PackageDir->new(%params);
 }
 
 sub set_up {
 	my $self = shift;
-	
+
 	$self->{tmpdir} = File::Temp->tempdir('packdirdb-XXXX', DIR => '/tmp');
 	$self->new_driver();
 }
@@ -44,7 +44,7 @@ sub suite {
 	my $self = shift;
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
-    
+
 	return $testsuite;
 }
 

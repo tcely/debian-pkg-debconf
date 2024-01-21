@@ -86,7 +86,7 @@ sub go {
 	my $this=shift;
 	my @elements=@{$this->elements};
 	return 1 unless @elements;
-	
+
 	# End the filename in .sh because it is basically a shell
 	# format file, and this makes some editors do good things.
 	$fh = Debconf::TmpFile::open('.sh');
@@ -106,12 +106,12 @@ sub go {
 		Debconf::TmpFile::cleanup();
 		return 1;
 	}
-	
+
 	$this->divider;
 	$this->comment(gettext("The editor-based debconf frontend presents you with one or more text files to edit. This is one such text file. If you are familiar with standard unix configuration files, this file will look familiar to you -- it contains comments interspersed with configuration items. Edit the file, changing any items as necessary, and then save it and exit. At that point, debconf will read the edited file, and use the values you entered to configure the system."));
 	print $fh ("\n");
 	close $fh;
-	
+
 	# Launch editor.
 	my $editor=$ENV{EDITOR} || $ENV{VISUAL} || '/usr/bin/editor';
 	# $editor may possibly contain spaces and options
@@ -133,7 +133,7 @@ sub go {
 		}
 	}
 	close $in;
-	
+
 	Debconf::TmpFile::cleanup();
 
 	return 1;

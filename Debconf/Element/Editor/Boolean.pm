@@ -51,10 +51,10 @@ if the user typed in something invalid, the value is not changed.
 
 sub value {
 	my $this=shift;
-	
+
 	return $this->SUPER::value() unless @_;
 	my $value=shift;
-	
+
 	# Handle translated and non-translated replies.
 	if ($value eq 'yes' || $value eq gettext("yes")) {
 		return $this->SUPER::value('true');

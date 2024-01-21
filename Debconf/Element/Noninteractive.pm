@@ -27,7 +27,7 @@ This type of element is not visible.
 
 sub visible {
 	my $this=shift;
-	
+
 	return;
 }
 

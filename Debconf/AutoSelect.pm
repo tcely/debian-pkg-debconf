@@ -120,7 +120,7 @@ sub make_confmodule {
 	my $confmodule=Debconf::ConfModule->new(frontend => $frontend);
 
 	$confmodule->startup(@_) if @_;
-	
+
 	return $confmodule;
 }
 

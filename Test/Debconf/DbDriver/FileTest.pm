@@ -25,15 +25,15 @@ sub new_driver {
 		name => "filedb",
 		filename => $self->{tmpfile}->filename,
 	);
-    
+
 	$self->{driver} = Debconf::DbDriver::File->new(%params);
 }
 
 sub set_up {
 	my $self = shift;
-	
+
 	$self->{tmpfile} = new File::Temp( DIR => '/tmp');
-	
+
 	$self->new_driver();
 }
 
@@ -47,7 +47,7 @@ sub suite {
 	my $self = shift;
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
-    
+
 	return $testsuite;
 }
 

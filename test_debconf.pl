@@ -6,7 +6,7 @@ use Getopt::Long;
 
 sub usage {
 	print STDERR <<EOF;
-Usage: 
+Usage:
     test_debconf.pl OneTest
     test_debconf.pl --all
 EOF

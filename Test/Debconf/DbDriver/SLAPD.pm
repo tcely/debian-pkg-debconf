@@ -25,9 +25,9 @@ sub new {
 sub slapd_start{
 	my $self = shift;
 
-		
+
 #	print "beg slapd_start\n";
-	# be sure that we have no residues before starting new test 
+	# be sure that we have no residues before starting new test
 	$self->slapd_stop();
 
 	system("mkdir -p $self->{dir}") == 0
@@ -44,7 +44,7 @@ sub slapd_start{
 
 	# is there slapd installed?
 	if (! -x $slapdbin) {
-		die "Unable to find $slapdbin, is slapd package installed ?"; 
+		die "Unable to find $slapdbin, is slapd package installed ?";
 	}
 
 	system("$slapdbin -s LOG_DEBUG -f $self->{conf} -h ldap://$self->{server}:$self->{port}") == 0

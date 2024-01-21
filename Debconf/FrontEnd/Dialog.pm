@@ -46,10 +46,10 @@ sub init {
 	# whiptail needs.
 	delete $ENV{POSIXLY_CORRECT} if exists $ENV{POSIXLY_CORRECT};
 	delete $ENV{POSIX_ME_HARDER} if exists $ENV{POSIX_ME_HARDER};
-	
+
 	# Detect all the ways people have managed to screw up their
 	# terminals (so far...)
-	if (! exists $ENV{TERM} || ! defined $ENV{TERM} || $ENV{TERM} eq '') { 
+	if (! exists $ENV{TERM} || ! defined $ENV{TERM} || $ENV{TERM} eq '') {
 		die gettext("TERM is not set, so the dialog frontend is not usable.")."\n";
 	}
 	elsif ($ENV{TERM} =~ /emacs/i) {
@@ -58,12 +58,12 @@ sub init {
 	elsif ($ENV{TERM} eq 'dumb' || $ENV{TERM} eq 'unknown') {
 		die gettext("Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.")."\n";
 	}
-	
+
 	$this->interactive(1);
 	$this->capb('backup');
 
 	# Autodetect if whiptail or dialog is available and set magic numbers.
-	if (Debconf::Path::find("whiptail") && 
+	if (Debconf::Path::find("whiptail") &&
 	    (! defined $ENV{DEBCONF_FORCE_DIALOG} || ! Debconf::Path::find("dialog")) &&
 	    (! defined $ENV{DEBCONF_FORCE_XDIALOG} || ! Debconf::Path::find("Xdialog")) &&
 	    system('whiptail --version >/dev/null 2>&1') == 0) {
@@ -81,7 +81,7 @@ sub init {
 	       (! defined $ENV{DEBCONF_FORCE_XDIALOG} || ! Debconf::Path::find("Xdialog")) &&
 	       system('dialog --version >/dev/null 2>&1') == 0) {
 		$this->program('dialog');
-		$this->dashsep(''); # dialog does not need (or support) 
+		$this->dashsep(''); # dialog does not need (or support)
 		                    # double-dash separation
 		$this->borderwidth(7);
 		$this->borderheight(6);
@@ -128,7 +128,7 @@ dialog.
 sub sizetext {
 	my $this=shift;
 	my $text=shift;
-	
+
 	# Try to guess how many lines the text will take up in the dialog.
 	# This is difficult because long lines are wrapped. So what I'll do
 	# is pre-wrap the text and then just look at the number of lines it
@@ -136,7 +136,7 @@ sub sizetext {
 	$columns = $this->screenwidth - $this->borderwidth - $this->columnspacer;
 	$text=wrap('', '', $text);
 	my @lines=split(/\n/, $text);
-	
+
 	# Now figure out what's the longest line. Look at the title size
 	# too. Note use of width function to count columns, not just
 	# characters.
@@ -145,7 +145,7 @@ sub sizetext {
 		my $w=width($_);
 		$window_columns = $w if $w > $window_columns;
 	} @lines;
-	
+
 	return $text, $#lines + 1 + $this->borderheight,
 	       $window_columns + $this->borderwidth;
 }
@@ -267,12 +267,12 @@ sub makeprompt {
 		$question->extended_description."\n\n".
 		$question->description
 	);
-	
+
 	if ($lines > $freelines) {
 		$this->showtext($question, $question->extended_description);
 		($text, $lines, $columns)=$this->sizetext($question->description);
 	}
-	
+
 	return ($text, $lines, $columns);
 }
 
@@ -280,7 +280,7 @@ sub startdialog {
 	my $this=shift;
 	my $question=shift;
 	my $wantinputfd=shift;
-	
+
 	debug debug => "preparing to run dialog. Params are:" ,
 		join(",", $this->program, @_);
 
@@ -296,11 +296,11 @@ sub startdialog {
 	}
 
 	# If warnings are enabled by $^W, they are actually printed to
-	# stdout by IPC::Open3 and get stored in $stdout below! 
+	# stdout by IPC::Open3 and get stored in $stdout below!
 	# So they must be disabled.
 	$this->dialog_savew($^W);
 	$^W=0;
-	
+
 	unless ($this->capb_backup || grep { $_ eq '--defaultno' } @_) {
 		if ($this->program ne 'Xdialog') {
 			unshift @_, '--nocancel';
@@ -313,7 +313,7 @@ sub startdialog {
 	if ($this->program eq 'Xdialog' && $_[0] eq '--passwordbox') {
 		$_[0]='--password --inputbox'
 	}
-	
+
 	# Set up a pipe to the output fd, before calling open3.
 	use vars qw{*OUTPUT_RDR *OUTPUT_WTR};
 	if ($this->hasoutputfd) {
@@ -323,7 +323,7 @@ sub startdialog {
 		$this->dialog_output_rdr(\*OUTPUT_RDR);
 		unshift @_, "--output-fd", fileno(\*OUTPUT_WTR);
 	}
-	
+
 	my $backtitle='';
 	if (defined $this->info) {
 		$backtitle = $this->info->description;

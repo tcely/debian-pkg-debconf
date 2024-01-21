@@ -22,7 +22,7 @@ use base qw(Debconf::FrontEnd);
 
 =head1 DESCRIPTION
 
-This is a IPC pass-through frontend for Debconf. It is meant to enable 
+This is a IPC pass-through frontend for Debconf. It is meant to enable
 integration of Debconf frontend components with installation systems.
 
 The basic idea of this frontend is to replay messages between the
@@ -108,10 +108,10 @@ sub talk_with_timeout {
 	my $timeout=shift;
 	my $command=join(' ', map { Debconf::Encoding::to_Unicode($_) } @_);
 	my $reply;
-	
+
 	my $readfh = $this->{readfh} || croak "Broken pipe";
 	my $writefh = $this->{writefh} || croak "Broken pipe";
-	
+
 	debug developer => "----> (passthrough) $command";
 	print $writefh $command."\n";
 	$writefh->flush;
@@ -250,7 +250,7 @@ sub settitle
 
 =head2 go
 
-Asks the UI agent to display all pending questions, first using the special 
+Asks the UI agent to display all pending questions, first using the special
 data command to tell it necessary data about them. Then read answers from
 the UI agent.
 
@@ -311,7 +311,7 @@ sub go {
 	if (@elements && (scalar($this->talk('GO')) eq "30") && $this->{capb_backup}) {
 		return;
 	}
-	
+
 	# Retrieve the answers.
 	foreach my $element (@{$this->elements}) {
 		if ($element->visible) {
@@ -424,4 +424,3 @@ Randolph Chung <tausq@debian.org>
 =cut
 
 1
-

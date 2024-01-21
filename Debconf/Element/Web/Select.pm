@@ -44,7 +44,7 @@ sub show {
 		}
 	}
 	$_.="</select>\n";
-	
+
 	return $_;
 }
 

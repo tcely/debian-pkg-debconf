@@ -23,10 +23,10 @@ sub endfile {}
 sub read {
 	my $this=shift;
 	my $fh=shift;
-	
+
 	# Make sure it's sane.
 	local $/="\n";
-	
+
 	my $name;
 	my %ret=(
 		owners => {},
@@ -69,7 +69,7 @@ sub read {
 			}
 		}
 		elsif ($key eq 'variables') {
-			$invars=1;	
+			$invars=1;
 		}
 		elsif ($key eq 'name') {
 			$name=$value;

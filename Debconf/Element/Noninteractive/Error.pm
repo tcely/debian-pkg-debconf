@@ -92,7 +92,7 @@ sub sendmail {
 		close $mail or return '';
 
 		$Text::Wrap::columns=$old_columns;
-	
+
 		# Mark this note as seen. The frontend doesn't do this for us,
 		# since we are marked as not visible.
 		$this->question->flag('seen', 'true');

@@ -31,7 +31,7 @@ foreach my $file (@ARGV) {
 		}
 	}
 	close $in;
-	
+
 	if ($package) {
 		$descs{$package}=$desc;
 		foreach (@isa) {
@@ -56,7 +56,7 @@ sub printitem {
 sub printkids {
 	my $parent=shift;
 	my $spacer=shift;
-	
+
 	foreach my $kid (sort keys %{$kids{$parent}}) {
 		next if $seen{$kid};
 		$seen{$kid}=1;
@@ -64,7 +64,7 @@ sub printkids {
 		$_=$kid;
 		foreach my $p (split(/::/,$parent)) {
 			s/^$p\:://;
-			
+
 		}
 		printitem($spacer.$_, $kid);
 		printkids($kid, "  $spacer");

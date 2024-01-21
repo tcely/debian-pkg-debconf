@@ -149,7 +149,7 @@ sub _query {
 	my $this=shift;
 	my $command=shift;
 	shift; # this again
-	
+
 	debug "db $this->{name}" => "trying to $command(@_) ..";
 	foreach my $driver (@{$this->{stack}}) {
 		if (wantarray) {
@@ -229,14 +229,14 @@ sub _change {
 			}
 		}
 	}
-	
+
 	unless ($writer) {
 		debug "db $this->{name}" => "FAILED $command";
 		return;
 	}
 
 	# Do the copy if we have to.
-	if ($src) {		
+	if ($src) {
 		$this->copy($item, $src, $writer);
 	}
 
@@ -247,7 +247,7 @@ sub _change {
 
 # A problem occurs sometimes: A write might be attempted that will not
 # actually change the database at all. If we naively copy an item up the
-# stack in these cases, we have shadowed the real data unnecessarily. 
+# stack in these cases, we have shadowed the real data unnecessarily.
 # Instead, I bothered to add a shitload of extra intelligence, to detect
 # such null writes, and do nothing but return whatever the current value is.
 # Gar gar gar!
@@ -267,7 +267,7 @@ sub _nochange {
 	}
 	elsif ($command eq 'removeowner') {
 		my $value=shift;
-		
+
 		# If the owner is already in the list, there is a change.
 		foreach my $owner ($driver->owners($item)) {
 			return if $owner eq $value;
@@ -276,7 +276,7 @@ sub _nochange {
 	}
 	elsif ($command eq 'removefield') {
 		my $value=shift;
-		
+
 		# If the field is not present, no change.
 		foreach my $field ($driver->fields($item)) {
 			return if $field eq $value;
@@ -306,7 +306,7 @@ sub _nochange {
 	my $thing=shift;
 	my $value=shift;
 	my $currentvalue=$driver->$get($item, $thing);
-	
+
 	# If the thing doesn't exist yet, there will be a change.
 	my $exists=0;
 	foreach my $i (@list) {

@@ -45,9 +45,9 @@ sub value {
 
 	return $this->SUPER::value() unless @_;
 	my $value=shift;
-	
+
 	my %valid=map { $_ => 1 } $this->question->choices_split;
-	
+
 	if ($valid{$value}) {
 		return $this->SUPER::value($this->translate_to_C($value));
 	}

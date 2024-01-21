@@ -35,7 +35,7 @@ while (my $q=$qi->iterate) {
 # be owned by their matching questions -- but the questions didn't exist!
 # Check for such a thing.
 foreach my $t (keys %templates) {
-	# Object has no owners method (not otherwise needed), so I'll do 
+	# Object has no owners method (not otherwise needed), so I'll do
 	# some nasty grubbing.
 	my @owners=$Debconf::Db::templates->owners($t);
 	foreach my $q (@owners) {

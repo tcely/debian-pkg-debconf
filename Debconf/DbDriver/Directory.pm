@@ -40,7 +40,7 @@ An optional extension to tack on the end of each filename.
 
 =item format
 
-The Format object to use for reading and writing files. 
+The Format object to use for reading and writing files.
 
 In the config file, just the name of the format to use, such as '822' can
 be specified. Default is 822.
@@ -65,7 +65,7 @@ sub init {
 	$this->{extension} = "" unless exists $this->{extension};
 	$this->{format} = "822" unless exists $this->{format};
 	$this->{backup} = 1 unless exists $this->{backup};
-	
+
 	$this->error("No format specified") unless $this->{format};
 	eval "use Debconf::Format::$this->{format}";
 	if ($@) {
@@ -88,7 +88,7 @@ sub init {
 		$this->error($this->{directory}." does not exist");
 	}
 	debug "db $this->{name}" => "started; directory is $this->{directory}";
-	
+
 	if (! $this->{readonly}) {
 		# Now lock the directory. I use a lockfile named '.lock' in the
 		# directory, and flock locking. I don't wait on locks, just
@@ -137,11 +137,11 @@ sub save {
 	my $this=shift;
 	my $item=shift;
 	my $data=shift;
-	
+
 	return unless $this->accept($item);
 	return if $this->{readonly};
 	debug "db $this->{name}" => "saving $item";
-	
+
 	my $file=$this->{directory}.'/'.$this->filename($item);
 
 	# Write out passwords mode 600.
@@ -157,13 +157,13 @@ sub save {
 	$this->{format}->write($fh, $data, $item)
 		or $this->error("could not write $file-new: $!");
 	$this->{format}->endfile;
-	
+
 	# Ensure it is synced, to disk buffering doesn't result in
 	# inconsistencies.
 	$fh->flush or $this->error("could not flush $file-new: $!");
 	$fh->sync or $this->error("could not sync $file-new: $!");
 	close $fh or $this->error("could not close $file-new: $!");
-	
+
 	# Now rename the old file to -old (if doing backups),
 	# and put -new in its place.
 	if (-e $file && $this->{backup}) {
@@ -182,7 +182,7 @@ whenever something is saved.
 
 sub shutdown {
 	my $this=shift;
-	
+
 	$this->SUPER::shutdown(@_);
 	delete $this->{lock};
 	return 1;
@@ -197,7 +197,7 @@ Simply check for file existance, after querying the cache.
 sub exists {
 	my $this=shift;
 	my $name=shift;
-	
+
 	# Check the cache first.
 	my $incache=$this->SUPER::exists($name);
 	return $incache if (!defined $incache or $incache);

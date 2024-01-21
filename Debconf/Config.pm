@@ -28,11 +28,11 @@ if ($ENV{DEBCONF_SYSTEMRC}) {
 	# set by programs like sudo, and that proved to be confusing
 	unshift @config_files, ((getpwuid($>))[7])."/.debconfrc";
 }
-	   
+
 =head1 DESCRIPTION
 
 This package holds configuration values for debconf. It supplies defaults,
-and allows them to be overridden by values from the command line, the 
+and allows them to be overridden by values from the command line, the
 environment, the config file, and values pulled out of the debconf database.
 
 =head1 METHODS
@@ -49,7 +49,7 @@ essence of it. It will load from a set of standard locations unless a file
 to load is specified as the first parameter.
 
 If a hash of parameters are passed, those parameters are used as the defaults
-for *every* database driver that is loaded up. Practically, setting 
+for *every* database driver that is loaded up. Practically, setting
 (readonly => "true") is the only use of this.
 
 =cut
@@ -58,7 +58,7 @@ for *every* database driver that is loaded up. Practically, setting
 # that were processed. Also handles env variable expansion.
 sub _hashify ($text, $hash) {
 	$text =~ s/\$\{([^}]+)\}/$ENV{$1}/eg;
-	
+
 	my %ret;
 	my $i;
 	foreach my $line (split /\n/, $text) {
@@ -74,7 +74,7 @@ sub _hashify ($text, $hash) {
 	}
 	return $i;
 }
- 
+
 # Processes an environment variable that encodes a reference to an existing
 # db, or the parameters to set up a new db. Returns the db. Additional
 # parameters will be used as defaults if a new driver is set up. At least a
@@ -82,11 +82,11 @@ sub _hashify ($text, $hash) {
 sub _env_to_driver ($value, %hash) {
 	my ($name, $options) = $value =~ m/^(\w+)(?:{(.*)})?$/;
 	return unless $name;
-	
+
 	return $name if Debconf::DbDriver->driver($name);
-	
+
 	$hash{driver} = $name;
-	
+
 	if (defined $options) {
 		# And add any other name:value name:value pairs,
 		# default name is `filename' for convienence.
@@ -226,7 +226,7 @@ EOF
 
 	# don't load big Getopt::Long unless really necessary.
 	return unless grep { $_ =~ /^-/ } @ARGV;
-	
+
 	require Getopt::Long;
 	Getopt::Long::Configure('bundling');
 	Getopt::Long::GetOptions(
@@ -254,7 +254,7 @@ sub frontend ($class, $frontend = undef) {
 	return $ENV{DEBIAN_FRONTEND} if exists $ENV{DEBIAN_FRONTEND};
 	$config->{frontend}=$frontend if defined $frontend;
 	return $config->{frontend} if exists $config->{frontend};
-	
+
 	my $ret='dialog';
 	my $question=Debconf::Question->get('debconf/frontend');
 	if ($question) {
@@ -399,7 +399,7 @@ Other fields can be accessed and set by calling class methods.
 
 sub AUTOLOAD ($class, @rest) {
 	(my $field = our $AUTOLOAD) =~ s/.*://;
-	
+
 	return $config->{$field}=shift @rest if @rest;
 	return $config->{$field} if defined $config->{$field};
 	return '';

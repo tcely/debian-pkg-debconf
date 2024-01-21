@@ -117,7 +117,7 @@ sub load_answer ($owner, $label, $type, $content) {
 		$template->extended_description("This is a fake template used to pre-seed the debconf database. If you are seeing this, something is probably wrong.");
 	}
 	$template->type($type);
-	
+
 	# The question should already exist, it was created along with the
 	# template. Set it up.
 	my $question=Debconf::Question->get($label);

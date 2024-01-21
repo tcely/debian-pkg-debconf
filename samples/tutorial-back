@@ -14,7 +14,7 @@ while [ "$STATE" != 0 -a "$STATE" != 3 ]; do
 		# Do you like debian?
 		db_input medium foo/like_debian || true
 	;;
-	
+
 	2)
 		# Check to see if they like debian.
 		db_get foo/like_debian

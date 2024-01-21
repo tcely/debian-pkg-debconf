@@ -92,7 +92,7 @@ sub show {
 			last;
 		}
 	}
-	
+
 	$this->frontend->display("\n");
 	$this->value($value);
 }

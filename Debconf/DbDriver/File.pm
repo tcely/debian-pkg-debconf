@@ -93,11 +93,11 @@ sub init {
 	$this->{filename} = abs_path($this->{filename});
 
 	debug "db $this->{name}" => "started; filename is $this->{filename}";
-	
+
 	# Make sure that the file exists, and set the mode too.
 	if (! -e $this->{filename}) {
 		$this->{backup}=0;
-		sysopen(my $fh, $this->{filename}, 
+		sysopen(my $fh, $this->{filename},
 				O_WRONLY|O_TRUNC|O_CREAT,$this->{mode}) or
 			$this->error("could not open $this->{filename}");
 		close $fh;
@@ -191,7 +191,7 @@ sub shutdown {
 	# resulting in truncated files.
 	$fh->sync or $this->error("could not sync $this->{filename}-new: $!");
 
-	# Now rename the old file to -old (if doing backups), and put -new 
+	# Now rename the old file to -old (if doing backups), and put -new
 	# in its place.
 	if (-e $this->{filename} && $this->{backup}) {
 		rename($this->{filename}, $this->{filename}."-old") or

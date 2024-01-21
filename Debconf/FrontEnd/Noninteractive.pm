@@ -24,7 +24,7 @@ tty not needed
 
 =cut
 
-sub init { 
+sub init {
         my $this=shift;
 
         $this->SUPER::init(@_);

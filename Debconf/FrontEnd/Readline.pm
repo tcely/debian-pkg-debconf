@@ -60,16 +60,16 @@ sub init {
 		if (exists $ENV{TERM} && $ENV{TERM} =~ /emacs/i) {
 			die gettext("Term::ReadLine::GNU is incompatable with emacs shell buffers.")."\n";
 		}
-		
+
 		# Ctrl-u or pageup backs up, while ctrl-v or pagedown moves
 		# forward. These key bindings and history completion are only
 		# supported by Gnu ReadLine.
-		$this->readline->add_defun('previous-question',	
+		$this->readline->add_defun('previous-question',
 			sub {
 				if ($this->capb_backup) {
 					$this->_skip(1);
 					$this->_direction(-1);
-					# Tell readline to quit. Yes, 
+					# Tell readline to quit. Yes,
 					# this is really the best way. <sigh>
 					$this->readline->stuff_char(ord "\n");
 				}
@@ -86,13 +86,13 @@ sub init {
 					$this->readline->stuff_char(ord "\n");
 				}
 			}, ord "\cv");
-		# FIXME: I cannot figure out a better way to feed in a key 
+		# FIXME: I cannot figure out a better way to feed in a key
 		# sequence -- someone help me.
 		$this->readline->parse_and_bind('"\e[5~": previous-question');
 		$this->readline->parse_and_bind('"\e[6~": next-question');
 		$this->capb('backup');
 	}
-	
+
 	# Figure out which readline module has been loaded, to tell if
 	# prompts must include defaults or not.
 	if (Term::ReadLine->ReadLine =~ /::Stub$/) {
@@ -168,7 +168,7 @@ sub go {
 Prompts the user for input, and returns it. If a title is pending,
 it will be displayed before the prompt.
 
-This function will return undef if the user opts to skip the question 
+This function will return undef if the user opts to skip the question
 (by backing up or moving on to the next question). Anything that uses this
 function should catch that and handle it, probably by exiting any
 read/validate loop it is in.
@@ -194,7 +194,7 @@ sub prompt {
 		$this->readline->Attribs->{completion_entry_function} = sub {
 			my $text=shift;
 			my $state=shift;
-			
+
 			if ($state == 0) {
 				@matches=();
 				foreach (@{$completions}) {
@@ -215,7 +215,7 @@ sub prompt {
 	else {
 		$this->readline->Attribs->{completion_append_character}='';
 	}
-	
+
 	$this->linecount(0);
 	my $ret;
 	$this->_skip(0);
@@ -247,7 +247,7 @@ sub prompt_password {
 		# so it is unusable here. Use Teletype's prompt_password.
 		return $this->SUPER::prompt_password(%params);
 	}
-	
+
 	# Kill default: not a good idea for passwords.
 	delete $params{default};
 	# Force echoing off.

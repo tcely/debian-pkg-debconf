@@ -48,7 +48,7 @@ our @EXPORT_OK=qw(version capb stop reset title input beginblock endblock go
 	      start_frontend fset fget subst purge metaget visible exist
 	      settitle info progress data x_loadtemplatefile);
 
-# Import :all to get everything.		   
+# Import :all to get everything.
 our %EXPORT_TAGS = (all => [@EXPORT_OK]);
 
 # Set up valid command lookup hash.
@@ -115,11 +115,11 @@ sub AUTOLOAD {
 
 	die "Unsupported command `$command'."
 		unless $commands{$command};
-	
+
 	no strict 'refs';
 	*$AUTOLOAD = sub {
 		my $c=join (' ', $command, @_);
-	
+
 		# Newlines in input can really badly confuse the protocol, so
 		# detect and warn.
 		if ($c=~m/\n/) {

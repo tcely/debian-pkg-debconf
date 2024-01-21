@@ -65,7 +65,7 @@ sub translate_default {
 	$this->question->template->i18n('');
 	my @choices_c=$this->question->choices_split;
 	$this->question->template->i18n(1);
-	
+
 	my @ret;
 	# Translate each default.
 	foreach my $c_default ($this->question->value_split) {

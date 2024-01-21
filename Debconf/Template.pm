@@ -33,14 +33,14 @@ our %known_field = map { $_ => 1 }
 # Debconf does its own conversions.
 binmode(STDOUT);
 binmode(STDERR);
-	
+
 =head1 DESCRIPTION
 
 This is an object that represents a Template. Each Template has some associated
 data, the fields of the template structure. To get at this data, just use
 $template->fieldname to read a field, and $template->fieldname(value) to write
 a field. Any field names at all can be used, the convention is to lower-case
-their names. 
+their names.
 
 Common fields are "default", "type", and "description". The field
 named "extended_description" holds the extended description, if any.
@@ -71,7 +71,7 @@ sub new {
 	my $template=shift || die "no template name specified";
 	my $owner=shift || 'unknown';
 	my $type=shift || die "no template type specified";
-	
+
 	# See if we can use an existing template.
 	if ($Debconf::Db::templates->exists($template) and
 	    $Debconf::Db::templates->owners($template)) {
@@ -98,7 +98,7 @@ sub new {
 				$newq->template($template);
 			}
 		}
-		
+
 		$this = fields::new($this);
 		$this->{template}=$template;
 		return $template{$template}=$this;
@@ -122,7 +122,7 @@ sub new {
 		my $q=Debconf::Question->new($template, $owner, $type);
 		$q->template($template);
 	}
-	
+
 	# This is what actually creates the template in the db.
 	return unless $Debconf::Db::templates->addowner($template, $template, $type);
 
@@ -191,7 +191,7 @@ sub load {
 	while (<$fh>) {
 		# Parse the data into a hash structure.
 		my %data;
-		
+
 		# Sets a field to a value in the hash, with sanity
 		# checking.
 		my $save = sub {
@@ -201,7 +201,7 @@ sub load {
 			my $file=shift;
 
 			# Make sure there are no blank lines at the end of
-			# the extended field, as that causes problems when 
+			# the extended field, as that causes problems when
 			# stringifying and elsewhere, and is pointless
 			# anyway.
 			$extended=~s/\n+$//;
@@ -237,7 +237,7 @@ sub load {
 				}
 			}
 			elsif ($line=~/^\s\.$/) {
-				# Continuation of field that contains only 
+				# Continuation of field that contains only
 				# a blank line.
 				$extended.="\n\n";
 			}
@@ -281,7 +281,7 @@ sub load {
 
 	return @ret;
 }
-					
+
 =head1 METHODS
 
 =head2 template
@@ -431,7 +431,7 @@ sub AUTOLOAD {
 		if (@_) {
 			return $Debconf::Db::templates->setfield($this->{template}, $field, shift);
 		}
-		
+
 		my $ret;
 		my $want_i18n = $Debconf::Template::i18n && Debconf::Config->c_values ne 'true';
 
@@ -449,7 +449,7 @@ sub AUTOLOAD {
 				# not specified.
 				$ret=$Debconf::Db::templates->getfield($this->{template}, $field.'-'.$lang);
 				return $ret if defined $ret;
-				
+
 				# Failing that, look for a field that matches
 				# the language, and do charset conversion.
 				if ($Debconf::Encoding::charmap) {

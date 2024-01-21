@@ -47,7 +47,7 @@ sub init {
 	my $this=shift;
 
 	$this->SUPER::init(@_);
-	
+
 	$this->port(8001) unless defined $this->port;
 	$this->formid(0);
 	$this->interactive(1);
@@ -77,7 +77,7 @@ in the commands field.
 
 sub client {
 	my $this=shift;
-	
+
 	$this->{client}=shift if @_;
 	return $this->{client} if $this->{client};
 
@@ -101,14 +101,14 @@ Forcibly close the current client's connection to the web server.
 
 sub closeclient {
 	my $this=shift;
-	
+
 	close $this->client;
 	$this->client('');
 }
 
 =item showclient
 
-Displays the passed text to the client. Can be called multiple times to 
+Displays the passed text to the client. Can be called multiple times to
 build up a page.
 
 =cut
@@ -172,18 +172,18 @@ sub go {
 	# We'll loop here until we get a valid response from a client.
 	do {
 		$this->showclient($httpheader . $form);
-	
+
 		# Now get the next connection to us, which causes any http
 		# commands to be read.
 		$this->closeclient;
 		$this->client;
-		
+
 		# Now parse the http commands and get the query string out
 		# of it.
 		my @get=grep { /^GET / } split(/\r\n/, $this->commands);
 		my $get=shift @get;
 		my ($qs)=$get=~m/^GET\s+.*?\?(.*?)(?:\s+.*)?$/;
-	
+
 		# Now parse the query string.
 		$query=CGI->new($qs);
 	} until (defined $query->param('formid') &&
@@ -201,7 +201,7 @@ sub go {
 	# elements.
 	foreach my $id ($query->param) {
 		next unless $idtoelt{$id};
-		
+
 		$idtoelt{$id}->value($query->param($id));
 		delete $idtoelt{$id};
 	}
@@ -211,7 +211,7 @@ sub go {
 	foreach my $elt (values %idtoelt) {
 		$elt->value('');
 	}
-	
+
 	return 1;
 }
 

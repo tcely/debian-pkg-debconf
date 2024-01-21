@@ -43,7 +43,7 @@ while [ "$STATE" != 0 -a "$STATE" != 10 ]; do
 	5)
 		# Will be displayed again.
 		db_input high demo/password || true
-		
+
 	;;
 	6)
 		db_progress START 0 10 demo/progress/title
@@ -70,7 +70,7 @@ while [ "$STATE" != 0 -a "$STATE" != 10 ]; do
 		db_input low demo/error || true
 	;;
 	esac
-	
+
 	if db_go; then
 		STATE=$(($STATE + 1))
 	else

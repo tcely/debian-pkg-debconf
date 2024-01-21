@@ -20,7 +20,7 @@ on it.
 sub show {
 	my $this=shift;
 
-	$this->frontend->showtext($this->question, 
+	$this->frontend->showtext($this->question,
 		$this->question->description."\n\n".
 		$this->question->extended_description
 	);

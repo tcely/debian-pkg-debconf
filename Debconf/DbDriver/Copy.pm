@@ -30,9 +30,9 @@ sub copy {
 	my $item=shift;
 	my $src=shift;
 	my $dest=shift;
-	
+
 	debug "db $this->{name}" => "copying $item from $src->{name} to $dest->{name}";
-	
+
 	# First copy the owners, which makes sure $dest has the item.
 	my @owners=$src->owners($item);
 	if (! @owners) {

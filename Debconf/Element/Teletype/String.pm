@@ -33,7 +33,7 @@ sub show {
 		question => $this->question,
 	);
 	return unless defined $value;
-	
+
 	$this->frontend->display("\n");
 	$this->value($value);
 }

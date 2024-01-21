@@ -50,7 +50,7 @@ sub value {
 	my @values=split(',\s+', shift);
 
 	my %valid=map { $_ => 1 } $this->question->choices_split;
-	
+
 	$this->SUPER::value(join(', ', $this->order_values(
 			map { $this->translate_to_C($_) }
 			grep { $valid{$_} } @values)));

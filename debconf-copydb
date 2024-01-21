@@ -116,7 +116,7 @@ sub config {
 	$field=~tr/-/_/;
 	$field=lc($field);
 	die "Parse error: \"$_[1]\"" unless defined $field and length $field;
-	
+
 	if ($field eq 'name') {
 		if ($config{name}) {
 			Debconf::Db->makedriver(%config);
@@ -176,4 +176,3 @@ $copier->shutdown;
 Joey Hess <joeyh@debian.org>
 
 =cut
-

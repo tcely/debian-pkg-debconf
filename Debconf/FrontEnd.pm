@@ -87,7 +87,7 @@ Sets several of the fields to defaults.
 
 sub init {
 	my $this=shift;
-	
+
 	$this->elements([]);
 	$this->interactive('');
 	$this->capb('');
@@ -110,7 +110,7 @@ This may be called as either a class or an object method.
 
 sub elementtype {
 	my $this=shift;
-	
+
 	my $ret;
 	if (ref $this) {
 		# Called as object method.
@@ -148,9 +148,9 @@ sub _loadelementclass {
 
 Creates an Element of the type used by this FrontEnd. Pass in the question
 that will be bound to the Element. It returns the generated Element, or false
-if it was unable to make an Element of the given  ype. 
+if it was unable to make an Element of the given  ype.
 
-This may be called as either a class or an object method. 
+This may be called as either a class or an object method.
 
 Normally, it outputs debug codes if creating the Element fails. If failure
 is expected, a second parameter can be passed with a true value to turn
@@ -189,7 +189,7 @@ sub add {
 	foreach (@{$this->elements}) {
 		return if $element->question == $_->question;
 	}
-	
+
 	$element->frontend($this);
 	push @{$this->elements}, $element;
 }
@@ -198,7 +198,7 @@ sub add {
 
 Display accumulated Elements to the user.
 
-This will normally return true, but if the user indicates they want to 
+This will normally return true, but if the user indicates they want to
 back up, it returns false.
 
 =cut
@@ -316,7 +316,7 @@ Clear out the accumulated Elements.
 
 sub clear {
 	my $this=shift;
-	
+
 	$this->elements([]);
 }
 
@@ -329,7 +329,7 @@ package that is being configured.
 
 sub default_title {
 	my $this=shift;
-	
+
 	$this->title(sprintf(gettext("Configuring %s"), shift));
 	$this->requested_title($this->title);
 }

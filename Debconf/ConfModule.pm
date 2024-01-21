@@ -109,9 +109,9 @@ sub init {
 
 	# Protcol version.
 	$this->version("2.0");
-	
+
 	$this->owner('unknown') if ! defined $this->owner;
-	
+
 	# If my frontend thought the client confmodule could backup
 	# (eg, because it was dealing earlier with a confmodule that could),
 	# tell it otherwise.
@@ -142,15 +142,15 @@ sub startup {
 	# when a new confmodule is run.
 	$this->frontend->clear;
 	$this->busy([]);
-	
+
 	my @args=$this->confmodule($confmodule);
 	push @args, @_ if @_;
-	
+
 	debug developer => "starting ".join(' ',@args);
 	$this->pid(open2($this->read_handle(FileHandle->new),
 		         $this->write_handle(FileHandle->new),
 			 @args)) || die $!;
-		
+
 	# Catch sigpipes so they don't kill us, and return 128 for them.
 	$this->caught_sigpipe('');
 	$SIG{PIPE}=sub { $this->caught_sigpipe(128) };
@@ -226,7 +226,7 @@ Pass in a raw command, and it will be processed and handled.
 
 sub process_command {
 	my $this=shift;
-	
+
 	debug developer => "<-- $_";
 	chomp;
 	my ($command, @params);
@@ -282,7 +282,7 @@ sub finish {
 	# Stop catching sigpipe now. IGNORE and DEFAULT both cause obscure
 	# failures, BTW.
 	$SIG{PIPE} = sub {};
-	
+
 	foreach (@{$this->seen}) {
 		# Try to get the question again, because it's possible it
 		# was shown, and then unregistered.
@@ -290,7 +290,7 @@ sub finish {
 		$_->flag('seen', 'true') if $q;
 	}
 	$this->seen([]);
-	
+
 	return '';
 }
 
@@ -306,7 +306,7 @@ sub command_input {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 2;
 	my $priority=shift;
 	my $question_name=shift;
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "\"$question_name\" doesn't exist";
 
@@ -315,7 +315,7 @@ sub command_input {
 	}
 
 	$question->priority($priority);
-	
+
 	# Figure out if the question should be displayed to the user or
 	# not.
 	my $visible=1;
@@ -373,7 +373,7 @@ sub command_input {
 	$element->markseen($markseen);
 
 	push @{$this->busy}, $question_name;
-	
+
 	$this->frontend->add($element);
 	if ($element->visible) {
 		return $codes{success}, "question will be asked";
@@ -465,10 +465,10 @@ Uses the short description of a question as the title, with automatic i18n.
 
 sub command_settitle {
 	my $this=shift;
-	
+
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 1;
 	my $question_name=shift;
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "\"$question_name\" doesn't exist";
 
@@ -478,7 +478,7 @@ sub command_settitle {
 		$this->frontend->title($question->description);
 	}
 	$this->frontend->requested_title($this->frontend->title);
-	
+
 	return $codes{success};
 }
 
@@ -608,7 +608,7 @@ sub command_subst {
 	my $question_name = shift;
 	my $variable = shift;
 	my $value = (join ' ', @_);
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "$question_name doesn't exist";
 	my $result=$question->variable($variable,$value);
@@ -628,12 +628,12 @@ sub command_register {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 2;
 	my $template=shift;
 	my $name=shift;
-	
+
 	my $tempobj = Debconf::Question->get($template);
 	if (! $tempobj) {
 		return $codes{badparams}, "No such template, \"$template\"";
 	}
-	my $question=Debconf::Question->get($name) || 
+	my $question=Debconf::Question->get($name) ||
 	             Debconf::Question->new($name, $this->owner, $tempobj->type);
 	if (! $question) {
 		return $codes{internalerror}, "Internal error making question";
@@ -659,7 +659,7 @@ sub command_unregister {
 	my $this=shift;
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 1;
 	my $name=shift;
-	
+
 	my $question=Debconf::Question->get($name) ||
 		return $codes{badparams}, "$name doesn't exist";
 	if (grep { $_ eq $name } @{$this->busy}) {
@@ -678,7 +678,7 @@ This will give up ownership of all questions a confmodule owns.
 sub command_purge {
 	my $this=shift;
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ > 0;
-	
+
 	my $iterator=Debconf::Question->iterator;
 	while (my $q=$iterator->iterate) {
 		$q->removeowner($this->owner);
@@ -699,7 +699,7 @@ sub command_metaget {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 2;
 	my $question_name=shift;
 	my $field=shift;
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "$question_name doesn't exist";
 	my $lcfield=lc $field;
@@ -726,10 +726,10 @@ sub command_fget {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 2;
 	my $question_name=shift;
 	my $flag=shift;
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams},  "$question_name doesn't exist";
-		
+
 	return $codes{success}, $question->flag($flag);
 }
 
@@ -746,7 +746,7 @@ sub command_fset {
 	my $question_name=shift;
 	my $flag=shift;
 	my $value=(join ' ', @_);
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "$question_name doesn't exist";
 
@@ -759,7 +759,7 @@ sub command_fset {
 		# it from our seen cache.
 		$this->seen([grep {$_ ne $question} @{$this->seen}]);
 	}
-		
+
 	return $codes{success}, $question->flag($flag, $value);
 }
 
@@ -828,7 +828,7 @@ This subcommand takes no arguments. It destroys the progress bar.
 
 =back
 
-Note that the frontend's progress_set, progress_step, and progress_info 
+Note that the frontend's progress_set, progress_step, and progress_info
 functions should return true, unless the progress bar was canceled.
 
 =cut
@@ -838,7 +838,7 @@ sub command_progress {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ < 1;
 	my $subcommand=shift;
 	$subcommand=lc($subcommand);
-	
+
 	my $ret;
 
 	if ($subcommand eq 'start') {
@@ -939,7 +939,7 @@ sub command_visible {
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 2;
 	my $priority=shift;
 	my $question_name=shift;
-	
+
 	my $question=Debconf::Question->get($question_name) ||
 		return $codes{badparams}, "$question_name doesn't exist";
 	return $codes{success}, $this->frontend->visible($question, $priority) ? "true" : "false";
@@ -955,8 +955,8 @@ sub command_exist {
 	my $this=shift;
 	return $codes{syntaxerror}, "Incorrect number of arguments" if @_ != 1;
 	my $question_name=shift;
-	
-	return $codes{success}, 
+
+	return $codes{success},
 		Debconf::Question->get($question_name) ? "true" : "false";
 }
 
@@ -1004,7 +1004,7 @@ sub AUTOLOAD {
 	no strict 'refs';
 	*$AUTOLOAD = sub {
 		my $this=shift;
-		
+
 		return $this->{$field} unless @_;
 		return $this->{$field}=shift;
 	};
@@ -1021,10 +1021,10 @@ of the confmodule are marked as seen.
 
 sub DESTROY {
 	my $this=shift;
-	
+
 	$this->read_handle->close if $this->read_handle;
 	$this->write_handle->close if $this->write_handle;
-	
+
 	if (defined $this->pid && $this->pid > 1) {
 		kill 'TERM', $this->pid;
 	}

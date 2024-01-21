@@ -180,7 +180,7 @@ If any driver with the given name exists, it is returned.
 sub driver {
 	my $this=shift;
 	my $name=shift;
-	
+
 	return $drivers{$name};
 }
 
@@ -199,9 +199,9 @@ sub accept {
 	my $this=shift;
 	my $name=shift;
 	my $type=shift;
-	
+
 	return if $this->{failed};
-	
+
 	if ((exists $this->{accept_name} && $name !~ /$this->{accept_name}/) ||
 	    (exists $this->{reject_name} && $name =~ /$this->{reject_name}/)) {
 		debug "db $this->{name}" => "reject $name";

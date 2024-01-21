@@ -21,7 +21,7 @@ it.
 
 sub show {
 	my $this=shift;
-	
+
 	# Figure out how much space in the dialog box the prompt will take.
 	# The -2 tells makeprompt to leave at least two lines to use to
 	# display the list.
@@ -50,7 +50,7 @@ sub show {
 			}
 		}
 	}
-	
+
 	$lines=$lines + $menu_height + $this->frontend->spacer;
 	my $selectspacer = $this->frontend->selectspacer;
 	my $c=1;
@@ -75,12 +75,12 @@ sub show {
 			$columns = width($choice) + $selectspacer;
 		}
 	}
-	
+
 	if ($this->frontend->dashsep) {
 		unshift @params, $this->frontend->dashsep;
 	}
-	
-	@params=('--separate-output', '--checklist', 
+
+	@params=('--separate-output', '--checklist',
 	         $text, $lines, $columns, $menu_height, @params);
 
 	my $value=$this->frontend->showdialog($this->question, @params);
