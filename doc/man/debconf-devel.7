@@ -772,9 +772,9 @@ is a skeleton of a state machine that you can fill out and expand.
   	esac
 
  	if db_go; then
- 		STATE=$(($STATE + 1))
+ 		STATE=$((STATE + 1))
  	else
- 		STATE=$(($STATE - 1))
+ 		STATE=$((STATE - 1))
  	fi
  done
 

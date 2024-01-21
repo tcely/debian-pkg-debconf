@@ -19,6 +19,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Avoid comma-separated statements.
     - Avoid indirect object call syntax for "new".
   * Reformat debconf.py using pyupgrade, black, and isort.
+  * Adjust shell code to pass shellcheck.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
