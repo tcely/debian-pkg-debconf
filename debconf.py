@@ -34,14 +34,18 @@ import sys
 from types import TracebackType
 from typing import IO, Protocol
 
+
 class Command(Protocol):
     def __call__(self, *params: str | int) -> str:
-       ...
+        ...
+
 
 class DebconfError(Exception):
     pass
 
-LOW, MEDIUM, HIGH, CRITICAL = 'low', 'medium', 'high', 'critical'
+
+LOW, MEDIUM, HIGH, CRITICAL = "low", "medium", "high", "critical"
+
 
 class Debconf:
     """A class that speaks the debconf protocol.
@@ -63,6 +67,7 @@ class Debconf:
         db = debconf.Debconf(run_frontend=True)
         print(db.get('debconf/frontend'))
     """
+
     beginblock: Command
     capb: Command
     endblock: Command
@@ -89,12 +94,14 @@ class Debconf:
         title: str | None = None,
         read: IO[str] | None = None,
         write: IO[str] | None = None,
-        run_frontend: bool = False
+        run_frontend: bool = False,
     ) -> None:
-        for command in ('capb set reset title input beginblock endblock go get'
-                        ' register unregister subst fset fget previous_module'
-                        ' visible purge metaget exist version_ settitle'
-                        ' info progress data').split():
+        for command in (
+            "capb set reset title input beginblock endblock go get"
+            " register unregister subst fset fget previous_module"
+            " visible purge metaget exist version_ settitle"
+            " info progress data"
+        ).split():
             self.setCommand(command)
         self.read = read or sys.stdin
         self.write = write or sys.stdout
@@ -105,26 +112,29 @@ class Debconf:
 
     def setUp(self, title: str | None) -> None:
         self.version = self.version_(2)
-        if self.version[:2] != '2.':
+        if self.version[:2] != "2.":
             raise DebconfError(256, "wrong version: %s" % self.version)
         self.capabilities = self.capb().split()
         if title:
             self.title(title)
 
     def setCommand(self, command: str) -> None:
-        setattr(self, command,
-               lambda *args, **kw: self.command(command, *args, **kw))
+        setattr(
+            self,
+            command,
+            lambda *args, **kw: self.command(command, *args, **kw),
+        )
 
     def command(self, command: str, *params: str | int) -> str:
-        if command == 'version_':
-            command = 'version'
+        if command == "version_":
+            command = "version"
         command = command.upper()
-        self.write.write("%s %s\n" % (command, ' '.join(map(str, params))))
+        self.write.write("%s %s\n" % (command, " ".join(map(str, params))))
         self.write.flush()
 
         while True:
             try:
-                resp = self.read.readline().rstrip('\n')
+                resp = self.read.readline().rstrip("\n")
                 break
             except IOError as e:
                 if e.errno == errno.EINTR:
@@ -132,19 +142,19 @@ class Debconf:
                 else:
                     raise
 
-        if ' ' in resp:
-            status_, data = resp.split(' ', 1)
+        if " " in resp:
+            status_, data = resp.split(" ", 1)
         else:
-            status_, data = resp, ''
+            status_, data = resp, ""
         status = int(status_)
         if status == 0:
             return data
-        elif status == 1:   # unescaped data
-            unescaped = ''
-            for chunk in re.split(r'(\\.)', data):
-                if chunk.startswith('\\') and len(chunk) == 2:
-                    if chunk[1] == 'n':
-                        unescaped += '\n'
+        elif status == 1:  # unescaped data
+            unescaped = ""
+            for chunk in re.split(r"(\\.)", data):
+                if chunk.startswith("\\") and len(chunk) == 2:
+                    if chunk[1] == "n":
+                        unescaped += "\n"
                     else:
                         unescaped += chunk[1]
                 else:
@@ -154,7 +164,7 @@ class Debconf:
             raise DebconfError(status, data)
 
     def stop(self) -> None:
-        self.write.write('STOP\n')
+        self.write.write("STOP\n")
         self.write.flush()
 
     def forceInput(self, priority: str, question: str) -> int:
@@ -168,7 +178,7 @@ class Debconf:
 
     def getBoolean(self, question: str) -> bool:
         result = self.get(question)
-        return result == 'true'
+        return result == "true"
 
     def getString(self, question: str) -> str:
         return self.get(question)
@@ -180,25 +190,26 @@ class Debconf:
         self,
         exc_type: type[BaseException] | None,
         exc_value: BaseException | None,
-        exc_tb: TracebackType | None
+        exc_tb: TracebackType | None,
     ) -> None:
         self.stop()
 
 
 class DebconfCommunicator(Debconf, object):
     def __init__(
-        self,
-        owner: str,
-        title: str | None = None,
-        cloexec: bool = False
+        self, owner: str, title: str | None = None, cloexec: bool = False
     ) -> None:
-        args = ['debconf-communicate', '-fnoninteractive', owner]
+        args = ["debconf-communicate", "-fnoninteractive", owner]
         self.dccomm: subprocess.Popen[str] | None = subprocess.Popen(
-            args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-            close_fds=True, universal_newlines=True)
-        super(DebconfCommunicator, self).__init__(title=title,
-                                                  read=self.dccomm.stdout,
-                                                  write=self.dccomm.stdin)
+            args,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            close_fds=True,
+            universal_newlines=True,
+        )
+        super(DebconfCommunicator, self).__init__(
+            title=title, read=self.dccomm.stdout, write=self.dccomm.stdin
+        )
         if cloexec:
             fcntl.fcntl(self.read.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
             fcntl.fcntl(self.write.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
@@ -220,25 +231,30 @@ class DebconfCommunicator(Debconf, object):
             pass
 
 
-if ('DEBCONF_USE_CDEBCONF' in os.environ and
-    os.environ['DEBCONF_USE_CDEBCONF'] != ''):
-    _frontEndProgram = '/usr/lib/cdebconf/debconf'
+if (
+    "DEBCONF_USE_CDEBCONF" in os.environ
+    and os.environ["DEBCONF_USE_CDEBCONF"] != ""
+):
+    _frontEndProgram = "/usr/lib/cdebconf/debconf"
 else:
-    _frontEndProgram = '/usr/share/debconf/frontend'
+    _frontEndProgram = "/usr/share/debconf/frontend"
+
 
 def runFrontEnd() -> None:
-    if 'DEBIAN_HAS_FRONTEND' not in os.environ:
-        os.environ['PERL_DL_NONLAZY']='1'
-        os.execv(_frontEndProgram, [_frontEndProgram, sys.executable]+sys.argv)
+    if "DEBIAN_HAS_FRONTEND" not in os.environ:
+        os.environ["PERL_DL_NONLAZY"] = "1"
+        os.execv(
+            _frontEndProgram, [_frontEndProgram, sys.executable] + sys.argv
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     runFrontEnd()
     db = Debconf()
-    db.forceInput(CRITICAL, 'bsdmainutils/calendar_lib_is_not_empty')
+    db.forceInput(CRITICAL, "bsdmainutils/calendar_lib_is_not_empty")
     db.go()
-    less = db.getBoolean('less/add_mime_handler')
-    aptlc = db.getString('apt-listchanges/email-address')
+    less = db.getBoolean("less/add_mime_handler")
+    aptlc = db.getString("apt-listchanges/email-address")
     db.stop()
     print(db.version)
     print(db.capabilities)
