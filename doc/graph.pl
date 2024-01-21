@@ -20,7 +20,7 @@ foreach my $file (@ARGV) {
 	my @isa=();
 	open (my $in, "<", $file) || die "$file: $!";
 	while (<$in>) {
-		if (/package\s(\w+.*?);/) {
+		if (/^\s*package\s(\w+.*?);/) {
 			$package=$1;
 		}
 		# Gag. This just looks for @ISA= lines and use base.
