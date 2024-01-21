@@ -27,7 +27,7 @@ BEGIN {
 	eval 'use Locale::gettext';
 	if ($@) {
 		# Failed; make up and export our own stupid gettext() function.
-		eval q{
+		eval {
 			sub gettext {
 				return shift;
 			}

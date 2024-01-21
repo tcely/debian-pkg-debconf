@@ -208,7 +208,7 @@ foreach my $line (@buffer) {
 	
 	# Load templates if any.
 	if (defined $template && length $template) {
-		eval q{
+		eval {
 			Debconf::Template->load($template, $package)
 		};
 		unlink $template;
