@@ -78,7 +78,6 @@ db_metaget ()	{ _db_cmd "METAGET $@"; }
 db_version ()	{ _db_cmd "VERSION $@"; }
 db_clear ()	{ _db_cmd "CLEAR $@"; }
 db_settitle ()	{ _db_cmd "SETTITLE $@"; }
-db_previous_module () { _db_cmd "PREVIOUS_MODULE $@"; }
 db_info ()	{ _db_cmd "INFO $@"; }
 db_progress ()	{ _db_cmd "PROGRESS $@"; }
 db_data ()	{ _db_cmd "DATA $@"; }
