@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome - gnome UI element
 =cut
 
 package Debconf::Element::Gnome;
+use warnings;
 use strict;
 use utf8;
 use Gtk3;

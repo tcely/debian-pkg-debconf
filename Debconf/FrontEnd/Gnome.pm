@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Gnome - GUI Gnome frontend
 =cut
 
 package Debconf::FrontEnd::Gnome;
+use warnings;
 use strict;
 use utf8;
 use Debconf::Gettext;

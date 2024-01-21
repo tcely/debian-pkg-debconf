@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 #
 # Pass this program a list of .pm files. It parses them (halfheartedly,
 # it works on my code, may not on your code), and generates an inheritcance
@@ -7,6 +7,7 @@
 # Remember: I have a copy of this in debconf and a copy in stool. Keep them
 # sync'd.
 
+use warnings;
 use strict;
 
 my %kids;

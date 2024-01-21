@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::DirTree - store database in a directory hierarchy
 =cut
 
 package Debconf::DbDriver::DirTree;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use base 'Debconf::DbDriver::Directory';

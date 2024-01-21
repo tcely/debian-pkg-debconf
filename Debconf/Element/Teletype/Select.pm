@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::Select - select from a list of values
 =cut
 
 package Debconf::Element::Teletype::Select;
+use warnings;
 use strict;
 use Debconf::Config;
 use POSIX qw(ceil);

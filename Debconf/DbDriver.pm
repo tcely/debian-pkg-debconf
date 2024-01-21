@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,8 +7,9 @@ Debconf::DbDriver - base class for debconf db drivers
 =cut
 
 package Debconf::DbDriver;
-use Debconf::Log qw{:all};
+use warnings;
 use strict;
+use Debconf::Log qw{:all};
 use base 1.01; # ensure that they don't have a broken perl installation
 
 =head1 DESCRIPTION

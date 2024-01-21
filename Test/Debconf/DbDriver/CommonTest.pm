@@ -1,4 +1,5 @@
 package Test::Debconf::DbDriver::CommonTest;
+use warnings;
 use strict;
 use FreezeThaw qw(cmpStr freeze);
 use base qw(Test::Unit::TestCase);

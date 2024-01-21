@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Editor::Select - select from a list of choices
 =cut
 
 package Debconf::Element::Editor::Select;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use base qw(Debconf::Element::Select);

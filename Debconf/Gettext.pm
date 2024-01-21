@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Gettext - Enables gettext for internationalization.
 =cut
 
 package Debconf::Gettext;
+use warnings;
 use strict;
 
 =head1 DESCRIPTION

@@ -1,5 +1,6 @@
-#!/usr/bin/perl -w -I.
+#!/usr/bin/perl -I.
 
+use warnings;
 use strict;
 use Test::Unit::TestRunner;
 use Getopt::Long;

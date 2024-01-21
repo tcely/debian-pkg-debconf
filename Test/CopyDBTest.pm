@@ -1,5 +1,6 @@
 package CopyDBTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
+use warnings;
 use strict;
 use Test::Debconf::DbDriver::SLAPD;
 use base qw(Test::Unit::Setup);

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Editor - Edit a config file to answer questions
 =cut
 
 package Debconf::FrontEnd::Editor;
+use warnings;
 use strict;
 use Debconf::Encoding q(wrap);
 use Debconf::TmpFile;

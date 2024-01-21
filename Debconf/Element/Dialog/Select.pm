@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Select - A list of choices in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Select;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Select);
 use Debconf::Encoding qw(width);

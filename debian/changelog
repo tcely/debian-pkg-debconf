@@ -13,6 +13,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Use ":encoding(UTF-8)" in Debconf::FrontEnd::Passthrough rather than
       ":utf8", since the latter does not validate the input data.
     - Avoid string eval in a couple of places.
+    - Enable warnings lexically rather than using "perl -w".
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 

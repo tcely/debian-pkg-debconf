@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Db - debconf databases
 =cut
 
 package Debconf::Db;
+use warnings;
 use strict;
 use Debconf::Log qw{:all};
 use Debconf::Config;

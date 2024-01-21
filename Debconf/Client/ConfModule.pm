@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -39,6 +39,7 @@ everything, simply import ":all".
 =cut
 
 package Debconf::Client::ConfModule;
+use warnings;
 use strict;
 use base qw(Exporter);
 

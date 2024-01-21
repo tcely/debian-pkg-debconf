@@ -1,5 +1,6 @@
 package Test::AllTests;
 
+use warnings;
 use strict;
 use Test::Unit::TestSuite;
 use Test::CopyDBTest;

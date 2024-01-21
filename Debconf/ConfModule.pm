@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::ConfModule - communicates with a ConfModule
 =cut
 
 package Debconf::ConfModule;
+use warnings;
 use strict;
 use IPC::Open2;
 use FileHandle;

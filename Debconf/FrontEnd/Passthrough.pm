@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Passthrough - pass-through meta-frontend for Debconf
 =cut
 
 package Debconf::FrontEnd::Passthrough;
+use warnings;
 use strict;
 use Carp;
 use IO::Socket;

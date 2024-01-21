@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::AutoSelect - automatic FrontEnd selection library.
 =cut
 
 package Debconf::AutoSelect;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use Debconf::ConfModule;

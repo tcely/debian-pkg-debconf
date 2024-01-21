@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Select - Base select input element
 =cut
 
 package Debconf::Element::Select;
+use warnings;
 use strict;
 use Debconf::Log ':all';
 use Debconf::Gettext;

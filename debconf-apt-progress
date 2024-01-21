@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -141,6 +141,7 @@ cancel button on the progress bar. If the cancel button was hit, a value of
 
 =cut
 
+use warnings;
 use strict;
 use feature qw(signatures);
 use POSIX;

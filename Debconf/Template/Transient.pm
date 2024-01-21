@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Template::Transient - Transient template object
 =cut
 
 package Debconf::Template::Transient;
+use warnings;
 use strict;
 use base 'Debconf::Template';
 use fields qw(_fields);

@@ -1,4 +1,5 @@
 package Test::Debconf::DbDriver::SLAPD;
+use warnings;
 use strict;
 
 use Debconf::Gettext;

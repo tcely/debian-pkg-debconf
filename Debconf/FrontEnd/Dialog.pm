@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Dialog - dialog FrontEnd
 =cut
 
 package Debconf::FrontEnd::Dialog;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use Debconf::Priority;

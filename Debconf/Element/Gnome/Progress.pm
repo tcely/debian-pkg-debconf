@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Progress - progress bar widget
 =cut
 
 package Debconf::Element::Gnome::Progress;
+use warnings;
 use strict;
 use Gtk3;
 use utf8;

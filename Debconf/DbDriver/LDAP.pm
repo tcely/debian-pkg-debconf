@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 # Copyright (C) 2002 Matthew Palmer.
 # Copyright (C) 2007-2008 Davor Ocelic.
 
@@ -9,6 +9,7 @@ Debconf::DbDriver::LDAP - access (config) database in an LDAP directory
 =cut
 
 package Debconf::DbDriver::LDAP;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use Net::LDAP;

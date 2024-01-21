@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Multiselect - a check list in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Multiselect;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Multiselect);
 use Debconf::Encoding qw(width);

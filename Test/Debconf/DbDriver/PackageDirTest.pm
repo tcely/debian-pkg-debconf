@@ -5,6 +5,7 @@ Test::Debconf::DbDriver::PackageDirTest - PackageDir driver class test
 =cut
 
 package Test::Debconf::DbDriver::PackageDirTest;
+use warnings;
 use strict;
 use File::Temp;
 use Debconf::DbDriver::PackageDir;

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Question - Question object
 =cut
 
 package Debconf::Question;
+use warnings;
 use strict;
 use Debconf::Db;
 use Debconf::Template;

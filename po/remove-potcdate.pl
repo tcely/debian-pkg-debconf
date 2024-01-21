@@ -1,5 +1,6 @@
 #! /usr/bin/perl -n
 
+use warnings;
 use strict;
 
 my $seen_potcdate;

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Readline - Terminal frontend with readline support
 =cut
 
 package Debconf::FrontEnd::Readline;
+use warnings;
 use strict;
 use Term::ReadLine;
 use Debconf::Gettext;

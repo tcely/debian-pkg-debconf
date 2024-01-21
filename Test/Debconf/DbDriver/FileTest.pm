@@ -7,6 +7,7 @@ Test::Debconf::DbDriver::FileTest - File driver class test
 =cut
 
 package Test::Debconf::DbDriver::FileTest;
+use warnings;
 use strict;
 use File::Temp;
 use Debconf::DbDriver::File;

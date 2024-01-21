@@ -7,6 +7,7 @@ Debconf::Log - debconf log module
 =cut
 
 package Debconf::Log;
+use warnings;
 use strict;
 use base qw(Exporter);
 our @EXPORT_OK=qw(debug warn);

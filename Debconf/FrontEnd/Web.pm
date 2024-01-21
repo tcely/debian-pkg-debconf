@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,10 +7,11 @@ Debconf::FrontEnd::Web - web FrontEnd
 =cut
 
 package Debconf::FrontEnd::Web;
+use warnings;
+use strict;
 use IO::Socket;
 use IO::Select;
 use CGI;
-use strict;
 use Debconf::Gettext;
 use base qw(Debconf::FrontEnd);
 

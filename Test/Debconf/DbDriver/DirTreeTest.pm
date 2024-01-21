@@ -7,6 +7,7 @@ Test::Debconf::DbDriver::DirTreeTest - DirTree driver class test
 =cut
 
 package Test::Debconf::DbDriver::DirTreeTest;
+use warnings;
 use strict;
 use File::Temp;
 use Debconf::DbDriver::DirTree;

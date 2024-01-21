@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::Directory - store database in a directory
 =cut
 
 package Debconf::DbDriver::Directory;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use IO::File;
