@@ -33,7 +33,7 @@ sub new_driver {
 sub set_up {
 	my $self = shift;
 
-	$self->{tmpfile} = new File::Temp( DIR => '/tmp');
+	$self->{tmpfile} = File::Temp->new( DIR => '/tmp');
 
 	$self->new_driver();
 }

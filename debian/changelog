@@ -17,6 +17,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Use the block form of grep and map.
     - Avoid combining low- and high-precedence boolean operators.
     - Avoid comma-separated statements.
+    - Avoid indirect object call syntax for "new".
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 

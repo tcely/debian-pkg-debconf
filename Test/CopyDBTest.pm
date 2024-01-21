@@ -233,15 +233,15 @@ sub db_init {
 	chomp(my $pwd = `pwd`);
 
 	# config temp file
-	$self->{config_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{config_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{config_filename} = $self->{config_file}->filename;
 
 	# template temp file
-	$self->{template_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{template_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{template_filename} = $self->{template_file}->filename;
 
 	# filedb temp file
-	$self->{filedb_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{filedb_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{filedb_filename} = $self->{filedb_file}->filename;
 
 	# dirtreedb temp dir
@@ -251,11 +251,11 @@ sub db_init {
 	$self->{packdirdb_dir} = File::Temp->tempdir('packdirdb-XXXX', DIR => $self->{tmp_dir});
 
 	# passwddb temp file
-	$self->{passwddb_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{passwddb_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{passwddb_filename} = $self->{passwddb_file}->filename;
 
 	# build conf file
-	$self->{conf_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{conf_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
 	open(my $outfile, ">", $self->{conf_filename});
 	print $outfile gettext(<<EOF);
