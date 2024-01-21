@@ -84,7 +84,7 @@ sub init {
 	$this->error("No filename specified") unless $this->{filename};
 
 	my ($directory)=$this->{filename}=~m!^(.*)/[^/]+!;
-	if (length $directory and ! -d $directory) {
+	if (length $directory and not -d $directory) {
 		mkdir $directory || $this->error("mkdir $directory:$!");
 	}
 

@@ -472,7 +472,7 @@ sub AUTOLOAD {
 				# different language with LANGUAGE=en.
 				last if $lang eq 'en';
 			}
-		} elsif (not $want_i18n && $field !~ /-c$/i) {
+		} elsif (not $want_i18n and $field !~ /-c$/i) {
 			# If i18n is turned off, try *-C first.
 			$ret=$Debconf::Db::templates->getfield($this->{template}, $field.'-c');
 			return $ret if defined $ret;

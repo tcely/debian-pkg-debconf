@@ -39,7 +39,7 @@ that on initialization.
 
 sub init {
 	my $this=shift;
-	if (! defined $this->{extension} or ! length $this->{extension}) {
+	if (not defined $this->{extension} or not length $this->{extension}) {
 		$this->{extension}=".dat";
 	}
 	$this->SUPER::init(@_);

@@ -174,7 +174,7 @@ sub exists {
 	my $name=shift;
 	# Check the cache first.
 	my $incache=$this->Debconf::DbDriver::Cache::exists($name);
-	return $incache if (!defined $incache or $incache);
+	return $incache if not defined $incache or $incache;
 	my $file=$this->{directory}.'/'.$this->filename($name);
 	return unless -e $file;
 

@@ -95,7 +95,7 @@ else {
 	}
 }
 debug developer => "frontend running, package name is $package";
-$frontend->default_title($package) if length $package and !$no_title;
+$frontend->default_title($package) if length $package and not $no_title;
 $frontend->info(undef);
 
 # Load any associated templates if we're being run from a package maintainer

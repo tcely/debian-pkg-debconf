@@ -201,7 +201,7 @@ sub exists {
 
 	# Check the cache first.
 	my $incache=$this->SUPER::exists($name);
-	return $incache if (!defined $incache or $incache);
+	return $incache if not defined $incache or $incache;
 
 	return -e $this->{directory}.'/'.$this->filename($name);
 }

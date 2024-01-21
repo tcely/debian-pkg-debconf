@@ -15,6 +15,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Avoid string eval in a couple of places.
     - Enable warnings lexically rather than using "perl -w".
     - Use the block form of grep and map.
+    - Avoid combining low- and high-precedence boolean operators.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
