@@ -1,3 +1,16 @@
+[BuiltinFunctions::ProhibitStringyEval]
+allow_includes = 1
+
+[TestingAndDebugging::ProhibitNoStrict]
+# Used for autoloading.
+allow = refs
+
+# debconf needs to be very conservative in its use of non-core modules.
+[-InputOutput::ProhibitInteractiveTest]
+
 # We use signatures instead of prototypes (except for a few subroutines used
 # with sort), but perlcritic doesn't understand that.
 [-Subroutines::ProhibitSubroutinePrototypes]
+
+# Misfires in various places.
+[-ValuesAndExpressions::ProhibitLeadingZeros]

@@ -71,6 +71,7 @@ use strict;
 # able to be loaded. As a sanity check, detect that case. If found, exit with
 # an error message, but a return code of 0 so apt continues.
 BEGIN {
+	## no critic (BuiltinFunctions::ProhibitStringyEval)
 	eval qq{
 		use File::Path qw(make_path remove_tree);
 		use FileHandle;
@@ -82,6 +83,7 @@ BEGIN {
 		use Debconf::Gettext;
 		use Debconf::Path;
 	};
+	## use critic
 	if ($@) {
 		# Don't use gettext() on this because it may have failed to
 		# load!

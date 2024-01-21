@@ -54,7 +54,9 @@ BEGIN {
 	}
 	
 	no warnings;
+	## no critic (BuiltinFunctions::ProhibitStringyEval)
 	eval q{ use Text::WrapI18N; use Text::CharWidth };
+	## use critic
 	use warnings;
 	# mblen has been known to get busted and return large numbers when
 	# the wrong version of perl is installed. Avoid an infinite loop

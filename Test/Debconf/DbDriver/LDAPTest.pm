@@ -1,4 +1,4 @@
-package LDAPTestSetup;
+package LDAPTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
 use strict;
 use Test::Debconf::DbDriver::SLAPD;

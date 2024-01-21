@@ -89,10 +89,12 @@ sub make_frontend {
 		else {
 			warn(sprintf(gettext("falling back to frontend: %s"), $trytype));
 		}
+		## no critic (BuiltinFunctions::ProhibitStringyEval)
 		$frontend=eval qq{
 			use Debconf::FrontEnd::$trytype;
 			Debconf::FrontEnd::$trytype->new();
 		};
+		## use critic
 		if (defined $frontend) {
 			$type = $trytype;
 			return $frontend;

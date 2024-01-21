@@ -1,4 +1,4 @@
-package CopyDBTestSetup;
+package CopyDBTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
 use strict;
 use Test::Debconf::DbDriver::SLAPD;
