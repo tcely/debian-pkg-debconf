@@ -65,7 +65,8 @@ Returns an ordered list of all allowed priorities.
 =cut
 
 sub priority_list {
-	return sort { $priorities{$a} <=> $priorities{$b} } keys %priorities;
+	my @sorted = sort { $priorities{$a} <=> $priorities{$b} } keys %priorities;
+	return @sorted;
 }
 
 =back

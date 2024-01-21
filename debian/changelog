@@ -9,6 +9,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Don't use subroutine prototypes.
     - Use bare return rather than "return undef".
     - Avoid two-argument open.
+    - Use a temporary variable rather than "return sort ...".
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
