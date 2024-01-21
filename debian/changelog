@@ -1,5 +1,6 @@
 debconf (1.5.84) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
   * perlcritic fixes:
     - Move "use strict" above all code.
     - Avoid declaring variables in conditional statements.
@@ -21,6 +22,10 @@ debconf (1.5.84) UNRELEASED; urgency=medium
   * Reformat debconf.py using pyupgrade, black, and isort.
   * Adjust shell code to pass shellcheck.
   * Fix parsing error that resulted in some nonsense in hierarchy.txt.
+
+  [ Gioele Barabucci ]
+  * Remove previous_module from confmodules again (cf. 1.4.27/1.4.28;
+    closes: #1040127).
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
