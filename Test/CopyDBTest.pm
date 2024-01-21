@@ -256,7 +256,7 @@ sub db_init {
 	# build conf file
 	$self->{conf_file} = new File::Temp( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
-	open(my $outfile, ">$self->{conf_filename}");
+	open(my $outfile, ">", $self->{conf_filename});
 	print $outfile gettext(<<EOF);
 Config: configdb
 Templates: templatedb

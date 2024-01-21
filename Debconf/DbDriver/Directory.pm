@@ -94,7 +94,7 @@ sub init {
 		# directory, and flock locking. I don't wait on locks, just
 		# error out. Since I open a lexical filehandle, the lock is
 		# dropped when this object is destroyed.
-		open ($this->{lock}, ">".$this->{directory}."/.lock") or
+		open ($this->{lock}, ">", $this->{directory}."/.lock") or
 			$this->error("could not lock $this->{directory}: $!");
 		while (! flock($this->{lock}, LOCK_EX | LOCK_NB)) {
 			next if $! == &POSIX::EINTR;
@@ -119,7 +119,7 @@ sub load {
 	return unless -e $file;
 
 	my $fh=IO::File->new;
-	open($fh, $file) or $this->error("$file: $!");
+	open($fh, "<", $file) or $this->error("$file: $!");
 	$this->cacheadd($this->{format}->read($fh));
 	close $fh;
 }
@@ -151,7 +151,7 @@ sub save {
 			or $this->error("$file-new: $!");
 	}
 	else {
-		open($fh, ">$file-new") or $this->error("$file-new: $!");
+		open($fh, ">", "$file-new") or $this->error("$file-new: $!");
 	}
 	$this->{format}->beginfile;
 	$this->{format}->write($fh, $data, $item)

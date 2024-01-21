@@ -122,7 +122,7 @@ if ($apt) {
 	
 	# We have now reached the end of the first file on stdin.
 	# Future reads from stdin should get input from the user, so re-open.
-	$have_tty=0 unless open (STDIN, "/dev/tty");
+	$have_tty=0 unless open (STDIN, "<", "/dev/tty");
 }
 elsif (! @debs) {
 	print STDERR sprintf("dpkg-preconfigure: ".gettext("must specify some debs to preconfigure")), "\n";

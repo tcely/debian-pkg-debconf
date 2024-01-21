@@ -122,7 +122,7 @@ sub go {
 	# pass the text into it to be processed.
 	# FIXME: this isn't really very robust. Syntax errors are ignored.
 	my %eltname=map { $_->question->name => $_ } @elements;
-	open (my $in, "<".Debconf::TmpFile::filename());
+	open (my $in, "<", Debconf::TmpFile::filename());
 	while (<$in>) {
 		next if /^\s*#/;
 

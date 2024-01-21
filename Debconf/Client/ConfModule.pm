@@ -87,7 +87,7 @@ sub import {
 	# perl module is used. In that case, this module needs to write
 	# to fd #3, rather than stdout. See changelog 0.3.74.
 	if (exists $ENV{DEBCONF_REDIR} && $ENV{DEBCONF_REDIR}) {
-		open(STDOUT,">&3");
+		open(STDOUT, ">&", 3);
 	}
 }
 

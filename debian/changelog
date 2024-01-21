@@ -8,6 +8,7 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     - Don't modify $_ in list functions.
     - Don't use subroutine prototypes.
     - Use bare return rather than "return undef".
+    - Avoid two-argument open.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 

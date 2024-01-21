@@ -17,7 +17,7 @@ foreach my $file (@ARGV) {
 	my $package='';
 	my $desc='';
 	my @isa=();
-	open (my $in, $file) || die "$file: $!";
+	open (my $in, "<", $file) || die "$file: $!";
 	while (<$in>) {
 		if (/package\s(\w+.*?);/) {
 			$package=$1;

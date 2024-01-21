@@ -92,7 +92,7 @@ sub loadfile {
 	return unless -e $file;
 
 	my $fh=IO::File->new;
-	open($fh, $file) or $this->error("$file: $!");
+	open($fh, "<", $file) or $this->error("$file: $!");
 	my @item = $this->{format}->read($fh);
 	while (@item) {
 		$this->cacheadd(@item);

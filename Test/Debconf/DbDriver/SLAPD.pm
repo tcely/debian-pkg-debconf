@@ -65,7 +65,7 @@ sub slapd_stop {
 
 	if ( -f $pf) {
 #		print $pf;
-		open(my $pidfile, $self->{pidfile}) or die "Can not open file: $pf";
+		open(my $pidfile, "<", $self->{pidfile}) or die "Can not open file: $pf";
 		my $pid = <$pidfile>;
 		close $pidfile;
 		my $cnt = kill 'TERM',$pid;
@@ -93,7 +93,7 @@ sub slapd_stop {
 sub build_slapd_conf {
 	my $self = shift;
 
-	open(my $slapd_conf, ">$self->{dir}/slapd.conf");
+	open(my $slapd_conf, ">", "$self->{dir}/slapd.conf");
 	print $slapd_conf gettext(<<EOF);
 # This is the main ldapd configuration file. See slapd.conf(5) for more
 # info on the configuration options.
@@ -154,7 +154,7 @@ EOF
 sub build_ldap_ldif {
 	my $self = shift;
 
-	open(my $outfile, ">$self->{dir}/ldap.ldif");
+	open(my $outfile, ">", "$self->{dir}/ldap.ldif");
 	print $outfile gettext(<<EOF);
 dn: cn=admin,dc=debian,dc=org
 objectClass: organizationalRole

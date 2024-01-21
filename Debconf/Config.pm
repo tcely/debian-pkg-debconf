@@ -111,7 +111,7 @@ sub load ($class, $cf, @defaults) {
 	}
 	die "No config file found" unless $cf;
 
-	open (my $debconf_config, $cf) or die "$cf: $!\n";
+	open (my $debconf_config, "<", $cf) or die "$cf: $!\n";
 	local $/="\n\n"; # read a stanza at a time
 
 	# Read global options stanza.

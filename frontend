@@ -48,7 +48,7 @@ elsif ($ARGV[0]=~m!^.*/(.*?)\.(?:postinst|postrm|prerm)$!) {
 elsif (-e "$root/var/lib/dpkg/tmp.ci/control") {
 	# The preinst is running, presumably. Now it gets really ugly, because
 	# I have to parse the control file.
-	open (my $control, "< $root/var/lib/dpkg/tmp.ci/control")
+	open (my $control, "<", "$root/var/lib/dpkg/tmp.ci/control")
 		|| die "Debconf: unable to open control file: $!";
 	while (<$control>) {
 		if (/^Package: (.*)/) {

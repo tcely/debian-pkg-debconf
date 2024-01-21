@@ -74,12 +74,12 @@ sub init {
 	my $fh;
 	if (defined $this->{infd}) {
 		if ($this->{infd} ne 'none') {
-			open ($fh, "<&=$this->{infd}") or
+			open ($fh, "<&=", $this->{infd}) or
 				$this->error("could not open file descriptor #$this->{infd}: $!");
 		}
 	}
 	else {	
-		open ($fh, '-');
+		open ($fh, '<', \*STDIN);
 	}
 
 	$this->SUPER::init(@_);
@@ -111,12 +111,12 @@ sub shutdown {
 	my $fh;
 	if (defined $this->{outfd}) {
 		if ($this->{outfd} ne 'none') {
-			open ($fh, ">&=$this->{outfd}") or
+			open ($fh, ">&=", $this->{outfd}) or
 				$this->error("could not open file descriptor #$this->{outfd}: $!");
 		}
 	}
 	else {
-		open ($fh, '>-');
+		open ($fh, '>', \*STDOUT);
 	}
 	
 	if (defined $fh) {

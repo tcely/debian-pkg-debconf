@@ -286,12 +286,12 @@ sub startdialog {
 
 	# Save stdout, stdin, the open3 below messes with them.
 	our ($saveout, $savein);
-	open($saveout, ">&STDOUT") || die $!;
+	open($saveout, ">&", \*STDOUT) || die $!;
 	$this->dialog_saveout($saveout);
 	if ($wantinputfd) {
 		$this->dialog_savein(undef);
 	} else {
-		open($savein, "<&STDIN") || die $!;
+		open($savein, "<&", \*STDIN) || die $!;
 		$this->dialog_savein($savein);
 	}
 

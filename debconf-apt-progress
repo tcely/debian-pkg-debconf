@@ -368,7 +368,7 @@ sub run_progress ($from, $to, @argv) {
 		or die "$0: can't create status pipe: $!";
 	nonblock($status_read);
 	checkdup2(fileno($status_write), 4);
-	open $status_write, '>&=4'
+	open $status_write, '>&=', 4
 		or die "$0: can't reopen \$status_write as fd 4: $!";
 	nocloexec($status_write);
 
@@ -381,14 +381,14 @@ sub run_progress ($from, $to, @argv) {
 		or die "$0: can't create debconf command pipe: $!";
 	nonblock($debconf_command_read);
 	checkdup2(fileno($debconf_command_write), 6);
-	open $debconf_command_write, '>&=6'
+	open $debconf_command_write, '>&=', 6
 		or die "$0: can't reopen \$debconf_command_write as fd 6: $!";
 	nocloexec($debconf_command_write);
 
 	pipe $debconf_reply_read, $debconf_reply_write
 		or die "$0: can't create debconf reply pipe: $!";
 	checkdup2(fileno($debconf_reply_read), 5);
-	open $debconf_reply_read, '<&=5'
+	open $debconf_reply_read, '<&=', 5
 		or die "$0: can't reopen \$debconf_reply_read as fd 5: $!";
 	nocloexec($debconf_reply_read);
 	$debconf_reply_write->autoflush(1);
@@ -397,7 +397,7 @@ sub run_progress ($from, $to, @argv) {
 		open $apt_log, '>>', $logfile
 			or die "$0: can't open $logfile: $!";
 	} elsif ($logstderr) {
-		open $apt_log, '>&STDERR'
+		open $apt_log, '>&', \*STDERR
 			or die "$0: can't duplicate stderr: $!";
 	} else {
 		open $apt_log, '>', '/dev/null'

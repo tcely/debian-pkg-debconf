@@ -216,7 +216,7 @@ foreach my $pkg (@packages) {
 
 		if ($script ne 'config') {
 			# Test to see if the script uses debconf.
-			open (my $in, "<$path_script");
+			open (my $in, "<", $path_script);
 			while (<$in>) {
 				if (/confmodule/i) {
 					$is_confmodule=1;
