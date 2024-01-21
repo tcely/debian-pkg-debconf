@@ -27,8 +27,8 @@ from __future__ import annotations
 
 import errno
 import fcntl
-import re
 import os
+import re
 import subprocess
 import sys
 from types import TracebackType
@@ -129,14 +129,14 @@ class Debconf:
         if command == "version_":
             command = "version"
         command = command.upper()
-        self.write.write("%s %s\n" % (command, " ".join(map(str, params))))
+        self.write.write("{} {}\n".format(command, " ".join(map(str, params))))
         self.write.flush()
 
         while True:
             try:
                 resp = self.read.readline().rstrip("\n")
                 break
-            except IOError as e:
+            except OSError as e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
@@ -195,7 +195,7 @@ class Debconf:
         self.stop()
 
 
-class DebconfCommunicator(Debconf, object):
+class DebconfCommunicator(Debconf):
     def __init__(
         self, owner: str, title: str | None = None, cloexec: bool = False
     ) -> None:
@@ -207,7 +207,7 @@ class DebconfCommunicator(Debconf, object):
             close_fds=True,
             universal_newlines=True,
         )
-        super(DebconfCommunicator, self).__init__(
+        super().__init__(
             title=title, read=self.dccomm.stdout, write=self.dccomm.stdin
         )
         if cloexec:
