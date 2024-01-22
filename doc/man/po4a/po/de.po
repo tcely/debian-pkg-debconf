@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf\n"
+"Project-Id-Version: debconf 1.5.84\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
 "POT-Creation-Date: 2024-01-21 19:23+0000\n"
-"PO-Revision-Date: 2018-07-20 10:47+0200\n"
+"PO-Revision-Date: 2024-01-22 18:59+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -3256,15 +3256,7 @@ msgstr ""
 
 #. type: Plain text
 #: debconf.conf.5:514
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  # A database is also used to hold templates. We \n"
-#| "  # don't need to make this as fancy.\n"
-#| "  Name: templates\n"
-#| "  Driver: File\n"
-#| "  Mode: 644\n"
-#| "  Format: 822\n"
-#| "  Filename: /var/cache/debconf/templates\n"
+#, no-wrap
 msgid ""
 "  # A database is also used to hold templates. We\n"
 "  # don't need to make this as fancy.\n"
