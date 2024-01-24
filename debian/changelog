@@ -22,6 +22,8 @@ debconf (1.5.84) UNRELEASED; urgency=medium
   * Reformat debconf.py using pyupgrade, black, and isort.
   * Adjust shell code to pass shellcheck.
   * Fix parsing error that resulted in some nonsense in hierarchy.txt.
+  * dpkg-preconfigure: Print "Extracting templates from packages" to stdout,
+    not stderr (closes: #797071).
 
   [ Gioele Barabucci ]
   * Remove previous_module from confmodules again (cf. 1.4.27/1.4.28;

@@ -155,8 +155,12 @@ my ($package, $version, $template, $config);
 # deal with the package, because apt-extracttemplates skips over any
 # package that depends on a version of debconf newer than what is
 # installed.
-my $info;
-unless (open($info, "-|")) {
+pipe(my $info_reader, my $info_writer) or die "debconf: pipe failed: $!";
+my $pid = fork();
+defined $pid or die "fork failed: $!";
+unless ($pid) {
+	close($info_reader);
+
 	# The kernel can accept command lines up to 20k worth of
 	# characters. It has happened that the list of packages to
 	# configure is more than that, which requires splitting it up into
@@ -168,8 +172,35 @@ unless (open($info, "-|")) {
 	my @collect;
 	my $progress=0;
 	my $show_progress=($apt && @debs > 30 && -t STDERR);
+
+	sub apt_extracttemplates {
+		my $apt_extracttemplates_pid = fork();
+		my $error;
+		if (not defined $apt_extracttemplates_pid) {
+			$error = $!;
+		} elsif (not $apt_extracttemplates_pid) {
+			open(STDOUT, ">&", $info_writer)
+				or die "debconf: redirect stdout failed: $!";
+			exec("apt-extracttemplates", "--tempdir", $tempdir, @collect)
+				or die "debconf: exec apt-extracttemplates failed: $!";
+		} else {
+			my $child = waitpid($apt_extracttemplates_pid, 0);
+			if ($child == -1) {
+				$error = $!;
+			} elsif ($?) {
+				$error = $?;
+			}
+		}
+		print STDERR sprintf("debconf: ".gettext("apt-extracttemplates failed: %s")."\n", $error) if defined $error;
+		if ($show_progress) {
+			$progress += @collect;
+			printf "\r".gettext("Extracting templates from packages: %d%%"), $progress * 100 / @debs;
+		}
+		return;
+	}
+
 	if ($show_progress) {
-		STDERR->autoflush(1);
+		STDOUT->autoflush(1);
 	}
 	foreach my $deb (@debs) {
 		$len += length($deb) + 1;
@@ -177,32 +208,21 @@ unless (open($info, "-|")) {
 			push @collect, $deb;
 		}
 		else {
-			if (system("apt-extracttemplates", "--tempdir", $tempdir, @collect) != 0) {
-				print STDERR sprintf("debconf: ".gettext("apt-extracttemplates failed: %s")."\n",$!);
-			}
-			if ($show_progress) {
-				$progress += @collect;
-				printf STDERR "\r".gettext("Extracting templates from packages: %d%%"), $progress * 100 / @debs;
-			}
-
+			apt_extracttemplates();
 			@collect=($deb);
 			$len=$static_len + length($deb) + 1;
 		}
 	}
-	if (system("apt-extracttemplates", "--tempdir", $tempdir, @collect) != 0) {
-		print STDERR sprintf("debconf: ".gettext("apt-extracttemplates failed: %s")."\n",$!);
-	}
-	if ($show_progress) {
-		$progress += @collect;
-		printf STDERR "\r".gettext("Extracting templates from packages: %d%%")."\n", $progress * 100 / @debs;
-	}
+	apt_extracttemplates();
+	print "\n" if $show_progress;
 	exit;
 }
+close($info_writer);
 # Why buffer here? Well, suppose 300 packages are being installed, and
 # only the first and last use debconf. The first is preconfigured. Then
 # the user watches their UI lock up until it scans all the way to the last..
 # Blowing a bit of memory on a buffer seems like a saner approach.
-my @buffer=<$info>;
+my @buffer=<$info_reader>;
 if ($apt && @buffer) {
 	print gettext("Preconfiguring packages ...\n");
 }
