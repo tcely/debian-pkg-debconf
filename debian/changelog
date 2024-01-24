@@ -38,6 +38,9 @@ debconf (1.5.84) UNRELEASED; urgency=medium
   [ Debconf translations ]
   * Romanian (Remus-Gabriel Chelu; closes: #1039068).
 
+  [ Programs translations ]
+  * Romanian (Remus-Gabriel Chelu; closes: #1039069).
+
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
 debconf (1.5.83) unstable; urgency=medium
