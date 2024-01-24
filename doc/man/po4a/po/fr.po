@@ -3593,15 +3593,7 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: debconf.conf.5:514
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  # A database is also used to hold templates. We \n"
-#| "  # don't need to make this as fancy.\n"
-#| "  Name: templates\n"
-#| "  Driver: File\n"
-#| "  Mode: 644\n"
-#| "  Format: 822\n"
-#| "  Filename: /var/cache/debconf/templates\n"
+#, no-wrap
 msgid ""
 "  # A database is also used to hold templates. We\n"
 "  # don't need to make this as fancy.\n"
