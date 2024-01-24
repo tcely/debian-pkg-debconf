@@ -76,14 +76,13 @@ L<debconf-get-selections(1)>
 
 use warnings;
 use strict;
-use feature qw(signatures);
 use Debconf::Db;
 use Debconf::Template;
 use Getopt::Long;
 
 use vars qw(%opts $filename $debug $error $checkonly $unseen);
 
-sub usage () {
+sub usage {
 	print STDERR <<EOF;
 Usage: debconf-set-selections [-vcu] [file]
   -v, --verbose     verbose output
@@ -93,20 +92,25 @@ EOF
 	exit(1);
 }
 
-sub info ($msg) {
+sub info {
+	my $msg = shift;
 	print STDERR "info: $msg\n" if $debug;
 }
 
-sub warning ($msg) {
+sub warning {
+	my $msg = shift;
 	print STDERR "warning: $msg\n";
 }
 
-sub error ($msg) {
+sub error {
+	my $msg = shift;
 	print STDERR "error: $msg\n";
 	$error++
 }
 
-sub load_answer ($owner, $label, $type, $content) {
+sub load_answer {
+	my ($owner, $label, $type, $content) = @_;
+
 	info "Loading answer for '$label'";
 
 	# Set up the template.
@@ -132,7 +136,9 @@ sub load_answer ($owner, $label, $type, $content) {
 	}
 }
 
-sub set_flag ($owner, $label, $flag, $content) {
+sub set_flag {
+	my ($owner, $label, $flag, $content) = @_;
+
 	info "Setting $flag flag";
 
 	my $question=Debconf::Question->get($label);
@@ -146,7 +152,8 @@ sub set_flag ($owner, $label, $flag, $content) {
 my @knowntypes = qw(select boolean string multiselect note password text title);
 my @knownflags = qw(seen);
 
-sub ok_format ($owner, $label, $type, $content) {
+sub ok_format {
+	my ($owner, $label, $type, $content) = @_;
 	if (! defined $owner || ! defined $label || ! defined $content) {
 		error "parse error on line $.: '$_'";
 		return;
@@ -160,7 +167,8 @@ sub ok_format ($owner, $label, $type, $content) {
 	}
 }
 
-sub mungeline ($line) {
+sub mungeline ($) {
+	my $line=shift;
 	chomp $line;
 	$line=~s/\r$//;
 	return $line;

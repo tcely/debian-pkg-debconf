@@ -9,7 +9,6 @@ Debconf::Config - Debconf meta-configuration module
 package Debconf::Config;
 use warnings;
 use strict;
-use feature qw(signatures);
 use Debconf::Question;
 use Debconf::Gettext;
 use Debconf::Priority qw(priority_valid priority_list);
@@ -57,7 +56,10 @@ for *every* database driver that is loaded up. Practically, setting
 
 # Turns a chunk of text into a hash. Returns number of fields
 # that were processed. Also handles env variable expansion.
-sub _hashify ($text, $hash) {
+sub _hashify ($$) {
+	my $text=shift;
+	my $hash=shift;
+
 	$text =~ s/\$\{([^}]+)\}/$ENV{$1}/eg;
 
 	my %ret;
@@ -80,12 +82,15 @@ sub _hashify ($text, $hash) {
 # db, or the parameters to set up a new db. Returns the db. Additional
 # parameters will be used as defaults if a new driver is set up. At least a
 # name default should always be passed. Returns the db name.
-sub _env_to_driver ($value, %hash) {
+sub _env_to_driver {
+	my $value=shift;
+
 	my ($name, $options) = $value =~ m/^(\w+)(?:{(.*)})?$/;
 	return unless $name;
 
 	return $name if Debconf::DbDriver->driver($name);
 
+	my %hash = @_; # defaults from params
 	$hash{driver} = $name;
 
 	if (defined $options) {
@@ -103,7 +108,11 @@ sub _env_to_driver ($value, %hash) {
 	return Debconf::Db->makedriver(%hash)->{name};
 }
 
-sub load ($class, $cf, @defaults) {
+sub load {
+	my $class=shift;
+	my $cf=shift;
+	my @defaults=@_;
+
 	if (! $cf) {
 		for my $file (@config_files) {
 			$file = "$ENV{DPKG_ROOT}$file" if exists $ENV{DPKG_ROOT};
@@ -119,7 +128,7 @@ sub load ($class, $cf, @defaults) {
 	local $/="\n\n"; # read a stanza at a time
 
 	# Read global options stanza.
-	1 until _hashify(scalar <$debconf_config>, $config) || eof $debconf_config;
+	1 until _hashify(<$debconf_config>, $config) || eof $debconf_config;
 
 	# Verify that all options are sane.
 	if (! exists $config->{config}) {
@@ -217,7 +226,10 @@ passed to GetOptions. This can be used to handle additional options.
 
 =cut
 
-sub getopt ($class, $usage, %options) {
+sub getopt {
+	my $class=shift;
+	my $usage=shift;
+
 	my $showusage=sub { # closure
 		print STDERR $usage."\n";
 		print STDERR gettext(<<EOF);
@@ -238,7 +250,7 @@ EOF
 		'priority|p=s',	sub { shift; $class->priority(shift) },
 		'terse',	sub { $config->{terse} = 'true' },
 		'help|h',	$showusage,
-		%options,
+		@_,
 	) || $showusage->();
 }
 
@@ -254,9 +266,11 @@ file.
 
 =cut
 
-sub frontend ($class, $frontend = undef) {
+sub frontend {
+	my $class=shift;
+
 	return $ENV{DEBIAN_FRONTEND} if exists $ENV{DEBIAN_FRONTEND};
-	$config->{frontend}=$frontend if defined $frontend;
+	$config->{frontend}=shift if @_;
 	return $config->{frontend} if exists $config->{frontend};
 
 	my $ret='dialog';
@@ -274,7 +288,8 @@ environment.
 
 =cut
 
-sub frontend_forced ($class, $val) {
+sub frontend_forced {
+	my ($class, $val) = @_;
 	$config->{frontend_forced} = $val
 		if defined $val || exists $ENV{DEBIAN_FRONTEND};
 	return $config->{frontend_forced} ? 1 : 0;
@@ -292,9 +307,11 @@ file.
 
 =cut
 
-sub priority ($class, $newpri = undef) {
+sub priority {
+	my $class=shift;
 	return $ENV{DEBIAN_PRIORITY} if exists $ENV{DEBIAN_PRIORITY};
-	if (defined $newpri) {
+	if (@_) {
+		my $newpri=shift;
 		if (! priority_valid($newpri)) {
 			warn(sprintf(gettext("Ignoring invalid priority \"%s\""), $newpri));
 			warn(sprintf(gettext("Valid priorities are: %s"), join(" ", priority_list())));
@@ -320,9 +337,10 @@ not persistant across debconf invocations.
 
 =cut
 
-sub terse ($class, $newval = undef) {
+sub terse {
+	my $class=shift;
 	return $ENV{DEBCONF_TERSE} if exists $ENV{DEBCONF_TERSE};
-	$config->{terse}=$newval if defined $newval;
+	$config->{terse}=$_[0] if @_;
 	return $config->{terse} if exists $config->{terse};
 	return 'false';
 }
@@ -333,9 +351,10 @@ Set to disable warnings.
 
 =cut
 
-sub nowarnings ($class, $newval = undef) {
+sub nowarnings {
+	my $class=shift;
 	return $ENV{DEBCONF_NOWARNINGS} if exists $ENV{DEBCONF_NOWARNINGS};
-	$config->{nowarnings}=$newval if defined $newval;
+	$config->{nowarnings}=$_[0] if @_;
 	return $config->{nowarnings} if exists $config->{nowarnings};
 	return 'false';
 }
@@ -347,7 +366,8 @@ and may be overridden by DEBCONF_DEBUG in the environment.
 
 =cut
 
-sub debug ($class) {
+sub debug {
+	my $class=shift;
 	return $ENV{DEBCONF_DEBUG} if exists $ENV{DEBCONF_DEBUG};
 	return $config->{debug} if exists $config->{debug};
 	return '';
@@ -361,7 +381,8 @@ variable. If neither is set, it defaults to root.
 
 =cut
 
-sub admin_email ($class) {
+sub admin_email {
+	my $class=shift;
 	return $ENV{DEBCONF_ADMIN_EMAIL} if exists $ENV{DEBCONF_ADMIN_EMAIL};
 	return $config->{admin_email} if exists $config->{admin_email};
 	return 'root';
@@ -374,7 +395,8 @@ noninteractive frontend.
 
 =cut
 
-sub noninteractive_seen ($class) {
+sub noninteractive_seen {
+	my $class=shift;
 	return $ENV{DEBCONF_NONINTERACTIVE_SEEN} if exists $ENV{DEBCONF_NONINTERACTIVE_SEEN};
 	return $config->{noninteractive_seen} if exists $config->{noninteractive_seen};
 	return 'false';
@@ -387,7 +409,8 @@ descriptive values from other fields for select and multiselect templates.
 
 =cut
 
-sub c_values ($class) {
+sub c_values {
+	my $class=shift;
 	return $ENV{DEBCONF_C_VALUES} if exists $ENV{DEBCONF_C_VALUES};
 	return $config->{c_values} if exists $config->{c_values};
 	return 'false';
@@ -401,10 +424,11 @@ Other fields can be accessed and set by calling class methods.
 
 =cut
 
-sub AUTOLOAD ($class, @rest) {
+sub AUTOLOAD {
 	(my $field = our $AUTOLOAD) =~ s/.*://;
+	my $class=shift;
 
-	return $config->{$field}=shift @rest if @rest;
+	return $config->{$field}=shift if @_;
 	return $config->{$field} if defined $config->{$field};
 	return '';
 }

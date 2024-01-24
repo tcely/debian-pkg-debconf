@@ -8,8 +8,8 @@ allow = refs
 # debconf needs to be very conservative in its use of non-core modules.
 [-InputOutput::ProhibitInteractiveTest]
 
-# We use signatures instead of prototypes (except for a few subroutines used
-# with sort), but perlcritic doesn't understand that.
+# Eventually we should probably use signatures, but they don't quite seem
+# mature enough yet.
 [-Subroutines::ProhibitSubroutinePrototypes]
 
 # Misfires in various places.
