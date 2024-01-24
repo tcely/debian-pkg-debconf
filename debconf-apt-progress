@@ -156,9 +156,15 @@ my $dlwaypoint=15;
 my ($logfile, $logstderr);
 my $had_frontend;
 
+our ($status_read, $status_write);
+our ($command_read, $command_write);
+our ($debconf_command_read, $debconf_command_write);
+our ($debconf_reply_read, $debconf_reply_write);
+our $apt_log;
+
 sub checkopen ($file) {
 	my $fd = POSIX::open($file, &POSIX::O_RDONLY);
-	defined $fd or die "$0: can't open $_[0]: $!\n";
+	defined $fd or die "$0: can't open $file: $!\n";
 	return $fd;
 }
 
