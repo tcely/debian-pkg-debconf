@@ -38,7 +38,7 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 				$fix=1;
 			}
 			elsif (! exists $templates{$q->template->template}) {
-				warn "question \"".$q->name."\" uses nonexistant template ".$q->template->template."; removing it.";
+				warn "question \"".$q->name."\" uses nonexistent template ".$q->template->template."; removing it.";
 				foreach my $owner (split(/, /, $q->owners)) {
 					$q->removeowner($owner);
 				}
@@ -65,7 +65,7 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 			}
 			foreach my $q (@owners) {
 				if (! exists $questions{$q}) {
-					warn "template \"$t\" claims to be used by nonexistant question \"$q\"; removing that.";
+					warn "template \"$t\" claims to be used by nonexistent question \"$q\"; removing that.";
 					$Debconf::Db::templates->removeowner($t, $q);
 					$ok=0;
 					$fix=1;

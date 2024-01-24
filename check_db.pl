@@ -40,7 +40,7 @@ foreach my $t (keys %templates) {
 	my @owners=$Debconf::Db::templates->owners($t);
 	foreach my $q (@owners) {
 		if (! exists $questions{$q}) {
-			print STDERR "Warning: template \"$t\" claims to be used by nonexistant question \"$q\".\n";
+			print STDERR "Warning: template \"$t\" claims to be used by nonexistent question \"$q\".\n";
 		}
 	}
 }
