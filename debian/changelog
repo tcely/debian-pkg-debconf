@@ -35,6 +35,9 @@ debconf (1.5.84) UNRELEASED; urgency=medium
   * Remove previous_module from confmodules again (cf. 1.4.27/1.4.28;
     closes: #1040127).
 
+  [ Debconf translations ]
+  * Romanian (Remus-Gabriel Chelu; closes: #1039068).
+
  -- Colin Watson <cjwatson@debian.org>  Thu, 11 Jan 2024 20:48:05 +0000
 
 debconf (1.5.83) unstable; urgency=medium
