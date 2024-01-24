@@ -289,7 +289,7 @@ sub passthrough (@) {
 			$ENV{DEBCONF_DB_REPLACE} = 'configdb';
 			$ENV{DEBCONF_DB_OVERRIDE} = 'Pipe{infd:none outfd:none}';
 		}
-		exec @_;
+		exec @_ or die "can't exec $_[0]: $!";
 	}
 
 	close $status_write;
