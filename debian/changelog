@@ -26,6 +26,10 @@ debconf (1.5.84) UNRELEASED; urgency=medium
     apt-extracttemplates fails (closes: #754123).
   * debconf-apt-progress: Handle the case of failing to exec the requested
     command (closes: #682508).
+  * debconf.py: Don't pass sys.executable as an argument to the frontend
+    (closes: #304572).  This may break compatibility if the importing
+    program isn't an executable with a #!, but that seems unlikely for
+    programs shipped in Debian.
 
   [ Gioele Barabucci ]
   * Remove previous_module from confmodules again (cf. 1.4.27/1.4.28;

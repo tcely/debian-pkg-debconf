@@ -240,16 +240,18 @@ else:
     _frontEndProgram = "/usr/share/debconf/frontend"
 
 
-def runFrontEnd() -> None:
+def runFrontEnd(*, pass_sys_executable: bool = False) -> None:
     if "DEBIAN_HAS_FRONTEND" not in os.environ:
         os.environ["PERL_DL_NONLAZY"] = "1"
-        os.execv(
-            _frontEndProgram, [_frontEndProgram, sys.executable] + sys.argv
-        )
+        args = [_frontEndProgram]
+        if pass_sys_executable:
+            args.append(sys.executable)
+        args.extend(sys.argv)
+        os.execv(_frontEndProgram, args)
 
 
 if __name__ == "__main__":
-    runFrontEnd()
+    runFrontEnd(pass_sys_executable=True)
     db = Debconf()
     db.forceInput(CRITICAL, "bsdmainutils/calendar_lib_is_not_empty")
     db.go()
