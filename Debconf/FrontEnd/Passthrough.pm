@@ -51,8 +51,8 @@ sub init {
 		}
 	}
 
-	binmode $this->{readfh}, ":encoding(UTF-8)";
-	binmode $this->{writefh}, ":encoding(UTF-8)";
+	binmode $this->{readfh}, ":utf8";
+	binmode $this->{writefh}, ":utf8";
 
 	$this->{readfh}->autoflush(1);
 	$this->{writefh}->autoflush(1);

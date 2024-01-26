@@ -1,3 +1,11 @@
+debconf (1.5.85) UNRELEASED; urgency=medium
+
+  * Revert 'Use ":encoding(UTF-8)" in Debconf::FrontEnd::Passthrough rather
+    than ":utf8"'; this requires PerlIO, which is not available when only
+    perl-base is installed.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 26 Jan 2024 10:11:46 +0000
+
 debconf (1.5.84) unstable; urgency=medium
 
   [ Colin Watson ]

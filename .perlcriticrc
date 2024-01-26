@@ -8,6 +8,9 @@ allow = refs
 # debconf needs to be very conservative in its use of non-core modules.
 [-InputOutput::ProhibitInteractiveTest]
 
+# Requires PerlIO, which is not available when only perl-base is installed.
+[-InputOutput::RequireEncodingWithUTF8Layer]
+
 # Eventually we should probably use signatures, but they don't quite seem
 # mature enough yet.
 [-Subroutines::ProhibitSubroutinePrototypes]
