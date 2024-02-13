@@ -1,3 +1,10 @@
+debconf (1.5.86) UNRELEASED; urgency=medium
+
+  * Fix stdin/stdout handling regression in Debconf::DbDriver::Pipe (thanks,
+    Dan Bungert; closes: #1063817, LP: #2052982).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 13 Feb 2024 09:33:25 +0000
+
 debconf (1.5.85) unstable; urgency=medium
 
   * Revert 'Use ":encoding(UTF-8)" in Debconf::FrontEnd::Passthrough rather

@@ -80,7 +80,7 @@ sub init {
 		}
 	}
 	else {
-		open ($fh, '<', \*STDIN);
+		open ($fh, '<&', \*STDIN);
 	}
 
 	$this->SUPER::init(@_);
@@ -117,7 +117,7 @@ sub shutdown {
 		}
 	}
 	else {
-		open ($fh, '>', \*STDOUT);
+		open ($fh, '>&', \*STDOUT);
 	}
 
 	if (defined $fh) {
