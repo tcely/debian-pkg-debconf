@@ -97,6 +97,13 @@ if (exists $ENV{DEBCONF_USE_CDEBCONF} and $ENV{DEBCONF_USE_CDEBCONF} ne '') {
     exec "/usr/lib/cdebconf/dpkg-preconfigure", @ARGV;
 }
 
+# remove_tree calls getcwd() and fails if it can't determine the current
+# working directory.  This is possible if the current working directory has
+# been removed, and there's no legitimate reason for dpkg-preconfigure to
+# depend on the current working directory, so just change to / to give
+# ourselves a more stable environment.
+chdir('/');
+
 Debconf::Db->load;
 
 my $apt=0;
