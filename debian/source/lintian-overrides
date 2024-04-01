@@ -1,0 +1,2 @@
+# debconf-common is required by debconf implementations, not the other way around.
+debhelper-but-no-misc-depends debconf-common

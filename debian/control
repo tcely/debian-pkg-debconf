@@ -18,6 +18,7 @@ Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
 
 Package: debconf
 Priority: important
+Pre-Depends: debconf-common (>= 1.5.83),
 Conflicts: debconf-tiny,
            whiptail-utf8 (<= 0.50.17-13),
 Provides: debconf-2.0,
@@ -38,6 +39,19 @@ Multi-Arch: foreign
 Description: Debian configuration management system
  Debconf is a configuration management system for debian packages. Packages
  use Debconf to ask questions when they are installed.
+
+Package: debconf-common
+Priority: important
+Breaks: debconf (<< 1.5.83),
+Replaces: debconf (<< 1.5.83),
+Architecture: all
+Multi-Arch: foreign
+Description: Debian configuration management system (shared files)
+ Debconf is a configuration management system for Debian packages. Packages
+ use Debconf to ask questions when they are installed.
+ .
+ This package contains files that are used by the classic Debconf, as well
+ as by its modern replacement cdebconf.
 
 Package: debconf-i18n
 Section: localization
