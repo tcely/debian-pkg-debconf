@@ -2,6 +2,7 @@ debconf (1.5.87) UNRELEASED; urgency=medium
 
   * dpkg-preconfigure: Change directory to /, to avoid problems if the
     current working directory does not exist (closes: #1043465).
+  * Apply X-Style: black.
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 17 Mar 2024 20:23:51 +0000
 
