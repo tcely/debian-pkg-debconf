@@ -11,6 +11,7 @@ pre-commit:
   stage: .pre
   image: $SALSA_CI_IMAGES_BASE
   variables:
+    RELEASE: testing
     XDG_CACHE_HOME: "$CI_PROJECT_DIR/.cache"
   before_script:
     - apt -qq update
