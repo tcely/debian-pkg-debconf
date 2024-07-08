@@ -36,8 +36,7 @@ from typing import IO, Protocol
 
 
 class Command(Protocol):
-    def __call__(self, *params: str | int) -> str:
-        ...
+    def __call__(self, *params: str | int) -> str: ...
 
 
 class DebconfError(Exception):
