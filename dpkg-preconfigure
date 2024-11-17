@@ -139,7 +139,12 @@ elsif (! @debs) {
 	exit(1);
 }
 
-if (! Debconf::Path::find("apt-extracttemplates")) {
+my $apt_extracttemplates;
+if (-x '/usr/lib/apt/apt-extracttemplates') {
+	$apt_extracttemplates = '/usr/lib/apt/apt-extracttemplates';
+} elsif (Debconf::Path::find('apt-extracttemplates')) {
+	$apt_extracttemplates = 'apt-extracttemplates';
+} else {
 	warn gettext("delaying package configuration, since apt-utils is not installed");
 	exit;
 }
@@ -174,7 +179,7 @@ unless ($pid) {
 	# multiple apt-extracttemplates runs.
 	my $command_max=20000; # LINUX SPECIFIC!!
 		# I could use POSIX::ARG_MAX, but that would be slow.
-	my $static_len=length("apt-extracttemplates");
+	my $static_len=length($apt_extracttemplates);
 	my $len=$static_len;
 	my @collect;
 	my $progress=0;
@@ -188,8 +193,8 @@ unless ($pid) {
 		} elsif (not $apt_extracttemplates_pid) {
 			open(STDOUT, ">&", $info_writer)
 				or die "debconf: redirect stdout failed: $!";
-			exec("apt-extracttemplates", "--tempdir", $tempdir, @collect)
-				or die "debconf: exec apt-extracttemplates failed: $!";
+			exec($apt_extracttemplates, "--tempdir", $tempdir, @collect)
+				or die "debconf: exec $apt_extracttemplates failed: $!";
 		} else {
 			my $child = waitpid($apt_extracttemplates_pid, 0);
 			if ($child == -1) {
