@@ -33,5 +33,3 @@ repos:
     rev: v0.10.0.1
     hooks:
     -   id: shellcheck
-        # confmodule.sh is obsolete, so not worth polishing.
-        exclude: ^confmodule\.sh$
