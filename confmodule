@@ -13,7 +13,7 @@ elif [ -x /usr/share/debconf/frontend ]; then
 	# Fall back to debconf, but only if installed.
 	_DEBCONF_IMPL=debconf
 else
-	# Last resort: use cdebconf although not explicity requested.
+	# Last resort: use cdebconf although not explicitly requested.
 	_DEBCONF_IMPL=cdebconf
 fi
 
