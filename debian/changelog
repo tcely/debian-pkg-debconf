@@ -6,6 +6,9 @@ debconf (1.5.88) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Use /usr/lib/apt/apt-extracttemplates if available (closes: #1087523).
 
+  [ Gioele Barabucci ]
+  * confmodule: Align debconf's and cdebconf's confmodule.
+
  -- Colin Watson <cjwatson@debian.org>  Mon, 22 Jul 2024 18:11:53 +0100
 
 debconf (1.5.87) unstable; urgency=medium
