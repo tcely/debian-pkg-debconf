@@ -1,4 +1,4 @@
-debconf (1.5.88) UNRELEASED; urgency=medium
+debconf (1.5.88) unstable; urgency=medium
 
   [ Programs translations ]
   * Catalan (Carles Pina i Estany).
@@ -9,7 +9,7 @@ debconf (1.5.88) UNRELEASED; urgency=medium
   [ Gioele Barabucci ]
   * confmodule: Align debconf's and cdebconf's confmodule.
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 22 Jul 2024 18:11:53 +0100
+ -- Colin Watson <cjwatson@debian.org>  Tue, 24 Dec 2024 00:10:45 +0000
 
 debconf (1.5.87) unstable; urgency=medium
 
