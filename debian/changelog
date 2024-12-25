@@ -1,9 +1,9 @@
-debconf (1.5.89) UNRELEASED; urgency=medium
+debconf (1.5.89) unstable; urgency=medium
 
   * confmodule: Fix detection of whether debconf is installed (closes:
     #1091366).
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 25 Dec 2024 23:36:07 +0000
+ -- Colin Watson <cjwatson@debian.org>  Wed, 25 Dec 2024 23:36:39 +0000
 
 debconf (1.5.88) unstable; urgency=medium
 
