@@ -9,8 +9,11 @@ _DEBCONF_IMPL=
 if [ "${DEBCONF_USE_CDEBCONF:-}" ]; then
 	# Use cdebconf if explicitly requested.
 	_DEBCONF_IMPL=cdebconf
-elif [ -x /usr/share/debconf/frontend ]; then
-	# Fall back to debconf, but only if installed.
+elif [ -x /usr/share/debconf/frontend ] && \
+     [ ! -h /usr/share/debconf/frontend ]; then
+	# Fall back to debconf, but only if installed.  (cdebconf currently
+	# installs /usr/share/debconf/frontend as a symlink to
+	# /usr/lib/cdebconf/debconf.)
 	_DEBCONF_IMPL=debconf
 else
 	# Last resort: use cdebconf although not explicitly requested.
