@@ -3,6 +3,9 @@ debconf (1.5.90) UNRELEASED; urgency=medium
   [ Benjamin Drung ]
   * ReadLine: Fix uninitialized value on "EOF" (^D) (closes: #723843).
 
+  [ Manual page translations ]
+  * Add Romanian (Remus-Gabriel Chelu; closes: #1083078).
+
  -- Colin Watson <cjwatson@debian.org>  Sun, 29 Dec 2024 14:10:03 +0000
 
 debconf (1.5.89) unstable; urgency=medium
