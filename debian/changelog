@@ -6,6 +6,12 @@ debconf (1.5.90) UNRELEASED; urgency=medium
   [ Manual page translations ]
   * Add Romanian (Remus-Gabriel Chelu; closes: #1083078).
 
+  [ Debconf translations ]
+  * Georgian (Temuri Doghonadze).
+
+  [ Programs translations ]
+  * Georgian (Temuri Doghonadze).
+
  -- Colin Watson <cjwatson@debian.org>  Sun, 29 Dec 2024 14:10:03 +0000
 
 debconf (1.5.89) unstable; urgency=medium
