@@ -1,4 +1,4 @@
-debconf (1.5.90) UNRELEASED; urgency=medium
+debconf (1.5.90) unstable; urgency=medium
 
   [ Benjamin Drung ]
   * ReadLine: Fix uninitialized value on "EOF" (^D) (closes: #723843).
@@ -12,7 +12,7 @@ debconf (1.5.90) UNRELEASED; urgency=medium
   [ Programs translations ]
   * Georgian (Temuri Doghonadze).
 
- -- Colin Watson <cjwatson@debian.org>  Sun, 29 Dec 2024 14:10:03 +0000
+ -- Colin Watson <cjwatson@debian.org>  Fri, 07 Mar 2025 18:07:00 +0000
 
 debconf (1.5.89) unstable; urgency=medium
 
