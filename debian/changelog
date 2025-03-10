@@ -1,8 +1,8 @@
-debconf (1.5.91) UNRELEASED; urgency=medium
+debconf (1.5.91) unstable; urgency=medium
 
   * Teletype: Require stdin to be a tty (closes: #1061480).
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 10 Mar 2025 12:04:03 +0000
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Mar 2025 12:07:15 +0000
 
 debconf (1.5.90) unstable; urgency=medium
 
