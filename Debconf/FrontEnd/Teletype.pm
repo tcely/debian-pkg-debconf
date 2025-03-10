@@ -41,6 +41,9 @@ sub init {
 	$this->SUPER::init(@_);
 	$this->interactive(1);
 	$this->linecount(0);
+
+	# Yeah, you need a controlling tty. Make sure there is one.
+	-t STDIN || die gettext("This frontend requires a controlling tty.")."\n";
 }
 
 =item display
