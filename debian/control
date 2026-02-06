@@ -7,6 +7,7 @@ Uploaders:
 Standards-Version: 4.0.0
 Build-Depends-Indep:
  gettext,
+ imagemagick,
  libintl-perl,
  perl,
  python3,
