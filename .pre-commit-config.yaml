@@ -2,35 +2,35 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
     -   id: check-added-large-files
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/scop/pre-commit-perlcritic
-    rev: v1.152-1
+    rev: v1.156-1
     hooks:
     -   id: perlcritic
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.16.0
+    rev: v3.21.2
     hooks:
     -   id: pyupgrade
 -   repo: https://github.com/psf/black
-    rev: 24.4.2
+    rev: 26.1.0
     hooks:
     -   id: black
         args: ["--line-length", "79"]
 -   repo: https://github.com/PyCQA/flake8
-    rev: 7.1.0
+    rev: 7.3.0
     hooks:
     -   id: flake8
 -   repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 7.0.0
     hooks:
     -   id: isort
 -   repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+    rev: v0.11.0.1
     hooks:
     -   id: shellcheck
         # confmodule.sh is obsolete, so not worth polishing.
