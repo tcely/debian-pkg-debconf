@@ -1,3 +1,10 @@
+debconf (1.5.92) unstable; urgency=medium
+
+  [ Luca Boccassi ]
+  * Add BMP version of debian-logo.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 16 Feb 2026 17:48:32 +0000
+
 debconf (1.5.91) unstable; urgency=medium
 
   * Teletype: Require stdin to be a tty (closes: #1061480).
