@@ -11,10 +11,12 @@ MUNGE=xargs perl -i.bak -ne ' \
 all:
 	$(MAKE) -C doc
 	$(MAKE) -C po
+	convert debian-logo.png debian-logo.bmp
 
 clean:
 	find . \( -name \*~ -o -name \*.pyc -o -name \*.pyo \) | xargs rm -f
 	rm -rf __pycache__
+	rm -f debian-logo.bmp
 	$(MAKE) -C doc clean
 	$(MAKE) -C po clean
 
@@ -48,6 +50,7 @@ install-rest:
 		$(prefix)/usr/share/pixmaps
 	install -m 0644 debconf.conf $(prefix)/etc/
 	install -m 0644 debian-logo.png $(prefix)/usr/share/pixmaps/
+	install -m 0644 debian-logo.bmp $(prefix)/usr/share/pixmaps/
 	# This one is the ultimate backup copy.
 	grep -v '^#' debconf.conf > $(prefix)/usr/share/debconf/debconf.conf
 	# Make module directories.
