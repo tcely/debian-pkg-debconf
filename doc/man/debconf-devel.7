@@ -33,19 +33,16 @@ you can use dpkg --compare-versions on $2 to make some behavior happen only
 on upgrade from a particular version of a package, and things like that.
 .P
 The config script can be run in one of three ways:
-.TP
-.B 1
+.IP 1.
 If a package is pre-configured, with dpkg-preconfigure, its config script
 is run, and is passed the parameters "configure", and installed-version.
-.TP
-.B 2
+.IP 2.
 When a package's postinst is run, debconf will try to run the config
 script then too, and it will be passed the same parameters it was passed
 when it is pre-configured. This is necessary because the package might
 not have been pre-configured, and the config script still needs to get a
 chance to run. See HACKS for details.
-.TP
-.B 3
+.IP 3.
 If a package is reconfigured, with dpkg-reconfigure, its config script
 it run, and is passed the parameters "reconfigure" and
 installed-version.
@@ -76,26 +73,30 @@ section of a deb. Its format is similar to a debian control file; a set of
 stanzas separated by blank lines, with each stanza having a RFC822-like
 form:
 .P
-  Template: foo/bar
-  Type: string
-  Default: foo
-  Description: This is a sample string question.
-   This is its extended description.
-   .
-   Notice that:
-    - Like in a debian package description, a dot
-      on its own line sets off a new paragraph.
-    - Most text is word-wrapped, but doubly-indented
-      text is left alone, so you can use it for lists
-      of items, like this list. Be careful, since
-      it is not word-wrapped, if it's too wide
-      it will look bad. Using it for short items
-      is best (so this is a bad example).
+.RS 4
+.EX
+Template: foo/bar
+Type: string
+Default: foo
+Description: This is a sample string question.
+ This is its extended description.
+ .
+ Notice that:
+  - Like in a debian package description, a dot
+    on its own line sets off a new paragraph.
+  - Most text is word-wrapped, but doubly-indented
+    text is left alone, so you can use it for lists
+    of items, like this list. Be careful, since
+    it is not word-wrapped, if it's too wide
+    it will look bad. Using it for short items
+    is best (so this is a bad example).
 
-  Template: foo/baz
-  Type: boolean
-  Description: Clear enough, no?
-   This is another question, of boolean type.
+Template: foo/baz
+Type: boolean
+Description: Clear enough, no?
+ This is another question, of boolean type.
+.EE
+.RE
 .P
 For some real-life examples of templates files, see
 /var/lib/dpkg/info/debconf.templates, and other .templates files in that
@@ -129,8 +130,13 @@ A true/false choice.
 A choice between one of a number of values. The choices must be specified
 in a field named 'Choices'. Separate the possible values
 with commas and spaces, like this:
+.P
 .RS
-  Choices: yes, no, maybe
+.RS 4
+.EX
+Choices: yes, no, maybe
+.EE
+.RE
 .RE
 .TP
 .B multiselect
@@ -402,19 +408,23 @@ The owner defaults to the package that is being configured with debconf.
 .P
 Here is a simple example of the debconf protocol in action.
 .P
-  INPUT medium debconf/frontend
-  30 question skipped
-  FSET debconf/frontend seen false
-  0 false
-  INPUT high debconf/frontend
-  0 question will be asked
-  GO
-  [ Here debconf displays a question to the user. ]
-  0 ok
-  GET no/such/question
-  10 no/such/question doesn't exist
-  GET debconf/frontend
-  0 Dialog
+.RS 4
+.EX
+INPUT medium debconf/frontend
+30 question skipped
+FSET debconf/frontend seen false
+0 false
+INPUT high debconf/frontend
+0 question will be asked
+GO
+[ Here debconf displays a question to the user. ]
+0 ok
+GET no/such/question
+10 no/such/question doesn't exist
+GET debconf/frontend
+0 Dialog
+.EE
+.RE
 .SH LIBRARIES
 Setting things up so you can talk to debconf, and speaking the debconf
 protocol by hand is a little too much work, so some thin libraries exist
@@ -436,12 +446,16 @@ The rest of this manual will use the /usr/share/debconf/confmodule library
 in example shell scripts. Here is an example config script using that library,
 that just asks a question:
 .P
-  #!/bin/sh
-  set -e
-  . /usr/share/debconf/confmodule
-  db_set mypackage/reboot-now false
-  db_input high mypackage/reboot-now || true
-  db_go || true
+.RS 4
+.EX
+#!/bin/sh
+set -e
+. /usr/share/debconf/confmodule
+db_set mypackage/reboot-now false
+db_input high mypackage/reboot-now || true
+db_go || true
+.EE
+.RE
 .P
 Notice the uses of "|| true" to prevent the script from dying if debconf
 decides it can't display a question, or the user tries to back up. In those
@@ -452,13 +466,17 @@ And here is a corresponding postinst script, that uses the user's answer to
 the question to see if the system should be rebooted (a rather absurd
 example..):
 .P
-  #!/bin/sh
-  set -e
-  . /usr/share/debconf/confmodule
-  db_get mypackage/reboot-now
-  if [ "$RET" = true ]; then
-  	shutdown -r now
-  fi
+.RS 4
+.EX
+#!/bin/sh
+set -e
+. /usr/share/debconf/confmodule
+db_get mypackage/reboot-now
+if [ "$RET" = true ]; then
+    shutdown -r now
+fi
+.EE
+.RE
 .P
 Notice the use of the $RET variable to get at the extended return code from
 the GET command, which holds the user's answer to the question.
@@ -466,28 +484,23 @@ the GET command, which holds the user's answer to the question.
 The last section had an example of a postinst script that uses debconf to
 get the value of a question, and act on it. Here are some things to keep in
 mind when writing postinst scripts that use debconf:
-.TP
-.B *
+.IP \(bu
 Avoid asking questions in the postinst. Instead, the config script should
 ask questions using debconf, so that pre-configuration will work.
-.TP
-.B *
+.IP \(bu
 Always source /usr/share/debconf/confmodule at the top of your postinst,
 even if you won't be running any db_* commands in it.
 This is required to make sure the config script gets a chance to run
 (see HACKS for details).
-.TP
-.B *
+.IP \(bu
 Avoid outputting anything to stdout in your postinst, since that can confuse
 debconf, and postinst should not be verbose anyway. Output to stderr is ok,
 if you must.
-.TP
-.B *
+.IP \(bu
 If your postinst launches a daemon, make sure you tell debconf to STOP at
 the end, since debconf can become a little confused about when your postinst
 is done otherwise.
-.TP
-.B *
+.IP \(bu
 Make your postinst script accept a first parameter of "reconfigure". It can
 treat it just like "configure". This will be used in a later version of
 debconf to let postinsts know when they are reconfigured.
@@ -581,10 +594,14 @@ If you set and export DEBCONF_DEBUG=developer, debconf will output to stderr
 a dump of the debconf protocol as your program runs. It'll look something
 like this -- the typo is made clear:
 .P
- debconf (developer): <-- input high debconf/frontand
- debconf (developer): --> 10 "debconf/frontand" doesn't exist
- debconf (developer): <-- go
- debconf (developer): --> 0 ok
+.RS 4
+.EX
+debconf (developer): <-- input high debconf/frontand
+debconf (developer): --> 10 "debconf/frontand" doesn't exist
+debconf (developer): <-- go
+debconf (developer): --> 0 ok
+.EE
+.RE
 .P
 It's rather useful to use debconf's readline frontend when you're debugging
 (in the author's opinion), as the questions don't get in the way, and all
@@ -651,63 +668,71 @@ becomes a bit trickier.
 .P
 Your config script will look something like this:
 .P
- #!/bin/sh
- CONFIGFILE=/etc/foo.conf
- set -e
- . /usr/share/debconf/confmodule
+.RS 4
+.EX
+#!/bin/sh
+CONFIGFILE=/etc/foo.conf
+set -e
+. /usr/share/debconf/confmodule
 
- # Load config file, if it exists.
- if [ -e $CONFIGFILE ]; then
- 	. $CONFIGFILE || true
+# Load config file, if it exists.
+if [ -e $CONFIGFILE ]; then
+    . $CONFIGFILE || true
 
- 	# Store values from config file into
- 	# debconf db.
- 	db_set mypackage/foo "$FOO"
- 	db_set mypackage/bar "$BAR"
- fi
+    # Store values from config file into
+    # debconf db.
+    db_set mypackage/foo "$FOO"
+    db_set mypackage/bar "$BAR"
+fi
 
- # Ask questions.
- db_input medium mypackage/foo || true
- db_input medium mypackage/bar || true
- db_go || true
+# Ask questions.
+db_input medium mypackage/foo || true
+db_input medium mypackage/bar || true
+db_go || true
+.EE
+.RE
 .P
 And the postinst will look something like this:
 .P
- #!/bin/sh
- CONFIGFILE=/etc/foo.conf
- set -e
- . /usr/share/debconf/confmodule
+.RS 4
+.EX
+#!/bin/sh
+CONFIGFILE=/etc/foo.conf
+set -e
+. /usr/share/debconf/confmodule
 
- # Generate config file, if it doesn't exist.
- # An alternative is to copy in a template
- # file from elsewhere.
- if [ ! -e $CONFIGFILE ]; then
- 	echo "# Config file for my package" > $CONFIGFILE
- 	echo "FOO=" >> $CONFIGFILE
- 	echo "BAR=" >> $CONFIGFILE
- fi
+# Generate config file, if it doesn't exist.
+# An alternative is to copy in a template
+# file from elsewhere.
+if [ ! -e $CONFIGFILE ]; then
+    echo "# Config file for my package" > $CONFIGFILE
+    echo "FOO=" >> $CONFIGFILE
+    echo "BAR=" >> $CONFIGFILE
+fi
 
- # Substitute in the values from the debconf db.
- # There are obvious optimizations possible here.
- # The cp before the sed ensures we do not mess up
- # the config file's ownership and permissions.
- db_get mypackage/foo
- FOO="$RET"
- db_get mypackage/bar
- BAR="$RET"
- cp -a -f $CONFIGFILE $CONFIGFILE.tmp
+# Substitute in the values from the debconf db.
+# There are obvious optimizations possible here.
+# The cp before the sed ensures we do not mess up
+# the config file's ownership and permissions.
+db_get mypackage/foo
+FOO="$RET"
+db_get mypackage/bar
+BAR="$RET"
+cp -a -f $CONFIGFILE $CONFIGFILE.tmp
 
- # If the admin deleted or commented some variables but then set
- # them via debconf, (re-)add them to the conffile.
- test -z "$FOO" || grep -Eq '^ *FOO=' $CONFIGFILE || \\
- 	echo "FOO=" >> $CONFIGFILE
- test -z "$BAR" || grep -Eq '^ *BAR=' $CONFIGFILE || \\
- 	echo "BAR=" >> $CONFIGFILE
+# If the admin deleted or commented some variables but then set
+# them via debconf, (re-)add them to the conffile.
+test -z "$FOO" || grep -Eq '^ *FOO=' $CONFIGFILE || \\
+    echo "FOO=" >> $CONFIGFILE
+test -z "$BAR" || grep -Eq '^ *BAR=' $CONFIGFILE || \\
+    echo "BAR=" >> $CONFIGFILE
 
- sed -e "s/^ *FOO=.*/FOO=\\"$FOO\\"/" \\
-     -e "s/^ *BAR=.*/BAR=\\"$BAR\\"/" \\
-     < $CONFIGFILE > $CONFIGFILE.tmp
- mv -f $CONFIGFILE.tmp $CONFIGFILE
+sed -e "s/^ *FOO=.*/FOO=\\"$FOO\\"/" \\
+    -e "s/^ *BAR=.*/BAR=\\"$BAR\\"/" \\
+    < $CONFIGFILE > $CONFIGFILE.tmp
+mv -f $CONFIGFILE.tmp $CONFIGFILE
+.EE
+.RE
 .P
 Consider how these two scripts handle all the cases. On fresh installs the
 questions are asked by the config script, and a new config file generated
@@ -739,55 +764,59 @@ spaghetti code. Or you can create several functions and use recursion. But
 perhaps the cleanest and easiest way is to construct a state machine. Here
 is a skeleton of a state machine that you can fill out and expand.
 .P
- #!/bin/sh
- set -e
- . /usr/share/debconf/confmodule
- db_capb backup
+.RS 4
+.EX
+#!/bin/sh
+set -e
+. /usr/share/debconf/confmodule
+db_capb backup
 
- STATE=1
- while true; do
- 	case "$STATE" in
-  	1)
-  		# Two unrelated questions.
- 		db_input medium my/question || true
- 		db_input medium my/other_question || true
- 	;;
- 	2)
- 		# Only ask this question if the
- 		# first question was answered in
- 		# the affirmative.
-        	db_get my/question
- 		if [ "$RET" = "true" ]; then
- 			db_input medium my/dep_question || true
- 		fi
-  	;;
- 	*)
- 		# The default case catches when $STATE is greater than the
- 		# last implemented state, and breaks out of the loop. This
- 		# requires that states be numbered consecutively from 1
- 		# with no gaps, as the default case will also be entered
- 		# if there is a break in the numbering
- 		break # exits the enclosing "while" loop
-  	;;
-  	esac
+STATE=1
+while true; do
+    case "$STATE" in
+        1)
+            # Two unrelated questions.
+            db_input medium my/question || true
+            db_input medium my/other_question || true
+            ;;
+        2)
+            # Only ask this question if the
+            # first question was answered in
+            # the affirmative.
+            db_get my/question
+            if [ "$RET" = "true" ]; then
+                db_input medium my/dep_question || true
+            fi
+            ;;
+        *)
+            # The default case catches when $STATE is greater than the
+            # last implemented state, and breaks out of the loop. This
+            # requires that states be numbered consecutively from 1
+            # with no gaps, as the default case will also be entered
+            # if there is a break in the numbering
+            break # exits the enclosing "while" loop
+            ;;
+    esac
 
- 	if db_go; then
- 		STATE=$((STATE + 1))
- 	else
- 		STATE=$((STATE - 1))
- 	fi
- done
+    if db_go; then
+        STATE=$((STATE + 1))
+    else
+        STATE=$((STATE - 1))
+    fi
+done
 
- if [ $STATE -eq 0 ]; then
- 	# The user has asked to back up from the first
- 	# question. This case is problematical. Regular
- 	# dpkg and apt package installation isn't capable
- 	# of backing up questions between packages as this
- 	# is written, so this will exit leaving the package
- 	# unconfigured - probably the best way to handle
- 	# the situation.
- 	exit 10
- fi
+if [ $STATE -eq 0 ]; then
+    # The user has asked to back up from the first
+    # question. This case is problematical. Regular
+    # dpkg and apt package installation isn't capable
+    # of backing up questions between packages as this
+    # is written, so this will exit leaving the package
+    # unconfigured - probably the best way to handle
+    # the situation.
+    exit 10
+fi
+.EE
+.RE
 .P
 Note that if all your config script does is ask a few unrelated questions,
 then there is no need for the state machine. Just ask them all, and GO;
@@ -798,15 +827,19 @@ One gotcha with debconf comes up if you have a loop in your
 config script. Suppose you're asking for input and validating
 it, and looping if it's not valid:
 .P
- ok=''
- do while [ ! "$ok" ];
- 	db_input low foo/bar || true
- 	db_go || true
- 	db_get foo/bar
- 	if [ "$RET" ]; then
- 		ok=1
- 	fi
- done
+.RS 4
+.EX
+ok=''
+do while [ ! "$ok" ];
+    db_input low foo/bar || true
+    db_go || true
+    db_get foo/bar
+    if [ "$RET" ]; then
+        ok=1
+    fi
+done
+.EE
+.RE
 .P
 This looks ok at first glance. But consider what happens if
 the value of foo/bar is "" when this loop is entered, and the
@@ -839,28 +872,36 @@ to choose between them. Here's how.
 Make all the packages in the set use a shared
 template. Something like this:
 .P
- Template: shared/window-manager
- Type: select
- Choices: ${choices}
- Description: Select the default window manager.
-  Select the window manager that will be started by
-  default when X starts.
+.RS 4
+.EX
+Template: shared/window-manager
+Type: select
+Choices: ${choices}
+Description: Select the default window manager.
+ Select the window manager that will be started by
+ default when X starts.
+.EE
+.RE
 .P
 Each package should include a copy of the template. Then it
 should include some code like this in its config script:
 .P
- db_metaget shared/window-manager owners
- OWNERS=$RET
- db_metaget shared/window-manager choices
- CHOICES=$RET
+.RS 4
+.EX
+db_metaget shared/window-manager owners
+OWNERS=$RET
+db_metaget shared/window-manager choices
+CHOICES=$RET
 
- if [ "$OWNERS" != "$CHOICES" ]; then
- 	db_subst shared/window-manager choices $OWNERS
- 	db_fset shared/window-manager seen false
- fi
+if [ "$OWNERS" != "$CHOICES" ]; then
+    db_subst shared/window-manager choices $OWNERS
+    db_fset shared/window-manager seen false
+fi
 
- db_input medium shared/window-manager || true
- db_go || true
+db_input medium shared/window-manager || true
+db_go || true
+.EE
+.RE
 .P
 A bit of an explanation is called for. By the time your config
 script runs, debconf has already read in all the templates for
@@ -883,26 +924,30 @@ This can be accomplished by adding something like this to the
 prerm scripts of all related packages (replacing <package> with
 the package name):
 .P
- if [ -e /usr/share/debconf/confmodule ]; then
- 	. /usr/share/debconf/confmodule
- 	# I no longer claim this question.
- 	db_unregister shared/window-manager
+.RS 4
+.EX
+if [ -e /usr/share/debconf/confmodule ]; then
+    . /usr/share/debconf/confmodule
+    # I no longer claim this question.
+    db_unregister shared/window-manager
 
- 	# See if the shared question still exists.
- 	if db_get shared/window-manager; then
- 		db_metaget shared/window-manager owners
- 		db_subst shared/window-manager choices $RET
- 		db_metaget shared/window-manager value
- 		if [ "<package>" = "$RET" ] ; then
- 			db_fset shared/window-manager seen false
- 			db_input high shared/window-manager || true
- 			db_go || true
- 		fi
+    # See if the shared question still exists.
+    if db_get shared/window-manager; then
+        db_metaget shared/window-manager owners
+        db_subst shared/window-manager choices $RET
+        db_metaget shared/window-manager value
+        if [ "<package>" = "$RET" ] ; then
+            db_fset shared/window-manager seen false
+            db_input high shared/window-manager || true
+            db_go || true
+        fi
 
- 		# Now do whatever the postinst script did
- 		# to update the window manager symlink.
- 	fi
+        # Now do whatever the postinst script did
+        # to update the window manager symlink.
+    fi
  fi
+.EE
+.RE
 .SH HACKS
 Debconf is currently not fully integrated into dpkg (but I want to change
 this in the future), and so some messy hacks are currently called for.
