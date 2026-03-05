@@ -113,6 +113,11 @@ qq{Usage: dpkg-preconfigure [options] [debs]
 	"apt"			=> \$apt,
 );
 
+if (exists $ENV{DEBIAN_FRONTEND} and $ENV{DEBIAN_FRONTEND} eq 'noninteractive') {
+    print STDERR sprintf("dpkg-preconfigure: ".gettext("Skipping dpkg-preconfigure with DEBIAN_FRONTEND set to 'noninteractive'")), "\n";
+    exit 0;
+}
+
 # In apt mode, need unbuffered output. Let's just enable it.
 $|=1;
 
