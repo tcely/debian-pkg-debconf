@@ -64,7 +64,7 @@ install-rest:
 	cp Debconf/Client/ConfModule.stub \
 		$(prefix)/$(PERL_VENDORLIB)/Debian/DebConf/Client/ConfModule.pm
 	# Other libs and helper stuff.
-	install -m 0644 confmodule.sh confmodule $(prefix)/usr/share/debconf/
+	install -m 0644 confmodule $(prefix)/usr/share/debconf/
 	install frontend $(prefix)/usr/share/debconf/
 	install -m 0755 fix_db.pl $(prefix)/usr/share/debconf/
 	# Install essential programs.
