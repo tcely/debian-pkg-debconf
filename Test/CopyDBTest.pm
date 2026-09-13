@@ -85,6 +85,76 @@ sub test_item_1 {
 	$self->go_test_copy($item,$owner);
 }
 
+sub test_item_without_template {
+	my $self = shift;
+	my $owner = 'debconf-test';
+	my $item = {
+		name => "$owner/item-without-template",
+		entry => {
+			owners => { "$owner" => 1 },
+			fields => { value => 'preserved value' },
+			flags => { seen => 'true' },
+			variables => { variable => 'preserved variable' },
+		}
+	};
+	my $template_lookups = 0;
+	my @warnings;
+	my $template_get = \&Debconf::Template::get;
+
+	$self->{assert} = sub {
+		my $item_config_entry = shift;
+		my $entry_from_db = shift;
+		$self->assert(cmpStr($item_config_entry, $entry_from_db) == 0,
+			'item saved in database differs from the original item');
+	};
+	@{$self->{src_db_names}} = ('configdb');
+	@{$self->{dest_db_names}} = ('filedb');
+	$self->{pattern} = '.*';
+
+	{
+		no warnings 'redefine';
+		local *Debconf::Template::get = sub {
+			$template_lookups++;
+			return $template_get->(@_);
+		};
+		local $SIG{__WARN__} = sub { push @warnings, @_ };
+		$self->go_test_copy($item, $owner);
+	}
+
+	$self->assert($template_lookups == 0,
+		'copy looked up a missing template');
+	$self->assert(! @warnings,
+		'copy warned for an item without a template');
+}
+
+sub test_item_with_empty_template {
+	my $self = shift;
+	my $owner = 'debconf-test';
+	my $item = {
+		name => "$owner/item-with-empty-template",
+		entry => {
+			owners => { "$owner" => 1 },
+			fields => {
+				template => '',
+				value => 'preserved value',
+			},
+			flags => { seen => 'true' },
+			variables => { variable => 'preserved variable' },
+		}
+	};
+
+	$self->{assert} = sub {
+		my $item_config_entry = shift;
+		my $entry_from_db = shift;
+		$self->assert(cmpStr($item_config_entry, $entry_from_db) == 0,
+			'item saved in database differs from the original item');
+	};
+	@{$self->{src_db_names}} = ('configdb');
+	@{$self->{dest_db_names}} = ('filedb');
+	$self->{pattern} = '.*';
+	$self->go_test_copy($item, $owner);
+}
+
 # Closes: #201431
 sub test_201431 {
 	my $self = shift;
