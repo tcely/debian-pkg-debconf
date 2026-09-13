@@ -159,6 +159,7 @@ sub test_item_with_empty_template {
 		}
 	};
 	my $template_lookups = 0;
+	my @warnings;
 	my $template_get = \&Debconf::Template::get;
 
 	$self->{assert} = sub {
@@ -177,11 +178,14 @@ sub test_item_with_empty_template {
 			$template_lookups++;
 			return $template_get->(@_);
 		};
+		local $SIG{__WARN__} = sub { push @warnings, @_ };
 		$self->go_test_copy($item, $owner);
 	}
 
 	$self->assert($template_lookups == 0,
 		'copy looked up an empty template');
+	$self->assert(! @warnings,
+		'copy warned for an item with an empty template');
 }
 
 # Closes: #201431
