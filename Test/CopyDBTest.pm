@@ -2,10 +2,19 @@ package CopyDBTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
 use warnings;
 use strict;
-use Test::Debconf::DbDriver::SLAPD;
 use base qw(Test::Unit::Setup);
 
+my $skip_ldap = defined($ENV{TEST_DEBCONF_SKIP_LDAP})
+	&& $ENV{TEST_DEBCONF_SKIP_LDAP} eq '1';
 my $tmp_base_dir = "/tmp/debconf-test";
+
+my @src_db_names = qw(configdb dirtreedb packdirdb);
+my @dest_db_names = qw(packdirdb filedb dirtreedb);
+
+unless ($skip_ldap) {
+	push @src_db_names, 'ldapdb';
+	push @dest_db_names, 'ldapdb';
+}
 
 sub set_up{
 	my $self = shift();
@@ -78,8 +87,8 @@ sub test_item_1 {
 			      'item saved in database differs from the original item');
 	};
 
-	@{$self->{src_db_names}} = ('configdb','dirtreedb','packdirdb','ldapdb',);
-	@{$self->{dest_db_names}} = ('packdirdb','filedb','dirtreedb','ldapdb',);
+	@{$self->{src_db_names}} = @src_db_names;
+	@{$self->{dest_db_names}} = @dest_db_names;
 
 	$self->{pattern} = '.*';
 	$self->go_test_copy($item,$owner);
@@ -196,7 +205,7 @@ sub test_201431 {
 			      'item saved in database differs from the original item');
 	};
 
-	@{$self->{src_db_names}} = ('configdb','dirtreedb','packdirdb','ldapdb',);
+	@{$self->{src_db_names}} = @src_db_names;
 	@{$self->{dest_db_names}} = ('passwddb',);
 
 	$self->{pattern} = '^passwd/';
@@ -338,6 +347,19 @@ sub db_init {
 	$self->{passwddb_filename} = $self->{passwddb_file}->filename;
 
 	# build conf file
+	my $ldap_config = '';
+	unless ($skip_ldap) {
+		$ldap_config = <<'EOF';
+Name: ldapdb
+Driver: LDAP
+Server: localhost
+Port: 9009
+BaseDN: cn=debconf,dc=debian,dc=org
+BindDN: cn=admin,dc=debian,dc=org
+BindPasswd: debian
+
+EOF
+	}
 	$self->{conf_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
 	open(my $outfile, ">", $self->{conf_filename});
@@ -363,13 +385,7 @@ Name: packdirdb
 Driver: PackageDir
 Directory: $self->{packdirdb_dir}
 
-Name: ldapdb
-Driver: LDAP
-Server: localhost
-Port: 9009
-BaseDN: cn=debconf,dc=debian,dc=org
-BindDN: cn=admin,dc=debian,dc=org
-BindPasswd: debian
+$ldap_config
 
 Name: passwddb
 Driver: File
@@ -399,8 +415,6 @@ sub set_up {
 #		or die "Can not create tmp data directory";
 
 	$self->{tmp_dir} = $tmp_base_dir;
-#	$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new('localhost',9009,$self->{tmp_dir});
-#	$self->{slapd}->slapd_start();
 	$self->db_init();
 }
 
@@ -408,7 +422,6 @@ sub tear_down {
 	my $self = shift;
 
 	Debconf::Db->save;
-#	$self->{slapd}->slapd_stop();
 
 #	system("rm -rf $self->{tmp_dir}") == 0
 #		or die "Can not delete tmp data directory";
