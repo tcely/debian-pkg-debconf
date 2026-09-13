@@ -22,14 +22,21 @@ sub set_up{
 	system("mkdir -p $tmp_base_dir") == 0
 		or die "Can not create tmp data directory";
 
-	$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new('localhost',9009,$tmp_base_dir);
-	$self->{slapd}->slapd_start();
+	unless ($skip_ldap) {
+		require Test::Debconf::DbDriver::SLAPD;
+		$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new(
+			'localhost', 9009, $tmp_base_dir
+		);
+		$self->{slapd}->slapd_start();
+		$self->{slapd_started} = 1;
+	}
 }
 
 sub tear_down{
 	my $self = shift();
 
-	$self->{slapd}->slapd_stop();
+	$self->{slapd}->slapd_stop()
+		if $self->{slapd_started} && $self->{slapd};
 }
 
 package Test::CopyDBTest;
