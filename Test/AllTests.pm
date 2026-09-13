@@ -28,16 +28,19 @@ sub suite {
 
 	my $skip_ldap = defined($ENV{TEST_DEBCONF_SKIP_LDAP})
 		&& $ENV{TEST_DEBCONF_SKIP_LDAP} eq '1';
-	if (!$skip_ldap) {
+	unless ($skip_ldap) {
 		# add LDAP test suite
-		my $ldapsuite;
+		my ($ldapsuite, $error);
 		my $loaded = eval {
 			require Test::Debconf::DbDriver::LDAPTest;
 			$ldapsuite = Test::Debconf::DbDriver::LDAPTest->suite();
 			1;
 		};
-		$suite->add_test($ldapsuite)
-			if $loaded && $ldapsuite;
+		$error = $@ unless $loaded;
+		die "Unable to load LDAP tests: $error"
+			unless $loaded && $ldapsuite;
+
+		$suite->add_test($ldapsuite);
 	}
 
 	# add your test suite or test case
