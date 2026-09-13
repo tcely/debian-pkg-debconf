@@ -6,8 +6,11 @@ use Test::Unit::TestSuite;
 use Test::CopyDBTest;
 use Test::Debconf::DbDriver::DirTreeTest;
 use Test::Debconf::DbDriver::FileTest;
-use Test::Debconf::DbDriver::LDAPTest;
 use Test::Debconf::DbDriver::PackageDirTest;
+
+unless ($ENV{TEST_DEBCONF_SKIP_LDAP}) {
+	use Test::Debconf::DbDriver::LDAPTest;
+}
 
 sub suite {
 	my $class = shift;
