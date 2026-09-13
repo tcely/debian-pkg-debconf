@@ -2,10 +2,19 @@ package CopyDBTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
 use warnings;
 use strict;
-use Test::Debconf::DbDriver::SLAPD;
 use base qw(Test::Unit::Setup);
 
+my $skip_ldap = defined($ENV{TEST_DEBCONF_SKIP_LDAP})
+	&& $ENV{TEST_DEBCONF_SKIP_LDAP} eq '1';
 my $tmp_base_dir = "/tmp/debconf-test";
+
+my @src_db_names = qw(configdb dirtreedb packdirdb);
+my @dest_db_names = qw(packdirdb filedb dirtreedb);
+
+unless ($skip_ldap) {
+	push @src_db_names, 'ldapdb';
+	push @dest_db_names, 'ldapdb';
+}
 
 sub set_up{
 	my $self = shift();
@@ -13,14 +22,21 @@ sub set_up{
 	system("mkdir -p $tmp_base_dir") == 0
 		or die "Can not create tmp data directory";
 
-	$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new('localhost',9009,$tmp_base_dir);
-	$self->{slapd}->slapd_start();
+	unless ($skip_ldap) {
+		require Test::Debconf::DbDriver::SLAPD;
+		$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new(
+			'localhost', 9009, $tmp_base_dir
+		);
+		$self->{slapd}->slapd_start();
+		$self->{slapd_started} = 1;
+	}
 }
 
 sub tear_down{
 	my $self = shift();
 
-	$self->{slapd}->slapd_stop();
+	$self->{slapd}->slapd_stop()
+		if $self->{slapd_started} && $self->{slapd};
 }
 
 package Test::CopyDBTest;
@@ -78,11 +94,98 @@ sub test_item_1 {
 			      'item saved in database differs from the original item');
 	};
 
-	@{$self->{src_db_names}} = ('configdb','dirtreedb','packdirdb','ldapdb',);
-	@{$self->{dest_db_names}} = ('packdirdb','filedb','dirtreedb','ldapdb',);
+	@{$self->{src_db_names}} = @src_db_names;
+	@{$self->{dest_db_names}} = @dest_db_names;
 
 	$self->{pattern} = '.*';
 	$self->go_test_copy($item,$owner);
+}
+
+sub test_item_without_template {
+	my $self = shift;
+	my $owner = 'debconf-test';
+	my $item = {
+		name => "$owner/item-without-template",
+		entry => {
+			owners => { "$owner" => 1 },
+			fields => { value => 'preserved value' },
+			flags => { seen => 'true' },
+			variables => { variable => 'preserved variable' },
+		}
+	};
+	my $template_lookups = 0;
+	my @warnings;
+	my $template_get = \&Debconf::Template::get;
+
+	$self->{assert} = sub {
+		my $item_config_entry = shift;
+		my $entry_from_db = shift;
+		$self->assert(cmpStr($item_config_entry, $entry_from_db) == 0,
+			'item saved in database differs from the original item');
+	};
+	@{$self->{src_db_names}} = ('configdb');
+	@{$self->{dest_db_names}} = ('filedb');
+	$self->{pattern} = '.*';
+
+	{
+		no warnings 'redefine';
+		local *Debconf::Template::get = sub {
+			$template_lookups++;
+			return $template_get->(@_);
+		};
+		local $SIG{__WARN__} = sub { push @warnings, @_ };
+		$self->go_test_copy($item, $owner);
+	}
+
+	$self->assert($template_lookups == 0,
+		'copy looked up a missing template');
+	$self->assert(! @warnings,
+		'copy warned for an item without a template');
+}
+
+sub test_item_with_empty_template {
+	my $self = shift;
+	my $owner = 'debconf-test';
+	my $item = {
+		name => "$owner/item-with-empty-template",
+		entry => {
+			owners => { "$owner" => 1 },
+			fields => {
+				template => '',
+				value => 'preserved value',
+			},
+			flags => { seen => 'true' },
+			variables => { variable => 'preserved variable' },
+		}
+	};
+	my $template_lookups = 0;
+	my @warnings;
+	my $template_get = \&Debconf::Template::get;
+
+	$self->{assert} = sub {
+		my $item_config_entry = shift;
+		my $entry_from_db = shift;
+		$self->assert(cmpStr($item_config_entry, $entry_from_db) == 0,
+			'item saved in database differs from the original item');
+	};
+	@{$self->{src_db_names}} = ('configdb');
+	@{$self->{dest_db_names}} = ('filedb');
+	$self->{pattern} = '.*';
+
+	{
+		no warnings 'redefine';
+		local *Debconf::Template::get = sub {
+			$template_lookups++;
+			return $template_get->(@_);
+		};
+		local $SIG{__WARN__} = sub { push @warnings, @_ };
+		$self->go_test_copy($item, $owner);
+	}
+
+	$self->assert($template_lookups == 0,
+		'copy looked up an empty template');
+	$self->assert(! @warnings,
+		'copy warned for an item with an empty template');
 }
 
 # Closes: #201431
@@ -113,7 +216,7 @@ sub test_201431 {
 			      'item saved in database differs from the original item');
 	};
 
-	@{$self->{src_db_names}} = ('configdb','dirtreedb','packdirdb','ldapdb',);
+	@{$self->{src_db_names}} = @src_db_names;
 	@{$self->{dest_db_names}} = ('passwddb',);
 
 	$self->{pattern} = '^passwd/';
@@ -255,6 +358,19 @@ sub db_init {
 	$self->{passwddb_filename} = $self->{passwddb_file}->filename;
 
 	# build conf file
+	my $ldap_config = '';
+	unless ($skip_ldap) {
+		$ldap_config = <<'EOF';
+Name: ldapdb
+Driver: LDAP
+Server: localhost
+Port: 9009
+BaseDN: cn=debconf,dc=debian,dc=org
+BindDN: cn=admin,dc=debian,dc=org
+BindPasswd: debian
+
+EOF
+	}
 	$self->{conf_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
 	open(my $outfile, ">", $self->{conf_filename});
@@ -280,13 +396,7 @@ Name: packdirdb
 Driver: PackageDir
 Directory: $self->{packdirdb_dir}
 
-Name: ldapdb
-Driver: LDAP
-Server: localhost
-Port: 9009
-BaseDN: cn=debconf,dc=debian,dc=org
-BindDN: cn=admin,dc=debian,dc=org
-BindPasswd: debian
+$ldap_config
 
 Name: passwddb
 Driver: File
@@ -316,8 +426,6 @@ sub set_up {
 #		or die "Can not create tmp data directory";
 
 	$self->{tmp_dir} = $tmp_base_dir;
-#	$self->{slapd} = Test::Debconf::DbDriver::SLAPD->new('localhost',9009,$self->{tmp_dir});
-#	$self->{slapd}->slapd_start();
 	$self->db_init();
 }
 
@@ -325,7 +433,6 @@ sub tear_down {
 	my $self = shift;
 
 	Debconf::Db->save;
-#	$self->{slapd}->slapd_stop();
 
 #	system("rm -rf $self->{tmp_dir}") == 0
 #		or die "Can not delete tmp data directory";

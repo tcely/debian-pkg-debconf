@@ -40,7 +40,10 @@ sub copy {
 		@owners=("unknown");
 	}
 	foreach my $owner (@owners) {
-		my $template = Debconf::Template->get($src->getfield($item, 'template'));
+		my $template_name = $src->getfield($item, 'template');
+		my $template = (defined($template_name) && length($template_name))
+			? Debconf::Template->get($template_name)
+			: undef;
 		my $type="";
 		$type = $template->type if $template;
 		$dest->addowner($item, $owner, $type);

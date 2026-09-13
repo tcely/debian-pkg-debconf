@@ -6,7 +6,7 @@ use Test::Unit::TestSuite;
 use Test::CopyDBTest;
 use Test::Debconf::DbDriver::DirTreeTest;
 use Test::Debconf::DbDriver::FileTest;
-use Test::Debconf::DbDriver::LDAPTest;
+use Test::Debconf::DbDriver::PackageDirTest;
 
 sub suite {
 	my $class = shift;
@@ -23,14 +23,25 @@ sub suite {
 	# add File test suite
 	$suite->add_test(Test::Debconf::DbDriver::FileTest->suite());
 
-	# add LDAP test suite
-	no strict 'refs';
-	my $ldapsuite;
-	my $ldapsuite_method = \&{"Test::Debconf::DbDriver::LDAPTest::suite"};
-	eval {
-		$ldapsuite = $ldapsuite_method->();
-	};
-	$suite->add_test($ldapsuite);
+	# add PackageDir test suite
+	$suite->add_test(Test::Debconf::DbDriver::PackageDirTest->suite());
+
+	my $skip_ldap = defined($ENV{TEST_DEBCONF_SKIP_LDAP})
+		&& $ENV{TEST_DEBCONF_SKIP_LDAP} eq '1';
+	unless ($skip_ldap) {
+		# add LDAP test suite
+		my ($ldapsuite, $error);
+		my $loaded = eval {
+			require Test::Debconf::DbDriver::LDAPTest;
+			$ldapsuite = Test::Debconf::DbDriver::LDAPTest->suite();
+			1;
+		};
+		$error = $@ unless $loaded;
+		die "Unable to load LDAP tests: $error"
+			unless $loaded && $ldapsuite;
+
+		$suite->add_test($ldapsuite);
+	}
 
 	# add your test suite or test case
 	# extract suite by way of suite method and add
