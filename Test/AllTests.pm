@@ -7,6 +7,7 @@ use Test::CopyDBTest;
 use Test::Debconf::DbDriver::DirTreeTest;
 use Test::Debconf::DbDriver::FileTest;
 use Test::Debconf::DbDriver::LDAPTest;
+use Test::Debconf::DbDriver::PackageDirTest;
 
 sub suite {
 	my $class = shift;
@@ -23,6 +24,9 @@ sub suite {
 	# add File test suite
 	$suite->add_test(Test::Debconf::DbDriver::FileTest->suite());
 
+	# add PackageDir test suite
+	$suite->add_test(Test::Debconf::DbDriver::PackageDirTest->suite());
+
 	# add LDAP test suite
 	no strict 'refs';
 	my $ldapsuite;
@@ -30,7 +34,7 @@ sub suite {
 	eval {
 		$ldapsuite = $ldapsuite_method->();
 	};
-	$suite->add_test($ldapsuite);
+	$suite->add_test($ldapsuite) if defined($ldapsuite) && $ldapsuite;
 
 	# add your test suite or test case
 	# extract suite by way of suite method and add
