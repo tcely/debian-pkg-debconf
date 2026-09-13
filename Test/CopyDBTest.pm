@@ -142,6 +142,8 @@ sub test_item_with_empty_template {
 			variables => { variable => 'preserved variable' },
 		}
 	};
+	my $template_lookups = 0;
+	my $template_get = \&Debconf::Template::get;
 
 	$self->{assert} = sub {
 		my $item_config_entry = shift;
@@ -152,7 +154,18 @@ sub test_item_with_empty_template {
 	@{$self->{src_db_names}} = ('configdb');
 	@{$self->{dest_db_names}} = ('filedb');
 	$self->{pattern} = '.*';
-	$self->go_test_copy($item, $owner);
+
+	{
+		no warnings 'redefine';
+		local *Debconf::Template::get = sub {
+			$template_lookups++;
+			return $template_get->(@_);
+		};
+		$self->go_test_copy($item, $owner);
+	}
+
+	$self->assert($template_lookups == 0,
+		'copy looked up an empty template');
 }
 
 # Closes: #201431
